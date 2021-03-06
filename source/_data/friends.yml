@@ -1,0 +1,78 @@
+group1:
+  title: 海内存知己 天涯若比邻
+  description: 感谢人生旅途中的每一份真挚的友谊，按结识先后顺序：
+  items:
+    - title: 尹寒磊
+      avatar: https://7.dusays.com/2021/01/30/9c783e50f597a.jpg
+      url: https://www.yinhanlei.com/
+      screenshot: https://7.dusays.com/2021/01/30/df2dc76fce132.png
+      description: 技术和生活的记录空间
+    - title: Justin Yang
+      avatar: https://7.dusays.com/2021/01/30/b8df98577d013.jpg
+      url: https://lifestyle1.cn/
+      screenshot: https://7.dusays.com/2021/01/30/a31fc2901f301.png
+      description: https://lifestyle1.cn/
+    - title: 执着_7748
+      avatar: https://7.dusays.com/2021/02/05/f6ee58dc1cf4e.jpg
+      url: https://www.jianshu.com/u/bd668c09cabf
+      screenshot:
+      description: https://www.jianshu.com/...
+    - title: Pikaurd
+      avatar:
+      url: http://blog.pikaurd.com/
+      screenshot: https://7.dusays.com/2021/01/30/a808f15c4a6f9.jpg
+      description: hello world
+    - title: Woooodi's Private Zone
+      avatar:
+      url: https://woonoah.github.io/woodi.github.io/
+      screenshot: https://7.dusays.com/2021/01/30/bc4975fac32f0.png
+      description: 目前共计 58 篇日志。
+
+
+
+group2:
+  title: 特别感谢的开源大佬
+  description: 感谢开源大佬们的无私奉献，按结识先后顺序：
+  items:
+    - title: 枋柚梓
+      avatar: https://cdn.jsdelivr.net/gh/inkss/common@master/static/web/avatar.jpg
+      url: https://inkss.cn/
+      screenshot: https://i.loli.net/2020/08/21/Vzbu3i8fXs6Nh5Y.jpg
+      keywords:
+      description: 喵喵喵？
+    - title: MHuiG
+      avatar: https://cdn.jsdelivr.net/gh/MHuiG/imgbed@master/data/p.png
+      url: https://blog.mhuig.top/
+      screenshot: https://i.loli.net/2020/08/22/d24zpPlhLYWX6D1.png
+      keywords:
+      description: Be Yourself, Make a Difference.
+    - title: Colsrch
+      avatar: https://cdn.jsdelivr.net/gh/Colsrch/images/Colsrch/avatar.jpg
+      url: https://colsrch.top/
+      screenshot: https://7bu.top/2020/09/05/893e98a441d5f.png
+      keywords: [C/C++, Web前端, Java, .NET, Linux, Android]
+      description: 愿多年以后，我可以酌一杯清酒，烂醉如泥，梦中回到我们的曾经。
+    - title: ChrAlpha 的幻想乡
+      avatar: https://7.dusays.com/2021/02/24/48c02337caa95.png
+      url: https://ichr.me
+      screenshot: https://7.dusays.com/2021/01/30/eefea79c845d3.png
+      keywords:
+      description: 不硬核瞎折腾
+    - title: 小冰博客
+      avatar: https://7.dusays.com/2021/03/03/fb0b9a5854790.png
+      url: http://zfe.space/
+      screenshot:
+      keywords:
+      description:
+    - title:
+      avatar:
+      url:
+      screenshot:
+      keywords:
+      description:
+
+group3:
+  title: 来自 GitHub 的朋友
+  description: '以下友链通过 [GitHub Issue](https://github.com/xaoxuu/friends/issues/) 提交，按 issue 最后更新时间排序：'
+  api: https://issues-api.vercel.app
+  repo: xaoxuu/friends

@@ -1,0 +1,189 @@
+mac:
+  title: Mac 应用下载
+  description:
+  items:
+    - title: MacWk
+      url: https://macwk.com/
+      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/mac/macwk-screenshot.jpg
+      avatar: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/mac/macwk-icon.png
+      description: 精品mac软件下载
+    - title: MacBL
+      url: https://www.macbl.com
+      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/mac/macbl-screenshot.jpg
+      avatar: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/mac/macbl-icon.png
+      description: 马可菠萝 - 分享你喜欢的MAC应用
+    - title: Xclient
+      url: https://xclient.info
+      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/mac/xclient-screenshot.jpg
+      avatar: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/mac/xclient-icon.png
+      description: 精品MAC应用分享
+
+ios:
+  title: iOS 知名开发者的博客
+  description:
+  items:
+    - title: OneV's Den
+      url: https://onevcat.com/#blog
+      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/dev/onevcat-screenshot.jpg
+      avatar: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/dev/onevcat-icon.jpg
+      description: 上善若水，人淡如菊
+    - title: 曾静的博客
+      url: https://blog.devzeng.com/#blog
+      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/dev/devzeng-screenshot.jpg
+      avatar: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/dev/devzeng-icon.jpg
+      description: 但行好事，莫问前程
+    - title: 唐巧的博客
+      url: http://blog.devtang.com
+      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/dev/devtang-screenshot.jpg
+      avatar: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/dev/devtang-icon.jpg
+      description: 记录下自己学习的点滴
+    - title: ibireme
+      url: https://blog.ibireme.com
+      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/dev/ibireme-screenshot.jpg
+      avatar:
+      description: 伽蓝之堂 —— 一只魔法师的工坊
+
+design:
+  title: 设计灵感和素材
+  description:
+  items:
+    - title: Unsplash
+      url: https://unsplash.com
+      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/design/unsplash-screenshot.jpg
+      avatar: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/design/unsplash-icon.png
+      description: Photos for everyone.
+    - title: Dribbble
+      url: https://dribbble.com
+      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/design/dribbble-screenshot.jpg
+      avatar: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/design/dribbble-icon.png
+      description: Discover the world’s top designers & creatives.
+    - title: Flaticon
+      url: https://www.flaticon.com
+      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/design/flaticon-screenshot.jpg
+      avatar: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/design/flaticon-icon.png
+      description: Access 3,260,000 vector icons.
+    - title: 创造狮导航
+      url: http://chuangzaoshi.com
+      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/design/chuangzaoshi-screenshot.jpg
+      avatar: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/design/chuangzaoshi-icon.png
+      description: Discover the world’s top designers & creatives.
+    - title: Pinterest
+      url: https://www.pinterest.com
+      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/design/pinterest-screenshot.jpg
+      avatar: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/design/pinterest-icon.png
+      description: 寻找值得尝试的新点子
+    - title: Iconfont
+      url: https://www.iconfont.cn
+      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/design/iconfont-screenshot.jpg
+      avatar:
+      description: 阿里巴巴矢量图标库
+    - title: WallpaperAccess
+      url: https://wallpaperaccess.com
+      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/design/wallpaperaccess-screenshot.jpg
+      avatar:
+      description: Access to Thousands of Wallpapers.
+    - title: Material Palette
+      url: https://www.materialpalette.com
+      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/design/materialpalette-screenshot.jpg
+      avatar:
+      description: Material Design Color Palette Generator.
+    - title: 设计师网址导航
+      url: http://hao.uisdc.com
+      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/design/uisdc-screenshot.jpg
+      avatar:
+      description: 优设导航 - 学设计从这里开始！
+
+online_tools:
+  title: 在线工具
+  description:
+  items:
+    - title: thum.io
+      url: https://image.thum.io
+      screenshot: https://7.dusays.com/2021/03/05/01ba3fde0e3d1.png
+      avatar: https://7.dusays.com/2021/03/05/e2eeddd5e537f.jpg
+      description: 快速生成网站截图
+    - title: Neumorphism.io
+      url: https://neumorphism.io/#e0e0e0
+      screenshot: https://7.dusays.com/2021/03/05/31111c56bdf50.jpg
+      avatar:
+      description: Generate Soft-UI CSS code
+    - title: Shields IO
+      url: https://shields.io
+      screenshot: https://7.dusays.com/2021/03/03/81b7072581f29.png
+      avatar:
+      description:
+    - title: json.cn
+      url: https://www.json.cn
+      screenshot: https://7.dusays.com/2021/03/03/70f3b6e3d55b1.png
+      avatar:
+      description:
+    - title: Favicon Generator
+      url: https://realfavicongenerator.net
+      screenshot: https://7.dusays.com/2021/03/03/d560caf42c66b.png
+      avatar:
+      description:
+    - title: 去不图床
+      url: https://7bu.top/
+      screenshot: https://7.dusays.com/2021/03/03/b4c71570c4b04.png
+      avatar:
+      description: 免费图床
+    - title: vim-cn.com
+      url: https://img.vim-cn.com
+      screenshot: https://7.dusays.com/2021/03/03/a2b15981b5a14.png
+      avatar:
+      description: 免费图床
+    - title: david-smith.org
+      url: https://david-smith.org/iosversionstats/
+      screenshot: https://7.dusays.com/2021/03/03/28b33280e4dc5.png
+      avatar:
+      description: 查询iOS各个版本用户量
+    - title: LaTeX公式编辑器
+      url: https://www.latexlive.com/
+      screenshot: https://7.dusays.com/2021/03/03/e4df394a287a6.png
+      avatar:
+      description:
+
+community:
+  title: 技术社区
+  description:
+  items:
+    - title: Stack Overflow
+      url: https://stackoverflow.com
+      screenshot: https://7.dusays.com/2021/03/03/d28d9e2f31f9a.png
+      avatar:
+      description:
+    - title: CocoaChina
+      url: http://www.cocoachina.com
+      screenshot: https://7.dusays.com/2021/03/03/b44f3d0731007.png
+      avatar:
+      description:
+    - title: RUNOOB
+      url: http://www.runoob.com
+      screenshot: https://7.dusays.com/2021/03/03/7758e79c04623.png
+      avatar:
+      description:
+    - title: W3school
+      url: http://www.w3school.com.cn
+      screenshot: https://7.dusays.com/2021/03/03/2b6e242373dfb.png
+      avatar:
+      description:
+    - title: TensorFlow中文社区
+      url: http://www.tensorfly.cn
+      screenshot: https://7.dusays.com/2021/03/03/773d6e9ab1ccf.png
+      avatar:
+      description:
+    - title: 廖雪峰的官方网站
+      url: https://www.liaoxuefeng.com
+      screenshot: https://7.dusays.com/2021/03/03/d67326f092780.png
+      avatar:
+      description:
+    - title:
+      url:
+      screenshot:
+      avatar:
+      description:
+    - title:
+      url:
+      screenshot:
+      avatar:
+      description:

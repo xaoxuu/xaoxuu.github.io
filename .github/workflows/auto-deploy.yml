@@ -20,7 +20,7 @@ jobs:
       run: |
         npm i
         npm install hexo-cli -g
-        npm run start
+        hexo clean && hexo generate
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
