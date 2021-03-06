@@ -26,7 +26,7 @@ jobs:
       with:
         deploy_key: ${{ secrets.DEPLOY_KEY }}
         external_repository: xaoxuu/xaoxuu.github.io
-        publish_branch: gh-branch
+        publish_branch: gh-pages
         publish_dir: ./public
         commit_message: ${{ github.event.head_commit.message }}
         user_name: 'github-actions[bot]'
