@@ -9,10 +9,10 @@
     "d": "hexo deploy"
   },
   "hexo": {
-    "version": "5.3.0"
+    "version": "5.4.0"
   },
   "dependencies": {
-    "hexo": "^5.3.0",
+    "hexo": "^5.4.0",
     "hexo-all-minifier": "^0.5.5",
     "hexo-autonofollow": "^1.0.1",
     "hexo-deployer-git": "^3.0.0",
