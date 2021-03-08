@@ -15,7 +15,7 @@ utterances:
 以图片标签为例，使用空格分隔开之后得到一个数组，如果图片描述文字中有空格，多分出来的这些「参数」被合并到最后一个「非键值对参数」中，什么是「非键值对参数」呢？举个例子您就明白了：
 
 ```
-{% image https://7.dusays.com/2021/02/15/183e71e0ad995.jpg 来自印度的 Rohit Vohra 使用 iPhone 12 Pro Max 拍摄。 download:https://www.apple.com.cn/newsroom/images/product/iphone/lifestyle/Apple_ShotoniPhone-rohit_vohra_12172020.zip %}
+{% image https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/photos/183e71e0ad995.jpg 来自印度的 Rohit Vohra 使用 iPhone 12 Pro Max 拍摄。 download:https://www.apple.com.cn/newsroom/images/product/iphone/lifestyle/Apple_ShotoniPhone-rohit_vohra_12172020.zip %}
 ```
 
 这个例子中，`download:https://xxxx` 是有冒号分隔开的，`download` 为键，后面的网址为值，所以叫做「键值对参数」；与此相对的，没有冒号分隔的就叫做「非键值对参数」。键值对参数可以放在任何位置，我可以通过匹配键来解析，而非键值对参数则只能通过顺序解析，所以它们必须和文档中要求的前后顺序一致。
@@ -50,26 +50,26 @@ utterances:
 
 无论在什么宽度的设备上都希望横向铺满的图片，一般不需要额外操作。可以在链接后面写上图片描述，如有必要，可以通过设置 `download:true` 使其显示一个「下载」按钮链接指向图片地址，如果下载链接与显示的图片地址不同，可以 `download:下载链接` 来使其能够下载原图。
 
-{% image https://7.dusays.com/2021/02/15/183e71e0ad995.jpg 来自印度的 Rohit Vohra 使用 iPhone 12 Pro Max 拍摄。 download:https://www.apple.com.cn/newsroom/images/product/iphone/lifestyle/Apple_ShotoniPhone-rohit_vohra_12172020.zip %}
-{% image https://7.dusays.com/2021/02/16/bc7bda18328da.jpg 来自澳大利亚的 Pieter de Vries 使用 iPhone 12 Pro Max 拍摄。 download:https://www.apple.com.cn/newsroom/images/product/iphone/lifestyle/Apple_ShotoniPhone_pieter_de_vries_011221.zip %}
+{% image https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/photos/183e71e0ad995.jpg 来自印度的 Rohit Vohra 使用 iPhone 12 Pro Max 拍摄。 download:https://www.apple.com.cn/newsroom/images/product/iphone/lifestyle/Apple_ShotoniPhone-rohit_vohra_12172020.zip %}
+{% image https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/photos/bc7bda18328da.jpg 来自澳大利亚的 Pieter de Vries 使用 iPhone 12 Pro Max 拍摄。 download:https://www.apple.com.cn/newsroom/images/product/iphone/lifestyle/Apple_ShotoniPhone_pieter_de_vries_011221.zip %}
 
 ```md 写法如下
-{% image https://7.dusays.com/2021/02/15/183e71e0ad995.jpg 来自印度的 Rohit Vohra 使用 iPhone 12 Pro Max 拍摄。 download:https://www.apple.com.cn/newsroom/images/product/iphone/lifestyle/Apple_ShotoniPhone-rohit_vohra_12172020.zip %}
-{% image https://7.dusays.com/2021/02/16/bc7bda18328da.jpg 来自澳大利亚的 Pieter de Vries 使用 iPhone 12 Pro Max 拍摄。 download:https://www.apple.com.cn/newsroom/images/product/iphone/lifestyle/Apple_ShotoniPhone_pieter_de_vries_011221.zip %}
+{% image https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/photos/183e71e0ad995.jpg 来自印度的 Rohit Vohra 使用 iPhone 12 Pro Max 拍摄。 download:https://www.apple.com.cn/newsroom/images/product/iphone/lifestyle/Apple_ShotoniPhone-rohit_vohra_12172020.zip %}
+{% image https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/photos/bc7bda18328da.jpg 来自澳大利亚的 Pieter de Vries 使用 iPhone 12 Pro Max 拍摄。 download:https://www.apple.com.cn/newsroom/images/product/iphone/lifestyle/Apple_ShotoniPhone_pieter_de_vries_011221.zip %}
 ```
 
 ### 小尺寸图片优化
 
 宽度较小而高度较大的图片，可以设置宽、高、填充间距、背景色等对其布局进行优化，使得它在不同宽度的屏幕下都能获得不错的视觉体验：
 
-{% image https://7.dusays.com/2021/02/27/b247f4acfb64d.png width:200px padding:16px bg:white %}
+{% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/mirror/apple/documentation/watchkit/06d45110-1dd7-49a4-a413-9f5159ecdd0e.png width:200px padding:16px bg:white %}
 
 ```md 写法如下
-{% image https://7.dusays.com/2021/02/27/b247f4acfb64d.png width:200px padding:16px bg:white %}
+{% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/mirror/apple/documentation/watchkit/06d45110-1dd7-49a4-a413-9f5159ecdd0e.png width:200px padding:16px bg:white %}
 ```
 
 {% folding 如果不进行约束，在宽屏设备上阅读体验很糟糕（为不影响阅读体验，已为您折叠过长的内容） %}
-{% image https://7.dusays.com/2021/02/27/b247f4acfb64d.png %}
+{% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/mirror/apple/documentation/watchkit/06d45110-1dd7-49a4-a413-9f5159ecdd0e.png %}
 {% endfolding %}
 
 
@@ -119,12 +119,12 @@ utterances:
 如果备注标签内容不只有文字，请使用 noteblock 代替。
 
 {% noteblock 图文示例 %}
-{% image https://7.dusays.com/2021/02/17/3de2cb218682d.webp 公司一般都会强制安装安防软件，这些软件要求开机自启动，要求有屏幕录制权限、完全的磁盘访问权限包括相册图库。因此如果使用自己的 MacBook 作为办公设备，必须要把生活区和工作区完全独立开，安装在两个磁盘分区，并且对磁盘分区进行加密。 download:true %}
+{% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0627a@2x.jpg 公司一般都会强制安装安防软件，这些软件要求开机自启动，要求有屏幕录制权限、完全的磁盘访问权限包括相册图库。因此如果使用自己的 MacBook 作为办公设备，必须要把生活区和工作区完全独立开，安装在两个磁盘分区，并且对磁盘分区进行加密。 download:true %}
 {% endnoteblock %}
 
 ```md 写法如下
 {% noteblock 图文示例 %}
-{% image https://7.dusays.com/2021/02/17/3de2cb218682d.webp 公司一般都会强制安装安防软件，这些软件要求开机自启动，要求有屏幕录制权限、完全的磁盘访问权限包括相册图库。因此如果使用自己的 MacBook 作为办公设备，必须要把生活区和工作区完全独立开，安装在两个磁盘分区，并且对磁盘分区进行加密。 download:true %}
+{% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0627a@2x.jpg 公司一般都会强制安装安防软件，这些软件要求开机自启动，要求有屏幕录制权限、完全的磁盘访问权限包括相册图库。因此如果使用自己的 MacBook 作为办公设备，必须要把生活区和工作区完全独立开，安装在两个磁盘分区，并且对磁盘分区进行加密。 download:true %}
 {% endnoteblock %}
 ```
 
@@ -160,18 +160,18 @@ checked: true/false
 color: red/orange/yellow/green/cyan/blue/purple
 ```
 
-{% checkbox color:green checked:true 复选框还额外支持三种符号 %}
-
-```yaml
-symbol: plus/minus/times
-```
-
 ### 单选框样式标签
 
 {% radio 没有勾选的单选框 %}
 {% radio checked:true 已勾选的单选框 %}
 
 ### 复选框样式标签
+
+复选框还额外支持三种符号：
+
+```yaml
+symbol: plus/minus/times
+```
 
 {% checkbox 普通的没有勾选的复选框 %}
 {% checkbox checked:true 普通的已勾选的复选框 %}
@@ -316,9 +316,9 @@ group3:
 方便在关于页面显示一段图文信息：
 
 ```
-{% about avatar:https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png height:80px %}
+{% about avatar:https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/avatar/rect-256@2x.png height:80px %}
 
-<img height="32px" alt="XAOXUU" src="https://7.dusays.com/2021/02/19/a2f9f7aa8c379.png">
+<img height="32px" alt="XAOXUU" src="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/logo/180x30@2x.png">
 
 **如果宇宙中真有什么终极的逻辑，那就是我们终有一天会在舰桥上重逢，直到生命终结。**
 
@@ -331,13 +331,38 @@ XAOXUU 目前是一个 iOS 开发者，代表作品有：ProHUD、ValueX 等。�
 
 ## 设备框架标签
 
-{% frame iphone11 img:https://7.dusays.com/2021/03/03/fd3b9a04a1aec.jpg video:https://7.dusays.com/2021/03/03/d99233d054526.mov focus:top %}
+{% frame iphone11 img:https://cdn.jsdelivr.net/gh/cdn-x/wiki/prohud/docs/toast-loading@2x.jpg video:https://cdn.jsdelivr.net/gh/cdn-x/wiki/prohud/docs/toast-loading@2x.mov focus:top %}
 
 ```md 示例写法
-{% frame iphone11 img:https://7.dusays.com/2021/03/03/fd3b9a04a1aec.jpg video:https://7.dusays.com/2021/03/03/d99233d054526.mov focus:top %}
+{% frame iphone11 img:https://cdn.jsdelivr.net/gh/cdn-x/wiki/prohud/docs/toast-loading@2x.jpg video:https://cdn.jsdelivr.net/gh/cdn-x/wiki/prohud/docs/toast-loading@2x.mov focus:top %}
 ```
 
 目前仅支持 iphone11 如果您有 iPhone12、iPad、Mac 等设备模型的 svg 图片，可以发给我进行适配。
+
+## 分栏标签
+
+这个标签移植自 [NexT](https://theme-next.js.org/docs/tag-plugins/tabs.html) 主题，但做了以下修改：
+
+- 设置默认激活的标签方式为「`active:1`」而非「`, 1`」（这样符合默认规则）
+- 支持设置 `codeblock:true` 进行代码块布局优化（删除多余的间距）
+- 不支持 `@icon` 方式设置图标
+
+{% tabs Fourth unique name active:2 %}
+<!-- tab Solution 1 -->
+This is Tab 1.
+<!-- endtab -->
+
+<!-- tab codeblock:true 代码块测试 -->
+```swift
+let x = 123
+print("hello world")
+```
+<!-- endtab -->
+
+<!-- tab Solution 3 -->
+This is Tab 3.
+<!-- endtab -->
+{% endtabs %}
 
 ## 轮播标签
 
@@ -346,45 +371,45 @@ XAOXUU 目前是一个 iOS 开发者，代表作品有：ProHUD、ValueX 等。�
 ### 最大图片宽度
 
 {% swiper width:max %}
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot11.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot12.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot13.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot11.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot12.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot13.png)
 {% endswiper %}
 
 ```md 写法如下
 {% swiper width:max %}
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot11.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot12.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot13.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot11.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot12.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot13.png)
 {% endswiper %}
 ```
 
 ### 最小图片宽度
 
 {% swiper width:min %}
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot01.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot02.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot03.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot04.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot05.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot06.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot07.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot08.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot09.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot10.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot01.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot02.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot03.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot04.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot05.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot06.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot07.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot08.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot09.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot10.png)
 {% endswiper %}
 
 ```md 写法如下
 {% swiper width:min %}
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot01.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot02.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot03.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot04.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot05.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot06.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot07.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot08.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot09.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot10.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot01.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot02.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot03.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot04.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot05.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot06.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot07.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot08.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot09.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot10.png)
 {% endswiper %}
 ```

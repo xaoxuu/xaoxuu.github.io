@@ -6,7 +6,7 @@ seo_title: 为什么选择 ProHUD
 title: 为什么选择 ProHUD
 cover: true
 logo:
-  src: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/icon.png
+  src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/icon.png
   small: 64px
   large: 80px
 description: 这是一个易于上手而又功能强大的综合型 HUD 库，包含通知横幅、弹窗和操作表。使用 ProHUD 能够轻松管理多个 HUD 实例、更新数据或避免重叠。您还可以完全定制 UI 样式以满足业务要求。
@@ -22,7 +22,7 @@ Toast.push(title: "Hello World", message: "This is a test message from ProHUD.")
 ```
 
 
-{% frame iphone11 img:https://7.dusays.com/2021/03/03/993c1098e3504.jpg focus:top %}
+{% frame iphone11 img:https://cdn.jsdelivr.net/gh/cdn-x/wiki/prohud/docs/toast-helloword@2x.jpg focus:top %}
 
 您可能好奇上方的图标从何而来，别着急，后面的「场景及其扩展」章节将会告诉您如何自定义一个实例的默认效果。
 
@@ -36,22 +36,22 @@ ProHUD 对每个实例记录 ID ，您只需要知道它的 ID 就可以随时�
 在程序初始化时配置样式，调用的地方只需要专注于业务逻辑。ProHUD 提供了「场景」模板特性，可以更加统一高效地规划这些控件的样式。ProHUD 的 UI 与逻辑分离，这就意味着您可以自由的在 ProHUD 容器中设计您的 UI 样式而无需处理控件逻辑问题。如果您不打算重新设计 UI ，使用默认提供的样式也可以轻松调整字体、颜色、边距等细节，新增「场景」模板。
 
 {% swiper width:min %}
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot01.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot02.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot03.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot04.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot05.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot06.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot07.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot08.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot09.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot10.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot01.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot02.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot03.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot04.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot05.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot06.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot07.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot08.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot09.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot10.png)
 {% endswiper %}
 
 对横屏也进行了适配：
 
 {% swiper width:max %}
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot11.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot12.png)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot13.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot11.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot12.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot13.png)
 {% endswiper %}

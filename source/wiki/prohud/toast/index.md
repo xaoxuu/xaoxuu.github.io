@@ -8,7 +8,7 @@ title: 通知横幅组件
 
 Toast 是用于顶部通知横幅的组件，它的层级最高，只接受一个点击事件，可以预先对不同的场景配置不同的默认值（图标、持续时间）。当多个 Toast 同时存在时，它们从上往下平铺。
 
-{% frame iphone11 img:https://7.dusays.com/2021/03/03/fd3b9a04a1aec.jpg video:https://7.dusays.com/2021/03/03/d99233d054526.mov focus:top %}
+{% frame iphone11 img:https://cdn.jsdelivr.net/gh/cdn-x/wiki/prohud/docs/toast-loading@2x.jpg video:https://cdn.jsdelivr.net/gh/cdn-x/wiki/prohud/docs/toast-loading@2x.mov focus:top %}
 
 默认提供的场景有：`default, loading, success, warning, error`。
 

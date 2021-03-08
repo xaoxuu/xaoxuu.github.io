@@ -7,12 +7,12 @@ description: 这是一个于2016年完成的毕业设计项目，现已归档，
 ---
 
 {% swiper %}
-<img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/smartlamp/screenshot01.png'>
-<img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/smartlamp/screenshot02.png'>
-<img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/smartlamp/screenshot03.png'>
-<img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/smartlamp/screenshot04.png'>
-<img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/smartlamp/screenshot05.png'>
-<img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/smartlamp/screenshot06.png'>
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/smartlamp/screenshot01.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/smartlamp/screenshot02.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/smartlamp/screenshot03.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/smartlamp/screenshot04.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/smartlamp/screenshot05.png)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/smartlamp/screenshot06.png)
 {% endswiper %}
 
 <!-- more -->

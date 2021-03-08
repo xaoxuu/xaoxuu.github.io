@@ -10,7 +10,7 @@ keywords:
 author: xaoxuu
 language: [zh-CN, en, zh-CN, zh-TW]
 timezone: ''
-avatar: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png
+avatar: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/avatar/rect-256@2x.png
 email: me@xaoxuu.com
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -115,14 +115,14 @@ deploy:
 
 inject:
   head:
-    - <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/cdn-x/favicon/blog/apple-touch-icon.png">
-    - <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/cdn-x/favicon/blog/favicon-32x32.png">
-    - <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/cdn-x/favicon/blog/favicon-16x16.png">
-    - <link rel="manifest" href="https://cdn.jsdelivr.net/gh/cdn-x/favicon/blog/site.webmanifest">
-    - <link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/cdn-x/favicon/blog/safari-pinned-tab.svg" color="#5bbad5">
-    - <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/cdn-x/favicon/blog/favicon.ico">
+    - <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/favicon/apple-touch-icon.png">
+    - <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/favicon/favicon-32x32.png">
+    - <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/favicon/favicon-16x16.png">
+    - <link rel="manifest" href="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/favicon/site.webmanifest">
+    - <link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    - <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/favicon/favicon.ico">
     - <meta name="msapplication-TileColor" content="#2d89ef">
-    - <meta name="msapplication-config" content="https://cdn.jsdelivr.net/gh/cdn-x/favicon/blog/browserconfig.xml">
+    - <meta name="msapplication-config" content="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/favicon/browserconfig.xml">
     - <meta name="theme-color" content="#ffffff">
 
 ########################### Plugins ###########################
@@ -132,13 +132,10 @@ feed:
   path: atom.xml
   limit: false
   content: true
-  icon: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png
+  icon: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/avatar/rect-256@2x.png
   autodiscovery: true
 
 # npm i hexo-related-popular-posts
-popularPosts:
-  eyeCatchImageAttributeName: cover
-
 
 # npm i hexo-neat
 neat_enable: false

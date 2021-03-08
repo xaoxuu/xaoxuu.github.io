@@ -4,7 +4,7 @@ wiki: 'Git 实用教程'
 order: -201901
 title: 认识 Git
 logo:
-  src: https://7.dusays.com/2021/02/22/150a9bf3aac99.svg
+  src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/git/icon.svg
   small: 72px
 description: Git 是目前世界上最先进的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。
 references:
@@ -28,7 +28,7 @@ Git 是目前世界上最先进的分布式版本控制系统，用于敏捷高�
 4. Git 没有一个全局的版本号，而 SVN 有。目前为止这是跟 SVN 相比 Git 缺少的最大的一个特征。
 5. Git 的内容完整性要优于 SVN。Git 的内容存储使用的是 SHA-1 哈希算法。这能确保代码内容的完整性，确保在遇到磁盘故障和网络问题时降低对版本库的破坏。
 
-{% image https://7.dusays.com/2021/02/22/7cbe6d83a285c.jpg width:400px 图片来源于 RUNOOB  %}
+{% image https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/git/svn-git.jpg width:400px 图片来源于 RUNOOB  %}
 
 ## Git 工作区、暂存区和版本库
 

@@ -4,18 +4,18 @@ mac:
   items:
     - title: MacWk
       url: https://macwk.com/
-      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/mac/macwk-screenshot.jpg
-      avatar: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/mac/macwk-icon.png
+      screenshot: https://cdn.jsdelivr.net/gh/cdn-x/bookmark/mac/macwk-screenshot.jpg
+      avatar: https://cdn.jsdelivr.net/gh/cdn-x/bookmark/mac/macwk-icon.png
       description: 精品mac软件下载
     - title: MacBL
       url: https://www.macbl.com
-      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/mac/macbl-screenshot.jpg
-      avatar: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/mac/macbl-icon.png
+      screenshot: https://cdn.jsdelivr.net/gh/cdn-x/bookmark/mac/macbl-screenshot.jpg
+      avatar: https://cdn.jsdelivr.net/gh/cdn-x/bookmark/mac/macbl-icon.png
       description: 马可菠萝 - 分享你喜欢的MAC应用
     - title: Xclient
       url: https://xclient.info
-      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/mac/xclient-screenshot.jpg
-      avatar: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/mac/xclient-icon.png
+      screenshot: https://cdn.jsdelivr.net/gh/cdn-x/bookmark/mac/xclient-screenshot.jpg
+      avatar: https://cdn.jsdelivr.net/gh/cdn-x/bookmark/mac/xclient-icon.png
       description: 精品MAC应用分享
 
 ios:
@@ -24,22 +24,22 @@ ios:
   items:
     - title: OneV's Den
       url: https://onevcat.com/#blog
-      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/dev/onevcat-screenshot.jpg
-      avatar: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/dev/onevcat-icon.jpg
+      screenshot: https://cdn.jsdelivr.net/gh/cdn-x/bookmark/developer/onevcat-screenshot.jpg
+      avatar: https://cdn.jsdelivr.net/gh/cdn-x/bookmark/developer/onevcat-icon.jpg
       description: 上善若水，人淡如菊
     - title: 曾静的博客
       url: https://blog.devzeng.com/#blog
-      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/dev/devzeng-screenshot.jpg
-      avatar: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/dev/devzeng-icon.jpg
+      screenshot: https://cdn.jsdelivr.net/gh/cdn-x/bookmark/developer/devzeng-screenshot.jpg
+      avatar: https://cdn.jsdelivr.net/gh/cdn-x/bookmark/developer/devzeng-icon.jpg
       description: 但行好事，莫问前程
     - title: 唐巧的博客
       url: http://blog.devtang.com
-      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/dev/devtang-screenshot.jpg
-      avatar: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/dev/devtang-icon.jpg
+      screenshot: https://cdn.jsdelivr.net/gh/cdn-x/bookmark/developer/devtang-screenshot.jpg
+      avatar: https://cdn.jsdelivr.net/gh/cdn-x/bookmark/developer/devtang-icon.jpg
       description: 记录下自己学习的点滴
     - title: ibireme
       url: https://blog.ibireme.com
-      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/dev/ibireme-screenshot.jpg
+      screenshot: https://cdn.jsdelivr.net/gh/cdn-x/bookmark/developer/ibireme-screenshot.jpg
       avatar:
       description: 伽蓝之堂 —— 一只魔法师的工坊
 
@@ -49,47 +49,47 @@ design:
   items:
     - title: Unsplash
       url: https://unsplash.com
-      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/design/unsplash-screenshot.jpg
-      avatar: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/design/unsplash-icon.png
+      screenshot: https://cdn.jsdelivr.net/gh/cdn-x/bookmark/design/unsplash-screenshot.jpg
+      avatar: https://cdn.jsdelivr.net/gh/cdn-x/bookmark/design/unsplash-icon.png
       description: Photos for everyone.
     - title: Dribbble
       url: https://dribbble.com
-      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/design/dribbble-screenshot.jpg
-      avatar: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/design/dribbble-icon.png
+      screenshot: https://cdn.jsdelivr.net/gh/cdn-x/bookmark/design/dribbble-screenshot.jpg
+      avatar: https://cdn.jsdelivr.net/gh/cdn-x/bookmark/design/dribbble-icon.png
       description: Discover the world’s top designers & creatives.
     - title: Flaticon
       url: https://www.flaticon.com
-      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/design/flaticon-screenshot.jpg
-      avatar: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/design/flaticon-icon.png
+      screenshot: https://cdn.jsdelivr.net/gh/cdn-x/bookmark/design/flaticon-screenshot.jpg
+      avatar: https://cdn.jsdelivr.net/gh/cdn-x/bookmark/design/flaticon-icon.png
       description: Access 3,260,000 vector icons.
     - title: 创造狮导航
       url: http://chuangzaoshi.com
-      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/design/chuangzaoshi-screenshot.jpg
-      avatar: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/design/chuangzaoshi-icon.png
+      screenshot: https://cdn.jsdelivr.net/gh/cdn-x/bookmark/design/chuangzaoshi-screenshot.jpg
+      avatar: https://cdn.jsdelivr.net/gh/cdn-x/bookmark/design/chuangzaoshi-icon.png
       description: Discover the world’s top designers & creatives.
     - title: Pinterest
       url: https://www.pinterest.com
-      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/design/pinterest-screenshot.jpg
-      avatar: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/design/pinterest-icon.png
+      screenshot: https://cdn.jsdelivr.net/gh/cdn-x/bookmark/design/pinterest-screenshot.jpg
+      avatar: https://cdn.jsdelivr.net/gh/cdn-x/bookmark/design/pinterest-icon.png
       description: 寻找值得尝试的新点子
     - title: Iconfont
       url: https://www.iconfont.cn
-      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/design/iconfont-screenshot.jpg
+      screenshot: https://cdn.jsdelivr.net/gh/cdn-x/bookmark/design/iconfont-screenshot.jpg
       avatar:
       description: 阿里巴巴矢量图标库
     - title: WallpaperAccess
       url: https://wallpaperaccess.com
-      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/design/wallpaperaccess-screenshot.jpg
+      screenshot: https://cdn.jsdelivr.net/gh/cdn-x/bookmark/design/wallpaperaccess-screenshot.jpg
       avatar:
       description: Access to Thousands of Wallpapers.
     - title: Material Palette
       url: https://www.materialpalette.com
-      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/design/materialpalette-screenshot.jpg
+      screenshot: https://cdn.jsdelivr.net/gh/cdn-x/bookmark/design/materialpalette-screenshot.jpg
       avatar:
       description: Material Design Color Palette Generator.
     - title: 设计师网址导航
       url: http://hao.uisdc.com
-      screenshot: https://gitee.com/xaoxuu/cdn-assets/raw/master/bookmark/design/uisdc-screenshot.jpg
+      screenshot: https://cdn.jsdelivr.net/gh/cdn-x/bookmark/design/uisdc-screenshot.jpg
       avatar:
       description: 优设导航 - 学设计从这里开始！
 

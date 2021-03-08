@@ -9,7 +9,7 @@ title: 操作表组件
 
 Guard 是一个操作表控件，如同守卫一样，它可以用于某些功能或者页面的准入判断，与弹窗不同的是，它更容易返回，可以放置更多丰富的组件。典型的应用场景是：升级至专业版、阅读隐私协议等。
 
-{% frame iphone11 img:https://7.dusays.com/2021/03/03/3d82098dbc8cb.jpg focus:bottom %}
+{% frame iphone11 img:https://cdn.jsdelivr.net/gh/cdn-x/wiki/prohud/docs/guard-upgrade@2x.jpg focus:bottom %}
 
 ## 简单的例子
 

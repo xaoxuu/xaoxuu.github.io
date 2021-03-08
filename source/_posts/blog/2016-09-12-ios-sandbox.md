@@ -4,7 +4,7 @@ updated: 2016-10-20
 title: ObjC 使用链式语法更优雅地管理沙盒文件
 categories: [设计开发]
 tags: [iOS, 链式语法, 沙盒, 缓存]
-cover: https://7.dusays.com/2021/02/28/84f1432dd039e.svg
+cover: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.1/blog/2016-0912a@1x.svg
 ---
 
 假如你需要把一个字典或者别的什么东西保存到沙盒里，你准备怎么做？也许你已经条件反射的想到了操作步骤……其实，你可以不必每次都那么老老实实的把每一步写出来，一行代码就可以了：【路径+保存文件】两个关键点，组成一条链式语法。

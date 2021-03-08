@@ -7,8 +7,8 @@ order: 1
 
 ## 安装
 
-### Lunix
-
+{% tabs install %}
+<!-- tab Lunix -->
 {% link https://git-scm.com/download/linux 下载地址 %}
 
 安装指定系统的依赖包：
@@ -58,20 +58,22 @@ git version 1.7.1
 ```
 
 {% endfolding %}
+<!-- endtab -->
 
-### Windows
-
+<!-- tab Windows -->
 {% link https://gitforwindows.org/ 下载地址 %}
 
 完成安装之后，就可以使用命令行的 git 工具（已经自带了 ssh 客户端）了，另外还有一个图形界面的 Git 项目管理工具。
 
 在开始菜单里找到 <kbd>Git</kbd> -> <kbd>Git Bash</kbd>，会弹出 Git 命令窗口，你可以在该窗口进行 Git 操作。
+<!-- endtab -->
 
-### Mac
-
+<!-- tab Mac -->
 {% link https://git-scm.com/download/mac 下载地址 %}
 
 Mac 自带 git 并且随着系统版本的更新，自带的 git 也会升级到最新，一般无需手动安装。
+<!-- endtab -->
+{% endtabs %}
 
 ## 配置
 
@@ -109,7 +111,7 @@ ssh-keygen -t rsa -C user@example.com
 
 其中 `user@example.com` 对应的是你的 Git 邮箱。
 
-{% image https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/2017/IMG_0350.PNG width:400px %}
+{% image https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/git/ssh-keys1.png width:400px %}
 
 
 ssh-agent 是一种控制用来保存公钥身份验证所使用的私钥的程序，其实 ssh-agent 就是一个密钥管理器，运行 ssh-agent 以后，使用 ssh-add 将私钥交给 ssh-agent 保管，其他程序需要身份验证的时候可以将验证申请交给 ssh-agent 来完成整个认证过程。
@@ -123,13 +125,13 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 ```
 
-{% image https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/2017/bba84f3e2157ac5d14e95984ee166bfa070d51.jpg width:400px %}
+{% image https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/git/ssh-keys2.jpg width:400px %}
 
 登陆 Github，添加 ssh：
 
-{% image https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/2017/2dfefdc461170ca0c29c5be54b6cacd4567b7d.jpg width:400px %}
+{% image https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/git/ssh-keys3.jpg width:400px %}
 
 
 把 id_rsa.pub 文件里的内容复制到这里：
 
-{% image https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/2017/406996dc0de53b8e866cf56e8cc2f92772c318.jpg width:400px %}
+{% image https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/git/ssh-keys4.jpg width:400px %}

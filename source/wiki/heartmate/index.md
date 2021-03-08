@@ -6,7 +6,7 @@ title: 心率管家
 h1: 心率管家：一个简单易用的掌上心率计
 cover: true
 logo:
-  src: https://7.dusays.com/2021/02/22/d0b704d042fe3.svg
+  src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/icon.svg
   small: 84px
   large: 180px
 description: 一个简单易用的掌上心率计，专为那些没有智能手环或手表却需要测量心率的用户而设计，可以方便快捷的测量和记录心率。
@@ -20,12 +20,12 @@ references:
 <!-- more -->
 
 {% swiper width:min %}
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/heartmate/screenshot01.jpg)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/heartmate/screenshot02.jpg)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/heartmate/screenshot03.jpg)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/heartmate/screenshot04.jpg)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/heartmate/screenshot05.jpg)
-![](https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/heartmate/screenshot06.jpg)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot01.jpg)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot02.jpg)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot03.jpg)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot04.jpg)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot05.jpg)
+![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot06.jpg)
 {% endswiper %}
 
 <br>
@@ -42,7 +42,7 @@ references:
 
 ## 如何测量
 
-{% frame iphone11 img:https://7.dusays.com/2020/09/28/baa33914a34ec.jpg video:https://7.dusays.com/2020/09/28/39db723f1e200.mp4 focus:top %}
+{% frame iphone11 img:https://cdn.jsdelivr.net/gh/cdn-x/wiki/heartmate/docs/usage01.jpg video:https://cdn.jsdelivr.net/gh/cdn-x/wiki/heartmate/docs/usage01.mp4 focus:top %}
 
 ### 第一步，调整位置
 
@@ -67,7 +67,7 @@ references:
 
 ![](https://7.dusays.com/2021/02/26/24622fa8268f1.jpg)
 
-付费真不是为了赚钱，是为了骗应用推荐类网站的爬虫给我做推广，同时这样也减少了免费时的莫名其妙的大量差评。已经高价购买的用户实在是抱歉，我的其它 App 也会采用类似的定价策略，所以请多多关注我的博客，能省下不少钱呢。<img class='inline' style='height:20px' src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/valine/tieba/tieba-4.png">
+付费真不是为了赚钱，是为了骗应用推荐类网站的爬虫给我做推广，同时这样也减少了免费时的莫名其妙的大量差评。已经高价购买的用户实在是抱歉，我的其它 App 也会采用类似的定价策略，所以请多多关注我的博客，能省下不少钱呢。
 
 
 ## 安装测试版

@@ -11,9 +11,9 @@ breadcrumb: false
 header: false
 ---
 
-{% about avatar:https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png height:80px %}
+{% about avatar:https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/avatar/rect-256@2x.png height:80px %}
 
-<img height="32px" alt="XAOXUU" src="https://7.dusays.com/2021/02/19/a2f9f7aa8c379.png">
+<img height="32px" alt="XAOXUU" src="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/logo/180x30@2x.png">
 
 **如果宇宙中真有什么终极的逻辑，那就是我们终有一天会在舰桥上重逢，直到生命终结。**
 

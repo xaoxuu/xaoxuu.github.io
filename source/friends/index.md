@@ -46,7 +46,7 @@ header: false
 
 ```yaml
 title: xaoxuu
-avatar: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png
+avatar: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/avatar/rect-256@2x.png
 url: https://xaoxuu.com
 screenshot: https://i.loli.net/2020/08/21/VuSwWZ1xAeUHEBC.jpg
 ```

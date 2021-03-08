@@ -12,7 +12,7 @@ Alert 是用于弹窗的组件，可以预先对不同的场景配置不同的�
 
 ### 写法1（缩放）
 
-{% frame iphone11 video:https://7.dusays.com/2020/09/28/434b2dc17f914.mp4 %}
+{% frame iphone11 video:https://cdn.jsdelivr.net/gh/cdn-x/wiki/prohud/docs/alert01.mp4 %}
 
 ```swift
 Alert.push(title: "正在同步")
@@ -42,7 +42,7 @@ static var sync2: ProHUD.Scene {
 
 ### 写法2（缩放展开）
 
-{% frame iphone11 video:https://7.dusays.com/2020/09/28/ff48abb74af6f.mp4 %}
+{% frame iphone11 video:https://cdn.jsdelivr.net/gh/cdn-x/wiki/prohud/docs/alert02.mp4 %}
 
 ```swift
 Alert.push("loading", scene: .sync2)

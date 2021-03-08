@@ -4,7 +4,7 @@ wiki: vim-cn.sh
 title: 一个快速批量上传图片的脚本
 cover: true
 logo:
-  src: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/vim-cn.sh/e463788b9eb82f82b551d8da1cd4cbae9d64cb.png
+  src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/vim-cn.sh/screenshot.png
 description: img.vim-cn.com 是一个十分干净好用的图床站点。
 ---
 

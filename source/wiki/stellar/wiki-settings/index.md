@@ -47,12 +47,15 @@ description: 这是一个全新的主题，拥有精心设计的样式和强大�
 
 ### 是否显示封面
 
-项目可以一个全屏封面，封面占据一个屏幕的高度，会剧中依次显示项目的 logo、标题、描述。开启项目封面方法如下：
+项目可以显示一个全屏封面，封面占据一个屏幕的高度，会居中依次显示项目的 logo、标题、描述。开启项目封面方法如下：
 
 ```yaml blog/source/wiki/stellar/index.md
 ---
 cover: true
-logo: 100px https://7.dusays.com/2021/02/16/5195815ea2055.svg
+logo:
+  src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg
+  small: 120px
+  large: 240px
 ---
 ```
 
@@ -61,11 +64,8 @@ logo: 100px https://7.dusays.com/2021/02/16/5195815ea2055.svg
 ```yaml blog/source/wiki/stellar/index.md
 ---
 cover: [logo, description]
-logo: 100px https://7.dusays.com/2021/02/16/5195815ea2055.svg
 ---
 ```
-
-{% note color:green 小技巧 为了优化显示效果，建议像上例一样指定图片的高度，高度用 `px` 为单位，和链接之间用空格隔开。 %}
 
 ## 项目文档排序
 

@@ -15,16 +15,8 @@ utterances:
 ```yaml blog/source/xxx.md
 ---
 title: 如何使用手机摄像头测量心率
-cover: https://7.dusays.com/2021/02/17/a571e3981f0b2.svg
+cover: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0927a@1x.svg
 ---
-```
-
-如果您安装了「相关文章推荐」插件，则需要在根目录配置文件中添加以下设置才能在「相关文章推荐」模块正确的显示文章封面：
-
-```yaml blog/_config.yml
-# npm i hexo-related-popular-posts
-popularPosts:
-  eyeCatchImageAttributeName: cover
 ```
 
 ## 文章摘要
@@ -34,7 +26,7 @@ popularPosts:
 ```yaml blog/source/xxx.md
 ---
 title: 如何使用手机摄像头测量心率
-cover: https://7.dusays.com/2021/02/17/a571e3981f0b2.svg
+cover: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0927a@1x.svg
 ---
 
 在心率管家默默无闻地上线了一年多之后，现在终于打算来好好聊聊关于手机摄像头测量心率的那些事。本文参考了很多前辈的文章，将在文末列出。

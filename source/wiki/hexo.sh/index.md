@@ -6,7 +6,7 @@ h1: 开始使用
 description: 此脚本可以很方便执行各种 hexo 命令，开启后会一直保持会话，随时输入简短的命令去执行一系列操作，提高效率。
 cover: true
 logo:
-  src: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/hexo.sh/e14f6ecb16deb21e894e78c9ccc46729854394.png
+  src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/hexo.sh/screenshot.png
 ---
 
 
