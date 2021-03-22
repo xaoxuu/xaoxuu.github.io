@@ -29,20 +29,9 @@ XAOXUU 目前是一个 iOS 开发者，代表作品有：ProHUD、ValueX 等。�
 
 {% timeline %}
 
-{% timenode 新主题开发 %}
-
-代号「Project Atom」的新主题已经完成设计和部分框架，预计过年期间开始恢复开发，年后一个月内发布公测版。公测版包含：
-
-- 确定的主题名称
-- 同步发布至 `HexoThemes`、`npm`
-- 页面：主页、文章页面、索引页面（归档+分类+标签）、项目页面（wiki）
-- 功能：目录树、至少一款评论插件、5个左右常用的标签插件
-
-{% endtimenode %}
-
 {% timenode Volantis 5.0 %}
 
-预计仓库 Star 数量达到 1k 且新主题发布公测版之后开始开发，计划更新内容及其进度在 [Projects](https://github.com/volantis-x/hexo-theme-volantis/projects/4) 中已经列出。
+更新内容及其进度在 [Projects](https://github.com/volantis-x/hexo-theme-volantis/projects/4) 中已经列出。
 
 {% endtimenode %}
 
