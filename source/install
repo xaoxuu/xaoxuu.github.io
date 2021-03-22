@@ -16,10 +16,10 @@ function on_fail() {
 
 function start() {
 	if [ "$VERSION" == "" ];then
-		VERSION='master'
+		VERSION='latest'
 	fi
 	printf '\n> 正在请求下载%s@%s...\n' ${NAME} ${VERSION}
-	curl -s https://cdn.jsdelivr.net/gh/xaoxuu/${NAME}@${VERSION}/install | sh -s ${VERSION} ${P3} ${P4} || on_fail
+	curl -s https://cdn.jsdelivr.net/gh/xaoxuu/${NAME}@latest/install | sh -s ${VERSION} ${P3} ${P4} || on_fail
 }
 
 function check_param() {
