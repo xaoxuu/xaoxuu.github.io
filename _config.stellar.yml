@@ -22,7 +22,7 @@ article:
     enable: true
 
 comments:
-  service: utterances # utterances
+  service: utterances
   utterances:
     repo: xaoxuu/blog-comments
 
