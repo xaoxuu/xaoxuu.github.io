@@ -96,8 +96,6 @@ git submodule add https://github.com/#yourname#/hexo-theme-stellar.git themes/st
 
 ## Todo
 
-截至目前（2021年2月21日更新），Stellar 仍处于公测阶段，部分功能还未开发完毕，在日程表前面的计划如下：
-
 {% checkbox 搜索 %}
 {% checkbox 横向滚动的 gallery 标签 %}
 {% checkbox 支持 fancybox 的 gallery 标签 %}
