@@ -6,7 +6,7 @@ title: 一个简约的在线简历主题
 cover: true
 logo:
   src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/resume/icon.svg
-  small: 78px
+  small: 96px
   large: 180px
 description: 一个干净简约的商务风轻量级在线简历主题。
 ---

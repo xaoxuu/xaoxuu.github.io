@@ -7,8 +7,8 @@ title: 为什么选择 ProHUD
 cover: true
 logo:
   src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/icon.png
-  small: 64px
-  large: 80px
+  small: 84px
+  large: 120px
 description: 这是一个易于上手而又功能强大的综合型 HUD 库，包含通知横幅、弹窗和操作表。使用 ProHUD 能够轻松管理多个 HUD 实例、更新数据或避免重叠。您还可以完全定制 UI 样式以满足业务要求。
 ---
 

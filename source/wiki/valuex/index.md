@@ -5,8 +5,8 @@ order: -201907
 title: 实用的ObjC安全对象类型转换库
 logo:
   src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/valuex/icon.png
-  small: 64px
-  large: 80px
+  small: 84px
+  large: 120px
 description: 这是一个实用的 ObjC 安全对象类型转换库，可以在 String、Number、Array、Set、Dictionary、Data 之间快速转换，提高开发效率。
 ---
 

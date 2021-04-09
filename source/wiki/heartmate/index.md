@@ -7,8 +7,8 @@ h1: 心率管家：一个简单易用的掌上心率计
 cover: true
 logo:
   src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/icon.svg
-  small: 84px
-  large: 180px
+  small: 110px
+  large: 128px
 description: 一个简单易用的掌上心率计，专为那些没有智能手环或手表却需要测量心率的用户而设计，可以方便快捷的测量和记录心率。
 references:
   - title: 心率管家 App 的设计与开发流程
