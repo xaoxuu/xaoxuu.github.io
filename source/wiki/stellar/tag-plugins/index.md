@@ -88,18 +88,18 @@ utterances:
 
 {% folding 更多颜色 %}
 
-{% note color:red 一共支持10种颜色，可以满足几乎所有的需求了。 color 可设置 red、orange、yellow、green、cyan、blue、purple、white、dark 9种值。 %}
-{% note color:orange 一共支持10种颜色，可以满足几乎所有的需求了。 color 可设置 red、orange、yellow、green、cyan、blue、purple、white、dark 9种值。 %}
-{% note color:yellow 一共支持10种颜色，可以满足几乎所有的需求了。 color 可设置 red、orange、yellow、green、cyan、blue、purple、white、dark 9种值。 %}
-{% note color:green 一共支持10种颜色，可以满足几乎所有的需求了。 color 可设置 red、orange、yellow、green、cyan、blue、purple、white、dark 9种值。 %}
-{% note color:cyan 一共支持10种颜色，可以满足几乎所有的需求了。 color 可设置 red、orange、yellow、green、cyan、blue、purple、white、dark 9种值。 %}
-{% note color:blue 一共支持10种颜色，可以满足几乎所有的需求了。 color 可设置 red、orange、yellow、green、cyan、blue、purple、white、dark 9种值。 %}
-{% note color:purple 一共支持10种颜色，可以满足几乎所有的需求了。 color 可设置 red、orange、yellow、green、cyan、blue、purple、white、dark 9种值。 %}
-{% note color:white 一共支持10种颜色，可以满足几乎所有的需求了。 color 可设置 red、orange、yellow、green、cyan、blue、purple、white、dark 9种值。 %}
-{% note color:dark 一共支持10种颜色，可以满足几乎所有的需求了。 color 可设置 red、orange、yellow、green、cyan、blue、purple、white、dark 9种值。 %}
+{% note color:red 一共支持10种颜色，可以满足几乎所有的需求了。 color 可设置 red、orange、yellow、green、cyan、blue、purple、light、dark 9种值。 %}
+{% note color:orange 一共支持10种颜色，可以满足几乎所有的需求了。 color 可设置 red、orange、yellow、green、cyan、blue、purple、light、dark 9种值。 %}
+{% note color:yellow 一共支持10种颜色，可以满足几乎所有的需求了。 color 可设置 red、orange、yellow、green、cyan、blue、purple、light、dark 9种值。 %}
+{% note color:green 一共支持10种颜色，可以满足几乎所有的需求了。 color 可设置 red、orange、yellow、green、cyan、blue、purple、light、dark 9种值。 %}
+{% note color:cyan 一共支持10种颜色，可以满足几乎所有的需求了。 color 可设置 red、orange、yellow、green、cyan、blue、purple、light、dark 9种值。 %}
+{% note color:blue 一共支持10种颜色，可以满足几乎所有的需求了。 color 可设置 red、orange、yellow、green、cyan、blue、purple、light、dark 9种值。 %}
+{% note color:purple 一共支持10种颜色，可以满足几乎所有的需求了。 color 可设置 red、orange、yellow、green、cyan、blue、purple、light、dark 9种值。 %}
+{% note color:light 一共支持10种颜色，可以满足几乎所有的需求了。 color 可设置 red、orange、yellow、green、cyan、blue、purple、light、dark 9种值。 %}
+{% note color:dark 一共支持10种颜色，可以满足几乎所有的需求了。 color 可设置 red、orange、yellow、green、cyan、blue、purple、light、dark 9种值。 %}
 
 ```md 写法如下
-{% note color:cyan 一共支持10种颜色，可以满足几乎所有的需求了。 color 可设置 red、orange、yellow、green、cyan、blue、purple、white、dark 9种值。 %}
+{% note color:cyan 一共支持10种颜色，可以满足几乎所有的需求了。 color 可设置 red、orange、yellow、green、cyan、blue、purple、light、dark 9种值。 %}
 ```
 
 {% endfolding %}

@@ -1,8 +1,8 @@
 sidebar:
   menu:
-    post: '[btn.blog](/)'
-    wiki: '[btn.wiki](/wiki/)'
-    notes: '[笔记](/notes/)'
+    post: '[博客](/)'
+    wiki: '[文档](/wiki/)'
+    notes: '[便笺](/notes/)'
     more: '[更多](/about/)'
 
 article:

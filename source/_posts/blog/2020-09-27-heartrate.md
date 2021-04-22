@@ -41,11 +41,11 @@ references:
 
 由于覆盖力度不稳定导致色相会整体偏移因而产生低频噪声，再加原本就存在的高频噪声影响，波形显得很杂乱无章，所以使用带通递归滤波器进行滤波：
 
-![](https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0927c@1x.svg)
+{% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0927c@1x.svg bg:#fff padding:16px %}
 
 公式展开为：
 
-![](https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0927d@1x.svg)
+{% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0927d@1x.svg bg:#fff padding:16px %}
 
 用 Swift 语言实现这个滤波器的算法（10阶）为：
 
