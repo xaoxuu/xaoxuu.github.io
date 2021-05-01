@@ -14,6 +14,16 @@ wiki: Notes
 
 {% endfolding %}
 
+{% folding 清理 Mac 的 DNS 缓存 %}
+
+```
+sudo killall -HUP mDNSResponder
+sudo killall mDNSResponderHelper
+sudo dscacheutil -flushcache
+```
+
+{% endfolding %}
+
 
 {% folding TNT 团队的应用无法使用怎么办？ %}
 
@@ -126,6 +136,32 @@ System Integrity Protection status: enabled.
 {% endtabs %}
 
 {% endfolding %}
+
+
+{% folding 搭载 Intel 芯片的 Mac 启动组合键 %}
+
+- **Command (⌘)-R**：从内建的 macOS 恢复系统启动。或者，您也可以使用 Option-Command-R 或 Shift-Option-Command-R 以通过互联网从 macOS 恢复功能启动。macOS 恢复功能可以安装不同版本的 macOS，具体取决于您在电脑启动时使用的组合键。如果您的 Mac 使用了固件密码，系统将提示您输入这个密码。
+
+- **Option (⌥) 或 Alt**：启动进入“启动管理器”，您可以从中选取其他可用的启动磁盘或宗卷。如果您的 Mac 使用了固件密码，系统将提示您输入这个密码。
+
+- **Option-Command-P-R**：重置 NVRAM 或 PRAM。如果您的 Mac 使用了固件密码，电脑会忽略这个组合键或从 macOS 恢复功能启动。
+
+- **Shift (⇧)** ：以安全模式启动。如果使用了固件密码，这个组合键将被停用。
+
+- **D**：启动进入“Apple 诊断”实用工具。也可以使用 Option-D 通过互联网启动进入这个实用工具。如果使用了固件密码，这个组合键将被停用。
+
+- **N**：从 NetBoot 服务器启动，前提是您的 Mac 支持网络启动宗卷。要使用服务器上默认的引导映像，请按住 Option-N。如果使用了固件密码，这个组合键将被停用。
+
+- **Command-S**：以单用户模式启动。如果运行的是 macOS Mojave 或更高版本，或者使用了固件密码，这个组合键会被停用。
+
+- **T**：以目标磁盘模式启动。如果使用了固件密码，这个组合键将被停用。
+
+- **Command-V**：以详细模式启动。如果使用了固件密码，这个组合键将被停用。
+
+- **推出键 (⏏)、F12**、鼠标按钮或触控板按钮：推出可移动介质，例如光盘。如果使用了固件密码，这个组合键将被停用。
+
+{% endfolding %}
+
 
 
 ## Mirrors
