@@ -12,6 +12,8 @@ language: [zh-CN, en, zh-CN, zh-TW]
 timezone: ''
 avatar: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/avatar/rect-256@2x.png
 email: me@xaoxuu.com
+# favicon: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/favicon/apple-touch-icon.png
+
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://xaoxuu.com
@@ -115,7 +117,7 @@ deploy:
 
 inject:
   head:
-    - <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.3/favicon/apple-touch-icon.png">
+    - <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/favicon/apple-touch-icon.png">
     - <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/favicon/favicon-32x32.png">
     - <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/favicon/favicon-16x16.png">
     - <link rel="manifest" href="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/favicon/site.webmanifest">

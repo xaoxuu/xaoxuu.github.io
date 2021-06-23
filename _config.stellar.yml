@@ -28,13 +28,17 @@ comments:
 
 footer:
   social:
-    - icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/08a41b181ce68.svg"/>'
+    - title: GitHub
+      icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/08a41b181ce68.svg"/>'
       url: https://github.com/xaoxuu
-    - icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/3845874.svg"/>'
+    - title: Spotify
+      icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/3845874.svg"/>'
       url: https://open.spotify.com/user/xaoxuu
-    - icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/3616429.svg"/>'
+    - title: Unsplash
+      icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/3616429.svg"/>'
       url: https://unsplash.com/@xaoxuu
-    - icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/942ebbf1a4b91.svg"/>'
+    - title: Comments
+      icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/942ebbf1a4b91.svg"/>'
       url: /about/#comments
 
   source: '[GitHub](https://github.com/xaoxuu/xaoxuu.github.io/)'
