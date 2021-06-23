@@ -136,7 +136,7 @@ git --work-tree=$WEBROOT checkout -f master
 
 ## GitLab
 
-{% link http://47.242.34.183:8099 GitLab %}
+{% link http://42.192.89.158:8099 GitLab %}
 
 把上述的 post-receive 文件放在这里：
 
