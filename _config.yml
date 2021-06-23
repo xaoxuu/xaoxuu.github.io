@@ -112,7 +112,7 @@ deploy:
   - type: git
     repo: https://github.com/xaoxuu/xaoxuu.github.io.git
     branch: gh-pages
-    message: "Github CI Auto Builder at {{ now('YYYY-MM-DD HH:mm:ss Z') }}"
+    message: "Build at {{ now('YYYY-MM-DD HH:mm:ss Z') }}"
 
 
 inject:
