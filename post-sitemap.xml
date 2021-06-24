@@ -9,8 +9,16 @@
 
 
     <url>
+        <loc>https://xaoxuu.com/blog/2019-07-23-heartmate/</loc>
+        <lastmod>2021-06-24T10:54:58.895Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://xaoxuu.com/blog/2019-10-06-ios-apple-watch/</loc>
-        <lastmod>2021-06-24T03:03:54.615Z</lastmod>
+        <lastmod>2021-06-24T10:54:58.895Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -18,7 +26,7 @@
 
     <url>
         <loc>https://xaoxuu.com/blog/2020-06-27-privacy/</loc>
-        <lastmod>2021-06-24T03:03:54.615Z</lastmod>
+        <lastmod>2021-06-24T10:54:58.895Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -26,7 +34,7 @@
 
     <url>
         <loc>https://xaoxuu.com/blog/2020-08-23-issues-api/</loc>
-        <lastmod>2021-06-24T03:03:54.615Z</lastmod>
+        <lastmod>2021-06-24T10:54:58.895Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -34,15 +42,7 @@
 
     <url>
         <loc>https://xaoxuu.com/blog/2020-09-27-heartrate/</loc>
-        <lastmod>2021-06-24T03:03:54.615Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://xaoxuu.com/blog/2021-01-02-shell/</loc>
-        <lastmod>2021-06-24T03:03:54.615Z</lastmod>
+        <lastmod>2021-06-24T10:54:58.895Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -50,15 +50,15 @@
 
     <url>
         <loc>https://xaoxuu.com/blog/2020-11-19-ios-layout/</loc>
-        <lastmod>2021-06-24T03:03:54.615Z</lastmod>
+        <lastmod>2021-06-24T10:54:58.895Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>https://xaoxuu.com/blog/2019-07-23-heartmate/</loc>
-        <lastmod>2021-06-24T03:03:54.614Z</lastmod>
+        <loc>https://xaoxuu.com/blog/2021-01-02-shell/</loc>
+        <lastmod>2021-06-24T10:54:58.895Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -66,7 +66,7 @@
 
     <url>
         <loc>https://xaoxuu.com/blog/2019-08-29-valuex/</loc>
-        <lastmod>2019-08-28T16:00:00.000Z</lastmod>
+        <lastmod>2019-08-29T00:00:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -74,7 +74,7 @@
 
     <url>
         <loc>https://xaoxuu.com/blog/2019-08-27-prohud/</loc>
-        <lastmod>2019-08-26T16:00:00.000Z</lastmod>
+        <lastmod>2019-08-27T00:00:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -82,7 +82,7 @@
 
     <url>
         <loc>https://xaoxuu.com/blog/2017-12-25-ios-merge-localizable-strings/</loc>
-        <lastmod>2017-12-24T16:00:00.000Z</lastmod>
+        <lastmod>2017-12-25T00:00:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -90,7 +90,7 @@
 
     <url>
         <loc>https://xaoxuu.com/blog/2017-11-09-ios-postpone-func/</loc>
-        <lastmod>2017-11-09T16:00:00.000Z</lastmod>
+        <lastmod>2017-11-10T00:00:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -98,7 +98,7 @@
 
     <url>
         <loc>https://xaoxuu.com/blog/2017-06-28-ios-strava/</loc>
-        <lastmod>2017-06-27T16:00:00.000Z</lastmod>
+        <lastmod>2017-06-28T00:00:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -106,7 +106,7 @@
 
     <url>
         <loc>https://xaoxuu.com/blog/2017-06-22-ios-fitsdk/</loc>
-        <lastmod>2017-06-21T16:00:00.000Z</lastmod>
+        <lastmod>2017-06-22T00:00:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -114,15 +114,7 @@
 
     <url>
         <loc>https://xaoxuu.com/blog/2016-11-06-ios-framework/</loc>
-        <lastmod>2016-11-05T16:00:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://xaoxuu.com/blog/2016-09-14-ios-get-color/</loc>
-        <lastmod>2016-10-19T16:00:00.000Z</lastmod>
+        <lastmod>2016-11-06T00:00:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -130,7 +122,15 @@
 
     <url>
         <loc>https://xaoxuu.com/blog/2016-09-12-ios-sandbox/</loc>
-        <lastmod>2016-10-19T16:00:00.000Z</lastmod>
+        <lastmod>2016-10-20T00:00:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://xaoxuu.com/blog/2016-09-14-ios-get-color/</loc>
+        <lastmod>2016-10-20T00:00:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -138,7 +138,7 @@
 
     <url>
         <loc>https://xaoxuu.com/blog/2016-02-11-smart-life/</loc>
-        <lastmod>2016-09-19T16:00:00.000Z</lastmod>
+        <lastmod>2016-09-20T00:00:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -146,7 +146,7 @@
 
     <url>
         <loc>https://xaoxuu.com/blog/2016-05-22-to-be-a-titan/</loc>
-        <lastmod>2016-05-21T16:00:00.000Z</lastmod>
+        <lastmod>2016-05-22T00:00:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -154,7 +154,7 @@
 
     <url>
         <loc>https://xaoxuu.com/blog/2013-02-06-effective-teamwork/</loc>
-        <lastmod>2015-03-10T16:00:00.000Z</lastmod>
+        <lastmod>2015-03-11T00:00:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
