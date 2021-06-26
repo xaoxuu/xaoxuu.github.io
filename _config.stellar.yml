@@ -40,5 +40,23 @@ footer:
     - title: Comments
       icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/942ebbf1a4b91.svg"/>'
       url: /about/#comments
-
+  sitemap:
+    '博客':
+      - '[近期发布](/)'
+      - '[分类](/blog/categories/)'
+      - '[标签](/blog/tags/)'
+      - '[归档](/blog/archives/)'
+    '项目':
+      - '[开源库](/wiki/categories/ios/)'
+      - '[实用脚本](/wiki/categories/shell-scripts/)'
+      - '[博客主题](/wiki/categories/hexo-themes/)'
+      - '[应用程序](/wiki/categories/app/)'
+    '社交':
+      - '[友链](/friends/)'
+      - '[留言板](/about/#comments)'
+      - '[Spotify](https://open.spotify.com/user/xaoxuu)'
+    '更多':
+      - '[关于本站](/about/)'
+      - '[GitHub](https://github.com/xaoxuu)'
+      - '[GitLab](http://42.192.89.158:8099/explore)'
   source: '[GitHub](https://github.com/xaoxuu/xaoxuu.github.io/)'

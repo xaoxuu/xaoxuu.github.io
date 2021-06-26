@@ -207,7 +207,6 @@ article:
   related_posts:
     enable: true
     title: 您可能感兴趣的文章
-    max_count: 5
 ```
 
 ## 自定义样式
