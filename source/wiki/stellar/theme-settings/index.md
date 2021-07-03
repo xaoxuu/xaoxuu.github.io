@@ -193,11 +193,9 @@ article:
 
 ### 相关文章推荐
 
-要实现相关文章推荐功能，您需要按照插件：
+要实现相关文章推荐功能，您需要安装插件：
 
-```
-npm i hexo-related-popular-posts
-```
+{% copy npm i hexo-related-popular-posts %}
 
 然后在主题配置文件中开启：
 

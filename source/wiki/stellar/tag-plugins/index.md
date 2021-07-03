@@ -24,6 +24,18 @@ utterances:
 
 {% endfolding %}
 
+
+{% folding open:true 语法格式说明 %}
+
+为了方便理解，本文档语法格式中的可选参数用方括号括起来，键值对参数用冒号分隔开，例如：
+
+```
+{% image src description [download:bool/string] %}
+```
+就表明第一个参数是图片链接，第二个参数是图片描述，而 `download` 是可选参数，并且值是布尔或字符串类型。
+
+{% endfolding %}
+
 ## 复制标签
 
 对于单行内容，可以使用 copy 标签来实现复制功能：
@@ -44,7 +56,20 @@ utterances:
 
 ## 图片标签
 
-图片标签是一个精心设计的应对各种尺寸插图的标签，对于大图，可以放置一个「下载」按钮，
+图片标签是一个精心设计的应对各种尺寸插图的标签，对于大图，可以放置一个「下载」按钮，语法格式如下：
+
+```
+{% image src [description] [download:bool/string] [width:px] [padding:px] [bg:hex] %}
+```
+
+```yaml 参数说明
+src: 图片地址
+description: 图片描述
+download: href # 下载地址，设置此值后鼠标放在图片上会显示下载地址，如果下载地址为图片地址，可以设置为 true
+width: 200px # 图片宽度
+padding: 16px # 图片四周填充宽度
+bg: '#ffffff' # 图片区域背景颜色，16进制
+```
 
 ### 大尺寸图片
 
@@ -77,13 +102,23 @@ utterances:
 
 ## 备注标签
 
+```
+{% note [title] content [color:color] %}
+```
+
+```yaml 参数说明
+title: 标题（可选）
+content: 内容
+color: red/orange/yellow/green/cyan/blue/purple/light/dark
+```
+
 备注标签相较于旧版进行了增强，可以实现更多种颜色， note 标签可以用空格隔开标题和内容。 noteblock 标签适用于应对更复杂的场合。
 
-{% note 直接写备注内容，默认是和代码块一样的样式 %}
+{% note 直接写备注内容，默认是和代码块一样的样式，如果内容中需要显示空格，请使用&nbsp;代替。 %}
 
 
 ```md 写法如下
-{% note 直接写备注内容，默认是和代码块一样的样式 %}
+{% note 直接写备注内容，默认是和代码块一样的样式，如果内容中需要显示空格，请使用&nbsp;代替。 %}
 ```
 
 {% folding 更多颜色 %}
@@ -130,9 +165,23 @@ utterances:
 
 ## 折叠标签
 
+折叠标签的语法格式为：
+
+```
+{% folding title [codeblock:bool] [open:bool] [color:color] %}
+content
+{% endfolding %}
+```
+
+```yaml 参数说明
+codeblock: true/false
+open: true/false
+color: red/orange/yellow/green/cyan/blue/purple/light/dark
+```
+
 备注标签相较于旧版进行了增强，可以实现更多种颜色，还可以通过设置 `codeblock:true` 来实现可折叠的代码块。以下是一个默认打开的代码折叠框：
 
-{% folding codeblock:true open:true 默认打开的代码折叠框 %}
+{% folding codeblock:true open:false 默认打开的代码折叠框 %}
 ```swift
 func test() {
   print("hello world")
@@ -140,6 +189,13 @@ func test() {
 ```
 {% endfolding %}
 
+代码如下：
+
+```
+{% folding codeblock:true open:true 默认打开的代码折叠框 %}
+代码块
+{% endfolding %}
+```
 
 {% folding color:yellow 危险，请不要打开这个 %}
 通过设置颜色，以实现更醒目的作用，但不要滥用色彩哦～
@@ -150,6 +206,25 @@ func test() {
 {% endfolding %}
 {% endfolding %}
 {% endfolding %}
+
+## 外链卡片标签
+
+外链卡片标签的语法格式为：
+
+```
+{% link href title [description] [img:src] %}
+```
+
+```yaml 参数说明
+href: 链接
+title: 标题
+description: 可选，副标题，不填写时默认值为链接
+img: 可选，缩略图
+```
+
+例如：
+
+{% link https://github.com/xaoxuu github@xaoxuu github.com/xaoxuu img:https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/avatar/rect-256@2x.png %}
 
 ## 单选/复选样式标签
 

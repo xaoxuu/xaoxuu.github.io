@@ -54,7 +54,7 @@ Stellar 意为恒星，致力于为大家提供稳定强大且易于上手的博
 
 如果您没有使用过 Hexo 也不要着急，可以先通读一遍 [Hexo](https://hexo.io/zh-cn/docs/) 中文文档。此外，如果您从旧版本更新或着其它主题迁移，请确保环境版本不要太低，否则会产生兼容性问题：
 
-```yaml
+```yaml 建议的版本
 Hexo: 5.4.0
 hexo-cli: 4.2.0
 node.js: 14.15.4 LTS # 选 LTS 就行，过高的版本 hexo 还没有进行兼容。
@@ -64,28 +64,46 @@ npm: 6.14.10 LTS
 ## 下载与安装
 
 {% tabs install %}
+
 <!-- tab 稳定版 -->
-在终端中输入：
+
+1. 在终端中输入：
 {% copy npm i hexo-theme-stellar %}
+
+2. 在 `blog/_config.yml` 文件中找到并修改：
+{% copy theme: stellar %}
+
+{% note color:green 适用范围 稳定版适用于以内容创作为主，不需要自定义主题，追求稳定和可靠性的用户。 %}
+
 <!-- endtab -->
 
 <!-- tab 最新版 -->
-把 Stellar 添加为子模块
+
+1. 把 Stellar 主题仓库添加为博客仓库的子模块
 {% copy git submodule add https://github.com/xaoxuu/hexo-theme-stellar.git themes/stellar %}
+
+2. 在 `blog/_config.yml` 文件中找到并修改：
+{% copy theme: stellar %}
+
+{% note color:blue 适用范围 最新版适用于以内容创作为主，不需要自定义主题，追求新特性的用户。 %}
+
 <!-- endtab -->
 
-<!-- tab DIY -->
-1. 把 Stellar [fork](https://github.com/xaoxuu/hexo-theme-stellar) 到您的 GitHub
-2. 把您 fork 的 Stellar 添加为子模块
-```
-git submodule add https://github.com/#yourname#/hexo-theme-stellar.git themes/stellar
-```
+<!-- tab 需要自定义 -->
+
+1. 把 Stellar 主题仓库 [fork](https://github.com/xaoxuu/hexo-theme-stellar) 到您的 GitHub 账号下
+
+2. 把您 fork 的 Stellar 主题仓库添加为博客仓库的子模块
+{% copy git submodule add https://github.com/#yourname#/hexo-theme-stellar.git themes/stellar %}
+
+3. 在 `blog/_config.yml` 文件中找到并修改：
+{% copy theme: stellar %}
+
+{% note color:yellow 适用范围 自定义版适用于对主题有自定义需求，且掌握了一定的前端知识和动手能力的用户。 %}
+
 <!-- endtab -->
 {% endtabs %}
 
-在 `blog/_config.yml` 文件中找到并修改：
-
-{% copy theme: stellar %}
 
 
 ## 示例博客
