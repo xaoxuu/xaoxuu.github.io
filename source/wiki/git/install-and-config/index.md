@@ -8,7 +8,7 @@ order: 1
 ## 安装
 
 {% tabs install %}
-<!-- tab Lunix -->
+<!-- tab Linux -->
 {% link https://git-scm.com/download/linux 下载地址 %}
 
 安装指定系统的依赖包：
