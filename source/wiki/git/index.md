@@ -1,12 +1,7 @@
 ---
 layout: wiki
-wiki: 'Git 实用教程'
-order: -201901
+wiki: Git
 title: 认识 Git
-logo:
-  src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/git/icon.svg
-  small: 96px
-description: Git 是目前世界上最先进的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。
 references:
   - title: RUNOOB：Git 教程
     url: https://www.runoob.com/git/git-tutorial.html

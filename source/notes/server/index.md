@@ -4,7 +4,7 @@ sitemap: false
 menu_id: notes
 layout: wiki
 wiki: Notes
-seo_title: Server
+title: 服务器相关问题
 order: 110
 ---
 

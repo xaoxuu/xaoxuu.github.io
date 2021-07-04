@@ -1,6 +1,6 @@
 ---
 layout: wiki
-wiki: 'Git 实用教程'
+wiki: Git
 title: 使用 GitHub
 order: 4
 ---

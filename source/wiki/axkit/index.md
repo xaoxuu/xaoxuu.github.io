@@ -1,12 +1,7 @@
 ---
 layout: wiki
-order: 10
 seo_title: 「AXKit」综合型ObjC开发工具包
 wiki: AXKit
-logo:
-  src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/axkit/logo.png
-  small: 64px
-description: 综合型 ObjC 开发工具包，包含对系统类的功能扩展和一些常用控件的封装。
 ---
 
 <!-- more -->

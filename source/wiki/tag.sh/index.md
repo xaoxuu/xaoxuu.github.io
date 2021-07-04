@@ -2,7 +2,6 @@
 layout: wiki
 wiki: tag.sh
 title: 「tag.sh」一个方便发布git版本的脚本
-description: 这个脚本可以很方便发布 git 版本，提高效率。
 ---
 
 

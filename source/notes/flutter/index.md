@@ -4,7 +4,7 @@ sitemap: false
 menu_id: notes
 layout: wiki
 wiki: Notes
-seo_title: Flutter
+title: Flutter 相关问题
 order: 30
 references:
   - title: 'flutter.cn'

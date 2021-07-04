@@ -1,6 +1,6 @@
 ---
 layout: wiki
-wiki: 'Git 实用教程'
+wiki: Git
 title: 安装与配置
 order: 1
 ---

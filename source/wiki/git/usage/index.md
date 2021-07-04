@@ -1,6 +1,6 @@
 ---
 layout: wiki
-wiki: 'Git 实用教程'
+wiki: Git
 title: 基本操作入门
 order: 2
 ---

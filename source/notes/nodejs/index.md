@@ -4,7 +4,7 @@ sitemap: false
 menu_id: notes
 layout: wiki
 wiki: Notes
-seo_title: Node.js
+title: Node.js 相关问题
 order: 100
 references:
   - url: https://nodejs.org/en/

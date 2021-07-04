@@ -1,6 +1,6 @@
 ---
 layout: wiki
-wiki: 'Git 实用教程'
+wiki: Git
 title: 搭建 Git 服务器
 order: 3
 ---

@@ -1,3 +1,18 @@
+mirrors:
+  title: 国内镜像站
+  items:
+    - title: 清华大学开源软件镜像站
+      url: https://mirrors.tuna.tsinghua.edu.cn
+      screenshot: https://bu.dusays.com/2021/07/04/6f214fd127e65.png
+      avatar: https://bu.dusays.com/2021/07/04/0e5faae4d59b0.png
+      description:
+    - title: 阿里云官方镜像站
+      url: https://developer.aliyun.com/mirror/
+      screenshot: https://bu.dusays.com/2021/07/04/3e669b4780254.png
+      avatar: https://bu.dusays.com/2021/07/04/53979dab9a153.png
+      description:
+
+
 mac:
   title: Mac 应用下载
   description:

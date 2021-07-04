@@ -3,10 +3,7 @@ layout: wiki
 wiki: hexo.sh
 title: 一个方便管理与发布hexo博客的脚本
 h1: 开始使用
-description: 此脚本可以很方便执行各种 hexo 命令，开启后会一直保持会话，随时输入简短的命令去执行一系列操作，提高效率。
 cover: true
-logo:
-  src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/hexo.sh/screenshot.png
 ---
 
 

@@ -2,7 +2,6 @@
 layout: wiki
 title: 一个方便发布podspec的脚本
 wiki: podspec.sh
-description: 频繁执行重复的工作内容很浪费时间，对于经常需要维护 CocoaPods 开源库的人来说，需要一个脚本快速发布和更新自己的开源库。
 ---
 
 

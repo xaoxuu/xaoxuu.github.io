@@ -1,12 +1,7 @@
 ---
 layout: wiki
 wiki: NEXUS
-order: -0
 title: NEXUS
-logo:
-  src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/nexus/icon.png
-  small: 88px
-description: 'Windows 实用工具箱，搜索、激活、清理一步即达，支持 Win7-10，现已暂停维护。'
 ---
 
 

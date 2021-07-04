@@ -1,12 +1,7 @@
 ---
 layout: wiki
 wiki: Inspire
-order: -20
 seo_title: 「Inspire」基于主题的Swift开发工具包
-logo:
-  src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/inspire/icon.png
-  small: 84px
-description: 基于主题的 Swift 开发工具包，包含颜色、字体、布局等，可配置可缓存。
 ---
 
 

@@ -1,14 +1,8 @@
 ---
 layout: wiki
 wiki: Volantis
-order: -201710
 title: Volantis for Hexo
 cover: [logo, description]
-logo:
-  src: https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-Cover@3x.png
-  small: 80px
-  large: 120px
-description: Volantis 是一个高度模块化的 Hexo 主题，拥有丰富的内置标签和第三方插件支持，拥有庞大的开发者团队和年轻活跃的社区文化。
 utterances:
   repo: 'volantis-x/community'
   'issue-number': 115

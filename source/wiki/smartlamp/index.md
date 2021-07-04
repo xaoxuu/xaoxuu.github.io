@@ -1,9 +1,7 @@
 ---
 layout: wiki
 wiki: SmartLamp
-order: -201803
 title: 蓝牙智能灯毕业设计项目
-description: 这是一个于2016年完成的毕业设计项目，现已归档，不再进行维护。
 ---
 
 {% swiper %}
