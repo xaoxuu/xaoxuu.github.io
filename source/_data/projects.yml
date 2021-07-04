@@ -7,7 +7,7 @@ Stellar:
     large: 240px
   description: Stellar 是一个内置 wiki 系统的 hexo 主题，适合综合型站点使用。同时也拥有简约而精美的视觉设计和丰富的标签插件，帮助您简单从容地应对各种场合。
   index: true
-  repo: xaoxuu/hexo-theme-stellar # user/repo 自动解析出需要的链接 readme/download/releases/issues
+  repo: xaoxuu/hexo-theme-stellar
 
 ProHUD:
   title: ProHUD
@@ -17,6 +17,8 @@ ProHUD:
     small: 84px
     large: 120px
   description: '这是一个易于上手而又功能强大的综合型 HUD 库，包含通知横幅、弹窗和操作表。使用 ProHUD 能够轻松管理多个 HUD 实例、更新数据或避免重叠。您还可以完全定制 UI 样式以满足业务要求。'
+  repo: xaoxuu/ProHUD
+  branch: master
 
 ValueX:
   title: ValueX
@@ -26,6 +28,8 @@ ValueX:
     small: 84px
     large: 120px
   description: 这是一个实用的 ObjC 安全对象类型转换库，可以在 String、Number、Array、Set、Dictionary、Data 之间快速转换，提高开发效率。
+  repo: xaoxuu/ValueX
+  branch: master
 
 Volantis:
   title: Volantis
@@ -35,7 +39,8 @@ Volantis:
     small: 80px
     large: 120px
   description: Volantis 是一个高度模块化的 Hexo 主题，拥有丰富的内置标签和第三方插件支持，拥有庞大的开发者团队和年轻活跃的社区文化。
-  repo: xaoxuu/hexo-theme-stellar # user/repo 自动解析出需要的链接 readme/download/releases/issues
+  repo: volantis-x/hexo-theme-volantis
+
 
 Git:
   title: Git 实用教程
@@ -44,7 +49,7 @@ Git:
     src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/git/icon.svg
     small: 96px
   description: Git 是目前世界上最先进的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。
-  repo:
+
 
 Notes:
   title: 便笺
@@ -54,7 +59,7 @@ Notes:
     large: 240px
   description:
   index: false
-  repo:
+
 
 heartmate:
   title: 心率管家
@@ -65,12 +70,16 @@ heartmate:
     large: 128px
   description: 一个简单易用的掌上心率计，专为那些没有智能手环或手表却需要测量心率的用户而设计，可以方便快捷的测量和记录心率。
 
+
 hexo.sh:
   title: hexo.sh
   group: 实用脚本
   logo:
     src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/hexo.sh/screenshot.png
   description: 此脚本可以很方便执行各种 hexo 命令，开启后会一直保持会话，随时输入简短的命令去执行一系列操作，提高效率。
+  repo: xaoxuu/hexo.sh
+  branch: master
+
 
 'vim-cn.sh':
   title: vim-cn.sh
@@ -78,16 +87,25 @@ hexo.sh:
   logo:
     src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/vim-cn.sh/screenshot.png
   description: img.vim-cn.com 是一个十分干净好用的图床站点。
+  repo: xaoxuu/vim-cn.sh
+  branch: master
+
 
 tag.sh:
   title: tag.sh
   group: 实用脚本
   description: 这个脚本可以很方便发布 git 版本，提高效率。
+  repo: xaoxuu/tag.sh
+  branch: master
+
 
 podspec.sh:
   title: podspec.sh
   group: 实用脚本
   description: 频繁执行重复的工作内容很浪费时间，对于经常需要维护 CocoaPods 开源库的人来说，需要一个脚本快速发布和更新自己的开源库。
+  repo: xaoxuu/podspec.sh
+  branch: master
+
 
 Resume:
   title: Resume
@@ -98,7 +116,8 @@ Resume:
     large: 180px
   description: 一个干净简约的商务风轻量级在线简历主题。
   index: true
-  repo: xaoxuu/hexo-theme-resume # user/repo 自动解析出需要的链接 readme/download/releases/issues
+  repo: xaoxuu/hexo-theme-resume
+  branch: master
 
 
 Inspire:
@@ -108,6 +127,9 @@ Inspire:
     src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/inspire/icon.png
     small: 84px
   description: 基于主题的 Swift 开发工具包，包含颜色、字体、布局等，可配置可缓存。
+  repo: xaoxuu/Inspire
+  branch: master
+
 
 
 AXKit:
@@ -117,11 +139,15 @@ AXKit:
     src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/axkit/logo.png
     small: 64px
   description: 综合型 ObjC 开发工具包，包含对系统类的功能扩展和一些常用控件的封装。
+  repo: xaoxuu/AXKit
+  branch: master
+
 
 SmartLamp:
   title: SmartLamp
   group: 应用程序
   description: 这是一个于2016年完成的毕业设计项目，现已归档，不再进行维护。
+
 
 NEXUS:
   title: NEXUS

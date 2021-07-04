@@ -4,6 +4,7 @@ title: 静态博客使用 Issues API 来实现动态发布友链、书签
 categories: [瞎折腾]
 tags: [博客, GitHub]
 cover: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.1/blog/2020-0823a@2x.jpg
+repo: xaoxuu/issues-api
 ---
 
 由于发布 issue 的成本远远低于发布一次博客更新（即便是使用了持续集成），可以用 issue 来简化每个独立博客都必备的友链系统，也可以通过 issue 来快速发布动态资讯，弥补静态博客必须更新静态文件才能更新内容的缺点。此功能已经集成到了主题中，使用非常方便。

@@ -1,8 +1,6 @@
 ---
 layout: wiki
 wiki: ProHUD
-order: -201907
-seo_title: 为什么选择 ProHUD
 title: 为什么选择 ProHUD
 ---
 
