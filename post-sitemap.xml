@@ -9,16 +9,8 @@
 
 
     <url>
-        <loc>https://xaoxuu.com/blog/2019-07-23-heartmate/</loc>
-        <lastmod>2021-07-04T15:04:09.616Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://xaoxuu.com/blog/2019-10-06-ios-apple-watch/</loc>
-        <lastmod>2021-07-04T15:04:09.616Z</lastmod>
+        <lastmod>2021-07-04T15:25:49.102Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -26,7 +18,7 @@
 
     <url>
         <loc>https://xaoxuu.com/blog/2020-06-27-privacy/</loc>
-        <lastmod>2021-07-04T15:04:09.616Z</lastmod>
+        <lastmod>2021-07-04T15:25:49.102Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -34,7 +26,7 @@
 
     <url>
         <loc>https://xaoxuu.com/blog/2020-08-23-issues-api/</loc>
-        <lastmod>2021-07-04T15:04:09.616Z</lastmod>
+        <lastmod>2021-07-04T15:25:49.102Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -42,7 +34,7 @@
 
     <url>
         <loc>https://xaoxuu.com/blog/2020-09-27-heartrate/</loc>
-        <lastmod>2021-07-04T15:04:09.616Z</lastmod>
+        <lastmod>2021-07-04T15:25:49.102Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -50,7 +42,7 @@
 
     <url>
         <loc>https://xaoxuu.com/blog/2020-11-19-ios-layout/</loc>
-        <lastmod>2021-07-04T15:04:09.616Z</lastmod>
+        <lastmod>2021-07-04T15:25:49.102Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -58,7 +50,15 @@
 
     <url>
         <loc>https://xaoxuu.com/blog/2021-01-02-shell/</loc>
-        <lastmod>2021-07-04T15:04:09.616Z</lastmod>
+        <lastmod>2021-07-04T15:25:49.102Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://xaoxuu.com/blog/2019-07-23-heartmate/</loc>
+        <lastmod>2021-07-04T15:25:49.098Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
