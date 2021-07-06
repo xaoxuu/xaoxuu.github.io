@@ -4,7 +4,7 @@
 
 # Site
 title: XAOXUU
-subtitle: ''
+subtitle: '风暴前夕 | xaoxuu.com'
 description: 'XAOXUU 目前是一个 iOS 开发者，代表作品有：ProHUD、ValueX 等。在业余时间也开发了 Stellar 博客主题，更多的作品可以去项目主页查看，希望大家喜欢～'
 keywords:
 author: xaoxuu
@@ -123,6 +123,20 @@ inject:
     - <link rel="manifest" href="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/favicon/site.webmanifest">
     - <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/favicon/favicon.ico">
     - <meta name="theme-color" content="#f8f8f8">
+  script:
+    - |
+      <script>
+        (function(d, w, c) {
+          w.ChatraID = 'LAxxGqF62yRZopZqc';
+          var s = d.createElement('script');
+          w[c] = w[c] || function() {
+              (w[c].q = w[c].q || []).push(arguments);
+          };
+          s.async = true;
+          s.src = 'https://call.chatra.io/chatra.js';
+          if (d.head) d.head.appendChild(s);
+        })(document, window, 'Chatra');
+      </script>
 
 ########################### Plugins ###########################
 # npm i hexo-generator-feed

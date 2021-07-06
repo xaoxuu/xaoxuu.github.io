@@ -5,6 +5,7 @@ menu_id: notes
 layout: wiki
 wiki: Notes
 title: Mac 相关问题
+order: 10
 ---
 
 
