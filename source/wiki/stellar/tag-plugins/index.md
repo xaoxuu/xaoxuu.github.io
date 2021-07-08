@@ -419,7 +419,6 @@ XAOXUU 目前是一个 iOS 开发者，代表作品有：ProHUD、ValueX 等。�
 这个标签移植自 [NexT](https://theme-next.js.org/docs/tag-plugins/tabs.html) 主题，但做了以下修改：
 
 - 设置默认激活的标签方式为 `active:1` 而非 `, 1`（这样符合默认规则）
-- 支持设置 `codeblock:true` 进行代码块布局优化（删除多余的间距）
 - 不支持 `@icon` 方式设置图标
 
 {% tabs Fourth unique name active:2 %}
@@ -427,7 +426,7 @@ XAOXUU 目前是一个 iOS 开发者，代表作品有：ProHUD、ValueX 等。�
 This is Tab 1.
 <!-- endtab -->
 
-<!-- tab codeblock:true 代码块测试 -->
+<!-- tab 代码块测试 -->
 ```swift
 let x = 123
 print("hello world")
