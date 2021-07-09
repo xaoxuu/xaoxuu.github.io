@@ -2,6 +2,7 @@ Stellar:
   title: Stellar
   subtitle: 每个人的独立博客
   group: 博客主题
+  cover: true
   logo:
     src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg
     small: 112px
@@ -35,6 +36,7 @@ ValueX:
 Volantis:
   title: Volantis
   group: 博客主题
+  cover: [logo, description]
   logo:
     src: https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-Cover@3x.png
     small: 80px
@@ -65,6 +67,7 @@ Notes:
 heartmate:
   title: 心率管家
   group: 应用程序
+  cover: true
   logo:
     src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/icon.svg
     small: 110px
@@ -75,6 +78,7 @@ heartmate:
 hexo.sh:
   title: hexo.sh
   group: 实用脚本
+  cover: true
   logo:
     src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/hexo.sh/screenshot.png
   description: 此脚本可以很方便执行各种 hexo 命令，开启后会一直保持会话，随时输入简短的命令去执行一系列操作，提高效率。
@@ -111,6 +115,7 @@ podspec.sh:
 Resume:
   title: Resume
   group: 博客主题
+  cover: true
   logo:
     src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/resume/icon.svg
     small: 96px

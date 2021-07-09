@@ -2,7 +2,6 @@
 layout: wiki
 wiki: Resume
 title: 一个简约的在线简历主题
-cover: true
 ---
 
 {% link https://resume.js.org/zh-cn/ 在线演示 %}

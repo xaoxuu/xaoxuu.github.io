@@ -64,13 +64,9 @@ codesign --force --deep --sign - /Applications/name.app
 
 {% copy defaults write com.apple.finder _FXShowPosixPathInTitle -bool TRUE; killall Finder %}
 
-<!-- endtab -->
-
 <!-- tab 隐藏 -->
 
 {% copy defaults delete com.apple.finder _FXShowPosixPathInTitle; killall Finder %}
-
-<!-- endtab -->
 
 {% endtabs %}
 
@@ -112,8 +108,6 @@ plutil -convert xml1 data.json -o data.plist
 System Integrity Protection status: enabled.
 ```
 
-<!-- endtab -->
-
 <!-- tab 关闭 SIP -->
 
 重启 Mac，按住 {% kbd command %} + {% kbd R %} 直到出现开机 logo，此时会进入 Recovery 模式，选择「实用工具」->「Terminal」并输入以下命令：
@@ -122,8 +116,6 @@ System Integrity Protection status: enabled.
 
 然后重新启动电脑即可关闭 SIP。
 
-<!-- endtab -->
-
 <!-- tab 开启 SIP -->
 
 重启 Mac，按住 {% kbd command %} + {% kbd R %} 直到出现开机 logo，此时会进入 Recovery 模式，选择「实用工具」->「Terminal」并输入以下命令：
@@ -131,8 +123,6 @@ System Integrity Protection status: enabled.
 {% copy csrutil enable %}
 
 然后重新启动电脑即可开启 SIP。
-
-<!-- endtab -->
 
 {% endtabs %}
 

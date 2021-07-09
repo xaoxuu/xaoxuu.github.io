@@ -26,19 +26,15 @@ ssh-keygen -t rsa -C me@xxx.com
 
 {% timeline %}
 
-{% timenode 打开源码仓库，在设置中找到「Secrets」 %}
+<!-- node 打开源码仓库，在设置中找到「Secrets」 -->
 
 第 1/3 步：添加 `DEPLOY_KEY` 内容是 `id_rsa` 文件的全部内容。
 第 2/3 步：添加 `EMAIL` 内容是 GitHub 邮箱。
 第 3/3 步：添加 `NAME` 内容是 GitHub 账号名。
 
-{% endtimenode %}
-
-{% timenode 打开 deploy 目标仓库，在设置中找到「Deploy Keys」 %}
+<!-- node 打开 deploy 目标仓库，在设置中找到「Deploy Keys」 -->
 
 第 1/1 步：添加 `deploy_key.pub` 内容是 `id_rsa.pub` 文件的全部内容。
-
-{% endtimenode %}
 
 {% endtimeline %}
 

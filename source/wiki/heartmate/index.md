@@ -3,7 +3,6 @@ layout: wiki
 wiki: heartmate
 title: 心率管家
 h1: 心率管家：一个简单易用的掌上心率计
-cover: true
 references:
   - title: 心率管家 App 的设计与开发流程
     url: /blog/2019-07-23-heartmate

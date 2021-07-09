@@ -49,22 +49,19 @@ description: 这是一个全新的主题，拥有精心设计的样式和强大�
 
 项目可以显示一个全屏封面，封面占据一个屏幕的高度，会居中依次显示项目的 logo、标题、描述。开启项目封面方法如下：
 
-```yaml blog/source/wiki/stellar/index.md
----
-cover: true
-logo:
-  src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg
-  small: 120px
-  large: 240px
----
+```yaml blog/source/_data/projects.yml
+项目:
+  cover: true
+  logo:
+    src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg
+    small: 120px
+    large: 240px
 ```
 
 如果 logo 中已经包含了项目标题，可以这样设置不显示项目标题：
 
-```yaml blog/source/wiki/stellar/index.md
----
+```yaml blog/source/_data/projects.yml
 cover: [logo, description]
----
 ```
 
 ## 项目文档排序

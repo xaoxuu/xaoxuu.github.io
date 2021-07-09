@@ -29,36 +29,28 @@ XAOXUU 目前是一个 iOS 开发者，代表作品有：ProHUD、ValueX 等。�
 
 {% timeline %}
 
-{% timenode Volantis 5.0 %}
+<!-- node Volantis 5.0 -->
 
 更新内容及其进度在 [Projects](https://github.com/volantis-x/hexo-theme-volantis/projects/4) 中已经列出。
 
-{% endtimenode %}
-
-{% timenode ProHUD 迭代 %}
+<!-- node ProHUD 迭代 -->
 
 - 针对 Swift 5 进行代码优化。
 - 继续发布 cocoapods （已经中断了几个版本）
 
-{% endtimenode %}
-
-{% timenode ValueX 迭代 %}
+<!-- node ValueX 迭代 -->
 
 目前存在冗余操作，需要优化代码以提高运行效率。
-
-{% endtimenode %}
 
 {% endtimeline %}
 
 ## 兴趣爱好
 
-{% tabs hobbies active:1 %}
+{% tabs hobbies active:1 center:true %}
 
 <!-- tab 音乐 -->
 
 非常热爱音乐，喜欢的品类很多，尤其喜爱 [Hans Zimmer](https://music.163.com/#/artist?id=34517) 和 [Two Steps From Hell](https://music.163.com/#/artist?id=102714) 的史诗音乐，夜深人静的时候喜欢听 [Ludovico Einaudi](https://music.163.com/#/artist?id=38127) 的钢琴曲，能量不足的时候会听一些电音或摇滚来充电，心灰意冷的时候会听一些十年前常听的轻音乐怀旧，那时我还特别喜欢 [班得瑞](https://music.163.com/#/artist?id=88149) 的音乐。
-
-<!-- endtab -->
 
 <!-- tab 影视 -->
 
@@ -66,8 +58,6 @@ XAOXUU 目前是一个 iOS 开发者，代表作品有：ProHUD、ValueX 等。�
 - 科幻类，例如：[Interstellar](https://movie.douban.com/subject/1889243/)、[Star Trek 系列](https://movie.douban.com/subject/2132932/)、[The Expanse](https://movie.douban.com/subject/25926851/)、[Avatar](https://movie.douban.com/subject/1652587/)、[I, Robot](https://movie.douban.com/subject/1308843/)
 - 魔幻类，例如：[Game of Thrones](https://movie.douban.com/subject/3016187/)
 - 诺兰大导演的作品，例如：[Inception](https://movie.douban.com/subject/3541415/)、[Dunkirk](https://movie.douban.com/subject/26607693/)
-
-<!-- endtab -->
 
 <!-- tab 游戏 -->
 
@@ -83,13 +73,9 @@ XAOXUU 目前是一个 iOS 开发者，代表作品有：ProHUD、ValueX 等。�
 | Ori and the Blind Forest | ★★★★★        | 2018-2020     |
 | Human Fall Flat | ★★★★★★       | 2018-2021     |
 
-<!-- endtab -->
-
 <!-- tab 话题 -->
 
 此外，也热衷于欣赏和学习这方面的知识：产品设计、摄影、天文。
-
-<!-- endtab -->
 
 {% endtabs %}
 

@@ -3,7 +3,6 @@ layout: wiki
 wiki: Stellar
 seo_title: 一个实用简约主义的 Hexo 主题
 title: 快速开始您的博客之旅
-cover: true
 comment_id: 'Q & A'
 utterances:
   repo: xaoxuu/hexo-theme-stellar
@@ -69,8 +68,6 @@ npm: 6.14.10 LTS
 
 {% note color:green 适用范围 稳定版适用于以内容创作为主，不需要自定义主题，追求稳定和可靠性的用户。 %}
 
-<!-- endtab -->
-
 <!-- tab 最新版 -->
 
 1. 把 Stellar 主题仓库添加为博客仓库的子模块
@@ -80,8 +77,6 @@ npm: 6.14.10 LTS
 {% copy theme: stellar %}
 
 {% note color:blue 适用范围 最新版适用于以内容创作为主，不需要自定义主题，追求新特性的用户。 %}
-
-<!-- endtab -->
 
 <!-- tab 需要自定义 -->
 
@@ -95,7 +90,6 @@ npm: 6.14.10 LTS
 
 {% note color:yellow 适用范围 自定义版适用于对主题有自定义需求，且掌握了一定的前端知识和动手能力的用户。 %}
 
-<!-- endtab -->
 {% endtabs %}
 
 

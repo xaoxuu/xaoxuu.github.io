@@ -58,7 +58,6 @@ git version 1.7.1
 ```
 
 {% endfolding %}
-<!-- endtab -->
 
 <!-- tab Windows -->
 {% link https://gitforwindows.org/ 下载地址 %}
@@ -66,13 +65,12 @@ git version 1.7.1
 完成安装之后，就可以使用命令行的 git 工具（已经自带了 ssh 客户端）了，另外还有一个图形界面的 Git 项目管理工具。
 
 在开始菜单里找到 <kbd>Git</kbd> -> <kbd>Git Bash</kbd>，会弹出 Git 命令窗口，你可以在该窗口进行 Git 操作。
-<!-- endtab -->
 
 <!-- tab Mac -->
 {% link https://git-scm.com/download/mac 下载地址 %}
 
 Mac 自带 git 并且随着系统版本的更新，自带的 git 也会升级到最新，一般无需手动安装。
-<!-- endtab -->
+
 {% endtabs %}
 
 ## 配置

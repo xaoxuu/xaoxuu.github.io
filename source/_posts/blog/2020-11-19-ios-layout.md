@@ -111,22 +111,16 @@ metrics = UIFontMetrics(...)
 
 {% timeline order:date %}
 
-{% timenode 2021年1月4日 %}
+<!-- node 2021年1月4日 -->
 
 今天收到 Apple 的邮件，设计开发加速器活动现在已经开放申请啦，感兴趣的朋友们可以去 [官网](https://developer.apple.com/cn/accelerator/) 申请。
 
-{% endtimenode %}
-
-{% timenode 2021年2月1日 %}
+<!-- node 2021年2月1日 -->
 
 今天无意中发现又关闭申请入口了。
 
-{% endtimenode %}
-
-{% timenode 2021年4月9日 %}
+<!-- node 2021年4月9日 -->
 
 今天经同事提醒发现又开放申请了。
-
-{% endtimenode %}
 
 {% endtimeline %}

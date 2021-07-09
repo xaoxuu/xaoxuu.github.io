@@ -30,7 +30,7 @@ header: false
 
 {% timeline %}
 
-{% timenode 第一步：新建 Issue %}
+<!-- node 第一步：新建 Issue -->
 
 新建 [GitHub Issue](https://github.com/xaoxuu/friends/issues/) 按照模板格式填写并提交。
 
@@ -38,9 +38,7 @@ header: false
 1. 打开 [压缩图](https://www.yasuotu.com/) 上传自己的头像，将图片尺寸调整到 `96px` 后下载。
 2. 将压缩后的图片上传到 [去不图床](https://7bu.top/) 并使用此图片链接作为头像。
 
-{% endtimenode %}
-
-{% timenode 第二步：添加友链并等待管理员审核 %}
+<!-- node 第二步：添加友链并等待管理员审核 -->
 
 请添加本站到您的友链中，如果您也使用 issue 作为友链源，只需要告知您的友链源仓库即可。
 
@@ -52,8 +50,6 @@ screenshot: https://i.loli.net/2020/08/21/VuSwWZ1xAeUHEBC.jpg
 ```
 
 待管理员审核通过，添加了 `active` 标签后，回来刷新即可生效。
-
-{% endtimenode %}
 
 {% endtimeline %}
 

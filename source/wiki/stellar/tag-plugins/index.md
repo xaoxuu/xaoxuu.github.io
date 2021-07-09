@@ -261,21 +261,22 @@ symbol: plus/minus/times
 目前的时间线只支持静态的，后续有望通过 API 实现动态时间线插件。
 
 {% timeline %}
-
-{% timenode 2021 年 2 月 16 日 %}
-
+<!-- node 2021 年 2 月 16 日 -->
 主要部分功能已经开发的差不多了。
-
-{% endtimenode %}
-
-{% timenode 2021 年 2 月 11 日 %}
-
+{% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg width:300px %}
+<!-- node 2021 年 2 月 11 日 -->
 今天除夕，也是生日，一个人在外地过年+过生日，熬夜开发新主题，尽量在假期结束前放出公测版。
-
-{% endtimenode %}
-
 {% endtimeline %}
 
+```md 写法如下
+{% timeline %}
+<!-- node 2021 年 2 月 16 日 -->
+主要部分功能已经开发的差不多了。
+{% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg width:300px %}
+<!-- node 2021 年 2 月 11 日 -->
+今天除夕，也是生日，一个人在外地过年+过生日，熬夜开发新主题，尽量在假期结束前放出公测版。
+{% endtimeline %}
+```
 
 ## 友链标签
 
@@ -418,25 +419,51 @@ XAOXUU 目前是一个 iOS 开发者，代表作品有：ProHUD、ValueX 等。�
 
 这个标签移植自 [NexT](https://theme-next.js.org/docs/tag-plugins/tabs.html) 主题，但做了以下修改：
 
-- 设置默认激活的标签方式为 `active:1` 而非 `, 1`（这样符合默认规则）
-- 不支持 `@icon` 方式设置图标
+- 支持设置 `center:true` 来使内容居中
+- 设置默认激活的标签方式为 `active:1` 而非 `, 1`（使用默认格式降低学习成本，且显式声明可读性更强）
+- 不需要 `<!-- endtab -->` 来作为结束标识（因为 Stellar 会自动判断）
+- 不支持 `@icon` 方式设置图标（因为 Stellar 不再内置 `fontawesome` 图标库）
+- 暂时不支持 `md` 格式的代码块，这是技术问题，有待解决。
 
-{% tabs Fourth unique name active:2 %}
-<!-- tab Solution 1 -->
-This is Tab 1.
-<!-- endtab -->
+{% tabs unique name active:2 center:true %}
 
-<!-- tab 代码块测试 -->
-```swift
+<!-- tab 图片 -->
+{% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg width:300px %}
+
+<!-- tab 代码块 -->
+{% codeblock lang:swift %}
 let x = 123
 print("hello world")
-```
-<!-- endtab -->
+{% endcodeblock %}
 
-<!-- tab Solution 3 -->
-This is Tab 3.
-<!-- endtab -->
+<!-- tab 表格 -->
+| a | b | c |
+| --- | --- | --- |
+| a1 | b1 | c1 |
+| a2 | b2 | c2 |
+
 {% endtabs %}
+
+```md 写法如下
+{% tabs unique name active:2 center:true %}
+
+<!-- tab 图片 -->
+{% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg width:300px %}
+
+<!-- tab 代码块 -->
+{% codeblock lang:swift %}
+let x = 123
+print("hello world")
+{% endcodeblock %}
+
+<!-- tab 表格 -->
+| a | b | c |
+| --- | --- | --- |
+| a1 | b1 | c1 |
+| a2 | b2 | c2 |
+
+{% endtabs %}
+```
 
 ## 轮播标签
 

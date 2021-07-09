@@ -2,7 +2,6 @@
 layout: wiki
 wiki: Volantis
 title: Volantis for Hexo
-cover: [logo, description]
 utterances:
   repo: 'volantis-x/community'
   'issue-number': 115
