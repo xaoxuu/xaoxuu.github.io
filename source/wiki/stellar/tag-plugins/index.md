@@ -174,7 +174,7 @@ color: red/orange/yellow/green/cyan/blue/purple/light/dark
 如果备注标签内容不只有文字，请使用 noteblock 代替。
 
 {% noteblock %}
-{% tabs example for noteblock align:center %}
+{% tabs example for noteblock %}
 <!-- tab 图文示例 -->
 {% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0627a@2x.jpg 个人电脑作为办公设备时，我们该如何保护隐私？ download:true %}
 公司一般都会强制安装安防软件，这些软件要求开机自启动，要求有屏幕录制权限、完全的磁盘访问权限包括相册图库。因此如果使用自己的 MacBook 作为办公设备，必须要把生活区和工作区完全独立开，安装在两个磁盘分区，并且对磁盘分区进行加密。
@@ -190,7 +190,7 @@ npm: 6.14.10 LTS
 
 ```md 写法如下
 {% noteblock %}
-{% tabs example for noteblock align:center %}
+{% tabs example for noteblock %}
 <!-- tab 图文示例 -->
 {% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0627a@2x.jpg 个人电脑作为办公设备时，我们该如何保护隐私？ download:true %}
 公司一般都会强制安装安防软件，这些软件要求开机自启动，要求有屏幕录制权限、完全的磁盘访问权限包括相册图库。因此如果使用自己的 MacBook 作为办公设备，必须要把生活区和工作区完全独立开，安装在两个磁盘分区，并且对磁盘分区进行加密。

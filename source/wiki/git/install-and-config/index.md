@@ -13,29 +13,29 @@ order: 1
 
 安装指定系统的依赖包：
 
-```bash Centos/RedHat
+{% codeblock Centos/RedHat %}
 $ yum install curl-devel expat-devel gettext-devel \
   openssl-devel zlib-devel
-```
-```bash Debian/Ubuntu
+{% endcodeblock %}
+{% codeblock Debian/Ubuntu %}
 $ apt-get install libcurl4-gnutls-dev libexpat1-dev gettext \
   libz-dev libssl-dev
-```
+{% endcodeblock %}
 
 解压安装下载的源码包：
 
-```bash
+{% codeblock %}
 $ tar -zxf git-1.7.2.2.tar.gz
 $ cd git-1.7.2.2
 $ make prefix=/usr/local all
 $ sudo make prefix=/usr/local install
-```
+{% endcodeblock %}
 
 {% folding 使用终端指令安装 %}
 
 **Debian/Ubuntu**
 
-```bash
+{% codeblock %}
 $ apt-get install libcurl4-gnutls-dev libexpat1-dev gettext \
   libz-dev libssl-dev
 
@@ -43,11 +43,11 @@ $ apt-get install git
 
 $ git --version
 git version 1.8.1.2
-```
+{% endcodeblock %}
 
 **CentOS/RedHat**
 
-```bash
+{% codeblock %}
 $ yum install curl-devel expat-devel gettext-devel \
   openssl-devel zlib-devel
 
@@ -55,7 +55,7 @@ $ yum -y install git-core
 
 $ git --version
 git version 1.7.1
-```
+{% endcodeblock %}
 
 {% endfolding %}
 

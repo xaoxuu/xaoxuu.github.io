@@ -56,6 +56,7 @@ npm: 6.14.10 LTS
 
 ## 下载与安装
 
+{% noteblock %}
 {% tabs install %}
 
 <!-- tab 稳定版 -->
@@ -91,7 +92,7 @@ npm: 6.14.10 LTS
 {% note color:yellow 适用范围 自定义版适用于对主题有自定义需求，且掌握了一定的前端知识和动手能力的用户。 %}
 
 {% endtabs %}
-
+{% endnoteblock %}
 
 
 ## 示例博客
