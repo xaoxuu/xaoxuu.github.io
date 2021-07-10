@@ -102,8 +102,14 @@ bg: '#ffffff' # 图片区域背景颜色，16进制
 
 ## 备注标签
 
-```
+```md note
 {% note [title] content [color:color] %}
+```
+
+```md noteblock
+{% noteblock [title] [color:color] [codeblock:bool] %}
+...
+{% endnoteblock %}
 ```
 
 ```yaml 参数说明
@@ -111,6 +117,8 @@ title: 标题（可选）
 content: 内容
 color: red/orange/yellow/green/cyan/blue/purple/light/dark
 ```
+
+### 彩色备注标签
 
 备注标签相较于旧版进行了增强，可以实现更多种颜色， note 标签可以用空格隔开标题和内容。 noteblock 标签适用于应对更复杂的场合。
 
@@ -141,7 +149,7 @@ color: red/orange/yellow/green/cyan/blue/purple/light/dark
 
 ### 具有标题的备注标签
 
-在旧版本只能使用 noteblock 实现，现在 note 可以用更简单的方式实现了，只需要在标题和内容中间加一个空格。
+#### 使用 note 标签
 
 {% note 这是标题 这是正文 哈哈。 %}
 
@@ -149,17 +157,105 @@ color: red/orange/yellow/green/cyan/blue/purple/light/dark
 {% note 这是标题 这是正文 哈哈。 %}
 ```
 
+#### 使用 noteblock 标签
+
+{% noteblock 这是标题 %}
+这是正文 哈哈。
+{% endnoteblock %}
+
+```md 代替 note 标签的写法
+{% noteblock 这是标题 %}
+这是正文 哈哈。
+{% endnoteblock %}
+```
+
 ### 复杂备注标签
 
 如果备注标签内容不只有文字，请使用 noteblock 代替。
 
-{% noteblock 图文示例 %}
-{% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0627a@2x.jpg 公司一般都会强制安装安防软件，这些软件要求开机自启动，要求有屏幕录制权限、完全的磁盘访问权限包括相册图库。因此如果使用自己的 MacBook 作为办公设备，必须要把生活区和工作区完全独立开，安装在两个磁盘分区，并且对磁盘分区进行加密。 download:true %}
+{% noteblock %}
+{% tabs example for noteblock align:center %}
+<!-- tab 图文示例 -->
+{% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0627a@2x.jpg 个人电脑作为办公设备时，我们该如何保护隐私？ download:true %}
+公司一般都会强制安装安防软件，这些软件要求开机自启动，要求有屏幕录制权限、完全的磁盘访问权限包括相册图库。因此如果使用自己的 MacBook 作为办公设备，必须要把生活区和工作区完全独立开，安装在两个磁盘分区，并且对磁盘分区进行加密。
+<!-- tab 代码示例 -->
+{% codeblock 建议的版本 lang:yaml %}
+Hexo: 5.4.0
+hexo-cli: 4.2.0
+node.js: 14.15.4 LTS # 建议使用LTS版本
+npm: 6.14.10 LTS
+{% endcodeblock %}
+{% endtabs %}
 {% endnoteblock %}
 
 ```md 写法如下
-{% noteblock 图文示例 %}
-{% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0627a@2x.jpg 公司一般都会强制安装安防软件，这些软件要求开机自启动，要求有屏幕录制权限、完全的磁盘访问权限包括相册图库。因此如果使用自己的 MacBook 作为办公设备，必须要把生活区和工作区完全独立开，安装在两个磁盘分区，并且对磁盘分区进行加密。 download:true %}
+{% noteblock %}
+{% tabs example for noteblock align:center %}
+<!-- tab 图文示例 -->
+{% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0627a@2x.jpg 个人电脑作为办公设备时，我们该如何保护隐私？ download:true %}
+公司一般都会强制安装安防软件，这些软件要求开机自启动，要求有屏幕录制权限、完全的磁盘访问权限包括相册图库。因此如果使用自己的 MacBook 作为办公设备，必须要把生活区和工作区完全独立开，安装在两个磁盘分区，并且对磁盘分区进行加密。
+<!-- tab 代码示例 -->
+{% codeblock 建议的版本 lang:yaml %}
+Hexo: 5.4.0
+hexo-cli: 4.2.0
+node.js: 14.15.4 LTS # 建议使用LTS版本
+npm: 6.14.10 LTS
+{% endcodeblock %}
+{% endtabs %}
+{% endnoteblock %}
+```
+
+### 彩色代码块
+
+**设置 `codeblock:true` 并设置 `color:颜色枚举` 可以实现10种颜色的代码块**
+
+正确的例子：
+
+{% noteblock codeblock:true color:green %}
+```swift
+func test() {
+    // ...
+}
+```
+{% endnoteblock %}
+
+错误的例子：
+
+{% noteblock codeblock:true color:red %}
+```swift
+func test() -> Void {
+    // ...
+}
+// 或者
+func test() -> () {
+    // ...
+}
+```
+{% endnoteblock %}
+
+```md 写法如下
+正确的例子：
+
+{% noteblock codeblock:true color:green %}
+\```swift
+func test() {
+    // ...
+}
+\```
+{% endnoteblock %}
+
+错误的例子：
+
+{% noteblock codeblock:true color:red %}
+\```swift
+func test() -> Void {
+    // ...
+}
+// 或者
+func test() -> () {
+    // ...
+}
+\```
 {% endnoteblock %}
 ```
 
@@ -179,9 +275,11 @@ open: true/false
 color: red/orange/yellow/green/cyan/blue/purple/light/dark
 ```
 
+### 彩色可折叠代码块
+
 备注标签相较于旧版进行了增强，可以实现更多种颜色，还可以通过设置 `codeblock:true` 来实现可折叠的代码块。以下是一个默认打开的代码折叠框：
 
-{% folding codeblock:true open:false 默认打开的代码折叠框 %}
+{% folding codeblock:true open:true color:yellow 默认打开的代码折叠框 %}
 ```swift
 func test() {
   print("hello world")
@@ -192,7 +290,7 @@ func test() {
 代码如下：
 
 ```
-{% folding codeblock:true open:true 默认打开的代码折叠框 %}
+{% folding codeblock:true open:true color:yellow 默认打开的代码折叠框 %}
 代码块
 {% endfolding %}
 ```
@@ -419,13 +517,13 @@ XAOXUU 目前是一个 iOS 开发者，代表作品有：ProHUD、ValueX 等。�
 
 这个标签移植自 [NexT](https://theme-next.js.org/docs/tag-plugins/tabs.html) 主题，但做了以下修改：
 
-- 支持设置 `center:true` 来使内容居中
+- 支持设置 `align:center` 来使内容居中
 - 设置默认激活的标签方式为 `active:1` 而非 `, 1`（使用默认格式降低学习成本，且显式声明可读性更强）
 - 不需要 `<!-- endtab -->` 来作为结束标识（因为 Stellar 会自动判断）
 - 不支持 `@icon` 方式设置图标（因为 Stellar 不再内置 `fontawesome` 图标库）
 - 暂时不支持 `md` 格式的代码块，这是技术问题，有待解决。
 
-{% tabs unique name active:2 center:true %}
+{% tabs unique name active:2 align:center %}
 
 <!-- tab 图片 -->
 {% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg width:300px %}
@@ -445,7 +543,7 @@ print("hello world")
 {% endtabs %}
 
 ```md 写法如下
-{% tabs unique name active:2 center:true %}
+{% tabs unique name active:2 align:center %}
 
 <!-- tab 图片 -->
 {% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg width:300px %}

@@ -46,7 +46,7 @@ XAOXUU 目前是一个 iOS 开发者，代表作品有：ProHUD、ValueX 等。�
 
 ## 兴趣爱好
 
-{% tabs hobbies active:1 center:true %}
+{% tabs hobbies active:1 align:center %}
 
 <!-- tab 音乐 -->
 
