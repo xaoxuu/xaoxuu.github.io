@@ -17,11 +17,6 @@ group1:
       url: https://www.jianshu.com/u/bd668c09cabf
       screenshot:
       description: https://www.jianshu.com/...
-    - title: Pikaurd
-      avatar:
-      url: http://blog.pikaurd.com/
-      screenshot: https://7.dusays.com/2021/01/30/a808f15c4a6f9.jpg
-      description: hello world
     - title: Woooodi's Private Zone
       avatar:
       url: https://woonoah.github.io/woodi.github.io/

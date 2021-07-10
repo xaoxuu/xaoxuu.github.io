@@ -17,16 +17,14 @@ header: false
 
 {% endnoteblock %}
 
-## 关于友链
-
-**我可以交换友链吗？**
+## 我可以交换友链吗？
 
 先友后链，在我们有一定了解了之后才可以交换友链，除此之外，您的网站还应满足以下条件：
 
 - 合法的、非营利性、无商业广告
 - 有实质性原创内容的 `HTTPS` 站点
 
-{% folding 如何自助添加友链？ %}
+## 如何自助添加友链？
 
 {% timeline %}
 
@@ -42,17 +40,15 @@ header: false
 
 请添加本站到您的友链中，如果您也使用 issue 作为友链源，只需要告知您的友链源仓库即可。
 
-```yaml
+{% codeblock lang:yaml %}
 title: xaoxuu
 avatar: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/avatar/rect-256@2x.png
 url: https://xaoxuu.com
 screenshot: https://i.loli.net/2020/08/21/VuSwWZ1xAeUHEBC.jpg
-```
+{% endcodeblock %}
 
 待管理员审核通过，添加了 `active` 标签后，回来刷新即可生效。
 
 {% endtimeline %}
-
-{% endfolding %}
 
 如果您需要更新自己的友链，请直接修改 issue 内容，大约 3 分钟内生效，无需等待博客更新。如果无法修改，可以重新创建一个。
