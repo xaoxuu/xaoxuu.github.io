@@ -3,7 +3,6 @@ layout: wiki
 wiki: Stellar
 order: 4
 title: 如何使用半自动化的文档系统
-comment_id: 'Q & A'
 utterances:
   repo: xaoxuu/hexo-theme-stellar
 ---

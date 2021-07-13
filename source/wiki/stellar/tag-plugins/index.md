@@ -3,7 +3,6 @@ layout: wiki
 wiki: Stellar
 order: 5
 title: 使用标签插件增强阅读体验
-comment_id: '& A'
 utterances:
   repo: xaoxuu/hexo-theme-stellar
 ---
@@ -173,11 +172,13 @@ color: red/orange/yellow/green/cyan/blue/purple/light/dark
 
 如果备注标签内容不只有文字，请使用 noteblock 代替。
 
-{% noteblock %}
+{% noteblock child:tabs %}
 {% tabs example for noteblock %}
 <!-- tab 图文示例 -->
 {% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0627a@2x.jpg 个人电脑作为办公设备时，我们该如何保护隐私？ download:true %}
+
 公司一般都会强制安装安防软件，这些软件要求开机自启动，要求有屏幕录制权限、完全的磁盘访问权限包括相册图库。因此如果使用自己的 MacBook 作为办公设备，必须要把生活区和工作区完全独立开，安装在两个磁盘分区，并且对磁盘分区进行加密。
+
 <!-- tab 代码示例 -->
 {% codeblock 建议的版本 lang:yaml %}
 Hexo: 5.4.0
@@ -207,11 +208,11 @@ npm: 6.14.10 LTS
 
 ### 彩色代码块
 
-**设置 `codeblock:true` 并设置 `color:颜色枚举` 可以实现10种颜色的代码块**
+**设置 `child:codeblock` 并设置 `color:颜色枚举` 可以实现10种颜色的代码块**
 
 正确的例子：
 
-{% noteblock codeblock:true color:green %}
+{% noteblock child:codeblock color:green %}
 ```swift
 func test() {
     // ...
@@ -221,7 +222,7 @@ func test() {
 
 错误的例子：
 
-{% noteblock codeblock:true color:red %}
+{% noteblock child:codeblock color:red %}
 ```swift
 func test() -> Void {
     // ...
@@ -236,7 +237,7 @@ func test() -> () {
 ```md 写法如下
 正确的例子：
 
-{% noteblock codeblock:true color:green %}
+{% noteblock child:codeblock color:green %}
 \```swift
 func test() {
     // ...
@@ -246,7 +247,7 @@ func test() {
 
 错误的例子：
 
-{% noteblock codeblock:true color:red %}
+{% noteblock child:codeblock color:red %}
 \```swift
 func test() -> Void {
     // ...
@@ -277,9 +278,9 @@ color: red/orange/yellow/green/cyan/blue/purple/light/dark
 
 ### 彩色可折叠代码块
 
-备注标签相较于旧版进行了增强，可以实现更多种颜色，还可以通过设置 `codeblock:true` 来实现可折叠的代码块。以下是一个默认打开的代码折叠框：
+备注标签相较于旧版进行了增强，可以实现更多种颜色，还可以通过设置 `child:codeblock` 来实现可折叠的代码块。以下是一个默认打开的代码折叠框：
 
-{% folding codeblock:true open:true color:yellow 默认打开的代码折叠框 %}
+{% folding child:codeblock open:true color:yellow 默认打开的代码折叠框 %}
 ```swift
 func test() {
   print("hello world")
@@ -290,7 +291,7 @@ func test() {
 代码如下：
 
 ```
-{% folding codeblock:true open:true color:yellow 默认打开的代码折叠框 %}
+{% folding child:codeblock open:true color:yellow 默认打开的代码折叠框 %}
 代码块
 {% endfolding %}
 ```

@@ -3,7 +3,6 @@ layout: wiki
 wiki: Stellar
 order: 2
 title: 个性化您的主题
-comment_id: 'Q & A'
 utterances:
   repo: xaoxuu/hexo-theme-stellar
 ---

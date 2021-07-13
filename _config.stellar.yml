@@ -60,3 +60,8 @@ footer:
       - '[GitHub](https://github.com/xaoxuu)'
       - '[GitLab](http://42.192.89.158:8099/explore)'
   source: '[GitHub](https://github.com/xaoxuu/xaoxuu.github.io/)'
+
+
+style:
+  codeblock:
+    scrollbar: 0px

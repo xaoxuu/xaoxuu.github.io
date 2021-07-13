@@ -24,7 +24,7 @@ pod install
 以字符串为例，通过 `NSSafeString(obj)` 拿到的值如果不为空，则其类型一定是 `NSString`，不会是 `NSNumber` 或者 `NSNull`。
 
 
-{% folding codeblock:true open:true 测试代码 %}
+{% folding child:codeblock open:true 测试代码 %}
 ```ObjC
 - (void)test01 {
     NSDictionary *d1 = @{@"name": @"Mr. Xu", @"info": @"{\n    \"age\" : \"23\",\n    \"userId\" : \"123123123\",\n    \"deviceId\" : \"<null>\"\n}"};
@@ -53,7 +53,7 @@ pod install
 
 通过 `[dict numberForKey:@"age"]` 得到的值，如果不为空，则一定是 `NSNumber` 的实例对象。
 
-{% folding codeblock:true open:true 测试代码 %}
+{% folding child:codeblock open:true 测试代码 %}
 ```ObjC
 /**
  测试: 从后台接收到字典
@@ -83,7 +83,7 @@ pod install
 
 同理，只要是能互相转换的值均能通过类似的格式一行代码获取，如果不能转换，得到的值是 `nil`。
 
-{% folding codeblock:true open:true 测试代码 %}
+{% folding child:codeblock open:true 测试代码 %}
 ```ObjC
 - (void)test2:(NSDictionary *)value {
     NSLog(@"value: %@", value);
