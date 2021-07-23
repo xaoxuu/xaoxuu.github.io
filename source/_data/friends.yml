@@ -68,6 +68,6 @@ group2:
 
 group3:
   title: 来自 GitHub 的朋友
-  description: '以下友链通过 [GitHub Issue](https://github.com/xaoxuu/friends/issues/) 提交，按 issue 最后更新时间排序：'
+  description: '以下友链通过 [GitHub Issue](https://github.com/xaoxuu/friends/issues/) 提交：'
   api: https://issues-api.vercel.app
   repo: xaoxuu/friends
