@@ -130,7 +130,9 @@ Resume:
   description: 一个干净简约的商务风轻量级在线简历主题。
   index: true
   repo: xaoxuu/hexo-theme-resume
-  branch: master
+  beaudar:
+    repo: xaoxuu/hexo-theme-resume
+    'issue-term': 'Q & A'
 
 
 Inspire:
