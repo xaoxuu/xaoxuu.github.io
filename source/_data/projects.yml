@@ -10,8 +10,10 @@ Stellar:
   description: Stellar 是一个内置 wiki 系统的 hexo 主题，适合综合型站点使用。同时也拥有简约而精美的视觉设计和丰富的标签插件，帮助您简单从容地应对各种场合。
   index: true
   repo: xaoxuu/hexo-theme-stellar
-  comment_id: 'Q & A'
   comment_title: '评论区仅供交流，有问题请提 [issue](https://github.com/xaoxuu/hexo-theme-stellar/issues) 反馈。'
+  beaudar:
+    repo: xaoxuu/hexo-theme-stellar
+    'issue-term': 'Q & A'
 
 ProHUD:
   title: ProHUD
@@ -45,6 +47,9 @@ Volantis:
     large: 120px
   description: Volantis 是一个高度模块化的 Hexo 主题，拥有丰富的内置标签和第三方插件支持，拥有庞大的开发者团队和年轻活跃的社区文化。
   repo: volantis-x/hexo-theme-volantis
+  beaudar:
+    repo: 'volantis-x/community'
+    'issue-number': 115
 
 
 Git:

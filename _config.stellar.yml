@@ -22,8 +22,8 @@ article:
     enable: true
 
 comments:
-  service: utterances
-  utterances:
+  service: beaudar
+  beaudar:
     repo: xaoxuu/blog-comments
 
 footer:

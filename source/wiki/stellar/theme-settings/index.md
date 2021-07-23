@@ -3,8 +3,6 @@ layout: wiki
 wiki: Stellar
 order: 2
 title: 个性化您的主题
-utterances:
-  repo: xaoxuu/hexo-theme-stellar
 ---
 
 ## 站点信息
@@ -133,7 +131,7 @@ A: 把 welcome 组件的属性都改成你想要的那个组件的就可以啦�
 ```yaml blog/_config.stellar.yml
 comments:
   service: utterances # utterances
-  utterances:
+  beaudar:
     repo: xaoxuu/blog-comments
 ```
 
@@ -160,7 +158,7 @@ comment_id: '留言板'
 
 ```yaml blog/source/wiki/stellar/index.md
 title: 快速开始您的博客之旅
-utterances:
+beaudar:
   repo: xaoxuu/hexo-theme-stellar
   'issue-term': 'Q & A'
 ```

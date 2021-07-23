@@ -3,8 +3,6 @@ layout: wiki
 wiki: Stellar
 order: 3
 title: 编写文章以及独立页面
-utterances:
-  repo: xaoxuu/hexo-theme-stellar
 ---
 
 ## 文章封面

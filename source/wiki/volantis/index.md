@@ -2,9 +2,6 @@
 layout: wiki
 wiki: Volantis
 title: Volantis for Hexo
-utterances:
-  repo: 'volantis-x/community'
-  'issue-number': 115
 ---
 
 Volantis 是一个高度模块化的 Hexo 主题，拥有丰富的内置标签和第三方插件支持，拥有庞大的开发者团队和年轻活跃的社区文化。得益于其强大的模块化特性，您可以轻松搭建一个极简风格的轻博客，也可以仿照社区主页搭建一个多人协作的、包含 wiki 的综合型站点。

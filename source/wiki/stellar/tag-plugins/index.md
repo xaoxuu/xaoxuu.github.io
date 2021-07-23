@@ -3,8 +3,6 @@ layout: wiki
 wiki: Stellar
 order: 5
 title: 使用标签插件增强阅读体验
-utterances:
-  repo: xaoxuu/hexo-theme-stellar
 ---
 
 新版标签插件和 Hexo 官方的标签插件统一使用空格分隔，所以如果参数内容中需要出现的空格被意外分隔开了的时候，请使用 `&nbsp;` 代替。

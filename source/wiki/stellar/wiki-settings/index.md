@@ -3,8 +3,6 @@ layout: wiki
 wiki: Stellar
 order: 4
 title: 如何使用半自动化的文档系统
-utterances:
-  repo: xaoxuu/hexo-theme-stellar
 ---
 
 自动意味着 Stellar 可以自动找到一个项目的所有文档分页，生成一个目录树，半自动意味着您可以手动指定顺序、标题、分组，而非依赖文件路径、文件名来排序和显示。
