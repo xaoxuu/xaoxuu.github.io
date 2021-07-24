@@ -126,17 +126,54 @@ A: 把 welcome 组件的属性都改成你想要的那个组件的就可以啦�
 
 ## 选择一个评论插件
 
-目前主题只支持一种评论，后续会加入更多评论插件，只要 [Volantis](https://volantis.js.org/v4/theme-settings/#选择评论系统) 支持的十余款都可以。
+{% tabs comments %}
 
-```yaml blog/_config.stellar.yml
+<!-- tab Beaudar  -->
+
+Beaudar 是 Utterances 的中文版本，相比 Utterances 有更多的体验优化，可以按时间倒序排序。
+
+{% codeblock blog/_config.stellar.yml lang:yaml %}
 comments:
-  service: utterances # utterances
+  service: beaudar
   beaudar:
     repo: xaoxuu/blog-comments
-```
+{% endcodeblock %}
 
-[utterances](https://utteranc.es/) 的配置方法很简单，创建一个仓库，在仓库中创建一个[域名白名单文件](https://github.com/xaoxuu/blog-comments/blob/main/utterances.json) ，然后在[此处](https://github.com/apps/utterances)授权安装即可。
+[Beaudar](https://beaudar.lipk.org) 的配置方法很简单，创建一个仓库，在仓库中创建一个[域名白名单文件](https://github.com/xaoxuu/blog-comments/blob/main/beaudar.json) ，然后在[此处](https://github.com/apps/beaudar)授权安装即可。
 
+<!-- tab utterances  -->
+
+A lightweight comments widget built on GitHub issues. Use GitHub issues for blog comments, wiki pages and more!
+
+{% codeblock blog/_config.stellar.yml lang:yaml %}
+comments:
+  service: utterances
+  utterances:
+    repo: xaoxuu/blog-comments
+{% endcodeblock %}
+
+[utterances](https://utteranc.es) 的配置方法很简单，创建一个仓库，在仓库中创建一个[域名白名单文件](https://github.com/xaoxuu/blog-comments/blob/main/utterances.json) ，然后在[此处](https://github.com/apps/utterances)授权安装即可。
+
+<!-- tab Twikoo  -->
+
+{% codeblock blog/_config.stellar.yml lang:yaml %}
+comments:
+  service: twikoo
+  twikoo:
+    envId: https://xxx # vercel函数
+{% endcodeblock %}
+
+<!-- tab Valine  -->
+
+{% codeblock blog/_config.stellar.yml lang:yaml %}
+comments:
+  service: valine
+  valine:
+    appId: # your appId
+    appKey: # your appKey
+{% endcodeblock %}
+
+{% endtabs %}
 
 ### 共用评论数据
 
@@ -154,7 +191,7 @@ comment_id: '留言板'
 
 ### 使用其它评论数据
 
-如果您有多个页面需要另外一个数据库的评论数据，以 `utterances` 为例，您可以这样：
+如果您有多个页面需要另外一个数据库的评论数据，以 Beaudar 为例，您可以这样：
 
 ```yaml blog/source/wiki/stellar/index.md
 title: 快速开始您的博客之旅
