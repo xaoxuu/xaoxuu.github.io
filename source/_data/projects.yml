@@ -61,16 +61,6 @@ Git:
   description: Git 是目前世界上最先进的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。
 
 
-Notes:
-  title: 便笺
-  logo:
-    src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg
-    small: 112px
-    large: 240px
-  description:
-  index: false
-
-
 heartmate:
   title: 心率管家
   group: 应用程序
@@ -171,3 +161,18 @@ NEXUS:
     src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/nexus/icon.png
     small: 88px
   description: 'Windows 实用工具箱，搜索、激活、清理一步即达，支持 Win7-10，现已暂停维护。'
+
+
+Notes:
+  title: 便笺
+  logo:
+    src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg
+    small: 112px
+    large: 240px
+  description:
+  index: false
+  sidebar: [toc]
+  sections:
+    '日常问题解决方案': [101, 200]
+    '移动端开发笔记': [201, 300]
+    '前端学习笔记': [301, 400]

@@ -5,7 +5,7 @@ menu_id: notes
 layout: wiki
 wiki: Notes
 title: Mac 相关问题
-order: 10
+order: 101
 ---
 
 
@@ -104,9 +104,9 @@ plutil -convert xml1 data.json -o data.plist
 
 如果输出以下信息，说明 SIP 开启，需要暂时将 SIP 关闭。
 
-```
+{% codeblock %}
 System Integrity Protection status: enabled.
-```
+{% endcodeblock %}
 
 <!-- tab 关闭 SIP -->
 

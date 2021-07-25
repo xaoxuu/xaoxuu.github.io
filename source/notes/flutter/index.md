@@ -5,7 +5,7 @@ menu_id: notes
 layout: wiki
 wiki: Notes
 title: Flutter 相关问题
-order: 30
+order: 250
 references:
   - title: 'flutter.cn'
     url: https://flutter.cn/

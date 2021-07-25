@@ -5,7 +5,7 @@ menu_id: notes
 layout: wiki
 wiki: Notes
 title: 服务器相关问题
-order: 110
+order: 360
 ---
 
 ## GitHub Action + Hexo 部署到服务器

@@ -5,7 +5,7 @@ menu_id: notes
 layout: wiki
 wiki: Notes
 title: Node.js 相关问题
-order: 100
+order: 350
 references:
   - url: https://nodejs.org/en/
   - url: https://www.npmjs.com
