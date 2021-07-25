@@ -25,29 +25,37 @@ title: 这是分页标题
 ---
 ```
 
-建议用这个文件作为项目的主页，并在文件夹内创建其它分页。
+建议用这个文件作为项目的主页，并在文件夹内创建其它分页。Stellar 会把同一个项目的所有分页中 `order` 最小的一页作为项目的主页（其默认值为0）。
 
-## 项目主页
+## 完善项目信息
 
-Stellar 会把具有 `description` 的项目识别为项目主页。例如：
+在数据文件中创建项目文件，以 Stellar 为例：
 
-```yaml blog/source/wiki/stellar/index.md
----
-layout: wiki
-wiki: Stellar
-order: -202102
-seo_title: 一个实用简约主义的 Hexo 主题
-title: 快速开始您的博客之旅
-description: 这是一个全新的主题，拥有精心设计的样式和强大的功能。目前还没开发完毕，旧的文章正在逐步迁移至新主题。
----
+```yaml blog/source/_data/projects.yml
+Stellar:
+  title: Stellar
+  subtitle: 每个人的独立博客
+  group: 博客主题
+  cover: true
+  logo:
+    src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg
+    small: 112px
+    large: 240px
+  description: Stellar 是一个内置 wiki 系统的 hexo 主题，适合综合型站点使用。同时也拥有简约而精美的视觉设计和丰富的标签插件，帮助您简单从容地应对各种场合。
+  repo: xaoxuu/hexo-theme-stellar
+  comment_title: '评论区仅供交流，有问题请提 [issue](https://github.com/xaoxuu/hexo-theme-stellar/issues) 反馈。'
+  beaudar:
+    repo: xaoxuu/hexo-theme-stellar
+    'issue-term': 'Q & A'
 ```
+
 
 ### 是否显示封面
 
 项目可以显示一个全屏封面，封面占据一个屏幕的高度，会居中依次显示项目的 logo、标题、描述。开启项目封面方法如下：
 
 ```yaml blog/source/_data/projects.yml
-项目:
+Stellar:
   cover: true
   logo:
     src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg
@@ -58,27 +66,55 @@ description: 这是一个全新的主题，拥有精心设计的样式和强大�
 如果 logo 中已经包含了项目标题，可以这样设置不显示项目标题：
 
 ```yaml blog/source/_data/projects.yml
-cover: [logo, description]
+Stellar:
+  cover: [logo, description]
+```
+
+### 项目文档分类
+
+如果您有很多项目，有些项目是属于同一个分组的，可以相同的 `group` 值：
+
+```yaml blog/source/_data/projects.yml
+Stellar:
+  group: 博客主题
+```
+
+### 项目的 GitHub 仓库信息
+
+设置了 `repo` 值就会在侧边栏显示项目仓库的相关链接：
+
+```yaml blog/source/_data/projects.yml
+Stellar:
+  repo: xaoxuu/hexo-theme-stellar
+```
+
+### 项目评论设置
+
+如果希望项目的所有分页使用相同的评论数据，可以在这里覆盖评论配置：
+
+```yaml blog/source/_data/projects.yml
+Stellar:
+  comment_title: '评论区仅供交流，有问题请提 [issue](https://github.com/xaoxuu/hexo-theme-stellar/issues) 反馈。'
+  beaudar:
+    repo: xaoxuu/hexo-theme-stellar
+    'issue-term': 'Q & A'
+```
+
+> 目前支持覆盖 beaudar/utterances，其它评论系统可以通过设置 `comment_id` 来实现。
+
+### 是否索引
+
+如果您有些项目希望在项目列表中隐藏，可以设置 `index` 值：
+
+```yaml blog/source/_data/projects.yml
+Stellar:
+  index: false
 ```
 
 ## 项目文档排序
 
-多个项目之间、一个项目的多个文档分页之间都以 `order` 的值作为排序依据，数字越小越靠前。
+多个项目之间、一个项目的多个文档分页之间都以 `order` 的值作为排序依据，数字越小越靠前，最小的是项目主页。
 
-## 项目文档分类
-
-如果您有很多项目，有些项目是属于同一个分组的，可以创建一个文件来描述它们的关系，文件要使用 `index` 布局模板：
-
-```yaml blog/wiki/categories/hexo-themes.md
----
-layout: index
-title: 博客主题
-order: 3
-wiki: [Stellar, Volantis]
----
-```
-
-有了这个文件，项目文档就可以像文章一样进行分类筛选浏览。
 
 ## 修改 wiki 路径
 
@@ -86,4 +122,16 @@ wiki: [Stellar, Volantis]
 
 ```yaml blog/_config.yml
 wiki_dir: wiki
+```
+
+例如书籍类的“项目”可以改为：
+
+```yaml blog/_config.yml
+wiki_dir: books
+```
+
+例如商品/产品类的“项目”可以改为：
+
+```yaml blog/_config.yml
+wiki_dir: products
 ```
