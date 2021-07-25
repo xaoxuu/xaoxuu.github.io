@@ -4,6 +4,7 @@ updated: 2016-10-20
 title: 如何从 UIImageView 指定的坐标点取色？
 categories: [解决方案]
 tags: [iOS, 开源库]
+cover: xcode,color
 references:
   - title: Simple way to read pixel color values from an PNG image on the iPhone?
     url: https://stackoverflow.com/questions/3773245/simple-way-to-read-pixel-color-values-from-an-png-image-on-the-iphone

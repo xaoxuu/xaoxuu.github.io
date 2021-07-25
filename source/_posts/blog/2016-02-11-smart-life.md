@@ -3,6 +3,7 @@ date: 2016-02-11
 updated: 2016-09-20
 title: 我关于未来的智能生活的畅想
 categories: [胡思乱想]
+cover: smart,home
 comment_title: 你想象中的未来生活是什么样子呢？
 ---
 

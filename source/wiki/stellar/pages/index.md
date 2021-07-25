@@ -16,6 +16,15 @@ cover: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0927a@1x.svg
 ---
 ```
 
+如果您想使用 Unsplash 随机封面，可以在 `cover` 设置搜索关键词（用英文逗号隔开）：
+
+```yaml blog/source/xxx.md
+---
+title: iOS 接入 Strava 分享模块（下篇：StravaSDK）
+cover: workout,strava
+---
+```
+
 ## 文章摘要
 
 一篇文章开头一段文字描述就是摘要，摘要和正文用 `<!-- more -->` 隔开，前后一定要有空行。例如：

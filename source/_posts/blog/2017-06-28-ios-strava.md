@@ -4,6 +4,7 @@ updated: 2017-06-28
 title: iOS 接入 Strava 分享模块（下篇：StravaSDK）
 categories: [解决方案]
 tags: [iOS, StravaSDK]
+cover: workout,strava
 references:
   - url: https://strava.github.io/api/
   - url: https://github.com/StravaKit/StravaKit/

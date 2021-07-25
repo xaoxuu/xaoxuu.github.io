@@ -4,6 +4,7 @@ updated: 2017-06-22
 title: iOS 接入 Strava 分享模块（上篇：FitSDK）
 categories: [解决方案]
 tags: [iOS, FitSDK]
+cover: workout,fit
 references:
   - title: G.FIT_SDK_V4.04.00.zip
     url: https://developer.garmin.com/fit/?resources/fit/
