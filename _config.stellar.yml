@@ -48,10 +48,10 @@ footer:
       - '[标签](/blog/tags/)'
       - '[归档](/blog/archives/)'
     '项目':
-      - '[开源库](/wiki/categories/开源库/)'
-      - '[实用脚本](/wiki/categories/实用脚本/)'
-      - '[博客主题](/wiki/categories/博客主题/)'
-      - '[应用程序](/wiki/categories/应用程序/)'
+      - '[开源库](/wiki/tags/开源库/)'
+      - '[实用脚本](/wiki/tags/实用脚本/)'
+      - '[博客主题](/wiki/tags/博客主题/)'
+      - '[应用程序](/wiki/tags/应用程序/)'
     '社交':
       - '[友链](/friends/)'
       - '[留言板](/about/#comments)'
