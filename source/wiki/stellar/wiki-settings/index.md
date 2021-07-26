@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: Stellar
-order: 4
+order: 201
 title: 如何使用半自动化的文档系统
 ---
 
@@ -35,7 +35,7 @@ title: 这是分页标题
 Stellar:
   title: Stellar
   subtitle: 每个人的独立博客
-  group: 博客主题
+  tags: 博客主题
   cover: true
   logo:
     src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg
@@ -70,14 +70,22 @@ Stellar:
   cover: [logo, description]
 ```
 
-### 项目文档分类
+### 项目文档标签
 
-如果您有很多项目，有些项目是属于同一个分组的，可以相同的 `group` 值：
+如果您有很多项目，有些项目是有相关性的，可以相同的 `tags` 值：
 
 ```yaml blog/source/_data/projects.yml
 Stellar:
-  group: 博客主题
+  tags: 博客主题
 ```
+
+也可以设置多个 `tags` 值：
+
+```yaml blog/source/_data/projects.yml
+Stellar:
+  tags: [博客主题, 开源项目]
+```
+
 
 ### 项目的 GitHub 仓库信息
 
@@ -111,9 +119,9 @@ Stellar:
   index: false
 ```
 
-## 项目文档排序
+## 文档排序
 
-多个项目之间、一个项目的多个文档分页之间都以 `order` 的值作为排序依据，数字越小越靠前，最小的是项目主页。
+一个项目文档的多个分页之间以 `order` 的值作为排序依据，数字越小越靠前，最小的是项目主页。
 
 ## 侧边栏设置
 
@@ -126,16 +134,18 @@ Notes:
   sidebar: [toc]
 ```
 
-### 目录树分组
+### 对目录树进行分组
 
-如果您的项目文档分页较多，可以进行分组展示目录树：
+如果您的项目文档分页较多，可以对目录树进行分组：
 
 ```yaml blog/source/_data/projects.yml
-Notes:
+Stellar:
+  ...
   sections:
-    '日常问题解决方案': [101, 200]
-    '移动端开发笔记': [201, 300]
-    '前端学习笔记': [301, 400]
+    '快速开始': [0, 99]
+    '基本使用': [100, 199]
+    '文档系统': [200, 299]
+    '进阶设定': [900, 999]
 ```
 
 左边是显示的标题，右边是 `order` 的区间，例如某页文档的 `order` 是 `150`，那么这页文档将会显示在「日常问题解决方案」这个组中。

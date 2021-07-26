@@ -1,14 +1,19 @@
 Stellar:
   title: Stellar
   subtitle: 每个人的独立博客
-  group: 博客主题
+  tags: 博客主题
   cover: true
   logo:
     src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg
-    small: 112px
-    large: 240px
+    small: 108px
+    large: 180px
   description: Stellar 是一个内置 wiki 系统的 hexo 主题，适合综合型站点使用。同时也拥有简约而精美的视觉设计和丰富的标签插件，帮助您简单从容地应对各种场合。
   index: true
+  sections:
+    '快速开始': [0, 99]
+    '基本使用': [100, 199]
+    '文档系统': [200, 299]
+    '进阶设定': [900, 999]
   repo: xaoxuu/hexo-theme-stellar
   comment_title: '评论区仅供交流，有问题请提 [issue](https://github.com/xaoxuu/hexo-theme-stellar/issues) 反馈。'
   beaudar:
@@ -17,7 +22,7 @@ Stellar:
 
 ProHUD:
   title: ProHUD
-  group: 开源库
+  tags: 开源库
   logo:
     src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/icon.png
     small: 84px
@@ -28,7 +33,7 @@ ProHUD:
 
 ValueX:
   title: ValueX
-  group: 开源库
+  tags: 开源库
   logo:
     src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/valuex/icon.png
     small: 84px
@@ -39,7 +44,7 @@ ValueX:
 
 Volantis:
   title: Volantis
-  group: 博客主题
+  tags: 博客主题
   cover: [logo, description]
   logo:
     src: https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-Cover@3x.png
@@ -54,16 +59,19 @@ Volantis:
 
 Git:
   title: Git 实用教程
-  group: 笔记
+  tags: 笔记
   logo:
     src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/git/icon.svg
     small: 96px
+    large: 128px
   description: Git 是目前世界上最先进的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。
+  start: 开始阅读
+  cover: true
 
 
 heartmate:
   title: 心率管家
-  group: 应用程序
+  tags: 应用程序
   cover: true
   logo:
     src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/icon.svg
@@ -74,7 +82,7 @@ heartmate:
 
 hexo.sh:
   title: hexo.sh
-  group: 实用脚本
+  tags: 实用脚本
   cover: true
   logo:
     src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/hexo.sh/screenshot.png
@@ -85,7 +93,7 @@ hexo.sh:
 
 'vim-cn.sh':
   title: vim-cn.sh
-  group: 实用脚本
+  tags: 实用脚本
   logo:
     src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/vim-cn.sh/screenshot.png
   description: img.vim-cn.com 是一个十分干净好用的图床站点。
@@ -95,7 +103,7 @@ hexo.sh:
 
 tag.sh:
   title: tag.sh
-  group: 实用脚本
+  tags: 实用脚本
   description: 这个脚本可以很方便发布 git 版本，提高效率。
   repo: xaoxuu/tag.sh
   branch: master
@@ -103,7 +111,7 @@ tag.sh:
 
 podspec.sh:
   title: podspec.sh
-  group: 实用脚本
+  tags: 实用脚本
   description: 频繁执行重复的工作内容很浪费时间，对于经常需要维护 CocoaPods 开源库的人来说，需要一个脚本快速发布和更新自己的开源库。
   repo: xaoxuu/podspec.sh
   branch: master
@@ -111,7 +119,7 @@ podspec.sh:
 
 Resume:
   title: Resume
-  group: 博客主题
+  tags: 博客主题
   cover: true
   logo:
     src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/resume/icon.svg
@@ -127,7 +135,7 @@ Resume:
 
 Inspire:
   title: Inspire
-  group: 开源库
+  tags: 开源库
   logo:
     src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/inspire/icon.png
     small: 84px
@@ -139,7 +147,7 @@ Inspire:
 
 AXKit:
   title: AXKit
-  group: 开源库
+  tags: 开源库
   logo:
     src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/axkit/logo.png
     small: 64px
@@ -150,13 +158,13 @@ AXKit:
 
 SmartLamp:
   title: SmartLamp
-  group: 应用程序
+  tags: 应用程序
   description: 这是一个于2016年完成的毕业设计项目，现已归档，不再进行维护。
 
 
 NEXUS:
   title: NEXUS
-  group: 应用程序
+  tags: 应用程序
   logo:
     src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/nexus/icon.png
     small: 88px
@@ -172,6 +180,7 @@ Notes:
   description:
   index: false
   sidebar: [toc]
+  tags: 笔记
   sections:
     '日常问题解决方案': [101, 200]
     '移动端开发笔记': [201, 300]

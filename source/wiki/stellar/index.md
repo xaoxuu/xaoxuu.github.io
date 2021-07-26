@@ -71,8 +71,6 @@ npm: 6.14.13 LTS
 
 2. 阅读[更新日志](https://github.com/xaoxuu/hexo-theme-stellar/releases)进行迁移操作。
 
-<br>
-
 {% note color:green 适用范围 稳定版适用于以内容创作为主，不需要自定义主题，追求稳定和可靠性的用户。 %}
 
 <!-- tab 最新版 -->
@@ -91,8 +89,6 @@ npm: 6.14.13 LTS
 {% copy git pull %}
 
 2. 阅读[更新日志](https://github.com/xaoxuu/hexo-theme-stellar/releases)进行迁移操作。
-
-<br>
 
 {% note color:blue 适用范围 最新版适用于以内容创作为主，不需要自定义主题，追求新特性的用户。 %}
 
@@ -115,8 +111,6 @@ npm: 6.14.13 LTS
 
 2. 阅读[更新日志](https://github.com/xaoxuu/hexo-theme-stellar/releases)进行迁移操作。
 
-<br>
-
 {% note color:yellow 适用范围 自定义版适用于对主题有自定义需求，且掌握了一定的前端知识和动手能力的用户。 %}
 
 <!-- tab 引用源码 -->
@@ -124,8 +118,6 @@ npm: 6.14.13 LTS
 **安装方法**
 
 下载源码放到 `themes/` 文件夹下面试用。
-
-<br>
 
 {% note color:red 适用范围 仅试用，无法获得更新。 %}
 
@@ -174,4 +166,3 @@ SOFTWARE.
 {% checkbox 横向滚动的 gallery 标签 %}
 {% checkbox 支持放大预览的图片标签 %}
 {% checkbox 更多评论插件（请提 issue 告知） %}
-{% checkbox 笔记页面布局模板 %}
