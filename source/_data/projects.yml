@@ -30,6 +30,10 @@ ProHUD:
   description: '这是一个易于上手而又功能强大的综合型 HUD 库，包含通知横幅、弹窗和操作表。使用 ProHUD 能够轻松管理多个 HUD 实例、更新数据或避免重叠。您还可以完全定制 UI 样式以满足业务要求。'
   repo: xaoxuu/ProHUD
   branch: master
+  sections:
+    '快速开始': [0, 99]
+    '组件的使用': [100, 199]
+    '场景与自定义': [200, 299]
 
 ValueX:
   title: ValueX

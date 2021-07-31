@@ -117,13 +117,13 @@ deploy:
 
 inject:
   head:
-    - <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/favicon/apple-touch-icon.png">
-    - <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/favicon/favicon-32x32.png">
-    - <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/favicon/favicon-16x16.png">
-    - <link rel="manifest" href="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/favicon/site.webmanifest">
-    - <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/favicon/favicon.ico">
+    - <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.4/favicon/apple-touch-icon.png">
+    - <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.4/favicon/favicon-32x32.png">
+    - <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.4/favicon/favicon-16x16.png">
+    - <link rel="manifest" href="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.4/favicon/site.webmanifest">
+    - <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.4/favicon/favicon.ico">
     - <meta name="theme-color" content="#f8f8f8">
-  
+
 
 ########################### Plugins ###########################
 # npm i hexo-generator-feed

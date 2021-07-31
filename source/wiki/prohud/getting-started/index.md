@@ -1,7 +1,7 @@
 ---
 layout: wiki
 wiki: ProHUD
-order: 110
+order: 1
 title: 快速开始
 ---
 
