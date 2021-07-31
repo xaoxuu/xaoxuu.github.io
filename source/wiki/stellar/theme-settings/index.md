@@ -69,7 +69,7 @@ sidebar:
 
 ## 选择一个评论插件
 
-{% tabs comments %}
+{% tabs %}
 
 <!-- tab Beaudar  -->
 

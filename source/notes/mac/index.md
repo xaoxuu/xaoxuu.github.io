@@ -15,7 +15,7 @@ order: 101
 
 {% endfolding %}
 
-{% folding 清理 Mac 的 DNS 缓存 %}
+{% folding child:codeblock 清理 Mac 的 DNS 缓存 %}
 
 ```
 sudo killall -HUP mDNSResponder
@@ -58,7 +58,7 @@ codesign --force --deep --sign - /Applications/name.app
 
 {% folding 显示隐藏文件 %}
 
-{% tabs hidden-files active:1 %}
+{% tabs active:1 align:left %}
 
 <!-- tab 显示 -->
 
@@ -96,7 +96,7 @@ plutil -convert xml1 data.json -o data.plist
 
 {% folding sudo 依然没有权限的解决办法 %}
 
-{% tabs disable-sip active:1 %}
+{% tabs active:1 %}
 
 <!-- tab 查询 SIP 状态 -->
 

@@ -165,7 +165,7 @@ color: red/orange/yellow/green/cyan/blue/purple/light/dark
 如果备注标签内容不只有文字，请使用 noteblock 代替。
 
 {% noteblock child:tabs %}
-{% tabs example for noteblock %}
+{% tabs %}
 <!-- tab 图文示例 -->
 {% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0627a@2x.jpg 个人电脑作为办公设备时，我们该如何保护隐私？ download:true %}
 
@@ -183,7 +183,7 @@ npm: 6.14.10 LTS
 
 ```md 写法如下
 {% noteblock %}
-{% tabs example for noteblock %}
+{% tabs %}
 <!-- tab 图文示例 -->
 {% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0627a@2x.jpg 个人电脑作为办公设备时，我们该如何保护隐私？ download:true %}
 公司一般都会强制安装安防软件，这些软件要求开机自启动，要求有屏幕录制权限、完全的磁盘访问权限包括相册图库。因此如果使用自己的 MacBook 作为办公设备，必须要把生活区和工作区完全独立开，安装在两个磁盘分区，并且对磁盘分区进行加密。
@@ -513,10 +513,11 @@ XAOXUU 目前是一个 iOS 开发者，代表作品有：ProHUD、ValueX 等。�
 - 支持设置 `align:center` 来使内容居中
 - 设置默认激活的标签方式为 `active:1` 而非 `, 1`（使用默认格式降低学习成本，且显式声明可读性更强）
 - 不需要 `<!-- endtab -->` 来作为结束标识（因为 Stellar 会自动判断）
+- 不需要 `tabs id` 来保证唯一性（因为 Stellar 会设置唯一标识）
 - 不支持 `@icon` 方式设置图标（因为 Stellar 不再内置 `fontawesome` 图标库）
 - 暂时不支持 `md` 格式的代码块，这是技术问题，有待解决。
 
-{% tabs unique name active:2 align:center %}
+{% tabs active:2 align:center %}
 
 <!-- tab 图片 -->
 {% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg width:300px %}
@@ -536,7 +537,7 @@ print("hello world")
 {% endtabs %}
 
 ```md 写法如下
-{% tabs unique name active:2 align:center %}
+{% tabs active:2 align:center %}
 
 <!-- tab 图片 -->
 {% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg width:300px %}

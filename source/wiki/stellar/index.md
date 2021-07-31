@@ -52,7 +52,7 @@ npm: 6.14.13 LTS
 ## 安装与更新
 
 {% noteblock %}
-{% tabs install %}
+{% tabs %}
 
 <!-- tab 稳定版 -->
 

@@ -7,7 +7,8 @@ order: 1
 
 ## 安装
 
-{% tabs install %}
+{% tabs %}
+
 <!-- tab Linux -->
 {% link https://git-scm.com/download/linux 下载地址 %}
 
