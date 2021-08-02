@@ -27,9 +27,68 @@ title: 使用标签插件增强阅读体验
 
 {% endfolding %}
 
+## 修饰文本标签
+
+- 这是 {% psw 密码 %} 标签
+- 这是 {% u 下划线 %} 标签
+- 这是 {% emp 着重号 %} 标签
+- 这是 {% wavy 波浪线 %} 标签
+- 这是 {% del 删除线 %} 标签
+- 这是 {% sup 上角标 color:red %} 标签
+- 这是 {% sub 下角标 %} 标签
+- 这是 {% kbd 键盘样式 %} 标签，试一试：{% kbd ⌘ %} + {% kbd D %}
+
+```md 写法如下
+- 这是 {% psw 密码 %} 标签
+- 这是 {% u 下划线 %} 标签
+- 这是 {% emp 着重号 %} 标签
+- 这是 {% wavy 波浪线 %} 标签
+- 这是 {% del 删除线 %} 标签
+- 这是 {% sup 上角标 color:red %} 标签
+- 这是 {% sub 下角标 %} 标签
+- 这是 {% kbd 键盘样式 %} 标签，试一试：{% kbd ⌘ %} + {% kbd D %}
+```
+
+## 表情标签
+
+内置了可配置的 emoji 标签 {% emoji 爱你 %} 使用方法如下：
+
+```
+{% emoji 爱你 %}
+```
+
+语法格式：
+
+```
+{% emoji [source] name [height:1.75em] %}
+```
+
+其中 `source` 可省略，默认为配置中的第一个 `source`：
+
+```yaml blog/_config.stellar.yml
+tag_plugins:
+  ...
+  emoji:
+    default: https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/qq/%s.gif
+    twemoji: https://cdn.jsdelivr.net/gh/twitter/twemoji/assets/svg/%s.svg
+    qq: https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/qq/%s.gif
+    aru: https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/aru-l/%s.gif
+    tieba: https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/tieba/%s.png
+```
+
+> 在配置文件中，文件名用 `%s` 代替。这种 emoji 集成方式虽然不那么优雅，但也能用，主要是配置起来比较灵活。 {% emoji aru 0180 %}
+
+如果对高度有特别要求，可以指定高度，例如 {% emoji aru 5150 height:3em %}：
+
+```
+{% emoji aru 5150 height:3em %}
+```
+
+
+
 ## 复制标签
 
-对于单行内容，可以使用 copy 标签来实现复制功能：
+对于单行内容，可以使用 `copy` 标签来实现复制功能：
 
 {% copy curl -s https://xaoxuu.com/install | sh %}
 
