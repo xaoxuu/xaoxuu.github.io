@@ -4,6 +4,8 @@ sidebar:
     wiki: '[项目](/wiki/)'
     notes: '[便笺](/notes/)'
     more: '[更多](/about/)'
+  widgets:
+    default_layout: [welcome, recent]
 
 article:
   auto_cover: false

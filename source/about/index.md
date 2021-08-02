@@ -17,7 +17,7 @@ header: false
 
 **如果宇宙中真有什么终极的逻辑，那就是我们终有一天会在舰桥上重逢，直到生命终结。**
 
-XAOXUU 目前是一个 iOS 开发者，代表作品有：ProHUD、ValueX 等。在业余时间也开发了 Stellar 博客主题，更多的作品可以去项目主页查看，希望大家喜欢～
+XAOXUU 目前主要从事于 iOS 开发行业，活跃于开源社区，代表作品有：[ProHUD](/wiki/prohud/)、[ValueX](/wiki/valuex/)、[Stellar](/wiki/stellar/) 等，更多的作品可以去项目主页查看，希望大家喜欢～
 
 {% navbar [文章](/) [项目](/wiki/) [GitHub](https://github.com/xaoxuu) [GitLab](http://42.192.89.158:8099/explore) [友链](/friends/) [留言](#comments) %}
 
@@ -25,7 +25,7 @@ XAOXUU 目前是一个 iOS 开发者，代表作品有：ProHUD、ValueX 等。�
 
 ## 近期日程
 
-开源项目无任何盈利目的（包含打赏），只在工作闲暇时间进行维护，有相关需求请前往对应项目提 Issue 进行反馈，通过私人邮件询问开源项目问题可能不会回复。
+开源项目无任何盈利目的，只在工作闲暇时间进行维护，有相关需求请前往对应项目提 Issue 进行反馈，通过私人邮件询问开源项目问题可能得不到答复。
 
 {% timeline %}
 
