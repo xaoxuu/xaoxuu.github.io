@@ -51,7 +51,7 @@ title: 使用标签插件增强阅读体验
 
 ## 表情标签
 
-内置了可配置的 emoji 标签 {% emoji 爱你 %} 使用方法如下：
+内置了可配置的表情标签{% emoji 爱你 %}使用方法如下：
 
 ```
 {% emoji 爱你 %}
@@ -76,15 +76,15 @@ tag_plugins:
     tieba: https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/tieba/%s.png
 ```
 
-> 在配置文件中，文件名用 `%s` 代替。这种 emoji 集成方式虽然不那么优雅，但也能用，主要是配置起来比较灵活。 {% emoji aru 0180 %}
-
-如果对高度有特别要求，可以指定高度，例如 {% emoji aru 5150 height:3em %}：
-
+{% noteblock %}
+在配置文件中，文件名用 `%s` 代替。这种集成方式虽然不那么优雅，但也能用，主要是配置起来比较灵活。 {% emoji aru 0180 %}
+如果对高度有特别要求，可以指定高度，例如：{% emoji aru 5150 height:3em %}
 ```
 {% emoji aru 5150 height:3em %}
 ```
+{% endnoteblock %}
 
-
+> 表情速查表：[stellar表情标签索引](https://www.hermitlsr.top/2021-08-02/36b0e529.html)
 
 ## 复制标签
 
