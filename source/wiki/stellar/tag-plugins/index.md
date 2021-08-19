@@ -29,6 +29,7 @@ title: 使用标签插件增强阅读体验
 
 ## 修饰文本标签
 
+- 支持多彩标记标签，包括：{% mark 默认 %}{% mark 红 color:red %}{% mark 橙 color:orange %}{% mark 黄 color:yellow %}{% mark 绿 color:green %}{% mark 青 color:cyan %}{% mark 蓝 color:blue %}{% mark 紫 color:purple %}{% mark 浅 color:light %}{% mark 深 color:dark %} 一共 10 种颜色。
 - 这是 {% psw 密码 %} 标签
 - 这是 {% u 下划线 %} 标签
 - 这是 {% emp 着重号 %} 标签
@@ -39,6 +40,7 @@ title: 使用标签插件增强阅读体验
 - 这是 {% kbd 键盘样式 %} 标签，试一试：{% kbd ⌘ %} + {% kbd D %}
 
 ```md 写法如下
+- 支持多彩标记标签，包括：{% mark 默认 %}{% mark 红 color:red %}{% mark 橙 color:orange %}{% mark 黄 color:yellow %}{% mark 绿 color:green %}{% mark 青 color:cyan %}{% mark 蓝 color:blue %}{% mark 紫 color:purple %}{% mark 浅 color:light %}{% mark 深 color:dark %} 一共 10 种颜色。
 - 这是 {% psw 密码 %} 标签
 - 这是 {% u 下划线 %} 标签
 - 这是 {% emp 着重号 %} 标签
