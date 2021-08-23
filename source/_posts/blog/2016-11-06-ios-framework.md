@@ -4,7 +4,6 @@ updated: 2016-11-06
 title: 如何封装自己的 iOS Framework 静态库
 categories: [解决方案]
 tags: [iOS, Framework]
-cover: xcode,framework
 references:
   - title: iOS开发——创建你自己的Framework
     url: http://www.cocoachina.com/articles/11022

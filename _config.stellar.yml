@@ -8,7 +8,6 @@ sidebar:
     default_layout: [welcome, recent]
 
 article:
-  auto_cover: false
   # 分类颜色
   category_color:
     '新闻稿': '#DA0F47'

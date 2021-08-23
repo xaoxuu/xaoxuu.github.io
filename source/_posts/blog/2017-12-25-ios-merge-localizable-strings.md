@@ -4,7 +4,6 @@ updated: 2017-12-25
 title: 如何整理 iOS 老项目中混乱不堪的多语言翻译？
 categories: [解决方案]
 tags: [Code, iOS]
-cover: xcode,translate
 ---
 
 

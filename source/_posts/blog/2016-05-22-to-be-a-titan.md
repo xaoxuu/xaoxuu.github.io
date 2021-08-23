@@ -3,7 +3,6 @@ date: 2016-05-22
 updated: 2016-05-22
 title: 十万蝼蚁不如一个巨人
 categories: [胡思乱想]
-cover: idea
 ---
 
 {% noteblock Game of Thrones 精选台词： %}
