@@ -139,10 +139,20 @@ bg: '#ffffff' # 图片区域背景颜色，16进制
 
 宽度较小而高度较大的图片，可以设置宽、高、填充间距、背景色等对其布局进行优化，使得它在不同宽度的屏幕下都能获得不错的视觉体验：
 
+有底色的图片，可以填充图片底色：
+
 {% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/mirror/apple/documentation/watchkit/06d45110-1dd7-49a4-a413-9f5159ecdd0e.png width:200px padding:16px bg:white %}
 
 ```md 写法如下
 {% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/mirror/apple/documentation/watchkit/06d45110-1dd7-49a4-a413-9f5159ecdd0e.png width:200px padding:16px bg:white %}
+```
+
+没有底色的图片，可以填充 `bg:var(--card)` 动态颜色，能够适配暗黑模式：
+
+{% image https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg bg:var(--card) padding:16px width:100px %}
+
+```md 写法如下
+{% image https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg bg:var(--card) padding:16px %}
 ```
 
 {% folding 如果不进行约束，在宽屏设备上阅读体验很糟糕（为不影响阅读体验，已为您折叠过长的内容） %}
@@ -376,7 +386,7 @@ img: 可选，缩略图
 
 例如：
 
-{% link https://github.com/xaoxuu github@xaoxuu github.com/xaoxuu img:https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/avatar/rect-256@2x.png %}
+{% link https://github.com/xaoxuu github@xaoxuu github.com/xaoxuu img:https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/favicon/android-chrome-192x192.png %}
 
 ## 单选/复选样式标签
 
