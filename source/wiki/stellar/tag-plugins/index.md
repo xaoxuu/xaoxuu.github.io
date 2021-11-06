@@ -548,6 +548,8 @@ group3:
 {% navbar [文章](/) [项目](/wiki/) [留言](#comments) [GitHub](https://github.com/xaoxuu/) %}
 ```
 
+{% navbar [文章](/) [项目](/wiki/) [留言](#comments) [GitHub](https://github.com/xaoxuu/) %}
+
 
 ## 关于标签
 
