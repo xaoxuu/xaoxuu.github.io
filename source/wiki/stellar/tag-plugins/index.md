@@ -374,19 +374,49 @@ func test() {
 外链卡片标签的语法格式为：
 
 ```
-{% link href title [description] [img:src] %}
+{% link href title [description] [icon:src] %}
 ```
 
 ```yaml 参数说明
 href: 链接
 title: 标题
 description: 可选，副标题，不填写时默认值为链接
-img: 可选，缩略图
+icon: 可选，缩略图链接
 ```
 
-例如：
+{% tabs align:center active:4 %}
 
-{% link https://github.com/xaoxuu github@xaoxuu github.com/xaoxuu img:https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/favicon/android-chrome-192x192.png %}
+<!-- tab 样式1 -->
+
+{% link https://github.com/xaoxuu/hexo-theme-stellar Stellar&nbsp;-&nbsp;每个人的独立博客 %}
+
+<!-- tab 样式2 -->
+
+{% link https://github.com/xaoxuu/hexo-theme-stellar Stellar&nbsp;-&nbsp;每个人的独立博客 icon:https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg %}
+
+<!-- tab 样式3 -->
+
+{% link https://github.com/xaoxuu/hexo-theme-stellar Stellar&nbsp;-&nbsp;每个人的独立博客 Stellar 是一个内置 wiki 系统的 hexo 主题，适合综合型站点使用。同时也拥有简约而精美的视觉设计和丰富的标签插件，帮助您简单从容地应对各种场合。 %}
+
+<!-- tab 样式4 -->
+
+{% link https://github.com/xaoxuu/hexo-theme-stellar Stellar&nbsp;-&nbsp;每个人的独立博客 Stellar 是一个内置 wiki 系统的 hexo 主题，适合综合型站点使用。同时也拥有简约而精美的视觉设计和丰富的标签插件，帮助您简单从容地应对各种场合。 icon:https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg %}
+
+{% endtabs %}
+
+```
+链接 + 标题：
+{% link https://github.com/xaoxuu/hexo-theme-stellar Stellar&nbsp;-&nbsp;每个人的独立博客 %}
+
+链接 + 标题 + 图标：
+{% link https://github.com/xaoxuu/hexo-theme-stellar Stellar&nbsp;-&nbsp;每个人的独立博客 icon:https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg %}
+
+链接 + 标题 + 描述：
+{% link https://github.com/xaoxuu/hexo-theme-stellar/hexo-theme-stellar Stellar&nbsp;-&nbsp;每个人的独立博客 Stellar 是一个内置 wiki 系统的 hexo 主题，适合综合型站点使用。同时也拥有简约而精美的视觉设计和丰富的标签插件，帮助您简单从容地应对各种场合。 %}
+
+链接 + 标题 + 图标 + 描述：
+{% link https://github.com/xaoxuu/hexo-theme-stellar/hexo-theme-stellar Stellar&nbsp;-&nbsp;每个人的独立博客 Stellar 是一个内置 wiki 系统的 hexo 主题，适合综合型站点使用。同时也拥有简约而精美的视觉设计和丰富的标签插件，帮助您简单从容地应对各种场合。 icon:https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg %}
+```
 
 ## 单选/复选样式标签
 

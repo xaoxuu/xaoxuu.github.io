@@ -4,8 +4,8 @@ sidebar:
     wiki: '[项目](/wiki/)'
     notes: '[便笺](/notes/)'
     more: '[更多](/about/)'
-  widgets:
-    default_layout: [welcome, recent]
+  # widgets:
+  #   default_layout: [welcome, recent]
 
 article:
   # 分类颜色
@@ -30,21 +30,21 @@ comments:
 
 footer:
   social:
-    - title: GitHub
+    github:
       icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/08a41b181ce68.svg"/>'
       url: https://github.com/xaoxuu
-    - title: Spotify
+    music:
       icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/3845874.svg"/>'
-      url: https://open.spotify.com/user/xaoxuu
-    - title: Unsplash
+      url: https://music.163.com/#/user/home?id=63035382
+    unsplash:
       icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/3616429.svg"/>'
       url: https://unsplash.com/@xaoxuu
-    - title: Comments
+    comments:
       icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/942ebbf1a4b91.svg"/>'
       url: /about/#comments
   sitemap:
     '博客':
-      - '[近期发布](/)'
+      - '[近期](/)'
       - '[分类](/blog/categories/)'
       - '[标签](/blog/tags/)'
       - '[归档](/blog/archives/)'
@@ -56,7 +56,6 @@ footer:
     '社交':
       - '[友链](/friends/)'
       - '[留言板](/about/#comments)'
-      - '[Spotify](https://open.spotify.com/user/xaoxuu)'
     '更多':
       - '[关于本站](/about/)'
       - '[GitHub](https://github.com/xaoxuu)'

@@ -8,7 +8,18 @@ comment_title: 快来交换友链吧～
 comment_id: '留言板'
 ---
 
-{% friends %}
+## 海内存知己 天涯若比邻
+感谢人生旅途中的每一份真挚的友谊，按结识先后顺序：
+{% friends only:group1 %}
+
+## 特别感谢的开源大佬
+感谢开源大佬们的无私奉献，按结识先后顺序：
+{% friends only:group2 %}
+
+## 来自 GitHub 的朋友
+以下友链通过 [GitHub Issue](https://github.com/xaoxuu/friends/issues/) 提交：
+{% friends only:group3 %}
+
 
 {% noteblock color:yellow 友链更新通知 %}
 
@@ -16,14 +27,13 @@ comment_id: '留言板'
 
 {% endnoteblock %}
 
-## 我可以交换友链吗？
+## 如何自助添加友链？
+
 
 先友后链，在我们有一定了解了之后才可以交换友链，除此之外，您的网站还应满足以下条件：
 
 - 合法的、非营利性、无商业广告
 - 有实质性原创内容的 `HTTPS` 站点
-
-## 如何自助添加友链？
 
 {% timeline %}
 

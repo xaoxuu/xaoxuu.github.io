@@ -1,6 +1,6 @@
 ---
 date: 2020-09-27
-title: 心率管家的设计与开发之路（下篇：信号处理）
+title: 心率管家的设计与开发（下篇：信号处理）
 categories: [设计开发]
 tags: [iOS, Swift, 心率]
 cover: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0927a@1x.svg
@@ -186,4 +186,4 @@ func calcFrequency(count: Int) -> CGFloat? {
 
 非常感谢 [@JustinYang](https://lifestyle1.cn/) 大佬在滤波算法方面给予的援助。也十分感谢 [@Punmy](https://punmy.cn/)、[@WuXiaoTu](https://github.com/WuXiaoTu) 等作者的文章，使得后人能够少走很多弯路。
 
-{% link /blog/2019-07-23-heartmate/ 心率管家&nbsp;App&nbsp;的设计与开发流程 %}
+{% link /blog/2019-07-23-heartmate/ 心率管家的设计与开发（上篇：整体流程） 近期开发并上架了新版心率管家 App（仅 iOS 端），专业版不定期限免，欢迎下载体验。本文将从设计、开发、上架等每个步骤和细节进行分享，也包含部分模块源码。 %}
