@@ -568,7 +568,7 @@ group3:
 {% ghcard xaoxuu/hexo-theme-stellar theme:dark %}
 ```
 
-{% link https://github.com/anuraghazra/github-readme-stats GitHub&nbsp;Card&nbsp;API github-readme-stats %}
+{% link https://github.com/anuraghazra/github-readme-stats GitHub&nbsp;Card&nbsp;API %}
 
 ## 导航栏标签
 

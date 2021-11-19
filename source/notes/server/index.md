@@ -132,7 +132,7 @@ git --work-tree=$WEBROOT checkout -f master
 > `/www/wwwroot/xaoxuu.github.io` 的权限要改成 777 才行
 
 
-{% link https://zhuanlan.zhihu.com/p/58654392 Hexo 从 GitHub 到阿里云 %}
+{% link https://zhuanlan.zhihu.com/p/58654392 Hexo&nbsp;从&nbsp;GitHub&nbsp;到阿里云 %}
 
 ## GitLab
 
