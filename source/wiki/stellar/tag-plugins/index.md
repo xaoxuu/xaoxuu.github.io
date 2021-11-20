@@ -481,12 +481,13 @@ group1:
   items:
     - title: 某某某
       ...
+# 如果不需要 title 和 description，可以直接把 items 内容提升到 group 层级中，例如：
 group2:
-  title: 特别感谢的开源大佬
-  description: 感谢开源大佬们的无私奉献，按结识先后顺序：
-  items:
-    - title: 某某某
-      ...
+  - title: 某某某
+    ...
+  - title: 某某某
+    ...
+# 可以设置 api、repo 来显示 GitHub Issues 中的数据：
 group3:
   title: 来自 GitHub 的朋友
   description: '以下友链通过 [GitHub Issue](https://github.com/xaoxuu/friends/issues/) 提交，按 issue 最后更新时间排序：'
