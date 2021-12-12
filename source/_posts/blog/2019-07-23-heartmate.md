@@ -4,7 +4,7 @@ title: 心率管家的设计与开发（上篇：整体流程）
 categories: [设计开发]
 tags: [iOS, Swift, 心率]
 keywords: 测量心率,心率管家,HeartMate,Swift,iOS开发
-cover: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.1/blog/2019-0723a@2x.jpg
+banner: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.1/blog/2019-0723a@2x.jpg
 comment_title: 经常有限免活动哦～
 ---
 

@@ -29,10 +29,6 @@ XAOXUU 目前主要从事于 iOS 开发行业，活跃于开源社区，代表�
 
 {% timeline %}
 
-<!-- node Volantis 5.0 -->
-
-更新内容及其进度在 [Projects](https://github.com/volantis-x/hexo-theme-volantis/projects/4) 中已经列出。
-
 <!-- node ProHUD 迭代 -->
 
 - 针对 Swift 5 进行代码优化。
@@ -41,6 +37,10 @@ XAOXUU 目前主要从事于 iOS 开发行业，活跃于开源社区，代表�
 <!-- node ValueX 迭代 -->
 
 目前存在冗余操作，需要优化代码以提高运行效率。
+
+<!-- node Stellar 2.0 & Volantis 6.0 -->
+
+Stellar 2.0 与 Volantis 6.0 配置格式统一，便于切换，且 Volantis 6.0 在外观上进行重新设计。
 
 {% endtimeline %}
 

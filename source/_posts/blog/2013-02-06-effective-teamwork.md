@@ -3,7 +3,7 @@ date: 2013-02-06
 updated: 2015-03-11
 title: 如何进行有效的团队合作
 categories: [胡思乱想]
-cover: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.1/blog/2013-0206a@1x.svg
+banner: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.1/blog/2013-0206a@1x.svg
 ---
 
 本文只是我在大学时期关于小组决策效率与分工方面的思考，可能不适用于其它场景。

@@ -3,7 +3,7 @@ date: 2020-09-27
 title: 心率管家的设计与开发（下篇：信号处理）
 categories: [设计开发]
 tags: [iOS, Swift, 心率]
-cover: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0927a@1x.svg
+banner: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0927a@1x.svg
 references:
   - title: '心跳之旅—💗—iOS用手机摄像头检测心率(PPG)'
     url: https://punmy.cn/2016/07/28/15231176397746.html

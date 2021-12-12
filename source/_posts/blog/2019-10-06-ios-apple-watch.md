@@ -4,6 +4,7 @@ title: 苹果设计开发加速器《创建卓越的 Apple Watch 体验》活动
 categories: [技术加油站]
 tags: [iOS, 设计开发加速器]
 cover: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2019-1006a@2x.jpg
+banner: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2019-1006a@2x.jpg
 references:
   - title: 'Apple Documentation: WatchKit - Creating Independent watchOS Apps'
     url: https://developer.apple.com/documentation/watchkit/creating_independent_watchos_apps#3226960

@@ -3,7 +3,7 @@ date: 2020-08-23
 title: 静态博客使用 Issues API 来实现动态发布友链、书签
 categories: [瞎折腾]
 tags: [博客, GitHub]
-cover: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.1/blog/2020-0823a@2x.jpg
+banner: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.1/blog/2020-0823a@2x.jpg
 repo: xaoxuu/issues-api
 ---
 
