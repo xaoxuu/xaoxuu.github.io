@@ -3,7 +3,6 @@ date: 2020-11-19
 title: 苹果设计开发加速器《为 iPhone 和 iPad 搭建灵活适配的用户界面》线上活动
 categories: [技术加油站]
 tags: [iOS, 设计开发加速器]
-cover: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.1/blog/2020-1119a@1x.svg
 banner: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.1/blog/2020-1119a@1x.svg
 references:
   - title: 'Apple Developer: Human Interface Guidelines'
