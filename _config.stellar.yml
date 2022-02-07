@@ -4,8 +4,10 @@ sidebar:
     wiki: '[项目](/wiki/)'
     notes: '[便笺](/notes/)'
     more: '[更多](/about/)'
-  # widgets:
-  #   default_layout: [welcome, recent]
+  widgets:
+    # Recent update
+    recent:
+      rss: /atom.xml # npm i hexo-generator-feed
 
 article:
   # 分类颜色

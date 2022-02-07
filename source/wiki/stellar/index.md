@@ -164,5 +164,4 @@ SOFTWARE.
 
 {% checkbox 搜索（欢迎 PR） %}
 {% checkbox 横向滚动的 gallery 标签 %}
-{% checkbox 支持放大预览的图片标签 %}
 {% checkbox 更多评论插件（请提 issue 告知） %}

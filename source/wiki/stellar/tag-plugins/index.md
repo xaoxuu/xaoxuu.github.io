@@ -159,8 +159,21 @@ bg: '#ffffff' # 图片区域背景颜色，16进制
 {% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/mirror/apple/documentation/watchkit/06d45110-1dd7-49a4-a413-9f5159ecdd0e.png %}
 {% endfolding %}
 
+### 支持 Fancybox 插件点击放大
 
+由于 Stellar 主题的插件具有按需加载的特性，所以 Fancybox 插件默认也是已经配置好了的，在任意 `image` 标签中增加 `fancybox:true` 参数即可为特定图片开启缩放功能。如果一个页面没有任何地方使用，则不会加载 Fancybox 插件。
 
+{% image fancybox:true https://www.apple.com.cn/newsroom/images/product/iphone/lifestyle/2022/Apple_Shot-on-iphone-macro-challenge_Cat_big.jpg.large_2x.jpg download:https://www.apple.com.cn/newsroom/images/product/iphone/lifestyle/2022/Images-of-Shot-on-iphone-macro-challenge.zip 图片来自 Apple 官网 %}
+
+如果您希望全站所有的 `image` 标签都开启此功能，可在主题配置文件中修改以下参数：
+
+```yaml
+######## Tag Plugins ########
+tag_plugins:
+  # {% image %}
+  image:
+    fancybox: true
+```
 
 ## 备注标签
 
