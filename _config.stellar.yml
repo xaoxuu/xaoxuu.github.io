@@ -24,6 +24,7 @@ article:
   share: [wechat, weibo, email, link]
   related_posts:
     enable: true
+    auto_cover: false
 
 comments:
   service: beaudar
