@@ -88,24 +88,6 @@ tag_plugins:
 
 > 表情速查表：[stellar表情标签索引](https://www.hermitlsr.top/2021-08-02/36b0e529.html)
 
-## 复制标签
-
-对于单行内容，可以使用 `copy` 标签来实现复制功能：
-
-{% copy curl -s https://xaoxuu.com/install | sh %}
-
-您可以设置 `git:https` 或者 `git:ssh` 或者 `git:gh` 来快速放置一个 git 仓库链接：
-{% copy git:https xaoxuu.com/hexo-theme-stellar %}
-
-
-```md 写法如下
-{% copy curl -s https://xaoxuu.com/install | sh %}
-{% copy width:max curl -s https://xaoxuu.com/install | sh %}
-{% copy git:https xaoxuu.com/hexo-theme-stellar %}
-{% copy git:ssh xaoxuu.com/hexo-theme-stellar %}
-{% copy git:gh xaoxuu.com/hexo-theme-stellar %}
-```
-
 ## 图片标签
 
 图片标签是一个精心设计的应对各种尺寸插图的标签，对于大图，可以放置一个「下载」按钮，语法格式如下：
@@ -174,6 +156,24 @@ tag_plugins:
   image:
     fancybox: true
 ```
+
+## 引用标签
+
+适合居中且醒目的引用：{% quot Stellar 是最好用的主题 %}
+
+支持自定义引号：{% quot 热门话题 icon:hashtag %}
+
+> 此外，加上 `el:h2` 可以作为标题使用
+
+## 诗文标签
+
+{% poetry 游山西村 author:陆游 footer:诗词节选 %}
+莫笑农家腊酒浑，丰年留客足鸡豚。
+**山重水复疑无路，柳暗花明又一村。**
+箫鼓追随春社近，衣冠简朴古风存。
+从今若许闲乘月，拄杖无时夜叩门。
+{% endpoetry %}
+
 
 ## 备注标签
 
@@ -429,6 +429,24 @@ icon: 可选，缩略图链接
 
 链接 + 标题 + 图标 + 描述：
 {% link https://github.com/xaoxuu/hexo-theme-stellar/hexo-theme-stellar Stellar&nbsp;-&nbsp;每个人的独立博客 Stellar 是一个内置 wiki 系统的 hexo 主题，适合综合型站点使用。同时也拥有简约而精美的视觉设计和丰富的标签插件，帮助您简单从容地应对各种场合。 icon:https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg %}
+```
+
+## 复制标签
+
+对于单行内容，可以使用 `copy` 标签来实现复制功能：
+
+{% copy curl -s https://xaoxuu.com/install | sh %}
+
+您可以设置 `git:https` 或者 `git:ssh` 或者 `git:gh` 来快速放置一个 git 仓库链接：
+{% copy git:https xaoxuu.com/hexo-theme-stellar %}
+
+
+```md 写法如下
+{% copy curl -s https://xaoxuu.com/install | sh %}
+{% copy width:max curl -s https://xaoxuu.com/install | sh %}
+{% copy git:https xaoxuu.com/hexo-theme-stellar %}
+{% copy git:ssh xaoxuu.com/hexo-theme-stellar %}
+{% copy git:gh xaoxuu.com/hexo-theme-stellar %}
 ```
 
 ## 单选/复选样式标签
