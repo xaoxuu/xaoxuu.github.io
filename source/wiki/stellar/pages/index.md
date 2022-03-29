@@ -90,9 +90,7 @@ title: 友链
 sidebar:
   menu:
     ...
-    more:
-      title: 更多
-      url: xxx
+    more: '[更多](/more/)'
 ```
 
 ### 友链

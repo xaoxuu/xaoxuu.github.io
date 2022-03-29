@@ -163,6 +163,15 @@ tag_plugins:
 
 支持自定义引号：{% quot 热门话题 icon:hashtag %}
 
+其中自定义引号素材在主题配置文件的 `tag_plugins.quot` 中配置。
+
+{% folding child:codeblock 写法如下 open:true %}
+```
+适合居中且醒目的引用：{% quot Stellar 是最好用的主题 %}
+支持自定义引号：{% quot 热门话题 icon:hashtag %}
+```
+{% endfolding %}
+
 > 此外，加上 `el:h2` 可以作为标题使用
 
 ## 诗文标签
@@ -174,6 +183,16 @@ tag_plugins:
 从今若许闲乘月，拄杖无时夜叩门。
 {% endpoetry %}
 
+{% folding child:codeblock 写法如下 open:true %}
+```
+{% poetry 游山西村 author:陆游 footer:诗词节选 %}
+莫笑农家腊酒浑，丰年留客足鸡豚。
+**山重水复疑无路，柳暗花明又一村。**
+箫鼓追随春社近，衣冠简朴古风存。
+从今若许闲乘月，拄杖无时夜叩门。
+{% endpoetry %}
+```
+{% endfolding %}
 
 ## 备注标签
 
