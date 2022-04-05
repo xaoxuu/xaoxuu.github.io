@@ -133,7 +133,9 @@ npm: 6.14.13 LTS
 
 ## 开源许可协议
 
-本主题是由 [@xaoxuu](https://github.com/xaoxuu) 首次开发，使用 [MIT License](https://cdn.jsdelivr.net/gh/xaoxuu/hexo-theme-stellar/LICENSE) 开源许可协议进行授权：
+{% quot 项目中的许可声明文件应包含在所有副本中 %}
+
+本主题是由 [@xaoxuu](https://github.com/xaoxuu) 设计和开发，使用 [MIT License](https://cdn.jsdelivr.net/gh/xaoxuu/hexo-theme-stellar/LICENSE) 开源许可协议进行授权，拷贝、分享或基于此进行创作时请遵守协议内容：
 
 ```license
 MIT License
@@ -165,3 +167,4 @@ SOFTWARE.
 {% checkbox 搜索（欢迎 PR） %}
 {% checkbox 横向滚动的 gallery 标签 %}
 {% checkbox 更多评论插件（请提 issue 告知） %}
+{% checkbox 公式（欢迎 PR） %}

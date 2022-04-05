@@ -85,8 +85,8 @@ heartmate:
 
 
 hexo.sh:
-  title: hexo.sh
-  tags: 实用脚本
+  title: Hexo 博客管理脚本
+  tags: 实用工具
   cover: true
   logo:
     src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/hexo.sh/screenshot.png
@@ -96,8 +96,8 @@ hexo.sh:
 
 
 'vim-cn.sh':
-  title: vim-cn.sh
-  tags: 实用脚本
+  title: 一行命令上传图片到图床的脚本
+  tags: 实用工具
   logo:
     src: https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/vim-cn.sh/screenshot.png
   description: img.vim-cn.com 是一个十分干净好用的图床站点。
@@ -106,16 +106,16 @@ hexo.sh:
 
 
 tag.sh:
-  title: tag.sh
-  tags: 实用脚本
+  title: Git快速打tag的脚本
+  tags: 实用工具
   description: 这个脚本可以很方便发布 git 版本，提高效率。
   repo: xaoxuu/tag.sh
   branch: master
 
 
 podspec.sh:
-  title: podspec.sh
-  tags: 实用脚本
+  title: 快速发布和更新 CocoaPods 开源库的脚本
+  tags: 实用工具
   description: 频繁执行重复的工作内容很浪费时间，对于经常需要维护 CocoaPods 开源库的人来说，需要一个脚本快速发布和更新自己的开源库。
   repo: xaoxuu/podspec.sh
   branch: master
@@ -186,6 +186,7 @@ Notes:
   sidebar: [toc]
   tags: 笔记
   sections:
-    '日常问题解决方案': [101, 200]
-    '移动端开发笔记': [201, 300]
-    '前端学习笔记': [301, 400]
+    '日常问题解决方案': [100, 199]
+    '移动端开发笔记': [200, 299]
+    '前端学习笔记': [300, 399]
+    '在线工具': [400, 499]
