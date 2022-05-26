@@ -9,7 +9,7 @@
     "d": "hexo deploy"
   },
   "hexo": {
-    "version": "5.4.1"
+    "version": "5.4.0"
   },
   "dependencies": {
     "hexo": "^5.4.0",
