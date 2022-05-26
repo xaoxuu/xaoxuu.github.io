@@ -140,5 +140,5 @@ inject:
     - <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
     - <meta name="theme-color" content="#ffffff">
   script:
-    - https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js
+    - https://fastly.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js
 ```

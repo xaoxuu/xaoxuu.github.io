@@ -13,12 +13,12 @@ references:
 <!-- more -->
 
 {% swiper width:min %}
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot01.jpg)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot02.jpg)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot03.jpg)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot04.jpg)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot05.jpg)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot06.jpg)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot01.jpg)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot02.jpg)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot03.jpg)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot04.jpg)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot05.jpg)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot06.jpg)
 {% endswiper %}
 
 <br>
@@ -35,7 +35,7 @@ references:
 
 ## 如何测量
 
-{% frame iphone11 img:https://cdn.jsdelivr.net/gh/cdn-x/wiki/heartmate/docs/usage01.jpg video:https://cdn.jsdelivr.net/gh/cdn-x/wiki/heartmate/docs/usage01.mp4 focus:top %}
+{% frame iphone11 img:https://fastly.jsdelivr.net/gh/cdn-x/wiki/heartmate/docs/usage01.jpg video:https://fastly.jsdelivr.net/gh/cdn-x/wiki/heartmate/docs/usage01.mp4 focus:top %}
 
 ### 第一步，调整位置
 

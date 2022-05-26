@@ -24,7 +24,7 @@ group1:
 
 group2:
   - title: 枋柚梓
-    avatar: https://cdn.jsdelivr.net/gh/inkss/common@master/static/web/avatar.jpg
+    avatar: https://fastly.jsdelivr.net/gh/inkss/common@master/static/web/avatar.jpg
     url: https://inkss.cn/
     screenshot: https://i.loli.net/2020/08/21/Vzbu3i8fXs6Nh5Y.jpg
     keywords:
@@ -36,7 +36,7 @@ group2:
     keywords:
     description: Be Yourself, Make a Difference.
   - title: Colsrch
-    avatar: https://cdn.jsdelivr.net/gh/Colsrch/images/Colsrch/avatar.jpg
+    avatar: https://fastly.jsdelivr.net/gh/Colsrch/images/Colsrch/avatar.jpg
     url: https://colsrch.top/
     screenshot: https://7bu.top/2020/09/05/893e98a441d5f.png
     keywords: [C/C++, Web前端, Java, .NET, Linux, Android]

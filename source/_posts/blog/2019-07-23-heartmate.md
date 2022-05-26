@@ -4,7 +4,7 @@ title: 心率管家的设计与开发（上篇：整体流程）
 categories: [设计开发]
 tags: [iOS, Swift, 心率]
 keywords: 测量心率,心率管家,HeartMate,Swift,iOS开发
-banner: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.1/blog/2019-0723a@2x.jpg
+banner: https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.1/blog/2019-0723a@2x.jpg
 comment_title: 经常有限免活动哦～
 ---
 
@@ -55,12 +55,12 @@ Wikipedia: [#Photoplethysmogram](https://en.wikipedia.org/wiki/Photoplethysmogra
 初期使用 Sketch 制作效果图，在后期直接在项目中进行调整，没有再更新到 Sketch 中。下面这是最终发布到 AppStore 的应用截图：
 
 {% swiper width:min %}
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot01.jpg)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot02.jpg)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot03.jpg)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot04.jpg)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot05.jpg)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot06.jpg)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot01.jpg)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot02.jpg)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot03.jpg)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot04.jpg)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot05.jpg)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot06.jpg)
 {% endswiper %}
 
 ## 开发
@@ -93,11 +93,11 @@ heartmatepro://record?l=0.1&c=10
 使用 [ProHUD](https://xaoxuu.com/wiki/prohud/) 来负责弹窗和操作表，包括隐私政策页面。
 
 {% swiper width:min %}
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot21.png)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot22.png)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot23.png)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot24.png)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot25.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot21.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot22.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot23.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot24.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/heartmate/screenshot25.png)
 {% endswiper %}
 
 ## 上架

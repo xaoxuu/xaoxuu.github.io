@@ -42,6 +42,6 @@ Windows 平台可以添加到启动计划任务中。
 
 用服务器 IP + 端口号来访问。例如我的电脑的 IP 是 `10.8.12.200`，那么在局域网内另外一台电脑访问 `http://10.8.12.200:7070` 就可以看到管理页面了：
 
-{% image https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/git/gitblit01.jpg width:500px %}
+{% image https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/git/gitblit01.jpg width:500px %}
 
 网页操作和使用 GitHub、Coding 等平台相似，非常简单。

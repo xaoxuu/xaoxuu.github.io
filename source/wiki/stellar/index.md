@@ -135,7 +135,7 @@ npm: 6.14.13 LTS
 
 {% quot 项目中的许可声明文件应包含在所有副本中 %}
 
-本主题是由 [@xaoxuu](https://github.com/xaoxuu) 设计和开发，使用 [MIT License](https://cdn.jsdelivr.net/gh/xaoxuu/hexo-theme-stellar/LICENSE) 开源许可协议进行授权，拷贝、分享或基于此进行创作时请遵守协议内容：
+本主题是由 [@xaoxuu](https://github.com/xaoxuu) 设计和开发，使用 [MIT License](https://fastly.jsdelivr.net/gh/xaoxuu/hexo-theme-stellar/LICENSE) 开源许可协议进行授权，拷贝、分享或基于此进行创作时请遵守协议内容：
 
 ```license
 MIT License

@@ -51,7 +51,7 @@ comment_id: '留言板'
 
 {% codeblock lang:yaml %}
 title: xaoxuu
-avatar: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/avatar/rect-256@2x.png
+avatar: https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/avatar/rect-256@2x.png
 url: https://xaoxuu.com
 screenshot: https://i.loli.net/2020/08/21/VuSwWZ1xAeUHEBC.jpg
 {% endcodeblock %}
