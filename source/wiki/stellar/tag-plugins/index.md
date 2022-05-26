@@ -18,7 +18,7 @@ title: 使用标签插件增强阅读体验
 以图片标签为例，使用空格分隔开之后得到一个数组，如果图片描述文字中有空格，多分出来的这些「参数」被合并到最后一个「非键值对参数」中，什么是「非键值对参数」呢？举个例子您就明白了：
 
 ```
-{% image https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/photos/183e71e0ad995.jpg 来自印度的 Rohit Vohra 使用 iPhone 12 Pro Max 拍摄。 download:https://www.apple.com.cn/newsroom/images/product/iphone/lifestyle/Apple_ShotoniPhone-rohit_vohra_12172020.zip %}
+{% image https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/photos/183e71e0ad995.jpg 来自印度的 Rohit Vohra 使用 iPhone 12 Pro Max 拍摄。 download:https://www.apple.com.cn/newsroom/images/product/iphone/lifestyle/Apple_ShotoniPhone-rohit_vohra_12172020.zip %}
 ```
 
 这个例子中，`download:https://xxxx` 是有冒号分隔开的，`download` 为键，后面的网址为值，所以叫做「键值对参数」；与此相对的，没有冒号分隔的就叫做「非键值对参数」。键值对参数可以放在任何位置，我可以通过匹配键来解析，而非键值对参数则只能通过顺序解析，所以它们必须和文档中要求的前后顺序一致。
@@ -71,11 +71,11 @@ title: 使用标签插件增强阅读体验
 tag_plugins:
   ...
   emoji:
-    default: https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/qq/%s.gif
-    twemoji: https://cdn.jsdelivr.net/gh/twitter/twemoji/assets/svg/%s.svg
-    qq: https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/qq/%s.gif
-    aru: https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/aru-l/%s.gif
-    tieba: https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/tieba/%s.png
+    default: https://fastly.jsdelivr.net/gh/volantis-x/cdn-emoji/qq/%s.gif
+    twemoji: https://fastly.jsdelivr.net/gh/twitter/twemoji/assets/svg/%s.svg
+    qq: https://fastly.jsdelivr.net/gh/volantis-x/cdn-emoji/qq/%s.gif
+    aru: https://fastly.jsdelivr.net/gh/volantis-x/cdn-emoji/aru-l/%s.gif
+    tieba: https://fastly.jsdelivr.net/gh/volantis-x/cdn-emoji/tieba/%s.png
 ```
 
 {% noteblock %}
@@ -109,12 +109,12 @@ bg: '#ffffff' # 图片区域背景颜色，16进制
 
 无论在什么宽度的设备上都希望横向铺满的图片，一般不需要额外操作。可以在链接后面写上图片描述，如有必要，可以通过设置 `download:true` 使其显示一个「下载」按钮链接指向图片地址，如果下载链接与显示的图片地址不同，可以 `download:下载链接` 来使其能够下载原图。
 
-{% image https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/photos/183e71e0ad995.jpg 来自印度的 Rohit Vohra 使用 iPhone 12 Pro Max 拍摄。 download:https://www.apple.com.cn/newsroom/images/product/iphone/lifestyle/Apple_ShotoniPhone-rohit_vohra_12172020.zip %}
-{% image https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/photos/bc7bda18328da.jpg 来自澳大利亚的 Pieter de Vries 使用 iPhone 12 Pro Max 拍摄。 download:https://www.apple.com.cn/newsroom/images/product/iphone/lifestyle/Apple_ShotoniPhone_pieter_de_vries_011221.zip %}
+{% image https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/photos/183e71e0ad995.jpg 来自印度的 Rohit Vohra 使用 iPhone 12 Pro Max 拍摄。 download:https://www.apple.com.cn/newsroom/images/product/iphone/lifestyle/Apple_ShotoniPhone-rohit_vohra_12172020.zip %}
+{% image https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/photos/bc7bda18328da.jpg 来自澳大利亚的 Pieter de Vries 使用 iPhone 12 Pro Max 拍摄。 download:https://www.apple.com.cn/newsroom/images/product/iphone/lifestyle/Apple_ShotoniPhone_pieter_de_vries_011221.zip %}
 
 ```md 写法如下
-{% image https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/photos/183e71e0ad995.jpg 来自印度的 Rohit Vohra 使用 iPhone 12 Pro Max 拍摄。 download:https://www.apple.com.cn/newsroom/images/product/iphone/lifestyle/Apple_ShotoniPhone-rohit_vohra_12172020.zip %}
-{% image https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/photos/bc7bda18328da.jpg 来自澳大利亚的 Pieter de Vries 使用 iPhone 12 Pro Max 拍摄。 download:https://www.apple.com.cn/newsroom/images/product/iphone/lifestyle/Apple_ShotoniPhone_pieter_de_vries_011221.zip %}
+{% image https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/photos/183e71e0ad995.jpg 来自印度的 Rohit Vohra 使用 iPhone 12 Pro Max 拍摄。 download:https://www.apple.com.cn/newsroom/images/product/iphone/lifestyle/Apple_ShotoniPhone-rohit_vohra_12172020.zip %}
+{% image https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/photos/bc7bda18328da.jpg 来自澳大利亚的 Pieter de Vries 使用 iPhone 12 Pro Max 拍摄。 download:https://www.apple.com.cn/newsroom/images/product/iphone/lifestyle/Apple_ShotoniPhone_pieter_de_vries_011221.zip %}
 ```
 
 ### 小尺寸图片优化
@@ -123,22 +123,22 @@ bg: '#ffffff' # 图片区域背景颜色，16进制
 
 有底色的图片，可以填充图片底色：
 
-{% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/mirror/apple/documentation/watchkit/06d45110-1dd7-49a4-a413-9f5159ecdd0e.png width:200px padding:16px bg:white %}
+{% image https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/mirror/apple/documentation/watchkit/06d45110-1dd7-49a4-a413-9f5159ecdd0e.png width:200px padding:16px bg:white %}
 
 ```md 写法如下
-{% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/mirror/apple/documentation/watchkit/06d45110-1dd7-49a4-a413-9f5159ecdd0e.png width:200px padding:16px bg:white %}
+{% image https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/mirror/apple/documentation/watchkit/06d45110-1dd7-49a4-a413-9f5159ecdd0e.png width:200px padding:16px bg:white %}
 ```
 
 没有底色的图片，可以填充 `bg:var(--card)` 动态颜色，能够适配暗黑模式：
 
-{% image https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg bg:var(--card) padding:16px width:100px %}
+{% image https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg bg:var(--card) padding:16px width:100px %}
 
 ```md 写法如下
-{% image https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg bg:var(--card) padding:16px %}
+{% image https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg bg:var(--card) padding:16px %}
 ```
 
 {% folding 如果不进行约束，在宽屏设备上阅读体验很糟糕（为不影响阅读体验，已为您折叠过长的内容） %}
-{% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/mirror/apple/documentation/watchkit/06d45110-1dd7-49a4-a413-9f5159ecdd0e.png %}
+{% image https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/mirror/apple/documentation/watchkit/06d45110-1dd7-49a4-a413-9f5159ecdd0e.png %}
 {% endfolding %}
 
 ### 支持 Fancybox 插件点击放大
@@ -270,7 +270,7 @@ color: red/orange/yellow/green/cyan/blue/purple/light/dark
 {% noteblock child:tabs %}
 {% tabs %}
 <!-- tab 图文示例 -->
-{% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0627a@2x.jpg 个人电脑作为办公设备时，我们该如何保护隐私？ download:true %}
+{% image https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0627a@2x.jpg 个人电脑作为办公设备时，我们该如何保护隐私？ download:true %}
 
 公司一般都会强制安装安防软件，这些软件要求开机自启动，要求有屏幕录制权限、完全的磁盘访问权限包括相册图库。因此如果使用自己的 MacBook 作为办公设备，必须要把生活区和工作区完全独立开，安装在两个磁盘分区，并且对磁盘分区进行加密。
 
@@ -288,7 +288,7 @@ npm: 6.14.10 LTS
 {% noteblock %}
 {% tabs %}
 <!-- tab 图文示例 -->
-{% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0627a@2x.jpg 个人电脑作为办公设备时，我们该如何保护隐私？ download:true %}
+{% image https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0627a@2x.jpg 个人电脑作为办公设备时，我们该如何保护隐私？ download:true %}
 公司一般都会强制安装安防软件，这些软件要求开机自启动，要求有屏幕录制权限、完全的磁盘访问权限包括相册图库。因此如果使用自己的 MacBook 作为办公设备，必须要把生活区和工作区完全独立开，安装在两个磁盘分区，并且对磁盘分区进行加密。
 <!-- tab 代码示例 -->
 {% codeblock 建议的版本 lang:yaml %}
@@ -424,7 +424,7 @@ icon: 可选，缩略图链接
 
 <!-- tab 样式2 -->
 
-{% link https://github.com/xaoxuu/hexo-theme-stellar Stellar&nbsp;-&nbsp;每个人的独立博客 icon:https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg %}
+{% link https://github.com/xaoxuu/hexo-theme-stellar Stellar&nbsp;-&nbsp;每个人的独立博客 icon:https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg %}
 
 <!-- tab 样式3 -->
 
@@ -432,7 +432,7 @@ icon: 可选，缩略图链接
 
 <!-- tab 样式4 -->
 
-{% link https://github.com/xaoxuu/hexo-theme-stellar Stellar&nbsp;-&nbsp;每个人的独立博客 Stellar 是一个内置 wiki 系统的 hexo 主题，适合综合型站点使用。同时也拥有简约而精美的视觉设计和丰富的标签插件，帮助您简单从容地应对各种场合。 icon:https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg %}
+{% link https://github.com/xaoxuu/hexo-theme-stellar Stellar&nbsp;-&nbsp;每个人的独立博客 Stellar 是一个内置 wiki 系统的 hexo 主题，适合综合型站点使用。同时也拥有简约而精美的视觉设计和丰富的标签插件，帮助您简单从容地应对各种场合。 icon:https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg %}
 
 {% endtabs %}
 
@@ -441,13 +441,13 @@ icon: 可选，缩略图链接
 {% link https://github.com/xaoxuu/hexo-theme-stellar Stellar&nbsp;-&nbsp;每个人的独立博客 %}
 
 链接 + 标题 + 图标：
-{% link https://github.com/xaoxuu/hexo-theme-stellar Stellar&nbsp;-&nbsp;每个人的独立博客 icon:https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg %}
+{% link https://github.com/xaoxuu/hexo-theme-stellar Stellar&nbsp;-&nbsp;每个人的独立博客 icon:https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg %}
 
 链接 + 标题 + 描述：
 {% link https://github.com/xaoxuu/hexo-theme-stellar/hexo-theme-stellar Stellar&nbsp;-&nbsp;每个人的独立博客 Stellar 是一个内置 wiki 系统的 hexo 主题，适合综合型站点使用。同时也拥有简约而精美的视觉设计和丰富的标签插件，帮助您简单从容地应对各种场合。 %}
 
 链接 + 标题 + 图标 + 描述：
-{% link https://github.com/xaoxuu/hexo-theme-stellar/hexo-theme-stellar Stellar&nbsp;-&nbsp;每个人的独立博客 Stellar 是一个内置 wiki 系统的 hexo 主题，适合综合型站点使用。同时也拥有简约而精美的视觉设计和丰富的标签插件，帮助您简单从容地应对各种场合。 icon:https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg %}
+{% link https://github.com/xaoxuu/hexo-theme-stellar/hexo-theme-stellar Stellar&nbsp;-&nbsp;每个人的独立博客 Stellar 是一个内置 wiki 系统的 hexo 主题，适合综合型站点使用。同时也拥有简约而精美的视觉设计和丰富的标签插件，帮助您简单从容地应对各种场合。 icon:https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg %}
 ```
 
 ## 复制标签
@@ -505,7 +505,7 @@ symbol: plus/minus/times
 {% timeline %}
 <!-- node 2021 年 2 月 16 日 -->
 主要部分功能已经开发的差不多了。
-{% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg width:300px %}
+{% image https://fastly.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg width:300px %}
 <!-- node 2021 年 2 月 11 日 -->
 今天除夕，也是生日，一个人在外地过年+过生日，熬夜开发新主题，尽量在假期结束前放出公测版。
 {% endtimeline %}
@@ -514,7 +514,7 @@ symbol: plus/minus/times
 {% timeline %}
 <!-- node 2021 年 2 月 16 日 -->
 主要部分功能已经开发的差不多了。
-{% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg width:300px %}
+{% image https://fastly.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg width:300px %}
 <!-- node 2021 年 2 月 11 日 -->
 今天除夕，也是生日，一个人在外地过年+过生日，熬夜开发新主题，尽量在假期结束前放出公测版。
 {% endtimeline %}
@@ -637,9 +637,9 @@ group3:
 方便在关于页面显示一段图文信息：
 
 ```
-{% about avatar:https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/avatar/rect-256@2x.png height:80px %}
+{% about avatar:https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/avatar/rect-256@2x.png height:80px %}
 
-<img height="32px" alt="XAOXUU" src="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/logo/180x30@2x.png">
+<img height="32px" alt="XAOXUU" src="https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/logo/180x30@2x.png">
 
 **如果宇宙中真有什么终极的逻辑，那就是我们终有一天会在舰桥上重逢，直到生命终结。**
 
@@ -652,10 +652,10 @@ XAOXUU 目前是一个 iOS 开发者，代表作品有：ProHUD、ValueX 等。�
 
 ## 设备框架标签
 
-{% frame iphone11 img:https://cdn.jsdelivr.net/gh/cdn-x/wiki/prohud/docs/toast-loading@2x.jpg video:https://cdn.jsdelivr.net/gh/cdn-x/wiki/prohud/docs/toast-loading@2x.mov focus:top %}
+{% frame iphone11 img:https://fastly.jsdelivr.net/gh/cdn-x/wiki/prohud/docs/toast-loading@2x.jpg video:https://fastly.jsdelivr.net/gh/cdn-x/wiki/prohud/docs/toast-loading@2x.mov focus:top %}
 
 ```md 示例写法
-{% frame iphone11 img:https://cdn.jsdelivr.net/gh/cdn-x/wiki/prohud/docs/toast-loading@2x.jpg video:https://cdn.jsdelivr.net/gh/cdn-x/wiki/prohud/docs/toast-loading@2x.mov focus:top %}
+{% frame iphone11 img:https://fastly.jsdelivr.net/gh/cdn-x/wiki/prohud/docs/toast-loading@2x.jpg video:https://fastly.jsdelivr.net/gh/cdn-x/wiki/prohud/docs/toast-loading@2x.mov focus:top %}
 ```
 
 目前仅支持 iphone11 如果您有 iPhone12、iPad、Mac 等设备模型的 svg 图片，可以发给我进行适配。
@@ -674,7 +674,7 @@ XAOXUU 目前是一个 iOS 开发者，代表作品有：ProHUD、ValueX 等。�
 {% tabs active:2 align:center %}
 
 <!-- tab 图片 -->
-{% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg width:300px %}
+{% image https://fastly.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg width:300px %}
 
 <!-- tab 代码块 -->
 {% codeblock lang:swift %}
@@ -694,7 +694,7 @@ print("hello world")
 {% tabs active:2 align:center %}
 
 <!-- tab 图片 -->
-{% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg width:300px %}
+{% image https://fastly.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg width:300px %}
 
 <!-- tab 代码块 -->
 {% codeblock lang:swift %}
@@ -718,45 +718,45 @@ print("hello world")
 ### 最大图片宽度
 
 {% swiper width:max %}
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot11.png)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot12.png)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot13.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot11.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot12.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot13.png)
 {% endswiper %}
 
 ```md 写法如下
 {% swiper width:max %}
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot11.png)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot12.png)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot13.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot11.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot12.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot13.png)
 {% endswiper %}
 ```
 
 ### 最小图片宽度
 
 {% swiper width:min %}
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot01.png)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot02.png)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot03.png)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot04.png)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot05.png)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot06.png)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot07.png)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot08.png)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot09.png)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot10.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot01.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot02.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot03.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot04.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot05.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot06.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot07.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot08.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot09.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot10.png)
 {% endswiper %}
 
 ```md 写法如下
 {% swiper width:min %}
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot01.png)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot02.png)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot03.png)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot04.png)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot05.png)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot06.png)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot07.png)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot08.png)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot09.png)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot10.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot01.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot02.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot03.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot04.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot05.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot06.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot07.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot08.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot09.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/prohud/screenshot10.png)
 {% endswiper %}
 ```

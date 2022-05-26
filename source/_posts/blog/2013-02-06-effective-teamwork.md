@@ -3,7 +3,7 @@ date: 2013-02-06
 updated: 2015-03-11
 title: 如何进行有效的团队合作
 categories: [胡思乱想]
-banner: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.1/blog/2013-0206a@1x.svg
+banner: https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.1/blog/2013-0206a@1x.svg
 indent: true
 ---
 

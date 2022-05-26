@@ -10,7 +10,7 @@ title: 一个快速批量上传图片的脚本
 
 打开终端，`cd` 到存放图片的文件夹，输入这行命令就开始上传图片：
 
-{% copy width:max curl -s https://cdn.jsdelivr.net/gh/xaoxuu/vim-cn.sh@2.1/upload.sh | sh %}
+{% copy width:max curl -s https://fastly.jsdelivr.net/gh/xaoxuu/vim-cn.sh@2.1/upload.sh | sh %}
 
 {% note color:cyan 为了简化指令，建议下载安装后使用。 %}
 

@@ -3,11 +3,11 @@ date: 2019-10-06
 title: 苹果设计开发加速器《创建卓越的 Apple Watch 体验》活动现场体验
 categories: [技术加油站]
 tags: [iOS, 设计开发加速器]
-cover: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2019-1006a@2x.jpg
+cover: https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2019-1006a@2x.jpg
 cover_info:
   meta: 活动现场
   title: 苹果设计开发加速器现场体验
-banner: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2019-1006a@2x.jpg
+banner: https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2019-1006a@2x.jpg
 references:
   - title: 'Apple Documentation: WatchKit - Creating Independent watchOS Apps'
     url: https://developer.apple.com/documentation/watchkit/creating_independent_watchos_apps#3226960
@@ -35,7 +35,7 @@ references:
 
 在 watchOS 6 中，可以构建完全独立的 Watch App。“Sign in with Apple” 让用户远离手机时也能在 Apple Watch 上登录 app。
 
-{% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/mirror/apple/documentation/watchkit/af79db6d-02b1-4df0-9f46-6c3c9db12d76.png width:500px bg:white padding:16px 选择应用模板 %}
+{% image https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/mirror/apple/documentation/watchkit/af79db6d-02b1-4df0-9f46-6c3c9db12d76.png width:500px bg:white padding:16px 选择应用模板 %}
 
 - **Watch-only app**
   创建只有 Apple Watch 且没有相关 iOS 应用程序。
@@ -54,7 +54,7 @@ references:
 
 watchOS 6 上提供适用于 Apple Watch 的 App Store，让用户可以直接在 Apple Watch 上轻松探索、浏览、搜索和安装 watchOS app。使用 Siri、听写或涂写进行搜索，或者通过轻点产品页面链接，直接进入产品页面。
 
-{% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/mirror/apple/documentation/watchkit/06d45110-1dd7-49a4-a413-9f5159ecdd0e.png width:180px bg:white padding:16px %}
+{% image https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/mirror/apple/documentation/watchkit/06d45110-1dd7-49a4-a413-9f5159ecdd0e.png width:180px bg:white padding:16px %}
 
 系统会为独立和从属应用直接将 watchOS 应用程序下载并安装到 Apple Watch。
 
@@ -68,7 +68,7 @@ Apple Watch 设计为可穿戴，因此用户界面适合穿戴者使用，并�
 - 如有必要，请在应用程序体验中提供更多详细信息和功能
 
 
-{% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/mirror/apple/design/human-interface-guidelines/watchos/watchOS-hero.svg width:320px bg:white padding:16px %}
+{% image https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/mirror/apple/design/human-interface-guidelines/watchos/watchOS-hero.svg width:320px bg:white padding:16px %}
 
 <br>
 
@@ -76,10 +76,10 @@ Apple Watch 设计为可穿戴，因此用户界面适合穿戴者使用，并�
 
 {% folding 附：议程安排 %}
 
-{% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2019-1006b@2x.jpg width:400px bg:#F3F2F7 padding:16px %}
+{% image https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2019-1006b@2x.jpg width:400px bg:#F3F2F7 padding:16px %}
 
 苹果上海设计开发加速器地点在源深体育中心地铁站4出口处，三座非常低调没有任何招牌的建筑，绕着走了一圈才找到A座二楼入口的门。内部环境如媒体图片一样，室内禁止私自拍照，只有这张门票留作纪念喽。
 
-{% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2019-1006c@2x.jpg width:400px bg:#857E74 padding:16px %}
+{% image https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2019-1006c@2x.jpg width:400px bg:#857E74 padding:16px %}
 
 {% endfolding %}

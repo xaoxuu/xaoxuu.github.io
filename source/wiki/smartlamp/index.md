@@ -5,12 +5,12 @@ title: 蓝牙智能灯毕业设计项目
 ---
 
 {% swiper %}
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/smartlamp/screenshot01.png)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/smartlamp/screenshot02.png)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/smartlamp/screenshot03.png)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/smartlamp/screenshot04.png)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/smartlamp/screenshot05.png)
-![](https://cdn.jsdelivr.net/gh/cdn-x/wiki@1.0.2/smartlamp/screenshot06.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/smartlamp/screenshot01.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/smartlamp/screenshot02.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/smartlamp/screenshot03.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/smartlamp/screenshot04.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/smartlamp/screenshot05.png)
+![](https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/smartlamp/screenshot06.png)
 {% endswiper %}
 
 <!-- more -->

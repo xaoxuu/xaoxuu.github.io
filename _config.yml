@@ -10,9 +10,9 @@ keywords:
 author: xaoxuu
 language: [zh-CN, en, zh-CN, zh-TW]
 timezone: ''
-avatar: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/avatar/rect-256@2x.png
+avatar: https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/avatar/rect-256@2x.png
 email: me@xaoxuu.com
-# favicon: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/favicon/apple-touch-icon.png
+# favicon: https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/favicon/apple-touch-icon.png
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -117,11 +117,11 @@ deploy:
 
 inject:
   head:
-    - <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.4/favicon/apple-touch-icon.png">
-    - <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.4/favicon/favicon-32x32.png">
-    - <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.4/favicon/favicon-16x16.png">
-    - <link rel="manifest" href="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.4/favicon/site.webmanifest">
-    - <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.4/favicon/favicon.ico">
+    - <link rel="apple-touch-icon" sizes="180x180" href="https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.4/favicon/apple-touch-icon.png">
+    - <link rel="icon" type="image/png" sizes="32x32" href="https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.4/favicon/favicon-32x32.png">
+    - <link rel="icon" type="image/png" sizes="16x16" href="https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.4/favicon/favicon-16x16.png">
+    - <link rel="manifest" href="https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.4/favicon/site.webmanifest">
+    - <link rel="shortcut icon" href="https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.4/favicon/favicon.ico">
     - <meta name="theme-color" content="#f8f8f8">
 
 
@@ -132,7 +132,7 @@ feed:
   path: atom.xml
   limit: false
   content: true
-  icon: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/avatar/rect-256@2x.png
+  icon: https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/avatar/rect-256@2x.png
   autodiscovery: true
 
 # npm i hexo-related-popular-posts

@@ -3,7 +3,7 @@ date: 2020-09-27
 title: 心率管家的设计与开发（下篇：信号处理）
 categories: [设计开发]
 tags: [iOS, Swift, 心率]
-banner: https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0927a@1x.svg
+banner: https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0927a@1x.svg
 references:
   - title: '心跳之旅—💗—iOS用手机摄像头检测心率(PPG)'
     url: https://punmy.cn/2016/07/28/15231176397746.html
@@ -25,7 +25,7 @@ references:
 
 <!-- more -->
 
-{% frame iphone11 img:https://cdn.jsdelivr.net/gh/cdn-x/wiki/heartmate/docs/usage01.jpg video:https://cdn.jsdelivr.net/gh/cdn-x/wiki/heartmate/docs/usage01.mp4 focus:top %}
+{% frame iphone11 img:https://fastly.jsdelivr.net/gh/cdn-x/wiki/heartmate/docs/usage01.jpg video:https://fastly.jsdelivr.net/gh/cdn-x/wiki/heartmate/docs/usage01.mp4 focus:top %}
 
 ## 光电容积脉搏波描记法
 
@@ -37,15 +37,15 @@ references:
 
 我使用简单的时域分析法计算脉率，关键点就是计算采样时间内的波峰个数。把色相信号绘制波形图如下：
 
-{% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0927b@2x.jpg width:300px bg:#fff padding:8px %}
+{% image https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0927b@2x.jpg width:300px bg:#fff padding:8px %}
 
 由于覆盖力度不稳定导致色相会整体偏移因而产生低频噪声，再加原本就存在的高频噪声影响，波形显得很杂乱无章，所以使用带通递归滤波器进行滤波：
 
-{% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0927c@1x.svg bg:#fff padding:16px %}
+{% image https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0927c@1x.svg bg:#fff padding:16px %}
 
 公式展开为：
 
-{% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0927d@1x.svg bg:#fff padding:16px %}
+{% image https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0927d@1x.svg bg:#fff padding:16px %}
 
 用 Swift 语言实现这个滤波器的算法（10阶）为：
 
@@ -77,7 +77,7 @@ private struct BandpassFilter {
 
 经过滤波之后就能看到波形图呈现锯齿状，由于这是由摄像头捕捉到的色相的波形图，所以看起来并不会像心电图那样：
 
-{% image https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0927e@2x.jpg width:300px bg:#fff padding:8px %}
+{% image https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0927e@2x.jpg width:300px bg:#fff padding:8px %}
 
 有了干净的波形图，就可以数出一段时间内的波峰个数，从而计算出频率。例如数5秒内有多少个波峰，然后乘以12就是每分钟脉搏跳动次数，也就是这5秒内的平均脉率。现在 GitHub 上的很多同类的开源项目也都是这种方案。由于连续测量的时间越长，发生中断的可能性就越大，测量成功率就越低，再考虑到心率本身就是变化的，时间跨度太长也会使得数据变得没有意义，测量时间太短又很容易被个别误差数据影响。
 
@@ -164,7 +164,7 @@ func calcFrequency(count: Int) -> CGFloat? {
 }
 ```
 
-{% frame iphone11 img:https://cdn.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0927f@2x.jpg %}
+{% frame iphone11 img:https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0927f@2x.jpg %}
 
 ## 准确性与参考价值
 
