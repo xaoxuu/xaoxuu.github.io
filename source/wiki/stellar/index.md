@@ -43,15 +43,15 @@ Stellar 是一个内置 wiki 系统的 hexo 主题，拥有简约而精美的视
 如果您没有使用过 Hexo 也不要着急，可以先通读一遍 [Hexo](https://hexo.io/zh-cn/docs/) 中文文档。此外，如果您从旧版本更新或着其它主题迁移，请确保环境版本不要太低，否则会产生兼容性问题：
 
 ```yaml 建议的版本
-Hexo: 5.4.0
-hexo-cli: 4.3.0
-node.js: 14.17.3 LTS # 选 LTS 就行，过高的版本 hexo 还没有进行兼容。
-npm: 6.14.13 LTS
+Hexo: 5.4.0 ~ 6.2.0
+hexo-cli: 4.3.0 ~ latest
+node.js: 14.17.3 ～ 16.15.0 # 建议选择 LTS 版本，过高的版本 hexo 还没有进行兼容。
+npm: 6.14.13 ~ 8.5.5
 ```
 
 ## 安装与更新
 
-{% noteblock %}
+{% grid %}
 {% tabs %}
 
 <!-- tab 稳定版 -->
@@ -122,7 +122,7 @@ npm: 6.14.13 LTS
 {% note color:red 适用范围 仅试用，无法获得更新。 %}
 
 {% endtabs %}
-{% endnoteblock %}
+{% endgrid %}
 
 
 ## 示例博客

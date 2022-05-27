@@ -12,4 +12,4 @@ seo_title: 收藏的站点
 
 {% toc wiki:Notes display:mobile TOC %}
 
-{% sites %}
+{% sites not:examples %}

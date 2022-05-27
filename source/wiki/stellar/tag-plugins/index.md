@@ -27,7 +27,7 @@ title: 使用标签插件增强阅读体验
 
 {% endfolding %}
 
-## 修饰文本标签
+## 文本修饰标签集
 
 - 支持多彩标记标签，包括：{% mark 默认 %}{% mark 红 color:red %}{% mark 橙 color:orange %}{% mark 黄 color:yellow %}{% mark 绿 color:green %}{% mark 青 color:cyan %}{% mark 蓝 color:blue %}{% mark 紫 color:purple %}{% mark 浅 color:light %}{% mark 深 color:dark %} 一共 10 种颜色。
 - 这是 {% psw 密码 %} 标签
@@ -51,7 +51,7 @@ title: 使用标签插件增强阅读体验
 - 这是 {% kbd 键盘样式 %} 标签，试一试：{% kbd ⌘ %} + {% kbd D %}
 ```
 
-## 表情标签
+## Emoji（表情标签）
 
 内置了可配置的表情标签{% emoji 爱你 %}使用方法如下：
 
@@ -78,17 +78,17 @@ tag_plugins:
     tieba: https://fastly.jsdelivr.net/gh/volantis-x/cdn-emoji/tieba/%s.png
 ```
 
-{% noteblock %}
+{% grid %}
 在配置文件中，文件名用 `%s` 代替。这种集成方式虽然不那么优雅，但也能用，主要是配置起来比较灵活。 {% emoji aru 0180 %}
 如果对高度有特别要求，可以指定高度，例如：{% emoji aru 5150 height:3em %}
 ```
 {% emoji aru 5150 height:3em %}
 ```
-{% endnoteblock %}
+{% endgrid %}
 
 > 表情速查表：[stellar表情标签索引](https://www.hermitlsr.top/2021-08-02/36b0e529.html)
 
-## 图片标签
+## Image（图片标签）
 
 图片标签是一个精心设计的应对各种尺寸插图的标签，对于大图，可以放置一个「下载」按钮，语法格式如下：
 
@@ -121,25 +121,35 @@ bg: '#ffffff' # 图片区域背景颜色，16进制
 
 宽度较小而高度较大的图片，可以设置宽、高、填充间距、背景色等对其布局进行优化，使得它在不同宽度的屏幕下都能获得不错的视觉体验：
 
+{% tabs %}
+
+<!-- tab 有底色的图片 -->
+
 有底色的图片，可以填充图片底色：
 
 {% image https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/mirror/apple/documentation/watchkit/06d45110-1dd7-49a4-a413-9f5159ecdd0e.png width:200px padding:16px bg:white %}
 
-```md 写法如下
-{% image https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/mirror/apple/documentation/watchkit/06d45110-1dd7-49a4-a413-9f5159ecdd0e.png width:200px padding:16px bg:white %}
-```
+{% codeblock %}
+{% raw %}{% image https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/mirror/apple/documentation/watchkit/06d45110-1dd7-49a4-a413-9f5159ecdd0e.png width:200px padding:16px bg:white %}{% endraw %}
+{% endcodeblock %}
+
+{% note 提示 鼠标拖拽一下图片可以看看原图 %}
+
+{% folding 如果不进行约束，在宽屏设备上阅读体验很糟糕（为不影响阅读体验，已为您折叠过长的内容） %}
+{% image https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/mirror/apple/documentation/watchkit/06d45110-1dd7-49a4-a413-9f5159ecdd0e.png %}
+{% endfolding %}
+
+<!-- tab 没有底色的图片 -->
 
 没有底色的图片，可以填充 `bg:var(--card)` 动态颜色，能够适配暗黑模式：
 
 {% image https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg bg:var(--card) padding:16px width:100px %}
 
-```md 写法如下
-{% image https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg bg:var(--card) padding:16px %}
-```
+{% codeblock %}
+{% raw %}{% image https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg bg:var(--card) padding:16px %}{% endraw %}
+{% endcodeblock %}
 
-{% folding 如果不进行约束，在宽屏设备上阅读体验很糟糕（为不影响阅读体验，已为您折叠过长的内容） %}
-{% image https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/mirror/apple/documentation/watchkit/06d45110-1dd7-49a4-a413-9f5159ecdd0e.png %}
-{% endfolding %}
+{% endtabs %}
 
 ### 支持 Fancybox 插件点击放大
 
@@ -157,7 +167,7 @@ tag_plugins:
     fancybox: true
 ```
 
-## 引用标签
+## Quot（引用标签）
 
 适合居中且醒目的引用：{% quot Stellar 是最好用的主题 %}
 
@@ -174,7 +184,7 @@ tag_plugins:
 
 > 此外，加上 `el:h2` 可以作为标题使用
 
-## 诗文标签
+## Poetry（诗词标签）
 
 {% poetry 游山西村 author:陆游 footer:诗词节选 %}
 莫笑农家腊酒浑，丰年留客足鸡豚。
@@ -194,16 +204,16 @@ tag_plugins:
 ```
 {% endfolding %}
 
-## 备注标签
+## Note（备注标签）
 
 ```md note
 {% note [title] content [color:color] %}
 ```
 
-```md noteblock
-{% noteblock [title] [color:color] [codeblock:bool] %}
+```md block
+{% grid [title] [color:color] [codeblock:bool] %}
 ...
-{% endnoteblock %}
+{% endgrid %}
 ```
 
 ```yaml 参数说明
@@ -214,7 +224,7 @@ color: red/orange/yellow/green/cyan/blue/purple/light/dark
 
 ### 彩色备注标签
 
-备注标签相较于旧版进行了增强，可以实现更多种颜色， note 标签可以用空格隔开标题和内容。 noteblock 标签适用于应对更复杂的场合。
+备注标签相较于旧版进行了增强，可以实现更多种颜色， note 标签可以用空格隔开标题和内容。 block 标签适用于应对更复杂的场合。
 
 {% note 直接写备注内容，默认是和代码块一样的样式，如果内容中需要显示空格，请使用&nbsp;代替。 %}
 
@@ -243,82 +253,58 @@ color: red/orange/yellow/green/cyan/blue/purple/light/dark
 
 ### 具有标题的备注标签
 
-#### 使用 note 标签
-
 {% note 这是标题 这是正文 哈哈。 %}
 
 ```md 写法如下
 {% note 这是标题 这是正文 哈哈。 %}
 ```
 
-#### 使用 noteblock 标签
+## Grid（格子标签）
 
-{% noteblock 这是标题 %}
+使用过 `noteblock` 标签的朋友对这个新标签会比较熟悉，它是从 `noteblock` 演化而来的，基础功能和 `noteblock` 是一致的，后续会推出多列布局可供选择。
+
+### 文本内容
+
+{% grid 这是标题 %}
 这是正文 哈哈。
-{% endnoteblock %}
+{% endgrid %}
 
-```md 代替 note 标签的写法
-{% noteblock 这是标题 %}
-这是正文 哈哈。
-{% endnoteblock %}
-```
-
-### 复杂备注标签
-
-如果备注标签内容不只有文字，请使用 noteblock 代替。
-
-{% noteblock child:tabs %}
-{% tabs %}
-<!-- tab 图文示例 -->
-{% image https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0627a@2x.jpg 个人电脑作为办公设备时，我们该如何保护隐私？ download:true %}
-
-公司一般都会强制安装安防软件，这些软件要求开机自启动，要求有屏幕录制权限、完全的磁盘访问权限包括相册图库。因此如果使用自己的 MacBook 作为办公设备，必须要把生活区和工作区完全独立开，安装在两个磁盘分区，并且对磁盘分区进行加密。
-
-<!-- tab 代码示例 -->
-{% codeblock 建议的版本 lang:yaml %}
-Hexo: 5.4.0
-hexo-cli: 4.2.0
-node.js: 14.15.4 LTS # 建议使用LTS版本
-npm: 6.14.10 LTS
-{% endcodeblock %}
-{% endtabs %}
-{% endnoteblock %}
+{% grid 彩色块标题 color:yellow %}
+这是彩色块正文 啊哈哈哈。
+{% endgrid %}
 
 ```md 写法如下
-{% noteblock %}
-{% tabs %}
-<!-- tab 图文示例 -->
-{% image https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0627a@2x.jpg 个人电脑作为办公设备时，我们该如何保护隐私？ download:true %}
-公司一般都会强制安装安防软件，这些软件要求开机自启动，要求有屏幕录制权限、完全的磁盘访问权限包括相册图库。因此如果使用自己的 MacBook 作为办公设备，必须要把生活区和工作区完全独立开，安装在两个磁盘分区，并且对磁盘分区进行加密。
-<!-- tab 代码示例 -->
-{% codeblock 建议的版本 lang:yaml %}
-Hexo: 5.4.0
-hexo-cli: 4.2.0
-node.js: 14.15.4 LTS # 建议使用LTS版本
-npm: 6.14.10 LTS
-{% endcodeblock %}
-{% endtabs %}
-{% endnoteblock %}
+{% grid 这是标题 %}
+这是正文 哈哈。
+{% endgrid %}
+
+{% grid 彩色块标题 color:yellow %}
+这是彩色块正文 啊哈哈哈。
+{% endgrid %}
 ```
 
 ### 彩色代码块
 
-**设置 `child:codeblock` 并设置 `color:颜色枚举` 可以实现10种颜色的代码块**
+设置 `child:codeblock` 并设置 `color:颜色枚举` 可以实现 10 种不同颜色的代码块，彩色代码块一般可以用在代码正确与错误的示范对比场景。
 
-正确的例子：
+{% tabs %}
 
-{% noteblock child:codeblock color:green %}
-```swift
+<!-- tab 效果 -->
+
+推荐的写法：
+
+{% grid child:codeblock color:green %}
+{% codeblock lang:swift %}
 func test() {
     // ...
 }
-```
-{% endnoteblock %}
+{% endcodeblock %}
+{% endgrid %}
 
-错误的例子：
+不推荐的写法：
 
-{% noteblock child:codeblock color:red %}
-```swift
+{% grid child:codeblock color:red %}
+{% codeblock lang:swift %}
 func test() -> Void {
     // ...
 }
@@ -326,38 +312,78 @@ func test() -> Void {
 func test() -> () {
     // ...
 }
-```
-{% endnoteblock %}
+{% endcodeblock %}
+{% endgrid %}
+
+<!-- tab 写法 -->
+
+{% codeblock %}{% raw %}
+推荐的写法：
+
+{% grid child:codeblock color:green %}
+{% codeblock lang:swift %}
+func test() {
+    // ...
+}
+{% endcodeblock %}
+{% endgrid %}
+
+不推荐的写法：
+
+{% grid child:codeblock color:red %}
+{% codeblock lang:swift %}
+func test() -> Void {
+    // ...
+}
+// 或者
+func test() -> () {
+    // ...
+}
+{% endcodeblock %}
+{% endgrid %}
+{% endraw %}{% endcodeblock %}
+
+{% endtabs %}
+
+### 嵌套其它标签
+
+{% grid child:tabs %}
+{% tabs %}
+<!-- tab 图文示例 -->
+{% image https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0627a@2x.jpg 个人电脑作为办公设备时，我们该如何保护隐私？ download:true %}
+
+公司一般都会强制安装安防软件，这些软件要求开机自启动，要求有屏幕录制权限、完全的磁盘访问权限包括相册图库。因此如果使用自己的 MacBook 作为办公设备，必须要把生活区和工作区完全独立开，安装在两个磁盘分区，并且对磁盘分区进行加密。
+
+<!-- tab 代码示例 -->
+{% codeblock 建议的版本 lang:yaml %}
+Hexo: 5.4.0
+hexo-cli: 4.2.0
+node.js: 14.15.4 LTS # 建议使用LTS版本
+npm: 6.14.10 LTS
+{% endcodeblock %}
+{% endtabs %}
+{% endgrid %}
 
 ```md 写法如下
-正确的例子：
-
-{% noteblock child:codeblock color:green %}
-\```swift
-func test() {
-    // ...
-}
-\```
-{% endnoteblock %}
-
-错误的例子：
-
-{% noteblock child:codeblock color:red %}
-\```swift
-func test() -> Void {
-    // ...
-}
-// 或者
-func test() -> () {
-    // ...
-}
-\```
-{% endnoteblock %}
+{% grid %}
+{% tabs %}
+<!-- tab 图文示例 -->
+{% image https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/blog/2020-0627a@2x.jpg 个人电脑作为办公设备时，我们该如何保护隐私？ download:true %}
+公司一般都会强制安装安防软件，这些软件要求开机自启动，要求有屏幕录制权限、完全的磁盘访问权限包括相册图库。因此如果使用自己的 MacBook 作为办公设备，必须要把生活区和工作区完全独立开，安装在两个磁盘分区，并且对磁盘分区进行加密。
+<!-- tab 代码示例 -->
+{% codeblock 建议的版本 lang:yaml %}
+Hexo: 5.4.0
+hexo-cli: 4.2.0
+node.js: 14.15.4 LTS # 建议使用LTS版本
+npm: 6.14.10 LTS
+{% endcodeblock %}
+{% endtabs %}
+{% endgrid %}
 ```
 
-## 折叠标签
+## Folding（折叠块标签）
 
-折叠标签的语法格式为：
+折叠块标签的语法格式为：
 
 ```
 {% folding title [codeblock:bool] [open:bool] [color:color] %}
@@ -401,7 +427,7 @@ func test() {
 {% endfolding %}
 {% endfolding %}
 
-## 外链卡片标签
+## Link（外链卡片标签）
 
 外链卡片标签的语法格式为：
 
@@ -450,7 +476,7 @@ icon: 可选，缩略图链接
 {% link https://github.com/xaoxuu/hexo-theme-stellar/hexo-theme-stellar Stellar&nbsp;-&nbsp;每个人的独立博客 Stellar 是一个内置 wiki 系统的 hexo 主题，适合综合型站点使用。同时也拥有简约而精美的视觉设计和丰富的标签插件，帮助您简单从容地应对各种场合。 icon:https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/stellar/icon.svg %}
 ```
 
-## 复制标签
+## Copy（复制标签）
 
 对于单行内容，可以使用 `copy` 标签来实现复制功能：
 
@@ -468,27 +494,18 @@ icon: 可选，缩略图链接
 {% copy git:gh xaoxuu.com/hexo-theme-stellar %}
 ```
 
-## 单选/复选样式标签
-
-单选框是 radio，复选框是 checkbox，它们都支持这些参数：
-
-```yaml
-checked: true/false
-color: red/orange/yellow/green/cyan/blue/purple
-```
-
-### 单选框样式标签
+## Radio（单选样式标签）
 
 {% radio 没有勾选的单选框 %}
 {% radio checked:true 已勾选的单选框 %}
 
-### 复选框样式标签
-
-复选框还额外支持三种符号：
-
-```yaml
-symbol: plus/minus/times
+```yaml 支持的参数
+checked: true/false
+color: red/orange/yellow/green/cyan/blue/purple
 ```
+
+
+## Checkbox（复选样式标签）
 
 {% checkbox 普通的没有勾选的复选框 %}
 {% checkbox checked:true 普通的已勾选的复选框 %}
@@ -496,9 +513,15 @@ symbol: plus/minus/times
 {% checkbox symbol:minus color:yellow checked:true 显示为减号的黄色的已勾选的复选框 %}
 {% checkbox symbol:times color:red checked:true 显示为乘号的红色的已勾选的复选框 %}
 
+```yaml 支持的参数
+checked: true/false
+color: red/orange/yellow/green/cyan/blue/purple
+symbol: plus/minus/times
+```
+
 {% note color:yellow 由于没有提交表单的需要，所以这个标签只是样式标签，不具有真实的单选/复选功能。 %}
 
-## 时间线标签
+## Timeline（时间线标签）
 
 目前的时间线只支持静态的，后续有望通过 API 实现动态时间线插件。
 
@@ -520,7 +543,9 @@ symbol: plus/minus/times
 {% endtimeline %}
 ```
 
-## 友链标签
+## Friends（友链标签）
+
+{% friends only:group2 %}
 
 您可以在任何位置插入友链，支持静态数据和动态数据，静态数据需要写在数据文件中：
 
@@ -566,10 +591,6 @@ group3:
 {% friends not:group2 %}
 ```
 
-{% folding friends only:group2 %}
-{% friends only:group2 %}
-{% endfolding %}
-
 ### 实现动态友链
 
 可以加载来自 issues 的友链数据，除了需要在 `_data/friends.yml` 中指定 `api` 和 `repo` 外，还需要做一下几件事：
@@ -596,7 +617,9 @@ group3:
 {% friends repo:xaoxuu/friends api:https://issues-api.vercel.app %}
 ```
 
-## 网站卡片标签
+## Sites（网站卡片标签）
+
+{% sites only:examples %}
 
 网站卡片可以显示网站截图、logo、标题、描述，使用方法和友链标签一模一样，唯一的区别是数据文件名称为 `sites.yml`，可以和友链数据混用，通过分组过滤实现不一样的效果。
 
@@ -608,7 +631,7 @@ group3:
 {% sites only:mac %}
 {% endfolding %}
 
-## GitHub Card
+## GitHub Card（GitHub卡片标签）
 
 {% ghcard xaoxuu %}
 
@@ -621,7 +644,7 @@ group3:
 
 {% link https://github.com/anuraghazra/github-readme-stats GitHub&nbsp;Card&nbsp;API %}
 
-## 导航栏标签
+## Navbar（导航栏标签）
 
 文章内也可以插入一个导航栏：
 
@@ -632,7 +655,7 @@ group3:
 {% navbar [文章](/) [项目](/wiki/) [留言](#comments) [GitHub](https://github.com/xaoxuu/) %}
 
 
-## 关于标签
+## About（关于标签）
 
 方便在关于页面显示一段图文信息：
 
@@ -650,7 +673,7 @@ XAOXUU 目前是一个 iOS 开发者，代表作品有：ProHUD、ValueX 等。�
 {% endabout %}
 ```
 
-## 设备框架标签
+## Frame（设备框架标签）
 
 {% frame iphone11 img:https://fastly.jsdelivr.net/gh/cdn-x/wiki/prohud/docs/toast-loading@2x.jpg video:https://fastly.jsdelivr.net/gh/cdn-x/wiki/prohud/docs/toast-loading@2x.mov focus:top %}
 
@@ -660,7 +683,7 @@ XAOXUU 目前是一个 iOS 开发者，代表作品有：ProHUD、ValueX 等。�
 
 目前仅支持 iphone11 如果您有 iPhone12、iPad、Mac 等设备模型的 svg 图片，可以发给我进行适配。
 
-## 分栏标签
+## Tabs（分栏标签）
 
 这个标签移植自 [NexT](https://theme-next.js.org/docs/tag-plugins/tabs.html) 主题，但做了以下修改：
 
@@ -711,7 +734,7 @@ print("hello world")
 {% endtabs %}
 ```
 
-## 轮播标签
+## Swiper（轮播标签）
 
 默认一张图片是 50% 宽度，通过设置 `width:min` 设置为 25% 宽度，`width:max` 设置为 100% 宽度。
 

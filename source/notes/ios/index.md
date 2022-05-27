@@ -109,13 +109,13 @@ s.source = { :git => "https://github.com/TeaseTian/HTQRCode.git", :commit => "68
 
 tag => s.version 表示将这个 Pod 版本与 Git 仓库中相同版本的 comit 绑定
 
-{% noteblock %}
+{% grid %}
 
 **注意**
 
 如果仓库中对应的tag是 `“v1.0.0”` 这样以字母开头的，可以在 `#{s.version}` 前面加上对应的字母。commit => "68defea" 表示将这个 Pod 版本与 Git 仓库中某个 commit 绑定
 
-{% endnoteblock %}
+{% endgrid %}
 
 
 **验证**

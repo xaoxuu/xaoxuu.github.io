@@ -90,10 +90,10 @@ deploy:
 
 Hexo官方教程： https://hexo.io/zh-cn/docs/one-command-deployment
 
-{% noteblock 小提示 %}
+{% grid 小提示 %}
 
 图标从这里找：https://fontawesome.com/
 如果需要更多DIY，请自行修改源码。
 简历主题不支持评论，如果需要，请自行集成。
 
-{% endnoteblock %}
+{% endgrid %}

@@ -232,3 +232,13 @@ community:
       screenshot:
       avatar:
       description:
+
+examples:
+  - title: XAOXUU
+    avatar: https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/avatar/rect-256@2x.png
+    url: https://xaoxuu.com
+    screenshot: https://7.dusays.com/2021/03/06/b43115b6a7c5d.jpg
+  - title: Volantis
+    avatar: https://fastly.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/apple-touch-icon.png
+    url: https://volantis.js.org/
+    screenshot: https://i.loli.net/2021/04/08/YQ2nhcvyCuFsm3g.png

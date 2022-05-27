@@ -45,7 +45,7 @@ tags: [GCD, ObjC, Swift]
 
 ```
 
-{% noteblock 也可以使用 AXKit 实现 %}
+{% grid 也可以使用 AXKit 实现 %}
 
 也可以使用 [AXKit](https://github.com/xaoxuu/AXKit/) 封装好的方法，将要执行的代码保存成 `ax_dispatch_operation_t` 的静态类型变量，使用 `ax_dispatch_cancel_operation()` 取消之前的任务，然后使用 `ax_dispatch_cancellable()` 再次赋值。
 
@@ -59,7 +59,7 @@ tags: [GCD, ObjC, Swift]
 }
 ```
 
-{% endnoteblock %}
+{% endgrid %}
 
 
 ### 使用 Swift
