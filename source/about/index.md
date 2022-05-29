@@ -9,44 +9,21 @@ comment_id: '留言板'
 comments: true
 breadcrumb: false
 header: false
+indent: true
+description: 本站是xaoxuu的个人站，博主目前主要从事于iOS开发行业，活跃于开源社区，热衷于设计和打磨美妙的东西。代表作有：ProHUD、ValueX、Stellar、心率管家等。
 ---
 
 {% about avatar:https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/avatar/rect-256@2x.png height:80px %}
 
 <img height="32px" alt="XAOXUU" src="https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu/logo/180x30@2x.png">
 
+{% tabs align:left %}
+
+<!-- tab 简介 -->
+
 **如果宇宙中真有什么终极的逻辑，那就是我们终有一天会在舰桥上重逢，直到生命终结。**
 
-XAOXUU 目前主要从事于 iOS 开发行业，活跃于开源社区，代表作品有：[ProHUD](/wiki/prohud/)、[ValueX](/wiki/valuex/)、[Stellar](/wiki/stellar/) 等，更多的作品可以去项目主页查看，希望大家喜欢～
-
-{% navbar [文章](/) [项目](/wiki/) [GitHub](https://github.com/xaoxuu) [GitLab](http://42.192.89.158:8099/explore) [友链](/friends/) [留言](#comments) %}
-
-{% endabout %}
-
-## 近期日程
-
-开源项目无任何盈利目的，只在工作闲暇时间进行维护，有相关需求请前往对应项目提 Issue 进行反馈，通过私人邮件询问开源项目问题可能得不到答复。
-
-{% timeline %}
-
-<!-- node ProHUD 迭代 -->
-
-- 针对 Swift 5 进行代码优化。
-- 继续发布 cocoapods （已经中断了几个版本）
-
-<!-- node ValueX 迭代 -->
-
-目前存在冗余操作，需要优化代码以提高运行效率。
-
-<!-- node Stellar 2.0 & Volantis 6.0 -->
-
-Stellar 2.0 与 Volantis 6.0 配置格式统一，便于切换，且 Volantis 6.0 在外观上进行重新设计。
-
-{% endtimeline %}
-
-## 兴趣爱好
-
-{% tabs align:center %}
+本站是 [@xaoxuu](https://xaoxuu.com) 的个人站，博主目前主要从事于 iOS 开发行业，活跃于开源社区，热衷于设计和打磨美妙的东西。代表作有：[ProHUD](/wiki/prohud/)、[ValueX](/wiki/valuex/)、[Stellar](/wiki/stellar/)、[心率管家](/wiki/heartmate/) 等，更多的作品可以去项目主页查看，希望大家喜欢～
 
 <!-- tab 音乐 -->
 
@@ -70,8 +47,34 @@ Stellar 2.0 与 Volantis 6.0 配置格式统一，便于切换，且 Volantis 6.
 
 此外，也热衷于欣赏和学习这方面的知识：产品设计、摄影、天文。
 
+
 {% endtabs %}
 
-## 关于本站
+{% navbar [文章](/) [项目](/wiki/) [GitHub](https://github.com/xaoxuu) [GitLab](http://42.192.89.158:8099/explore) [友链](/friends/) [留言](#comments) %}
 
-本站是个人博客，不放置任何推广链接。内容以技术积累为主，也不排除会写一些生活方面或者其它主题的内容。{% del 季更 %}年更博主，精力有限，为了保证文章质量，篇数不会很多，已经发布过的文章也会不定期审查和更新（以免过时的内容误导读者）。
+{% endabout %}
+
+{% quot icon:hashtag 近期开源日程 %}
+
+开源项目无任何盈利目的，只在工作闲暇时间进行维护，有相关需求请前往对应项目提 Issue 进行反馈，通过私人邮件询问开源项目问题可能得不到答复。
+
+{% timeline %}
+
+<!-- node ProHUD 迭代 -->
+
+- 针对 Swift 5 进行代码优化。
+- 继续发布 cocoapods （已经中断了几个版本）
+
+<!-- node ValueX 迭代 -->
+
+目前存在冗余操作，需要优化代码以提高运行效率。
+
+<!-- node Stellar 2.0 & Volantis 6.0 -->
+
+Stellar 2.0 与 Volantis 6.0 配置格式统一，便于切换，且 Volantis 6.0 在外观上进行重新设计。
+
+{% endtimeline %}
+
+{% quot icon:hashtag 如何支持博主 %}
+
+本站没有任何推广和打赏链接，如果您觉得哪个作品不错，欢迎去对应的仓库点个赞，或者在对应的文章下面留言互动一下。{% emoji qq 可爱 %}
