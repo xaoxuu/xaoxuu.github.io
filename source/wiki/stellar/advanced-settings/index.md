@@ -129,6 +129,29 @@ article:
 
 如果要修改样式，您需要删掉主题的样式文件的 CDN 链接，使用本地文件，然后在 `themes/stellar/source/css/_custom.styl` 中进行修改。
 
+### 使用其它 highlight.js 代码高亮主题
+
+Hexo 官方有文档： https://hexo.io/docs/syntax-highlight.html#hljs
+
+> Tip: When line_number is set to false, wrap is set to false and hljs is set to true, you can then use highlight.js theme directly in your site.
+
+以 `atom-one-dark` 主题为例，翻译过来就是 `_config.yml` 找到 `highlight` 并修改为：
+```yaml
+highlight:
+  enable: true
+  line_number: false
+  auto_detect: false
+  tab_replace: '    '
+  wrap: false
+  hljs: true
+```
+然后再找到 `inject` 新增一个 css 链接：
+```yaml
+inject:
+  head:
+    - <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/highlightjs/cdn-release@11.5.0/build/styles/atom-one-dark.min.css">
+```
+
 ## 外部文件注入
 
 在站点根目录下的配置文件中进行修改 `inject.head` 以在 `<head>` 标签末尾处注入代码，修改 `inject.script` 以在 `<body>` 标签末尾处注入代码。
