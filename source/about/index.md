@@ -23,11 +23,11 @@ description: 本站是xaoxuu的个人站，博主目前主要从事于iOS开发�
 
 **如果宇宙中真有什么终极的逻辑，那就是我们终有一天会在舰桥上重逢，直到生命终结。**
 
-本站是 [@xaoxuu](https://xaoxuu.com) 的个人站，博主目前主要从事于 iOS 开发行业，活跃于开源社区，热衷于设计和打磨美妙的东西。代表作有：[ProHUD](/wiki/prohud/)、[ValueX](/wiki/valuex/)、[Stellar](/wiki/stellar/)、[心率管家](/wiki/heartmate/) 等，更多的作品可以去项目主页查看，希望大家喜欢～
+本站是[@xaoxuu](https://xaoxuu.com)的个人站，博主目前主要从事于 iOS 开发行业，活跃于开源社区，热衷于设计和打磨美妙的东西。代表作有：[ProHUD](/wiki/prohud/)、[ValueX](/wiki/valuex/)、[Stellar](/wiki/stellar/)、[心率管家](/wiki/heartmate/)等，更多的作品可以去项目主页查看，希望大家喜欢～
 
 <!-- tab 音乐 -->
 
-非常热爱音乐，喜欢的品类很多，尤其喜爱 [Hans Zimmer](https://music.163.com/#/artist?id=34517) 和 [Two Steps From Hell](https://music.163.com/#/artist?id=102714) 的史诗音乐，夜深人静的时候喜欢听 [Ludovico Einaudi](https://music.163.com/#/artist?id=38127) 的钢琴曲，能量不足的时候会听一些电音或摇滚来充电，心灰意冷的时候会听一些十年前常听的轻音乐怀旧，那时我还特别喜欢 [班得瑞](https://music.163.com/#/artist?id=88149) 的音乐。
+非常热爱音乐，喜欢的品类很多，尤其喜爱[Hans Zimmer](https://music.163.com/#/artist?id=34517)和[Two Steps From Hell](https://music.163.com/#/artist?id=102714)的史诗音乐，夜深人静的时候喜欢听[Ludovico Einaudi](https://music.163.com/#/artist?id=38127)的钢琴曲，能量不足的时候会听一些电音或摇滚来充电，心灰意冷的时候会听一些十年前常听的轻音乐怀旧，那时我还特别喜欢[班得瑞](https://music.163.com/#/artist?id=88149)的音乐。
 
 <!-- tab 游戏 -->
 

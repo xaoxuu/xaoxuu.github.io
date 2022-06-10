@@ -129,13 +129,13 @@ npm: 6.14.13 ~ 8.5.5
 
 {% sites repo:xaoxuu/hexo-theme-stellar-examples %}
 
-{% note 小提示 如果您也使用了 Stellar 并希望显示在这里，可以在 [hexo-theme-stellar-examples](https://github.com/xaoxuu/hexo-theme-stellar-examples/issues) 中提交 issue 告知您的站点信息，在您提交后的大约 3 分钟内生效。 %}
+{% note 小提示 如果您也使用了 Stellar 并希望显示在这里，可以在[hexo-theme-stellar-examples](https://github.com/xaoxuu/hexo-theme-stellar-examples/issues)中提交 issue 告知您的站点信息，在您提交后的大约 3 分钟内生效。 %}
 
 ## 开源许可协议
 
 {% quot 项目中的许可声明文件应包含在所有副本中 %}
 
-本主题是由 [@xaoxuu](https://github.com/xaoxuu) 设计和开发，使用 [MIT License](https://fastly.jsdelivr.net/gh/xaoxuu/hexo-theme-stellar/LICENSE) 开源许可协议进行授权，拷贝、分享或基于此进行创作时请遵守协议内容：
+本主题是由[@xaoxuu](https://github.com/xaoxuu)设计和开发，使用[MIT License](https://fastly.jsdelivr.net/gh/xaoxuu/hexo-theme-stellar/LICENSE)开源许可协议进行授权，拷贝、分享或基于此进行创作时请遵守协议内容：
 
 ```license
 MIT License
