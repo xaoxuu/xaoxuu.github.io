@@ -161,6 +161,20 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
+## 鸣谢
+
+感谢以下开发者贡献代码：
+
+{% users api:https://gh-api-nine.vercel.app/repos/xaoxuu/hexo-theme-stellar/contributors?per_page=100&direction=asc %}
+
+{% folding 感谢点赞的用户 %}
+
+{% quot icon:hashtag 1-100 %}
+{% users api:https://gh-api-nine.vercel.app/repos/xaoxuu/hexo-theme-stellar/stargazers?per_page=100&page=1 %}
+{% quot icon:hashtag 101-200 %}
+{% users api:https://gh-api-nine.vercel.app/repos/xaoxuu/hexo-theme-stellar/stargazers?per_page=100&page=2 %}
+
+{% endfolding %}
 
 ## Todo
 
