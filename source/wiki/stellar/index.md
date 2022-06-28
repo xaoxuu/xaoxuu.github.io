@@ -173,7 +173,8 @@ SOFTWARE.
 {% users api:https://gh-api-nine.vercel.app/repos/xaoxuu/hexo-theme-stellar/stargazers?per_page=100&page=1 %}
 {% quot icon:hashtag 101-200 %}
 {% users api:https://gh-api-nine.vercel.app/repos/xaoxuu/hexo-theme-stellar/stargazers?per_page=100&page=2 %}
-
+{% quot icon:hashtag 201-300 %}
+{% users api:https://gh-api-nine.vercel.app/repos/xaoxuu/hexo-theme-stellar/stargazers?per_page=100&page=3 %}
 {% endfolding %}
 
 ## Todo
