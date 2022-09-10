@@ -28,12 +28,12 @@
 <meta property="og:site_name" content="XAOXUU">
 <meta property="og:description" content="网上相关教程挺多，但是步骤略繁琐，本文将借助 Gitblit 开源工具使用最简单的方式搭建和维护 Git 服务器，支持 Linux、Windows、Mac 平台。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/git/gitblit01.jpg">
-<meta property="article:published_time" content="2022-09-10T07:27:52.607Z">
-<meta property="article:modified_time" content="2022-09-10T07:27:52.607Z">
+<meta property="og:image" content="https://xaoxuu.com/assets/wiki/git/gitblit01.jpg">
+<meta property="article:published_time" content="2022-09-10T08:11:15.583Z">
+<meta property="article:modified_time" content="2022-09-10T08:11:15.583Z">
 <meta property="article:author" content="xaoxuu">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/git/gitblit01.jpg">
+<meta name="twitter:image" content="https://xaoxuu.com/assets/wiki/git/gitblit01.jpg">
   
   
 
@@ -57,15 +57,15 @@
 
   
     
-      <link rel="apple-touch-icon" sizes="180x180" href="https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.4/favicon/apple-touch-icon.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/assets/xaoxuu/favicon/apple-touch-icon.png">
     
-      <link rel="icon" type="image/png" sizes="32x32" href="https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.4/favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/assets/xaoxuu/favicon/favicon-32x32.png">
     
-      <link rel="icon" type="image/png" sizes="16x16" href="https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.4/favicon/favicon-16x16.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/assets/xaoxuu/favicon/favicon-16x16.png">
     
-      <link rel="manifest" href="https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.4/favicon/site.webmanifest">
+      <link rel="manifest" href="/assets/xaoxuu/favicon/site.webmanifest">
     
-      <link rel="shortcut icon" href="https://fastly.jsdelivr.net/gh/cdn-x/xaoxuu@1.0.4/favicon/favicon.ico">
+      <link rel="shortcut icon" href="/assets/xaoxuu/favicon/favicon.ico">
     
       <meta name="theme-color" content="#f8f8f8">
     
@@ -106,7 +106,7 @@
 
   
   
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">项目</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/git/">Git 实用教程</a></div><div id="post-meta">更新于&nbsp;<time datetime="2022-09-10T07:27:52.607Z">2022年9月10日</time></div></div>
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">项目</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/git/">Git 实用教程</a></div><div id="post-meta">更新于&nbsp;<time datetime="2022-09-10T08:11:15.583Z">2022年9月10日</time></div></div>
 
   <article class="content md wiki">
   <h1 class="article-title"><span>搭建 Git 服务器</span></h1>
@@ -125,7 +125,7 @@
 <details class="tag-plugin folding"><summary><span>建议设置开机自启动</span></summary><div class="body"><p>通过 Mac 的自动化工具，将启动指令写成脚本，系统启动后自动运行脚本即可。<br>Windows 平台可以添加到启动计划任务中。</p></div></details>
 
 <h2 id="客户端访问"><a href="#客户端访问" class="headerlink" title="客户端访问"></a>客户端访问</h2><p>用服务器 IP + 端口号来访问。例如我的电脑的 IP 是 <code>10.8.12.200</code>，那么在局域网内另外一台电脑访问 <code>http://10.8.12.200:7070</code> 就可以看到管理页面了：</p>
-<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/wiki@1.0.2/git/gitblit01.jpg" style="width:500px;"></div></div>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/wiki/git/gitblit01.jpg" style="width:500px;"></div></div>
 
 <p>网页操作和使用 GitHub、Coding 等平台相似，非常简单。</p>
 
@@ -156,7 +156,7 @@
 
 
       
-<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">近期</a><a href="/blog/categories/">分类</a><a href="/blog/tags/">标签</a><a href="/blog/archives/">归档</a></div><div class="sitemap-group"><span class="fs14">项目</span><a href="/wiki/tags/%E5%BC%80%E6%BA%90%E5%BA%93/">开源库</a><a href="/wiki/tags/%E5%AE%9E%E7%94%A8%E8%84%9A%E6%9C%AC/">实用脚本</a><a href="/wiki/tags/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/">博客主题</a><a href="/wiki/tags/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/">应用程序</a></div><div class="sitemap-group"><span class="fs14">社交</span><a href="/friends/">友链</a><a href="/about/#comments">留言板</a></div><div class="sitemap-group"><span class="fs14">更多</span><a href="/about/">关于本站</a><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/xaoxuu">GitHub</a><a target="_blank" rel="external nofollow noopener noreferrer" href="http://42.192.89.158:8099/explore">GitLab</a></div></div><div class="text"><p>本站由 <a href="https://xaoxuu.com/">@xaoxuu</a> 使用 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.9.0" title="v1.9.0">Stellar</a> 主题创建，您可以在 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/xaoxuu/xaoxuu.github.io/">GitHub</a> 找到本站源码。</p>
+<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">近期</a><a href="/blog/categories/">分类</a><a href="/blog/tags/">标签</a><a href="/blog/archives/">归档</a></div><div class="sitemap-group"><span class="fs14">项目</span><a href="/wiki/tags/%E5%BC%80%E6%BA%90%E5%BA%93/">开源库</a><a href="/wiki/tags/%E5%AE%9E%E7%94%A8%E8%84%9A%E6%9C%AC/">实用脚本</a><a href="/wiki/tags/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/">博客主题</a><a href="/wiki/tags/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/">应用程序</a></div><div class="sitemap-group"><span class="fs14">社交</span><a href="/friends/">友链</a><a href="/about/#comments">留言板</a></div><div class="sitemap-group"><span class="fs14">更多</span><a href="/about/">关于本站</a><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/xaoxuu">GitHub</a><a target="_blank" rel="external nofollow noopener noreferrer" href="http://42.192.89.158:8099/explore">GitLab</a></div></div><div class="text"><p>本站由 <a href="https://xaoxuu.com/">@xaoxuu</a> 使用 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.9.0" title="v1.9.0">Stellar</a> 主题创建。</p>
 </div></footer>
 
       <div class="float-panel mobile-only blur" style="display:none">
