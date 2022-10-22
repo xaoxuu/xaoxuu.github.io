@@ -18,8 +18,8 @@
   
   <entry>
     <title>苹果设计开发加速器《为 iPhone 和 iPad 搭建灵活适配的用户界面》线上活动</title>
-    <link href="https://xaoxuu.com/blog/2020-11-19-ios-layout/"/>
-    <id>https://xaoxuu.com/blog/2020-11-19-ios-layout/</id>
+    <link href="https://xaoxuu.com/blog/20201119/"/>
+    <id>https://xaoxuu.com/blog/20201119/</id>
     <published>2020-11-19T00:00:00.000Z</published>
     <updated>2020-11-19T00:00:00.000Z</updated>
     
@@ -41,8 +41,8 @@
   
   <entry>
     <title>心率管家的设计与开发（下篇：信号处理）</title>
-    <link href="https://xaoxuu.com/blog/2020-09-27-heartmate/"/>
-    <id>https://xaoxuu.com/blog/2020-09-27-heartmate/</id>
+    <link href="https://xaoxuu.com/blog/20200927/"/>
+    <id>https://xaoxuu.com/blog/20200927/</id>
     <published>2020-09-27T00:00:00.000Z</published>
     <updated>2020-09-27T00:00:00.000Z</updated>
     
@@ -66,8 +66,8 @@
   
   <entry>
     <title>静态博客使用 Issues API 来实现动态发布友链、书签</title>
-    <link href="https://xaoxuu.com/blog/2020-08-23-issues-api/"/>
-    <id>https://xaoxuu.com/blog/2020-08-23-issues-api/</id>
+    <link href="https://xaoxuu.com/blog/20200823/"/>
+    <id>https://xaoxuu.com/blog/20200823/</id>
     <published>2020-08-23T00:00:00.000Z</published>
     <updated>2020-08-23T00:00:00.000Z</updated>
     
@@ -89,8 +89,8 @@
   
   <entry>
     <title>个人电脑作为办公设备时，我们该如何保护隐私？</title>
-    <link href="https://xaoxuu.com/blog/2020-06-27-privacy/"/>
-    <id>https://xaoxuu.com/blog/2020-06-27-privacy/</id>
+    <link href="https://xaoxuu.com/blog/20200627/"/>
+    <id>https://xaoxuu.com/blog/20200627/</id>
     <published>2020-06-27T00:00:00.000Z</published>
     <updated>2020-06-27T00:00:00.000Z</updated>
     
@@ -110,8 +110,8 @@
   
   <entry>
     <title>苹果设计开发加速器《创建卓越的 Apple Watch 体验》活动现场体验</title>
-    <link href="https://xaoxuu.com/blog/2019-10-06-ios-apple-watch/"/>
-    <id>https://xaoxuu.com/blog/2019-10-06-ios-apple-watch/</id>
+    <link href="https://xaoxuu.com/blog/20191006/"/>
+    <id>https://xaoxuu.com/blog/20191006/</id>
     <published>2019-10-06T00:00:00.000Z</published>
     <updated>2019-10-06T00:00:00.000Z</updated>
     
@@ -133,8 +133,8 @@
   
   <entry>
     <title>使用链式语法打造一个 ObjC 安全的对象类型转换库</title>
-    <link href="https://xaoxuu.com/blog/2019-08-29-valuex/"/>
-    <id>https://xaoxuu.com/blog/2019-08-29-valuex/</id>
+    <link href="https://xaoxuu.com/blog/20190829/"/>
+    <id>https://xaoxuu.com/blog/20190829/</id>
     <published>2019-08-29T00:00:00.000Z</published>
     <updated>2019-08-29T00:00:00.000Z</updated>
     
@@ -162,8 +162,8 @@
   
   <entry>
     <title>设计一个样式和逻辑分离的 HUD 库</title>
-    <link href="https://xaoxuu.com/blog/2019-08-27-prohud/"/>
-    <id>https://xaoxuu.com/blog/2019-08-27-prohud/</id>
+    <link href="https://xaoxuu.com/blog/20190827/"/>
+    <id>https://xaoxuu.com/blog/20190827/</id>
     <published>2019-08-27T00:00:00.000Z</published>
     <updated>2019-08-27T00:00:00.000Z</updated>
     
@@ -189,8 +189,8 @@
   
   <entry>
     <title>心率管家的设计与开发（上篇：整体流程）</title>
-    <link href="https://xaoxuu.com/blog/2019-07-23-heartmate/"/>
-    <id>https://xaoxuu.com/blog/2019-07-23-heartmate/</id>
+    <link href="https://xaoxuu.com/blog/20190723/"/>
+    <id>https://xaoxuu.com/blog/20190723/</id>
     <published>2019-07-23T00:00:00.000Z</published>
     <updated>2019-07-23T00:00:00.000Z</updated>
     
@@ -214,8 +214,8 @@
   
   <entry>
     <title>如何整理 iOS 老项目中混乱不堪的多语言翻译？</title>
-    <link href="https://xaoxuu.com/blog/2017-12-25-ios-merge-localizable-strings/"/>
-    <id>https://xaoxuu.com/blog/2017-12-25-ios-merge-localizable-strings/</id>
+    <link href="https://xaoxuu.com/blog/20171225/"/>
+    <id>https://xaoxuu.com/blog/20171225/</id>
     <published>2017-12-25T00:00:00.000Z</published>
     <updated>2017-12-25T00:00:00.000Z</updated>
     
@@ -237,8 +237,8 @@
   
   <entry>
     <title>在 iOS 开发中，如何实现只推迟而不会重复执行的函数</title>
-    <link href="https://xaoxuu.com/blog/2017-11-09-ios-postpone-func/"/>
-    <id>https://xaoxuu.com/blog/2017-11-09-ios-postpone-func/</id>
+    <link href="https://xaoxuu.com/blog/20171109/"/>
+    <id>https://xaoxuu.com/blog/20171109/</id>
     <published>2017-11-09T00:00:00.000Z</published>
     <updated>2017-11-10T00:00:00.000Z</updated>
     
@@ -262,8 +262,8 @@
   
   <entry>
     <title>iOS 接入 Strava 分享模块（下篇：StravaSDK）</title>
-    <link href="https://xaoxuu.com/blog/2017-06-28-ios-strava/"/>
-    <id>https://xaoxuu.com/blog/2017-06-28-ios-strava/</id>
+    <link href="https://xaoxuu.com/blog/20170628/"/>
+    <id>https://xaoxuu.com/blog/20170628/</id>
     <published>2017-06-28T00:00:00.000Z</published>
     <updated>2017-06-28T00:00:00.000Z</updated>
     
@@ -285,8 +285,8 @@
   
   <entry>
     <title>iOS 接入 Strava 分享模块（上篇：FitSDK）</title>
-    <link href="https://xaoxuu.com/blog/2017-06-22-ios-fitsdk/"/>
-    <id>https://xaoxuu.com/blog/2017-06-22-ios-fitsdk/</id>
+    <link href="https://xaoxuu.com/blog/20170622/"/>
+    <id>https://xaoxuu.com/blog/20170622/</id>
     <published>2017-06-22T00:00:00.000Z</published>
     <updated>2017-06-22T00:00:00.000Z</updated>
     
@@ -308,8 +308,8 @@
   
   <entry>
     <title>如何封装自己的 iOS Framework 静态库</title>
-    <link href="https://xaoxuu.com/blog/2016-11-06-ios-framework/"/>
-    <id>https://xaoxuu.com/blog/2016-11-06-ios-framework/</id>
+    <link href="https://xaoxuu.com/blog/20161106/"/>
+    <id>https://xaoxuu.com/blog/20161106/</id>
     <published>2016-11-06T00:00:00.000Z</published>
     <updated>2016-11-06T00:00:00.000Z</updated>
     
@@ -331,8 +331,8 @@
   
   <entry>
     <title>如何从 UIImageView 指定的坐标点取色？</title>
-    <link href="https://xaoxuu.com/blog/2016-09-14-ios-get-color/"/>
-    <id>https://xaoxuu.com/blog/2016-09-14-ios-get-color/</id>
+    <link href="https://xaoxuu.com/blog/20160914/"/>
+    <id>https://xaoxuu.com/blog/20160914/</id>
     <published>2016-09-14T00:00:00.000Z</published>
     <updated>2016-10-20T00:00:00.000Z</updated>
     
@@ -354,8 +354,8 @@
   
   <entry>
     <title>ObjC 使用链式语法更优雅地管理沙盒文件</title>
-    <link href="https://xaoxuu.com/blog/2016-09-12-ios-sandbox/"/>
-    <id>https://xaoxuu.com/blog/2016-09-12-ios-sandbox/</id>
+    <link href="https://xaoxuu.com/blog/20160912/"/>
+    <id>https://xaoxuu.com/blog/20160912/</id>
     <published>2016-09-12T00:00:00.000Z</published>
     <updated>2016-10-20T00:00:00.000Z</updated>
     
@@ -381,8 +381,8 @@
   
   <entry>
     <title>十万蝼蚁不如一个巨人</title>
-    <link href="https://xaoxuu.com/blog/2016-05-22-to-be-a-titan/"/>
-    <id>https://xaoxuu.com/blog/2016-05-22-to-be-a-titan/</id>
+    <link href="https://xaoxuu.com/blog/20160522/"/>
+    <id>https://xaoxuu.com/blog/20160522/</id>
     <published>2016-05-22T00:00:00.000Z</published>
     <updated>2016-05-22T00:00:00.000Z</updated>
     
@@ -400,8 +400,8 @@
   
   <entry>
     <title>我关于未来的智能生活的畅想</title>
-    <link href="https://xaoxuu.com/blog/2016-02-11-smart-life/"/>
-    <id>https://xaoxuu.com/blog/2016-02-11-smart-life/</id>
+    <link href="https://xaoxuu.com/blog/20160211/"/>
+    <id>https://xaoxuu.com/blog/20160211/</id>
     <published>2016-02-11T00:00:00.000Z</published>
     <updated>2016-09-20T00:00:00.000Z</updated>
     
@@ -420,8 +420,8 @@
   
   <entry>
     <title>如何进行有效的团队合作</title>
-    <link href="https://xaoxuu.com/blog/2013-02-06-effective-teamwork/"/>
-    <id>https://xaoxuu.com/blog/2013-02-06-effective-teamwork/</id>
+    <link href="https://xaoxuu.com/blog/20130206/"/>
+    <id>https://xaoxuu.com/blog/20130206/</id>
     <published>2013-02-06T00:00:00.000Z</published>
     <updated>2015-03-11T00:00:00.000Z</updated>
     
