@@ -1,1 +1,427 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 6.3.0"><meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.17.2"><meta charset="utf-8"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://fastly.jsdelivr.net"><link rel="preconnect" href="https://fastly.jsdelivr.net" crossorigin><link rel="dns-prefetch" href="//unpkg.com"><meta name="renderer" content="webkit"><meta name="force-rendering" content="webkit"><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><meta name="HandheldFriendly" content="True"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="theme-color" content="#f8f8f8"><title>心率管家的设计与开发（下篇：信号处理） - XAOXUU</title><meta name="description" content="作为一名开发者，如何使用手机摄像头测量心率呢？在心率管家默默无闻地上线了一年多之后，现在终于打算来好好聊聊关于手机摄像头测量心率的那些事。本文参考了很多前辈的文章，将在文末列出。"><meta property="og:type" content="article"><meta property="og:title" content="心率管家的设计与开发（下篇：信号处理）"><meta property="og:url" content="https://xaoxuu.com/blog/20200927/"><meta property="og:site_name" content="XAOXUU"><meta property="og:description" content="作为一名开发者，如何使用手机摄像头测量心率呢？在心率管家默默无闻地上线了一年多之后，现在终于打算来好好聊聊关于手机摄像头测量心率的那些事。本文参考了很多前辈的文章，将在文末列出。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://xaoxuu.com/assets/xaoxuu/blog/2020-0927b@2x.jpg"><meta property="og:image" content="https://xaoxuu.com/assets/xaoxuu/blog/2020-0927c@1x.svg"><meta property="og:image" content="https://xaoxuu.com/assets/xaoxuu/blog/2020-0927d@1x.svg"><meta property="og:image" content="https://xaoxuu.com/assets/xaoxuu/blog/2020-0927e@2x.jpg"><meta property="og:image" content="https://xaoxuu.com/assets/xaoxuu/blog/2020-0927f@2x.jpg"><meta property="article:published_time" content="2020-09-27T00:00:00.000Z"><meta property="article:modified_time" content="2020-09-27T00:00:00.000Z"><meta property="article:author" content="xaoxuu"><meta property="article:tag" content="iOS"><meta property="article:tag" content="Swift"><meta property="article:tag" content="心率"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://xaoxuu.com/assets/xaoxuu/blog/2020-0927b@2x.jpg"><link rel="alternate" href="/atom.xml" title="XAOXUU" type="application/atom+xml"><link rel="stylesheet" href="/css/main.css"><link rel="apple-touch-icon" sizes="180x180" href="/assets/xaoxuu/favicon/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/xaoxuu/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/xaoxuu/favicon/favicon-16x16.png"><link rel="manifest" href="/assets/xaoxuu/favicon/site.webmanifest"><link rel="shortcut icon" href="/assets/xaoxuu/favicon/favicon.ico"><meta name="theme-color" content="#f8f8f8"><link rel="preconnect" href="https://s1.hdslb.com/"><link rel="stylesheet" href="//s1.hdslb.com/bfs/static/jinkela/long/font/regular.css" media="all" onload="this.media=&quot;all&quot;"></head><body><div class="l_cover post"><div class="cover"><div class="lazy img bg" data-bg="/assets/xaoxuu/blog/2019-0723b@2x.webp"></div></div></div><div class="l_body" id="start"><aside class="l_left" layout="post"><header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp)"></div><img no-lazy class="avatar" src="/assets/xaoxuu/avatar/rect-256@2x.png" onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">XAOXUU</div><div class="sub normal cap">风暴前夕</div><div class="sub hover cap" style="opacity:0">xaoxuu.com</div></a></div><nav class="menu dis-select"><a class="nav-item active" href="/">博客</a><a class="nav-item" href="/wiki/">项目</a><a class="nav-item" href="/notes/">随记</a><a class="nav-item" href="/timeline/">社交</a></nav></header><div class="widgets"><widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/blog/" placeholder="文章搜索"><svg t="1670596976048" class="icon search-icon" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"/></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget><widget class="widget-wrapper toc single" id="toc"><div class="widget-header cap dis-select"><span class="name">心率管家的设计与开发（下篇：信号处理）</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%89%E7%94%B5%E5%AE%B9%E7%A7%AF%E8%84%89%E6%90%8F%E6%B3%A2%E6%8F%8F%E8%AE%B0%E6%B3%95"><span class="toc-text">光电容积脉搏波描记法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86"><span class="toc-text">信号处理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%84%89%E5%86%B2%E6%8E%A2%E6%B5%8B%E5%99%A8"><span class="toc-text">脉冲探测器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E8%84%89%E7%8E%87"><span class="toc-text">计算脉率</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E7%A1%AE%E6%80%A7%E4%B8%8E%E5%8F%82%E8%80%83%E4%BB%B7%E5%80%BC"><span class="toc-text">准确性与参考价值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%84%89%E7%8E%87%E5%92%8C%E5%BF%83%E7%8E%87"><span class="toc-text">脉率和心率</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8E%E8%AE%B0"><span class="toc-text">后记</span></a></li></ol></div></div></widget></div><footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/xaoxuu" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/placeholder/social/08a41b181ce68.svg"></a><a class="social" href="https://music.163.com/#/user/home?id=63035382" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/placeholder/social/3845874.svg"></a><a class="social" href="https://unsplash.com/@xaoxuu" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/placeholder/social/3616429.svg"></a><a class="social" href="/about/#comments" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/placeholder/social/942ebbf1a4b91.svg"></a></div></footer></aside><div class="l_main"><div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/blog/categories/%E8%AE%BE%E8%AE%A1%E5%BC%80%E5%8F%91/">设计开发</a></div><div id="post-meta">发布于&nbsp;<time datetime="2020-09-27T00:00:00.000Z">2020年9月27日</time></div></div><article class="md-text content post"><h1 class="article-title"><span>心率管家的设计与开发（下篇：信号处理）</span></h1><p>作为一名开发者，如何使用手机摄像头测量心率呢？在心率管家默默无闻地上线了一年多之后，现在终于打算来好好聊聊关于手机摄像头测量心率的那些事。本文参考了很多前辈的文章，将在文末列出。</p><span id="more"></span><div class="tag-plugin video-wrap"><div class="frame-wrap" id="iphone11" focus="top"><video poster="/assets/wiki/heartmate/docs/usage01.jpg" playsinline muted loop autoplay preload="metadata"><source src="/assets/wiki/heartmate/docs/usage01.mp4" type="video/mp4"></video><div class="frame"></div></div></div><h2 id="光电容积脉搏波描记法"><a href="#光电容积脉搏波描记法" class="headerlink" title="光电容积脉搏波描记法"></a>光电容积脉搏波描记法</h2><p>目前市面上大部分便携心率检测设备都是基于光电容积脉搏波描记法来测量的。由于心跳引起动脉周期性变化，动脉内血液的容积发生周期性变化，因而对光线的吸收也会呈现同样的周期性变化，这个周期性变化的频率就是脉率，脉率大部分情况都和心率一致。</p><p>打开相机，把手指指尖覆盖在摄像头上，观察屏幕上的取景框，就可以发现每心跳一次，屏幕中的红色都会变暗一次。对每一帧画面提取 RGB 均值，并转换到 HSV 色彩空间，把色相 H 作为特征值，得到时域信号。</p><h2 id="信号处理"><a href="#信号处理" class="headerlink" title="信号处理"></a>信号处理</h2><p>我使用简单的时域分析法计算脉率，关键点就是计算采样时间内的波峰个数。把色相信号绘制波形图如下：</p><div class="tag-plugin image"><div class="image-bg" style="background:#fff;padding:8px"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/xaoxuu/blog/2020-0927b@2x.jpg" style="width:300px"></div></div><p>由于覆盖力度不稳定导致色相会整体偏移因而产生低频噪声，再加原本就存在的高频噪声影响，波形显得很杂乱无章，所以使用带通递归滤波器进行滤波：</p><div class="tag-plugin image"><div class="image-bg" style="background:#fff;padding:16px"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/xaoxuu/blog/2020-0927c@1x.svg"></div></div><p>公式展开为：</p><div class="tag-plugin image"><div class="image-bg" style="background:#fff;padding:16px"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/xaoxuu/blog/2020-0927d@1x.svg"></div></div><p>用 Swift 语言实现这个滤波器的算法（10阶）为：</p><figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">struct</span> <span class="title class_">BandpassFilter</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> x <span class="operator">=</span> [<span class="type">CGFloat</span>].<span class="keyword">init</span>(repeating: <span class="number">0</span>, count: <span class="number">11</span>)</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> y <span class="operator">=</span> [<span class="type">CGFloat</span>].<span class="keyword">init</span>(repeating: <span class="number">0</span>, count: <span class="number">11</span>)</span><br><span class="line">    <span class="keyword">@discardableResult</span> <span class="keyword">mutating</span> <span class="keyword">func</span> <span class="title function_">filted</span>(<span class="keyword">_</span> <span class="params">value</span>: <span class="type">CGFloat</span>) -&gt; <span class="type">CGFloat</span> &#123;</span><br><span class="line">        <span class="keyword">guard</span> x.count <span class="operator">&gt;</span> <span class="number">10</span>, y.count <span class="operator">&gt;</span> <span class="number">10</span> <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0</span> <span class="operator">..&lt;</span> <span class="number">10</span> &#123;</span><br><span class="line">            x[i] <span class="operator">=</span> x[i<span class="operator">+</span><span class="number">1</span>]</span><br><span class="line">            y[i] <span class="operator">=</span> y[i<span class="operator">+</span><span class="number">1</span>]</span><br><span class="line">        &#125;</span><br><span class="line">        x[<span class="number">10</span>] <span class="operator">=</span> value <span class="operator">/</span> <span class="number">1.894427025e+01</span></span><br><span class="line">        y[<span class="number">10</span>] <span class="operator">=</span> x[<span class="number">10</span>] <span class="operator">-</span> x[<span class="number">0</span>] <span class="operator">+</span> <span class="number">5</span> <span class="operator">*</span> (x[<span class="number">2</span>] <span class="operator">-</span> x[<span class="number">8</span>]) <span class="operator">+</span> <span class="number">10</span> <span class="operator">*</span> (x[<span class="number">6</span>] <span class="operator">-</span> x[<span class="number">4</span>])</span><br><span class="line">        y[<span class="number">10</span>] <span class="operator">+=</span> (<span class="operator">-</span><span class="number">0.0000000000</span> <span class="operator">*</span> y[<span class="number">0</span>]) <span class="operator">+</span> (<span class="number">0.0357796363</span> <span class="operator">*</span> y[<span class="number">1</span>])</span><br><span class="line">        y[<span class="number">10</span>] <span class="operator">+=</span> (<span class="operator">-</span><span class="number">0.1476158522</span> <span class="operator">*</span> y[<span class="number">2</span>]) <span class="operator">+</span> (<span class="number">0.3992561394</span> <span class="operator">*</span> y[<span class="number">3</span>])</span><br><span class="line">        y[<span class="number">10</span>] <span class="operator">+=</span> (<span class="operator">-</span><span class="number">1.1743136181</span> <span class="operator">*</span> y[<span class="number">4</span>]) <span class="operator">+</span> (<span class="number">2.4692165842</span> <span class="operator">*</span> y[<span class="number">5</span>])</span><br><span class="line">        y[<span class="number">10</span>] <span class="operator">+=</span> (<span class="operator">-</span><span class="number">3.3820859632</span> <span class="operator">*</span> y[<span class="number">6</span>]) <span class="operator">+</span> (<span class="number">3.9628972812</span> <span class="operator">*</span> y[<span class="number">7</span>])</span><br><span class="line">        y[<span class="number">10</span>] <span class="operator">+=</span> (<span class="operator">-</span><span class="number">4.3832594900</span> <span class="operator">*</span> y[<span class="number">8</span>]) <span class="operator">+</span> (<span class="number">3.2101976096</span> <span class="operator">*</span> y[<span class="number">9</span>])</span><br><span class="line">        <span class="keyword">return</span> y[<span class="number">10</span>]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>这个算法是从 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/WuXiaoTu/HeartRate">WuXiaoTu&#x2F;HeartRate</a> 这个开源库中翻译来的。</p></blockquote><p>经过滤波之后就能看到波形图呈现锯齿状，由于这是由摄像头捕捉到的色相的波形图，所以看起来并不会像心电图那样：</p><div class="tag-plugin image"><div class="image-bg" style="background:#fff;padding:8px"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/xaoxuu/blog/2020-0927e@2x.jpg" style="width:300px"></div></div><p>有了干净的波形图，就可以数出一段时间内的波峰个数，从而计算出频率。例如数5秒内有多少个波峰，然后乘以12就是每分钟脉搏跳动次数，也就是这5秒内的平均脉率。现在 GitHub 上的很多同类的开源项目也都是这种方案。由于连续测量的时间越长，发生中断的可能性就越大，测量成功率就越低，再考虑到心率本身就是变化的，时间跨度太长也会使得数据变得没有意义，测量时间太短又很容易被个别误差数据影响。</p><p>网络上现有方案都是先确定测量时长，时间结束后计算结果：</p><ul><li>如果测量时间短：成功率高，准确性低。</li><li>如果测量时间中等：成功率低，准确性高。</li><li>如果测量时间长：成功率很低，准确性很高，但是数据意义不大。</li></ul><p>我想出了一种新的方案，就是每探测到一个有效脉冲，就记录下这个脉冲与上一个有效脉冲之间的间隔，两个连续的有效脉冲计算出来的频率就是100%正确的瞬时脉率。所以改进后的方案是：开始测量后，始终记录脉冲，随时可以计算瞬时脉率、最后若干秒的平均脉率。</p><ul><li>成功率：100%（不存在测量中断而失败的情况）</li><li>准确性的情况如下：<ul><li>如果脉冲计数都是由脉搏跳动引起的，测量结果就是完全准确的</li><li>如果脉搏跳动了而脉冲计数没有增加，不会影响结果，因为计算时只会把有效脉冲的周期进行累加</li><li>如果在脉搏跳动间隙额外增加了脉冲计数，那么数据就会失真</li></ul></li></ul><p>如果不故意快速抖动手指，数据失真的情况就不会发生，因为手指不离开摄像头并在两次脉搏跳动中间产生一次色相饱和度明度都以假乱真的脉冲信号是很难的。</p><h3 id="脉冲探测器"><a href="#脉冲探测器" class="headerlink" title="脉冲探测器"></a>脉冲探测器</h3><p>经过滤波后的数值是围绕0上下波动的，分别记录大于0的值和小于0的值，各自保存到数组中，然后求出它们的平均值：</p><figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> filted <span class="operator">&gt;</span> <span class="number">0</span> &#123;</span><br><span class="line">    upVals.append(filted)</span><br><span class="line">    <span class="keyword">if</span> upVals.count <span class="operator">&gt;</span> <span class="number">20</span> &#123;</span><br><span class="line">        upVals.removeFirst(upVals.count <span class="operator">-</span> <span class="number">20</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> filted <span class="operator">&lt;</span> <span class="number">0</span> &#123;</span><br><span class="line">    downVals.append(filted)</span><br><span class="line">    <span class="keyword">if</span> downVals.count <span class="operator">&gt;</span> <span class="number">20</span> &#123;</span><br><span class="line">        downVals.removeFirst(downVals.count <span class="operator">-</span> <span class="number">20</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> avgUp <span class="operator">=</span> upVals.reduce(<span class="number">0</span>, <span class="operator">+</span>) <span class="operator">/</span> <span class="type">CGFloat</span>(upVals.count)</span><br><span class="line"><span class="keyword">let</span> avgDown <span class="operator">=</span> downVals.reduce(<span class="number">0</span>, <span class="operator">+</span>) <span class="operator">/</span> <span class="type">CGFloat</span>(downVals.count)</span><br></pre></td></tr></table></figure><p>如果新的值高于 <code>avgUp</code> 的一半，就标记 <code>flag = true</code> ，低于 <code>avgDown</code> 的一半且 <code>flag = true</code> 就标记 <code>flag = true</code>，触发一次脉冲，记录下这个脉冲的时间戳。如果两个脉冲之间的时间间隔符合正常心率的范围，就认为是有效脉冲。</p><figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> filted <span class="operator">&gt;</span> <span class="number">0.5</span> <span class="operator">*</span> avgUp  &#123;</span><br><span class="line">    flag <span class="operator">=</span> <span class="literal">true</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> filted <span class="operator">&lt;</span> <span class="number">0.5</span> <span class="operator">*</span> avgDown <span class="operator">&amp;&amp;</span> flag <span class="operator">==</span> <span class="literal">true</span> &#123;</span><br><span class="line">    flag <span class="operator">=</span> <span class="literal">false</span></span><br><span class="line">    <span class="keyword">let</span> time <span class="operator">=</span> <span class="type">CACurrentMediaTime</span>()</span><br><span class="line">    <span class="keyword">let</span> period <span class="operator">=</span> time <span class="operator">-</span> periodStart</span><br><span class="line">    <span class="comment">// 与上一个周期间隔时间满足正常周期范围</span></span><br><span class="line">    <span class="keyword">if</span> period <span class="operator">&lt;</span> <span class="type">MAX_PERIOD</span> <span class="operator">&amp;&amp;</span> period <span class="operator">&gt;</span> <span class="type">MIN_PERIOD</span> &#123;</span><br><span class="line">        <span class="comment">// 记录这次脉冲与上次脉冲的时间间隔</span></span><br><span class="line">        periods.append(period)</span><br><span class="line">        <span class="comment">// 捕获到脉冲</span></span><br><span class="line">        delegate<span class="operator">?</span>.pulseDetector(detector: <span class="keyword">self</span>, capture: periods)</span><br><span class="line">    &#125;</span><br><span class="line">    periodStart <span class="operator">=</span> time</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> filted</span><br></pre></td></tr></table></figure><p>上文「正常心率的范围」如何界定？心率如果低到 40bpm 此时周期达到最大值，如果心率高达 255bpm 则周期达到最小值。</p><figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="type">MAX_PERIOD</span> <span class="operator">=</span> <span class="type">CFTimeInterval</span>(<span class="number">60.0</span> <span class="operator">/</span> <span class="number">40</span>)</span><br><span class="line"><span class="type">MIN_PERIOD</span> <span class="operator">=</span> <span class="type">CFTimeInterval</span>(<span class="number">60.0</span> <span class="operator">/</span> <span class="number">255</span>)</span><br></pre></td></tr></table></figure><h3 id="计算脉率"><a href="#计算脉率" class="headerlink" title="计算脉率"></a>计算脉率</h3><p>上一步记录下了每个脉冲的周期，取出最后 N 个要计算的脉冲，把它们的周期相加就是总时长，用 <code>个数 / 时长</code> 计算的值就是频率，频率乘以 <code>60</code> 就是每分钟的脉冲数，也就是脉率。</p><figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="keyword">func</span> <span class="title function_">calcFrequency</span>(<span class="params">count</span>: <span class="type">Int</span>) -&gt; <span class="type">CGFloat</span>? &#123;</span><br><span class="line">    <span class="keyword">guard</span> (<span class="number">0</span> <span class="operator">...</span> periods.count).contains(count) <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> duration <span class="operator">=</span> periods.dropFirst(periods.count <span class="operator">-</span> count).reduce(<span class="number">0</span>, <span class="operator">+</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="type">CGFloat</span>(count) <span class="operator">/</span> <span class="type">CGFloat</span>(duration)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><div class="tag-plugin img-wrap"><div class="frame-wrap" id="iphone11"><img class="img lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/xaoxuu/blog/2020-0927f@2x.jpg"><div class="frame"></div></div></div><h2 id="准确性与参考价值"><a href="#准确性与参考价值" class="headerlink" title="准确性与参考价值"></a>准确性与参考价值</h2><p>由于心率是动态变化的，即使测量的脉搏跳动都是准确的，也就是说测量阶段实现了零误差，但是计算方式不一样也会产生不同的结果。因此直接拿结果去和小米手环或者 Apple Watch 上显示的数值去进行对比是不严谨的。正确地方法是在一个时间段内用多种方式测量的同时亲自用手测量脉搏跳动次数，可以借助本文的 demo 计算瞬时或者平均脉率，如果一段时间的脉冲计数完全正确，那么 demo 计算的结果就是完全准确的，瞬时脉率、最后 N 秒的平均脉率一般都不会相同。因此即使戴在一只手上同一时间进行测量，不同产品显示的心率不同也并不能说明它们谁更准，只能说谁的结果更具有参考价值。</p><p>对此，我优化后的心率管家测量方案可以选择测量时长，也可以随时结束测量，运动后心率变化快的时候适合取短时间内例如5s平均脉率，心平气和的时候可以取适当长一点的例如10s或者20s的平均脉率。</p><h2 id="脉率和心率"><a href="#脉率和心率" class="headerlink" title="脉率和心率"></a>脉率和心率</h2><p>脉率是每分钟脉搏的次数，心率是每分钟心跳次数，健康情况下脉率与心率一致，但是如果出现心律失常，心脏有一些跳动不能有效将血液泵至全身，因此会出现脉搏缺失，导致脉率显著低于心率。如果用来判断心脏功能状态，误差很大。对于心动过速、低血压症和休克病人，即使是心率规则，由于脉压差很小，脉搏也会很弱，此时往往不能够准确测量脉率。</p><p>另外，脉搏随肢体移动会形成伪迹波动，也会影响脉率的测量。而心率不受心律失常、心动过速、休克、肢体活动的影响，所以在临床上，医生判断心跳活动不是看脉率，而是看心率，摸脉搏只是一个辅助操作。</p><p>因此，通过手环、手表、app 测量的“心率”并不是一个完全可靠的数据。</p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>非常感谢 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://lifestyle1.cn/">@JustinYang</a> 大佬在滤波算法方面给予的援助。也十分感谢 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://punmy.cn/">@Punmy</a>、<a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/WuXiaoTu">@WuXiaoTu</a> 等作者的文章，使得后人能够少走很多弯路。</p><div class="tag-plugin link dis-select"><a class="link-card rich" href="https://xaoxuu.com/blog/20190723/" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,icon,desc"><div class="top"><div class="lazy img" data-bg="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg"></div><span class="cap link fs12">https://xaoxuu.com/blog/20190723/</span></div><div class="bottom"><span class="title">https://xaoxuu.com/blog/20190723/</span><span class="cap desc fs12"></span></div></a></div><div class="article-footer reveal fs14"><section id="references"><div class="header"><span>参考资料</span></div><div class="body"><ul><li class="post-title"><a href="https://punmy.cn/2016/07/28/15231176397746.html" target="_blank" rel="external nofollow noopener noreferrer">心跳之旅—💗—iOS用手机摄像头检测心率(PPG)</a></li><li class="post-title"><a href="https://www.jianshu.com/p/695c131abfa5" target="_blank" rel="external nofollow noopener noreferrer">PPG光电容积脉搏波描记法技术概况</a></li><li class="post-title"><a href="https://blog.csdn.net/shengzhadon/article/details/46803401" target="_blank" rel="external nofollow noopener noreferrer">数字信号处理公式变程序（四）——巴特沃斯滤波器（下）</a></li><li class="post-title"><a href="https://www.jianshu.com/p/9f678e0bdf9b" target="_blank" rel="external nofollow noopener noreferrer">iOS手机摄像头测心率</a></li><li class="post-title"><a href="https://www.zhihu.com/question/27391584" target="_blank" rel="external nofollow noopener noreferrer">各种智能手表/智能手环的心率监测功能精准度怎么样？都有哪些技术在里面？</a></li><li class="post-title"><a href="https://github.com/WuXiaoTu/HeartRate" target="_blank" rel="external nofollow noopener noreferrer">通过手机摄像头获取心率值</a></li><li class="post-title"><a href="https://www.latexlive.com" target="_blank" rel="external nofollow noopener noreferrer">LaTeX公式编辑器</a></li></ul></div></section><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p></div></section><section id="share"><div class="header"><span>分享文章</span></div><div class="body"><div class="link"><input class="copy-area" readonly id="copy-link" value="https://xaoxuu.com/blog/20200927/"></div><div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/b32ef3da1162a.svg"></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://xaoxuu.com/blog/20200927/&title=心率管家的设计与开发（下篇：信号处理） - XAOXUU&pics=/assets/xaoxuu/blog/2019-0723a@2x.webp&summary=作为一名开发者，如何使用手机摄像头测量心率呢？在心率管家默默无闻地上线了一年多之后，现在终于打算来好好聊聊关于手机摄像头测量心率的那些事。本文参考了很多前辈的文章，将在文末列出。"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/80c07e4dbb303.svg"></a><a class="social share-item email" href="mailto:?subject=心率管家的设计与开发（下篇：信号处理） - XAOXUU&amp;body=https://xaoxuu.com/blog/20200927/"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/a1b00e20f425d.svg"></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/8411ed322ced6.svg"></a></div><div class="qrcode" id="qrcode-wechat" style="visibility:hidden;height:0"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://xaoxuu.com/blog/20200927/index.html"></div></div></section></div></article><div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/blog/20201119/">苹果设计开发加速器线上活动</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/blog/20200823/">静态博客使用 Issues API 来实现动态发布友链、书签</a></div></section></div><div class="related-wrap reveal" id="related-posts"><section class="header"><div class="title cap theme">您可能感兴趣的文章</div></section><section class="body"><div class="related-posts"><a class="item" href="/blog/20190723/" title="心率管家的设计与开发（上篇：整体流程）"><span class="title">心率管家的设计与开发（上篇：整体流程）</span><span class="excerpt">近期开发并上架了新版心率管家 App（仅 iOS 端），专业版不定期限免，欢迎下载体验。本文将从设计、开发、上架等每个步骤和细节进行分享，也包含部分模块源码。</span></a><a class="item" href="/blog/20190827/" title="设计一个样式和逻辑分离的 HUD 库"><span class="title">设计一个样式和逻辑分离的 HUD 库</span><span class="excerpt">在写「ProHUD」之前我已经在「AXKit」中实现了原生控件快速构造方法、为公司写了 ObjC 版的可定制化 HUD、Swift 版的开源的 NoticeBoard（通知横幅）。ProHUD 诞生的意义就在于取代这些不那么完善的 H...</span></a><a class="item" href="/blog/20160912/" title="ObjC 使用链式语法更优雅地管理沙盒文件"><span class="title">ObjC 使用链式语法更优雅地管理沙盒文件</span><span class="excerpt">假如你需要把一个字典或者别的什么东西保存到沙盒里，你准备怎么做？也许你已经条件反射的想到了操作步骤……其实，你可以不必每次都那么老老实实的把每一步写出来，一行代码就可以了：【路径+保存文件】两个关键点，组成一条链式语法。</span></a></div></section></div><div class="related-wrap md-text reveal" id="comments"><div class="cmt-title cap theme">快来参与讨论吧</div><div class="cmt-body beaudar"><svg class="loading" style="vertical-align:middle;fill:currentColor;overflow:hidden" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"/></svg><div id="beaudar" repo="xaoxuu/blog-comments" issue-term="pathname" theme="preferred-color-scheme" input-position="top" comment-order="desc" loading="false" branch="main"></div></div></div><footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">近期发布</a><a href="/blog/hot/">热门文章</a><a href="/blog/categories/">分类</a><a href="/blog/tags/">标签</a><a href="/blog/archives/">归档</a></div><div class="sitemap-group"><span class="fs14">项目</span><a href="/wiki/tags/iOS%E5%BC%80%E6%BA%90%E5%BA%93/">iOS开源库</a><a href="/wiki/tags/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/">实用工具</a><a href="/wiki/tags/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/">博客主题</a><a href="/wiki/tags/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/">应用程序</a><a href="/wiki/tags/%E7%9F%A5%E8%AF%86%E5%BA%93/">知识库</a></div><div class="sitemap-group"><span class="fs14">社交</span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://inkss.cn">枋柚梓</a><a target="_blank" rel="external nofollow noopener noreferrer" href="https://blog.mhuig.top">MHuiG</a><a target="_blank" rel="external nofollow noopener noreferrer" href="https://colsrch.cn">Colsrch</a><a target="_blank" rel="external nofollow noopener noreferrer" href="https://dusays.com">杜老师说</a><a href="/friends/">更多友链</a></div><div class="sitemap-group"><span class="fs14">关于</span><a href="/about/">本站简介</a><a href="/privacy/">隐私政策</a><a href="/timeline/">博主动态</a><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/xaoxuu">GitHub</a><a target="_blank" rel="external nofollow noopener noreferrer" href="https://gitea.xaox.cc/xaoxuu">Gitea</a></div></div><div class="text"></div></footer><div class="float-panel mobile-only blur" style="display:none"><button type="button" class="sidebar-toggle mobile" onclick="sidebar.toggle()"><svg class="icon" style="width:1em;height:1em;vertical-align:middle;fill:currentColor;overflow:hidden" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"/><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"/></svg></button></div></div></div><div class="scripts"><script type="text/javascript">if(stellar={loadCSS:(e,s,t,n)=>{var l,a=window.document,i=a.createElement("link");if(s)l=s;else{var r=(a.body||a.getElementsByTagName("head")[0]).childNodes;l=r[r.length-1]}var o=a.styleSheets;if(n)for(var c in n)n.hasOwnProperty(c)&&i.setAttribute(c,n[c]);i.rel="stylesheet",i.href=e,i.media="only x",function e(s){if(a.body)return s();setTimeout((function(){e(s)}))}((function(){l.parentNode.insertBefore(i,s?l:l.nextSibling)}));var d=function(e){for(var s=i.href,t=o.length;t--;)if(o[t].href===s)return e();setTimeout((function(){d(e)}))};function p(){i.addEventListener&&i.removeEventListener("load",p),i.media=t||"all"}return i.addEventListener&&i.addEventListener("load",p),i.onloadcssdefined=d,d(p),i},loadScript:(e,s)=>new Promise((t,n)=>{var l=document.createElement("script");if(l.src=e,s)for(let e of Object.keys(s))l[e]=s[e];else l.async=!0;l.onerror=n,l.onload=l.onreadystatechange=function(){const e=this.readyState;e&&"loaded"!==e&&"complete"!==e||(l.onload=l.onreadystatechange=null,t())},document.head.appendChild(l)}),jQuery:e=>{"undefined"==typeof jQuery?stellar.loadScript(stellar.plugins.jQuery).then(e):e()}},stellar.version="1.17.2",stellar.github="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.17.2",stellar.config={date_suffix:{just:"刚刚",min:"分钟前",hour:"小时前",day:"天前",month:"个月前"}},stellar.plugins={jQuery:"https://fastly.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"},stellar.search={},stellar.search.service="local_search","local_search"==stellar.search.service){let e=Object.assign({},{field:"all",path:"/search.json",content:!0,codeblock:!0,sort:"-date"});stellar.search[stellar.search.service]=e}stellar.plugins.stellar=Object.assign({sites:"/js/plugins/sites.js",friends:"/js/plugins/friends.js",ghinfo:"/js/plugins/ghinfo.js",timeline:"/js/plugins/timeline.js",linkcard:"/js/plugins/linkcard.js",fcircle:"/js/plugins/fcircle.js",weibo:"/js/plugins/weibo.js"}),stellar.plugins.marked=Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js"),stellar.plugins.lazyload=Object.assign({enable:!0,js:"https://fastly.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js",transition:"blur"}),stellar.plugins.swiper=Object.assign({enable:!0,css:"https://unpkg.com/swiper@6/swiper-bundle.min.css",js:"https://unpkg.com/swiper@6/swiper-bundle.min.js"}),stellar.plugins.preload=Object.assign({enable:!0,service:"flying_pages",instant_page:"https://fastly.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js",flying_pages:"https://fastly.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"}),stellar.plugins.fancybox=Object.assign({enable:!0,js:"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js",css:"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css",selector:".swiper-slide img"})</script><script src="/js/main.js" async></script><script>function loadBeaudar(){const e=document.querySelectorAll("#comments #beaudar");0!==e.length&&e.forEach((e,t)=>{try{e.innerHTML=""}catch(e){console.log(e)}var a=document.createElement("script");a.src="https://beaudar.lipk.org/client.js",a.async=!0;for(let t of Object.keys(e.attributes)){let n=e.attributes[t];!1===["class","id"].includes(n.name)&&a.setAttribute(n.name,n.value)}e.appendChild(a)})}window.addEventListener("DOMContentLoaded",e=>{loadBeaudar()})</script></div></body></html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="https://fastly.jsdelivr.net">
+  <link rel="preconnect" href="https://fastly.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="//unpkg.com">
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>心率管家的设计与开发（下篇：信号处理） - XAOXUU</title>
+
+  
+    <meta name="description" content="作为一名开发者，如何使用手机摄像头测量心率呢？在心率管家默默无闻地上线了一年多之后，现在终于打算来好好聊聊关于手机摄像头测量心率的那些事。本文参考了很多前辈的文章，将在文末列出。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="心率管家的设计与开发（下篇：信号处理）">
+<meta property="og:url" content="https://xaoxuu.com/blog/20200927/">
+<meta property="og:site_name" content="XAOXUU">
+<meta property="og:description" content="作为一名开发者，如何使用手机摄像头测量心率呢？在心率管家默默无闻地上线了一年多之后，现在终于打算来好好聊聊关于手机摄像头测量心率的那些事。本文参考了很多前辈的文章，将在文末列出。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xaoxuu.com/assets/xaoxuu/blog/2020-0927b@2x.jpg">
+<meta property="og:image" content="https://xaoxuu.com/assets/xaoxuu/blog/2020-0927c@1x.svg">
+<meta property="og:image" content="https://xaoxuu.com/assets/xaoxuu/blog/2020-0927d@1x.svg">
+<meta property="og:image" content="https://xaoxuu.com/assets/xaoxuu/blog/2020-0927e@2x.jpg">
+<meta property="og:image" content="https://xaoxuu.com/assets/xaoxuu/blog/2020-0927f@2x.jpg">
+<meta property="article:published_time" content="2020-09-27T00:00:00.000Z">
+<meta property="article:modified_time" content="2020-09-27T00:00:00.000Z">
+<meta property="article:author" content="xaoxuu">
+<meta property="article:tag" content="iOS">
+<meta property="article:tag" content="Swift">
+<meta property="article:tag" content="心率">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://xaoxuu.com/assets/xaoxuu/blog/2020-0927b@2x.jpg">
+  
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="XAOXUU" type="application/atom+xml">
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+
+  
+
+
+  
+    
+      <link rel="apple-touch-icon" sizes="180x180" href="/assets/xaoxuu/favicon/apple-touch-icon.png">
+    
+      <link rel="icon" type="image/png" sizes="32x32" href="/assets/xaoxuu/favicon/favicon-32x32.png">
+    
+      <link rel="icon" type="image/png" sizes="16x16" href="/assets/xaoxuu/favicon/favicon-16x16.png">
+    
+      <link rel="manifest" href="/assets/xaoxuu/favicon/site.webmanifest">
+    
+      <link rel="shortcut icon" href="/assets/xaoxuu/favicon/favicon.ico">
+    
+      <meta name="theme-color" content="#f8f8f8">
+    
+      <link rel="preconnect" href="https://s1.hdslb.com/">
+    
+      <link rel="stylesheet" href="//s1.hdslb.com/bfs/static/jinkela/long/font/regular.css" media="all" onload="this.media=&quot;all&quot;">
+    
+  
+</head>
+
+<body>
+  
+
+<div class="l_cover post"><div class="cover"><div class="lazy img bg" data-bg="/assets/xaoxuu/blog/2019-0723b@2x.webp"></div></div></div>
+
+
+  <div class="l_body" id="start">
+    <aside class="l_left" layout="post">
+    
+
+  
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/assets/xaoxuu/avatar/rect-256@2x.png" onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">XAOXUU</div><div class="sub normal cap">风暴前夕</div><div class="sub hover cap" style="opacity:0"> xaoxuu.com</div></a></div>
+
+<nav class="menu dis-select"><a class="nav-item active" href="/">博客</a><a class="nav-item" href="/wiki/">项目</a><a class="nav-item" href="/notes/">随记</a><a class="nav-item" href="/timeline/">社交</a></nav>
+</header>
+
+
+<div class="widgets">
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/blog/" placeholder="文章搜索"><svg t="1670596976048" class="icon search-icon" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"/></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+
+
+<widget class="widget-wrapper toc single" id="toc"><div class="widget-header cap dis-select"><span class="name">心率管家的设计与开发（下篇：信号处理）</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%89%E7%94%B5%E5%AE%B9%E7%A7%AF%E8%84%89%E6%90%8F%E6%B3%A2%E6%8F%8F%E8%AE%B0%E6%B3%95"><span class="toc-text">光电容积脉搏波描记法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86"><span class="toc-text">信号处理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%84%89%E5%86%B2%E6%8E%A2%E6%B5%8B%E5%99%A8"><span class="toc-text">脉冲探测器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E8%84%89%E7%8E%87"><span class="toc-text">计算脉率</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E7%A1%AE%E6%80%A7%E4%B8%8E%E5%8F%82%E8%80%83%E4%BB%B7%E5%80%BC"><span class="toc-text">准确性与参考价值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%84%89%E7%8E%87%E5%92%8C%E5%BF%83%E7%8E%87"><span class="toc-text">脉率和心率</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8E%E8%AE%B0"><span class="toc-text">后记</span></a></li></ol></div></div></widget>
+
+
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/xaoxuu" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/placeholder/social/08a41b181ce68.svg"></a><a class="social" href="https://music.163.com/#/user/home?id=63035382" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/placeholder/social/3845874.svg"></a><a class="social" href="https://unsplash.com/@xaoxuu" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/placeholder/social/3616429.svg"></a><a class="social" href="/about/#comments" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/placeholder/social/942ebbf1a4b91.svg"></a></div></footer>
+
+    </aside>
+    <div class="l_main">
+      
+
+      
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/blog/categories/%E8%AE%BE%E8%AE%A1%E5%BC%80%E5%8F%91/">设计开发</a></div><div id="post-meta">发布于&nbsp;<time datetime="2020-09-27T00:00:00.000Z">2020年9月27日</time></div></div>
+
+<article class="md-text content post">
+<h1 class="article-title"><span>心率管家的设计与开发（下篇：信号处理）</span></h1>
+<p>作为一名开发者，如何使用手机摄像头测量心率呢？在心率管家默默无闻地上线了一年多之后，现在终于打算来好好聊聊关于手机摄像头测量心率的那些事。本文参考了很多前辈的文章，将在文末列出。</p>
+<span id="more"></span>
+
+<div class="tag-plugin video-wrap"><div class="frame-wrap" id="iphone11" focus="top"><video poster="/assets/wiki/heartmate/docs/usage01.jpg" playsinline muted loop autoplay preload="metadata"><source src="/assets/wiki/heartmate/docs/usage01.mp4" type="video/mp4"></video><div class="frame"></div></div></div>
+
+<h2 id="光电容积脉搏波描记法"><a href="#光电容积脉搏波描记法" class="headerlink" title="光电容积脉搏波描记法"></a>光电容积脉搏波描记法</h2><p>目前市面上大部分便携心率检测设备都是基于光电容积脉搏波描记法来测量的。由于心跳引起动脉周期性变化，动脉内血液的容积发生周期性变化，因而对光线的吸收也会呈现同样的周期性变化，这个周期性变化的频率就是脉率，脉率大部分情况都和心率一致。</p>
+<p>打开相机，把手指指尖覆盖在摄像头上，观察屏幕上的取景框，就可以发现每心跳一次，屏幕中的红色都会变暗一次。对每一帧画面提取 RGB 均值，并转换到 HSV 色彩空间，把色相 H 作为特征值，得到时域信号。</p>
+<h2 id="信号处理"><a href="#信号处理" class="headerlink" title="信号处理"></a>信号处理</h2><p>我使用简单的时域分析法计算脉率，关键点就是计算采样时间内的波峰个数。把色相信号绘制波形图如下：</p>
+<div class="tag-plugin image"><div class="image-bg" style="background:#fff;padding:8px;"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/xaoxuu/blog/2020-0927b@2x.jpg" style="width:300px;"></div></div>
+
+<p>由于覆盖力度不稳定导致色相会整体偏移因而产生低频噪声，再加原本就存在的高频噪声影响，波形显得很杂乱无章，所以使用带通递归滤波器进行滤波：</p>
+<div class="tag-plugin image"><div class="image-bg" style="background:#fff;padding:16px;"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/xaoxuu/blog/2020-0927c@1x.svg"></div></div>
+
+<p>公式展开为：</p>
+<div class="tag-plugin image"><div class="image-bg" style="background:#fff;padding:16px;"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/xaoxuu/blog/2020-0927d@1x.svg"></div></div>
+
+<p>用 Swift 语言实现这个滤波器的算法（10阶）为：</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">struct</span> <span class="title class_">BandpassFilter</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> x <span class="operator">=</span> [<span class="type">CGFloat</span>].<span class="keyword">init</span>(repeating: <span class="number">0</span>, count: <span class="number">11</span>)</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> y <span class="operator">=</span> [<span class="type">CGFloat</span>].<span class="keyword">init</span>(repeating: <span class="number">0</span>, count: <span class="number">11</span>)</span><br><span class="line">    <span class="keyword">@discardableResult</span> <span class="keyword">mutating</span> <span class="keyword">func</span> <span class="title function_">filted</span>(<span class="keyword">_</span> <span class="params">value</span>: <span class="type">CGFloat</span>) -&gt; <span class="type">CGFloat</span> &#123;</span><br><span class="line">        <span class="keyword">guard</span> x.count <span class="operator">&gt;</span> <span class="number">10</span>, y.count <span class="operator">&gt;</span> <span class="number">10</span> <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0</span> <span class="operator">..&lt;</span> <span class="number">10</span> &#123;</span><br><span class="line">            x[i] <span class="operator">=</span> x[i<span class="operator">+</span><span class="number">1</span>]</span><br><span class="line">            y[i] <span class="operator">=</span> y[i<span class="operator">+</span><span class="number">1</span>]</span><br><span class="line">        &#125;</span><br><span class="line">        x[<span class="number">10</span>] <span class="operator">=</span> value <span class="operator">/</span> <span class="number">1.894427025e+01</span></span><br><span class="line">        y[<span class="number">10</span>] <span class="operator">=</span> x[<span class="number">10</span>] <span class="operator">-</span> x[<span class="number">0</span>] <span class="operator">+</span> <span class="number">5</span> <span class="operator">*</span> (x[<span class="number">2</span>] <span class="operator">-</span> x[<span class="number">8</span>]) <span class="operator">+</span> <span class="number">10</span> <span class="operator">*</span> (x[<span class="number">6</span>] <span class="operator">-</span> x[<span class="number">4</span>])</span><br><span class="line">        y[<span class="number">10</span>] <span class="operator">+=</span> (<span class="operator">-</span><span class="number">0.0000000000</span> <span class="operator">*</span> y[<span class="number">0</span>]) <span class="operator">+</span> (<span class="number">0.0357796363</span> <span class="operator">*</span> y[<span class="number">1</span>])</span><br><span class="line">        y[<span class="number">10</span>] <span class="operator">+=</span> (<span class="operator">-</span><span class="number">0.1476158522</span> <span class="operator">*</span> y[<span class="number">2</span>]) <span class="operator">+</span> (<span class="number">0.3992561394</span> <span class="operator">*</span> y[<span class="number">3</span>])</span><br><span class="line">        y[<span class="number">10</span>] <span class="operator">+=</span> (<span class="operator">-</span><span class="number">1.1743136181</span> <span class="operator">*</span> y[<span class="number">4</span>]) <span class="operator">+</span> (<span class="number">2.4692165842</span> <span class="operator">*</span> y[<span class="number">5</span>])</span><br><span class="line">        y[<span class="number">10</span>] <span class="operator">+=</span> (<span class="operator">-</span><span class="number">3.3820859632</span> <span class="operator">*</span> y[<span class="number">6</span>]) <span class="operator">+</span> (<span class="number">3.9628972812</span> <span class="operator">*</span> y[<span class="number">7</span>])</span><br><span class="line">        y[<span class="number">10</span>] <span class="operator">+=</span> (<span class="operator">-</span><span class="number">4.3832594900</span> <span class="operator">*</span> y[<span class="number">8</span>]) <span class="operator">+</span> (<span class="number">3.2101976096</span> <span class="operator">*</span> y[<span class="number">9</span>])</span><br><span class="line">        <span class="keyword">return</span> y[<span class="number">10</span>]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这个算法是从 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/WuXiaoTu/HeartRate">WuXiaoTu&#x2F;HeartRate</a> 这个开源库中翻译来的。</p>
+</blockquote>
+<p>经过滤波之后就能看到波形图呈现锯齿状，由于这是由摄像头捕捉到的色相的波形图，所以看起来并不会像心电图那样：</p>
+<div class="tag-plugin image"><div class="image-bg" style="background:#fff;padding:8px;"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/xaoxuu/blog/2020-0927e@2x.jpg" style="width:300px;"></div></div>
+
+<p>有了干净的波形图，就可以数出一段时间内的波峰个数，从而计算出频率。例如数5秒内有多少个波峰，然后乘以12就是每分钟脉搏跳动次数，也就是这5秒内的平均脉率。现在 GitHub 上的很多同类的开源项目也都是这种方案。由于连续测量的时间越长，发生中断的可能性就越大，测量成功率就越低，再考虑到心率本身就是变化的，时间跨度太长也会使得数据变得没有意义，测量时间太短又很容易被个别误差数据影响。</p>
+<p>网络上现有方案都是先确定测量时长，时间结束后计算结果：</p>
+<ul>
+<li>如果测量时间短：成功率高，准确性低。</li>
+<li>如果测量时间中等：成功率低，准确性高。</li>
+<li>如果测量时间长：成功率很低，准确性很高，但是数据意义不大。</li>
+</ul>
+<p>我想出了一种新的方案，就是每探测到一个有效脉冲，就记录下这个脉冲与上一个有效脉冲之间的间隔，两个连续的有效脉冲计算出来的频率就是100%正确的瞬时脉率。所以改进后的方案是：开始测量后，始终记录脉冲，随时可以计算瞬时脉率、最后若干秒的平均脉率。</p>
+<ul>
+<li>成功率：100%（不存在测量中断而失败的情况）</li>
+<li>准确性的情况如下：<ul>
+<li>如果脉冲计数都是由脉搏跳动引起的，测量结果就是完全准确的</li>
+<li>如果脉搏跳动了而脉冲计数没有增加，不会影响结果，因为计算时只会把有效脉冲的周期进行累加</li>
+<li>如果在脉搏跳动间隙额外增加了脉冲计数，那么数据就会失真</li>
+</ul>
+</li>
+</ul>
+<p>如果不故意快速抖动手指，数据失真的情况就不会发生，因为手指不离开摄像头并在两次脉搏跳动中间产生一次色相饱和度明度都以假乱真的脉冲信号是很难的。</p>
+<h3 id="脉冲探测器"><a href="#脉冲探测器" class="headerlink" title="脉冲探测器"></a>脉冲探测器</h3><p>经过滤波后的数值是围绕0上下波动的，分别记录大于0的值和小于0的值，各自保存到数组中，然后求出它们的平均值：</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> filted <span class="operator">&gt;</span> <span class="number">0</span> &#123;</span><br><span class="line">    upVals.append(filted)</span><br><span class="line">    <span class="keyword">if</span> upVals.count <span class="operator">&gt;</span> <span class="number">20</span> &#123;</span><br><span class="line">        upVals.removeFirst(upVals.count <span class="operator">-</span> <span class="number">20</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> filted <span class="operator">&lt;</span> <span class="number">0</span> &#123;</span><br><span class="line">    downVals.append(filted)</span><br><span class="line">    <span class="keyword">if</span> downVals.count <span class="operator">&gt;</span> <span class="number">20</span> &#123;</span><br><span class="line">        downVals.removeFirst(downVals.count <span class="operator">-</span> <span class="number">20</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> avgUp <span class="operator">=</span> upVals.reduce(<span class="number">0</span>, <span class="operator">+</span>) <span class="operator">/</span> <span class="type">CGFloat</span>(upVals.count)</span><br><span class="line"><span class="keyword">let</span> avgDown <span class="operator">=</span> downVals.reduce(<span class="number">0</span>, <span class="operator">+</span>) <span class="operator">/</span> <span class="type">CGFloat</span>(downVals.count)</span><br></pre></td></tr></table></figure>
+
+<p>如果新的值高于 <code>avgUp</code> 的一半，就标记 <code>flag = true</code> ，低于 <code>avgDown</code> 的一半且 <code>flag = true</code> 就标记 <code>flag = true</code>，触发一次脉冲，记录下这个脉冲的时间戳。如果两个脉冲之间的时间间隔符合正常心率的范围，就认为是有效脉冲。</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> filted <span class="operator">&gt;</span> <span class="number">0.5</span> <span class="operator">*</span> avgUp  &#123;</span><br><span class="line">    flag <span class="operator">=</span> <span class="literal">true</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> filted <span class="operator">&lt;</span> <span class="number">0.5</span> <span class="operator">*</span> avgDown <span class="operator">&amp;&amp;</span> flag <span class="operator">==</span> <span class="literal">true</span> &#123;</span><br><span class="line">    flag <span class="operator">=</span> <span class="literal">false</span></span><br><span class="line">    <span class="keyword">let</span> time <span class="operator">=</span> <span class="type">CACurrentMediaTime</span>()</span><br><span class="line">    <span class="keyword">let</span> period <span class="operator">=</span> time <span class="operator">-</span> periodStart</span><br><span class="line">    <span class="comment">// 与上一个周期间隔时间满足正常周期范围</span></span><br><span class="line">    <span class="keyword">if</span> period <span class="operator">&lt;</span> <span class="type">MAX_PERIOD</span> <span class="operator">&amp;&amp;</span> period <span class="operator">&gt;</span> <span class="type">MIN_PERIOD</span> &#123;</span><br><span class="line">        <span class="comment">// 记录这次脉冲与上次脉冲的时间间隔</span></span><br><span class="line">        periods.append(period)</span><br><span class="line">        <span class="comment">// 捕获到脉冲</span></span><br><span class="line">        delegate<span class="operator">?</span>.pulseDetector(detector: <span class="keyword">self</span>, capture: periods)</span><br><span class="line">    &#125;</span><br><span class="line">    periodStart <span class="operator">=</span> time</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> filted</span><br></pre></td></tr></table></figure>
+
+<p>上文「正常心率的范围」如何界定？心率如果低到 40bpm 此时周期达到最大值，如果心率高达 255bpm 则周期达到最小值。</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="type">MAX_PERIOD</span> <span class="operator">=</span> <span class="type">CFTimeInterval</span>(<span class="number">60.0</span> <span class="operator">/</span> <span class="number">40</span>)</span><br><span class="line"><span class="type">MIN_PERIOD</span> <span class="operator">=</span> <span class="type">CFTimeInterval</span>(<span class="number">60.0</span> <span class="operator">/</span> <span class="number">255</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="计算脉率"><a href="#计算脉率" class="headerlink" title="计算脉率"></a>计算脉率</h3><p>上一步记录下了每个脉冲的周期，取出最后 N 个要计算的脉冲，把它们的周期相加就是总时长，用 <code>个数 / 时长</code> 计算的值就是频率，频率乘以 <code>60</code> 就是每分钟的脉冲数，也就是脉率。</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="keyword">func</span> <span class="title function_">calcFrequency</span>(<span class="params">count</span>: <span class="type">Int</span>) -&gt; <span class="type">CGFloat</span>? &#123;</span><br><span class="line">    <span class="keyword">guard</span> (<span class="number">0</span> <span class="operator">...</span> periods.count).contains(count) <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> duration <span class="operator">=</span> periods.dropFirst(periods.count <span class="operator">-</span> count).reduce(<span class="number">0</span>, <span class="operator">+</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="type">CGFloat</span>(count) <span class="operator">/</span> <span class="type">CGFloat</span>(duration)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<div class="tag-plugin img-wrap"><div class="frame-wrap" id="iphone11"><img class="img lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/xaoxuu/blog/2020-0927f@2x.jpg"><div class="frame"></div></div></div>
+
+<h2 id="准确性与参考价值"><a href="#准确性与参考价值" class="headerlink" title="准确性与参考价值"></a>准确性与参考价值</h2><p>由于心率是动态变化的，即使测量的脉搏跳动都是准确的，也就是说测量阶段实现了零误差，但是计算方式不一样也会产生不同的结果。因此直接拿结果去和小米手环或者 Apple Watch 上显示的数值去进行对比是不严谨的。正确地方法是在一个时间段内用多种方式测量的同时亲自用手测量脉搏跳动次数，可以借助本文的 demo 计算瞬时或者平均脉率，如果一段时间的脉冲计数完全正确，那么 demo 计算的结果就是完全准确的，瞬时脉率、最后 N 秒的平均脉率一般都不会相同。因此即使戴在一只手上同一时间进行测量，不同产品显示的心率不同也并不能说明它们谁更准，只能说谁的结果更具有参考价值。</p>
+<p>对此，我优化后的心率管家测量方案可以选择测量时长，也可以随时结束测量，运动后心率变化快的时候适合取短时间内例如5s平均脉率，心平气和的时候可以取适当长一点的例如10s或者20s的平均脉率。</p>
+<h2 id="脉率和心率"><a href="#脉率和心率" class="headerlink" title="脉率和心率"></a>脉率和心率</h2><p>脉率是每分钟脉搏的次数，心率是每分钟心跳次数，健康情况下脉率与心率一致，但是如果出现心律失常，心脏有一些跳动不能有效将血液泵至全身，因此会出现脉搏缺失，导致脉率显著低于心率。如果用来判断心脏功能状态，误差很大。对于心动过速、低血压症和休克病人，即使是心率规则，由于脉压差很小，脉搏也会很弱，此时往往不能够准确测量脉率。</p>
+<p>另外，脉搏随肢体移动会形成伪迹波动，也会影响脉率的测量。而心率不受心律失常、心动过速、休克、肢体活动的影响，所以在临床上，医生判断心跳活动不是看脉率，而是看心率，摸脉搏只是一个辅助操作。</p>
+<p>因此，通过手环、手表、app 测量的“心率”并不是一个完全可靠的数据。</p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>非常感谢 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://lifestyle1.cn/">@JustinYang</a> 大佬在滤波算法方面给予的援助。也十分感谢 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://punmy.cn/">@Punmy</a>、<a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/WuXiaoTu">@WuXiaoTu</a> 等作者的文章，使得后人能够少走很多弯路。</p>
+<div class="tag-plugin link dis-select"><a class="link-card rich" title href="https://xaoxuu.com/blog/20190723/" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,icon,desc"><div class="top"><div class="lazy img" data-bg="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/link/8f277b4ee0ecd.svg"></div><span class="cap link fs12">https://xaoxuu.com/blog/20190723/</span></div><div class="bottom"><span class="title">https://xaoxuu.com/blog/20190723/</span><span class="cap desc fs12"></span></div></a></div>
+
+
+<div class="article-footer reveal fs14"><section id="references"><div class="header"><span>参考资料</span></div><div class="body"><ul><li class="post-title"><a href="https://punmy.cn/2016/07/28/15231176397746.html" target="_blank" rel="external nofollow noopener noreferrer">心跳之旅—💗—iOS用手机摄像头检测心率(PPG)</a></li><li class="post-title"><a href="https://www.jianshu.com/p/695c131abfa5" target="_blank" rel="external nofollow noopener noreferrer">PPG光电容积脉搏波描记法技术概况</a></li><li class="post-title"><a href="https://blog.csdn.net/shengzhadon/article/details/46803401" target="_blank" rel="external nofollow noopener noreferrer">数字信号处理公式变程序（四）——巴特沃斯滤波器（下）</a></li><li class="post-title"><a href="https://www.jianshu.com/p/9f678e0bdf9b" target="_blank" rel="external nofollow noopener noreferrer">iOS手机摄像头测心率</a></li><li class="post-title"><a href="https://www.zhihu.com/question/27391584" target="_blank" rel="external nofollow noopener noreferrer">各种智能手表/智能手环的心率监测功能精准度怎么样？都有哪些技术在里面？</a></li><li class="post-title"><a href="https://github.com/WuXiaoTu/HeartRate" target="_blank" rel="external nofollow noopener noreferrer">通过手机摄像头获取心率值</a></li><li class="post-title"><a href="https://www.latexlive.com" target="_blank" rel="external nofollow noopener noreferrer">LaTeX公式编辑器</a></li></ul></div></section><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></section><section id="share"><div class="header"><span>分享文章</span></div><div class="body"><div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://xaoxuu.com/blog/20200927/"></div><div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/b32ef3da1162a.svg"></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://xaoxuu.com/blog/20200927/&title=心率管家的设计与开发（下篇：信号处理） - XAOXUU&pics=/assets/xaoxuu/blog/2019-0723a@2x.webp&summary=作为一名开发者，如何使用手机摄像头测量心率呢？在心率管家默默无闻地上线了一年多之后，现在终于打算来好好聊聊关于手机摄像头测量心率的那些事。本文参考了很多前辈的文章，将在文末列出。"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/80c07e4dbb303.svg"></a><a class="social share-item email" href="mailto:?subject=心率管家的设计与开发（下篇：信号处理） - XAOXUU&amp;body=https://xaoxuu.com/blog/20200927/"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/a1b00e20f425d.svg"></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/8411ed322ced6.svg"></a></div><div class="qrcode" id="qrcode-wechat" style="visibility:hidden;height:0"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://xaoxuu.com/blog/20200927/index.html"></div></div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/blog/20201119/">苹果设计开发加速器线上活动</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/blog/20200823/">静态博客使用 Issues API 来实现动态发布友链、书签</a></div></section></div>
+
+
+<div class="related-wrap reveal" id="related-posts">
+    <section class="header">
+      <div class="title cap theme">您可能感兴趣的文章</div>
+    </section>
+    <section class="body">
+    <div class="related-posts"><a class="item" href="/blog/20190723/" title="心率管家的设计与开发（上篇：整体流程）"><span class="title">心率管家的设计与开发（上篇：整体流程）</span><span class="excerpt">近期开发并上架了新版心率管家 App（仅 iOS 端），专业版不定期限免，欢迎下载体验。本文将从设计、开发、上架等每个步骤和细节进行分享，也包含部分模块源码。</span></a><a class="item" href="/blog/20190827/" title="设计一个样式和逻辑分离的 HUD 库"><span class="title">设计一个样式和逻辑分离的 HUD 库</span><span class="excerpt">在写「ProHUD」之前我已经在「AXKit」中实现了原生控件快速构造方法、为公司写了 ObjC 版的可定制化 HUD、Swift 版的开源的 NoticeBoard（通知横幅）。ProHUD 诞生的意义就在于取代这些不那么完善的 H...</span></a><a class="item" href="/blog/20160912/" title="ObjC 使用链式语法更优雅地管理沙盒文件"><span class="title">ObjC 使用链式语法更优雅地管理沙盒文件</span><span class="excerpt">假如你需要把一个字典或者别的什么东西保存到沙盒里，你准备怎么做？也许你已经条件反射的想到了操作步骤……其实，你可以不必每次都那么老老实实的把每一步写出来，一行代码就可以了：【路径+保存文件】两个关键点，组成一条链式语法。</span></a></div></section></div>
+
+
+
+  <div class="related-wrap md-text reveal" id="comments">
+    <div class="cmt-title cap theme">
+      快来参与讨论吧
+    </div>
+    <div class="cmt-body beaudar">
+      
+
+<svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"/></svg>
+
+<div id="beaudar" repo="xaoxuu/blog-comments" issue-term="pathname" theme="preferred-color-scheme" input-position="top" comment-order="desc" loading="false" branch="main"></div>
+
+    </div>
+  </div>
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">近期发布</a><a href="/blog/hot/">热门文章</a><a href="/blog/categories/">分类</a><a href="/blog/tags/">标签</a><a href="/blog/archives/">归档</a></div><div class="sitemap-group"><span class="fs14">项目</span><a href="/wiki/tags/iOS%E5%BC%80%E6%BA%90%E5%BA%93/">iOS开源库</a><a href="/wiki/tags/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/">实用工具</a><a href="/wiki/tags/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/">博客主题</a><a href="/wiki/tags/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/">应用程序</a><a href="/wiki/tags/%E7%9F%A5%E8%AF%86%E5%BA%93/">知识库</a></div><div class="sitemap-group"><span class="fs14">社交</span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://inkss.cn">枋柚梓</a><a target="_blank" rel="external nofollow noopener noreferrer" href="https://blog.mhuig.top">MHuiG</a><a target="_blank" rel="external nofollow noopener noreferrer" href="https://colsrch.cn">Colsrch</a><a target="_blank" rel="external nofollow noopener noreferrer" href="https://dusays.com">杜老师说</a><a href="/friends/">更多友链</a></div><div class="sitemap-group"><span class="fs14">关于</span><a href="/about/">本站简介</a><a href="/privacy/">隐私政策</a><a href="/timeline/">博主动态</a><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/xaoxuu">GitHub</a><a target="_blank" rel="external nofollow noopener noreferrer" href="https://gitea.xaox.cc/xaoxuu">Gitea</a></div></div><div class="text"></div></footer>
+
+      <div class="float-panel mobile-only blur" style="display:none">
+  <button type="button" class="sidebar-toggle mobile" onclick="sidebar.toggle()">
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"/><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"/></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class="scripts">
+    <script type="text/javascript">
+  stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.18.0';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.0';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://fastly.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"codeblock":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@6/swiper-bundle.min.css","js":"https://unpkg.com/swiper@6/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://fastly.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://fastly.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://fastly.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti/umd/heti.min.css","js":"https://unpkg.com/heti/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+  function loadBeaudar() {
+    const els = document.querySelectorAll("#comments #beaudar");
+    if (els.length === 0) return;
+    els.forEach((el, i) => {
+      try {
+        el.innerHTML = '';
+      } catch (error) {
+        console.log(error);
+      }
+      var script = document.createElement('script');
+      script.src = 'https://beaudar.lipk.org/client.js';
+      script.async = true;
+      for (let key of Object.keys(el.attributes)) {
+        let attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+      loadBeaudar();
+  });
+</script>
+
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>
