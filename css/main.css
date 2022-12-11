@@ -1894,7 +1894,7 @@ nav.cap a+a {
   color: var(--text-p0);
   background: var(--block-hover);
 }
-.tag-plugin.folders summary:hover:after {
+.tag-plugin.folders summary:after {
   position: absolute;
   content: '+';
   text-align: center;
@@ -1915,7 +1915,7 @@ nav.cap a+a {
   color: var(--text-p1);
   background: var(--block-hover);
 }
-.tag-plugin.folders details[open] >summary:hover:after {
+.tag-plugin.folders details[open] >summary:after {
   content: '-';
 }
 .tag-plugin.folders details[open] >div.body {
