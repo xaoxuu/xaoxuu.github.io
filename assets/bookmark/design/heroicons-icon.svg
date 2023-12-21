@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>heroicons-icon</title>
+    <g id="heroicons-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M2.2075,5.73152559 C5.826425,5.68755344 9.3060125,4.36162208 12,2 C14.69375,4.36206181 18.173375,5.6884451 21.7925,5.73274704 C21.93,6.52668865 22,7.34505924 22,8.17686576 C22,14.5589349 17.825,19.9882741 12,22 C6.175,19.9870526 2,14.5577134 2,8.17564431 C2,7.34261634 2.07125,6.52668865 2.2075,5.73152559 Z" id="路径" fill="#3399FF" fill-rule="nonzero"></path>
+    </g>
+</svg>
