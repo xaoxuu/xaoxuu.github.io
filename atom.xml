@@ -6,7 +6,7 @@
   <link href="https://xaoxuu.com/atom.xml" rel="self"/>
   
   <link href="https://xaoxuu.com/"/>
-  <updated>2023-12-23T00:00:00.000Z</updated>
+  <updated>2024-01-10T00:00:00.000Z</updated>
   <id>https://xaoxuu.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于 ObjC 通知的一个神奇崩溃</title>
+    <link href="https://xaoxuu.com/blog/20240110/"/>
+    <id>https://xaoxuu.com/blog/20240110/</id>
+    <published>2024-01-10T00:00:00.000Z</published>
+    <updated>2024-01-10T00:00:00.000Z</updated>
+    
+    
+    <summary type="html">近日发现一个用 NSNotificationCenter 发通知时触发的 EXC_BAD_ACCESS 崩溃，表现形式比较奇怪，特此记录一下。</summary>
+    
+    
+    
+    <category term="经验分享" scheme="https://xaoxuu.com/blog/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="iOS" scheme="https://xaoxuu.com/blog/tags/ios/"/>
+    
+  </entry>
   
   <entry>
     <title>Gallery 标签组件的使用方法和 Unsplash 高清壁纸分享</title>
@@ -202,27 +221,6 @@
     <category term="Swift" scheme="https://xaoxuu.com/blog/tags/swift/"/>
     
     <category term="心率" scheme="https://xaoxuu.com/blog/tags/%E5%BF%83%E7%8E%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>静态博客使用 Issues API 来实现动态发布友链、书签</title>
-    <link href="https://xaoxuu.com/blog/20200823/"/>
-    <id>https://xaoxuu.com/blog/20200823/</id>
-    <published>2020-08-23T00:00:00.000Z</published>
-    <updated>2020-08-23T00:00:00.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;由于发布 issue 的成本远远低于发布一次博客更新（即便是使用了持续集成），可以用 issue 来简化每个独立博客都必备的友链系统，也可以通过 issue 来快速发布动态资讯，弥补静态博客必须更新静态文件才能更新内容的缺点。此功能已经集成到了主题中，使用非常方便。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="设计开发" scheme="https://xaoxuu.com/blog/categories/%E8%AE%BE%E8%AE%A1%E5%BC%80%E5%8F%91/"/>
-    
-    
-    <category term="博客" scheme="https://xaoxuu.com/blog/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-    <category term="GitHub" scheme="https://xaoxuu.com/blog/tags/github/"/>
     
   </entry>
   
