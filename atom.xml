@@ -6,7 +6,7 @@
   <link href="https://xaoxuu.com/atom.xml" rel="self"/>
   
   <link href="https://xaoxuu.com/"/>
-  <updated>2024-01-10T00:00:00.000Z</updated>
+  <updated>2024-01-11T00:00:00.000Z</updated>
   <id>https://xaoxuu.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>项目警告对构建速度的巨大影响</title>
+    <link href="https://xaoxuu.com/blog/20240111/"/>
+    <id>https://xaoxuu.com/blog/20240111/</id>
+    <published>2024-01-11T00:00:00.000Z</published>
+    <updated>2024-01-11T00:00:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;近期（指一个月前）终于有时间偿还前辈留下的技术债了，下面分享一下经验和心得。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="经验分享" scheme="https://xaoxuu.com/blog/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="iOS" scheme="https://xaoxuu.com/blog/tags/ios/"/>
+    
+  </entry>
   
   <entry>
     <title>关于 ObjC 通知的一个神奇崩溃</title>
@@ -198,29 +217,6 @@
     <category term="iOS" scheme="https://xaoxuu.com/blog/tags/ios/"/>
     
     <category term="设计开发加速器" scheme="https://xaoxuu.com/blog/tags/%E8%AE%BE%E8%AE%A1%E5%BC%80%E5%8F%91%E5%8A%A0%E9%80%9F%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>心率管家的设计与开发（下篇：信号处理）</title>
-    <link href="https://xaoxuu.com/blog/20200927/"/>
-    <id>https://xaoxuu.com/blog/20200927/</id>
-    <published>2020-09-27T00:00:00.000Z</published>
-    <updated>2020-09-27T00:00:00.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;作为一名开发者，如何使用手机摄像头测量心率呢？在心率管家默默无闻地上线了一年多之后，现在终于打算来好好聊聊关于手机摄像头测量心率的那些事。本文参考了很多前辈的文章，将在文末列出。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="设计开发" scheme="https://xaoxuu.com/blog/categories/%E8%AE%BE%E8%AE%A1%E5%BC%80%E5%8F%91/"/>
-    
-    
-    <category term="iOS" scheme="https://xaoxuu.com/blog/tags/ios/"/>
-    
-    <category term="Swift" scheme="https://xaoxuu.com/blog/tags/swift/"/>
-    
-    <category term="心率" scheme="https://xaoxuu.com/blog/tags/%E5%BF%83%E7%8E%87/"/>
     
   </entry>
   
