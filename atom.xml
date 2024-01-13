@@ -66,7 +66,7 @@
     &lt;button class=&quot;back cap&quot; onclick=&quot;window.history.back()&quot;&gt;
       &lt;svg aria-hidden=&quot;true&quot; viewBox=&quot;0 0 16 16&quot; fill=&quot;currentColor&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
     &lt;/button&gt;
-    &lt;div class=&quot;tag-plugin navbar&quot;&gt;&lt;nav class=&quot;cap&quot;&gt;&lt;a class=&quot;link blur active&quot; href=&quot;https://unsplash.com&quot;&gt;前往官网&lt;/a&gt;&lt;/nav&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;bottom&quot;&gt;&lt;div class=&quot;text-area&quot;&gt;&lt;div class=&quot;text title&quot;&gt;Unsplash&amp;nbsp;图片欣赏&lt;/div&gt;&lt;div class=&quot;text subtitle&quot;&gt;水一下文，主要是为了测试一下图库功能，都是高清大图，可以用作壁纸。&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</summary>
+    &lt;div class=&quot;tag-plugin navbar&quot;&gt;&lt;nav class=&quot;cap&quot;&gt;&lt;a class=&quot;link active&quot; href=&quot;https://unsplash.com&quot;&gt;前往官网&lt;/a&gt;&lt;/nav&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;bottom&quot;&gt;&lt;div class=&quot;text-area&quot;&gt;&lt;div class=&quot;text title&quot;&gt;Unsplash&amp;nbsp;图片欣赏&lt;/div&gt;&lt;div class=&quot;text subtitle&quot;&gt;水一下文，主要是为了测试一下图库功能，都是高清大图，可以用作壁纸。&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</summary>
     
     
     
