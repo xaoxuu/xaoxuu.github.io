@@ -6,7 +6,7 @@
   <link href="https://xaoxuu.com/atom.xml" rel="self"/>
   
   <link href="https://xaoxuu.com/"/>
-  <updated>2024-01-11T00:00:00.000Z</updated>
+  <updated>2024-01-29T00:00:00.000Z</updated>
   <id>https://xaoxuu.com/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2023 年度回顾 &amp; 2024 年度规划</title>
+    <link href="https://xaoxuu.com/blog/20240129/"/>
+    <id>https://xaoxuu.com/blog/20240129/</id>
+    <published>2024-01-29T00:00:00.000Z</published>
+    <updated>2024-01-29T00:00:00.000Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;一、失落感贯穿全年的-2023&quot;&gt;&lt;a href=&quot;#一、失落感贯穿全年的-2023&quot; class=&quot;headerlink&quot; title=&quot;一、失落感贯穿全年的 2023&quot;&gt;&lt;/a&gt;一、失落感贯穿全年的 2023&lt;/h2&gt;&lt;p&gt;其实从年初就知道了这将会是很难熬的一</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>项目警告对构建速度的巨大影响</title>
@@ -192,27 +210,6 @@
     
     
     <category term="shell" scheme="https://xaoxuu.com/blog/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>苹果设计开发加速器线上活动</title>
-    <link href="https://xaoxuu.com/blog/20201119/"/>
-    <id>https://xaoxuu.com/blog/20201119/</id>
-    <published>2020-11-19T00:00:00.000Z</published>
-    <updated>2021-04-09T00:00:00.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;受疫情影响，今年设计开发加速器活动改为线上形式，本次参与的活动课题是《为 iPhone 和 iPad 搭建灵活适配的用户界面》。</summary>
-    
-    
-    
-    <category term="技术加油站" scheme="https://xaoxuu.com/blog/categories/%E6%8A%80%E6%9C%AF%E5%8A%A0%E6%B2%B9%E7%AB%99/"/>
-    
-    
-    <category term="iOS" scheme="https://xaoxuu.com/blog/tags/ios/"/>
-    
-    <category term="设计开发加速器" scheme="https://xaoxuu.com/blog/tags/%E8%AE%BE%E8%AE%A1%E5%BC%80%E5%8F%91%E5%8A%A0%E9%80%9F%E5%99%A8/"/>
     
   </entry>
   
