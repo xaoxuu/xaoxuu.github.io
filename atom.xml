@@ -6,7 +6,7 @@
   <link href="https://xaoxuu.com/atom.xml" rel="self"/>
   
   <link href="https://xaoxuu.com/"/>
-  <updated>2024-01-29T00:00:00.000Z</updated>
+  <updated>2024-02-03T00:00:00.000Z</updated>
   <id>https://xaoxuu.com/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我为什么又开发一个专栏功能？</title>
+    <link href="https://xaoxuu.com/blog/20240203/"/>
+    <id>https://xaoxuu.com/blog/20240203/</id>
+    <published>2024-02-03T00:00:00.000Z</published>
+    <updated>2024-02-03T00:00:00.000Z</updated>
+    
+    
+    <summary type="html">在回访用户的过程中，我发现有不少用户用 wiki 当作专栏来使用，可见专栏确实是一个普遍的需求点，而现有的 wiki 系统并不是专门为此场景设计的，虽然能用，但是不够好用。</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>2023 年度回顾 &amp; 2024 年度规划</title>
@@ -177,7 +192,7 @@
     <link href="https://xaoxuu.com/blog/20210102/"/>
     <id>https://xaoxuu.com/blog/20210102/</id>
     <published>2021-01-02T00:00:00.000Z</published>
-    <updated>2021-01-02T00:00:00.000Z</updated>
+    <updated>2022-04-12T00:00:00.000Z</updated>
     
     
     <summary type="html">细心的朋友可能会发现，我提供的一些脚本都可以在不需要任何包管理工具的情况下通过一行命令安装，本文讲述如何搭建一个轻量级的脚本库，方便随时执行自己存放于仓库的脚本。</summary>
@@ -188,27 +203,6 @@
     
     
     <category term="shell" scheme="https://xaoxuu.com/blog/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>苹果设计开发加速器线上活动</title>
-    <link href="https://xaoxuu.com/blog/20201119/"/>
-    <id>https://xaoxuu.com/blog/20201119/</id>
-    <published>2020-11-19T00:00:00.000Z</published>
-    <updated>2021-04-09T00:00:00.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;受疫情影响，今年设计开发加速器活动改为线上形式，本次参与的活动课题是《为 iPhone 和 iPad 搭建灵活适配的用户界面》。</summary>
-    
-    
-    
-    <category term="技术加油站" scheme="https://xaoxuu.com/blog/categories/%E6%8A%80%E6%9C%AF%E5%8A%A0%E6%B2%B9%E7%AB%99/"/>
-    
-    
-    <category term="iOS" scheme="https://xaoxuu.com/blog/tags/ios/"/>
-    
-    <category term="设计开发加速器" scheme="https://xaoxuu.com/blog/tags/%E8%AE%BE%E8%AE%A1%E5%BC%80%E5%8F%91%E5%8A%A0%E9%80%9F%E5%99%A8/"/>
     
   </entry>
   
