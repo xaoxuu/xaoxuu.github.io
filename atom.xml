@@ -17,7 +17,7 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>我为什么又开发一个专栏功能？</title>
+    <title>我为什么开发了一个专栏功能？</title>
     <link href="https://xaoxuu.com/blog/20240203/"/>
     <id>https://xaoxuu.com/blog/20240203/</id>
     <published>2024-02-03T00:00:00.000Z</published>
@@ -27,6 +27,8 @@
     <summary type="html">在回访用户的过程中，我发现有不少用户用 wiki 当作专栏来使用，可见专栏确实是一个普遍的需求点，而现有的 wiki 系统并不是专门为此场景设计的，虽然能用，但是不够好用。</summary>
     
     
+    
+    <category term="产品思考" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E5%93%81%E6%80%9D%E8%80%83/"/>
     
     
   </entry>
@@ -58,7 +60,7 @@
     
     
     
-    <category term="经验分享" scheme="https://xaoxuu.com/blog/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    <category term="技术分享" scheme="https://xaoxuu.com/blog/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
     
     <category term="iOS" scheme="https://xaoxuu.com/blog/tags/ios/"/>
@@ -77,7 +79,7 @@
     
     
     
-    <category term="经验分享" scheme="https://xaoxuu.com/blog/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    <category term="技术分享" scheme="https://xaoxuu.com/blog/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
     
     <category term="iOS" scheme="https://xaoxuu.com/blog/tags/ios/"/>
@@ -113,7 +115,7 @@
     
     
     
-    <category term="经验分享" scheme="https://xaoxuu.com/blog/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    <category term="技术分享" scheme="https://xaoxuu.com/blog/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
     
     <category term="hexo" scheme="https://xaoxuu.com/blog/tags/hexo/"/>
@@ -136,7 +138,7 @@
     
     
     
-    <category term="经验分享" scheme="https://xaoxuu.com/blog/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    <category term="技术分享" scheme="https://xaoxuu.com/blog/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
     
     <category term="shell" scheme="https://xaoxuu.com/blog/tags/shell/"/>
@@ -157,7 +159,7 @@
     
     
     
-    <category term="探索号" scheme="https://xaoxuu.com/blog/categories/%E6%8E%A2%E7%B4%A2%E5%8F%B7/"/>
+    <category term="技术分享" scheme="https://xaoxuu.com/blog/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
     
     <category term="GitHub" scheme="https://xaoxuu.com/blog/tags/github/"/>
@@ -178,7 +180,7 @@
     
     
     
-    <category term="经验分享" scheme="https://xaoxuu.com/blog/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    <category term="技术分享" scheme="https://xaoxuu.com/blog/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
     
     <category term="Stellar" scheme="https://xaoxuu.com/blog/tags/stellar/"/>
