@@ -1,0 +1,1 @@
+utils.jq(()=>{for(var e=document.getElementsByClassName("stellar-marked-api"),t=0;t<e.length;t++){const r=e[t];var a=r.getAttribute("src")+"?t="+(new Date).getTime();utils.request(r,a,function(e){r.innerHTML=marked.parse(resp.data)})}});
