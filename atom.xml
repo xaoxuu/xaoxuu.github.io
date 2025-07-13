@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>XAOXUU</title>
+  <icon>https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp</icon>
+  <subtitle>For all time, always. | xaoxuu.com</subtitle>
+  <link href="https://xaoxuu.com/atom.xml" rel="self"/>
+  
+  <link href="https://xaoxuu.com/"/>
+  <updated>2025-07-06T13:36:00.000Z</updated>
+  <id>https://xaoxuu.com/</id>
+  
+  <author>
+    <name>xaoxuu</name>
+    <email>me@xaoxuu.com</email>
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>适合静态博客的 Nginx 安全性配置</title>
+    <link href="https://xaoxuu.com/blog/20250706/"/>
+    <id>https://xaoxuu.com/blog/20250706/</id>
+    <published>2025-07-06T13:36:00.000Z</published>
+    <updated>2025-07-06T13:36:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;书接上回，刚迁到服务器，东西还没完全配完，就从日志里看到不少蟑螂了！虽然是静态博客，但是看到这些蟑螂爬来爬去的还是很恶心，果断禁掉。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="产研" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/"/>
+    
+    <category term="技术" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>利用 Webhook 实现博客自动部署到服务器并通过飞书通知</title>
+    <link href="https://xaoxuu.com/blog/20250705/"/>
+    <id>https://xaoxuu.com/blog/20250705/</id>
+    <published>2025-07-05T13:59:00.000Z</published>
+    <updated>2025-07-05T13:59:00.000Z</updated>
+    
+    
+    <summary type="html">由于近期网站速度不稳定，只好再把博客解析改到服务器上。本文记录了如何利用 Webhook 实现博客自动部署到服务器并通过飞书通知。</summary>
+    
+    
+    
+    <category term="产研" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/"/>
+    
+    <category term="技术" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>梦境：寄生之种与崩塌的时空</title>
+    <link href="https://xaoxuu.com/blog/20250616/"/>
+    <id>https://xaoxuu.com/blog/20250616/</id>
+    <published>2025-06-16T04:56:00.000Z</published>
+    <updated>2025-06-16T04:56:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;这是一个新鲜热乎的梦，我今天早上快迟到了还没醒，意识投射入了梦境，醒来后请了一上午假，把这有趣的梦写了下来。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="梦境" scheme="https://xaoxuu.com/blog/categories/%E6%A2%A6%E5%A2%83/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>博客图片到底该存哪儿啊？</title>
+    <link href="https://xaoxuu.com/blog/20250611/"/>
+    <id>https://xaoxuu.com/blog/20250611/</id>
+    <published>2025-06-11T15:37:00.000Z</published>
+    <updated>2025-06-11T15:37:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;博客图片存哪儿，看起来是小事，折腾起来却让人头大。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="图床" scheme="https://xaoxuu.com/blog/tags/%E5%9B%BE%E5%BA%8A/"/>
+    
+    <category term="博客" scheme="https://xaoxuu.com/blog/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="图片" scheme="https://xaoxuu.com/blog/tags/%E5%9B%BE%E7%89%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>梦境：末日之后</title>
+    <link href="https://xaoxuu.com/blog/20250605/"/>
+    <id>https://xaoxuu.com/blog/20250605/</id>
+    <published>2025-06-04T16:00:00.000Z</published>
+    <updated>2025-06-04T16:00:00.000Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;这是我真实的梦境，看记录大概在2024年初，一直没时间写出来分享给大家，现在借助 AI 帮我圆梦了。所以本文以及插图由 AI 根据我拙劣的描述生成。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;那是某个傍晚，我沿着一条蜿蜒曲折的小路慢慢往前走。路面是</summary>
+      
+    
+    
+    
+    <category term="梦境" scheme="https://xaoxuu.com/blog/categories/%E6%A2%A6%E5%A2%83/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>预埋了两年半的数据，现在终于用上了</title>
+    <link href="https://xaoxuu.com/blog/20250604/"/>
+    <id>https://xaoxuu.com/blog/20250604/</id>
+    <published>2025-06-04T12:33:35.000Z</published>
+    <updated>2025-06-04T12:33:35.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;其实早在 Stellar 1.13.0 版本，我便引入了主题信息标签，初衷是待用户群体广泛升级后，通过解析此标签，在前端清晰展示用户当前所用的主题版本。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="思考" scheme="https://xaoxuu.com/blog/categories/%E6%80%9D%E8%80%83/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>感谢 AI，动态友链获重磅升级！</title>
+    <link href="https://xaoxuu.com/blog/20250602/"/>
+    <id>https://xaoxuu.com/blog/20250602/</id>
+    <published>2025-06-02T11:56:49.000Z</published>
+    <updated>2025-06-02T11:56:49.000Z</updated>
+    
+    
+    <summary type="html">最近用TRAE重构了动态友链项目，新版功能更加强大，使用更简单，快来试试吧。</summary>
+    
+    
+    
+    <category term="产研" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/"/>
+    
+    <category term="设计开发" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/%E8%AE%BE%E8%AE%A1%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="开源项目" scheme="https://xaoxuu.com/blog/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
+    
+    <category term="动态友链" scheme="https://xaoxuu.com/blog/tags/%E5%8A%A8%E6%80%81%E5%8F%8B%E9%93%BE/"/>
+    
+    <category term="GitHub Actions" scheme="https://xaoxuu.com/blog/tags/github-actions/"/>
+    
+    <category term="GitHub Workflow" scheme="https://xaoxuu.com/blog/tags/github-workflow/"/>
+    
+    <category term="友链" scheme="https://xaoxuu.com/blog/tags/%E5%8F%8B%E9%93%BE/"/>
+    
+    <category term="动态" scheme="https://xaoxuu.com/blog/tags/%E5%8A%A8%E6%80%81/"/>
+    
+    <category term="静态友链" scheme="https://xaoxuu.com/blog/tags/%E9%9D%99%E6%80%81%E5%8F%8B%E9%93%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2025，继续寻找下一块拼图</title>
+    <link href="https://xaoxuu.com/blog/20250128/"/>
+    <id>https://xaoxuu.com/blog/20250128/</id>
+    <published>2025-01-27T16:00:00.000Z</published>
+    <updated>2025-06-12T05:10:00.000Z</updated>
+    
+    
+    <summary type="html">好久不见，季更博主变成了年更博主，但我依然还惦记着我热爱的一切。</summary>
+    
+    
+    
+    <category term="思考" scheme="https://xaoxuu.com/blog/categories/%E6%80%9D%E8%80%83/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>文章里放大才能看的插图是好插图吗？</title>
+    <link href="https://xaoxuu.com/blog/20240208/"/>
+    <id>https://xaoxuu.com/blog/20240208/</id>
+    <published>2024-02-07T16:00:00.000Z</published>
+    <updated>2024-02-07T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">这是一个非常有争议的话题，自 Stellar 诞生之初，就有这个话题相关的讨论，本文将就这个话题展开详细阐述，解答一下 Stellar 为什么与众不同。</summary>
+    
+    
+    
+    <category term="产研" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/"/>
+    
+    <category term="产品" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/%E4%BA%A7%E5%93%81/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>我为什么开发了一个专栏功能？</title>
+    <link href="https://xaoxuu.com/blog/20240203/"/>
+    <id>https://xaoxuu.com/blog/20240203/</id>
+    <published>2024-02-02T16:00:00.000Z</published>
+    <updated>2024-02-02T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">在回访用户的过程中，我发现有不少用户用 wiki 当作专栏来使用，可见专栏确实是一个普遍的需求点，而现有的 wiki 系统并不是专门为此场景设计的，虽然能用，但是不够好用。</summary>
+    
+    
+    
+    <category term="产研" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/"/>
+    
+    <category term="产品" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/%E4%BA%A7%E5%93%81/"/>
+    
+    
+  </entry>
+  
+</feed>
