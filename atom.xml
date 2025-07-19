@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>XAOXUU</title>
-  <icon>https://gh.xaox.cc/cdn-x/xaoxuu@main/avatar/classic.webp</icon>
+  <icon>https://res.xaox.cc/gh/cdn-x/xaoxuu@main/avatar/classic.webp</icon>
   <subtitle>For all time, always. | xaoxuu.com</subtitle>
   <link href="https://xaoxuu.com/atom.xml" rel="self"/>
   
