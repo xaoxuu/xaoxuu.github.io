@@ -6,7 +6,7 @@
   <link href="https://xaoxuu.com/atom.xml" rel="self"/>
   
   <link href="https://xaoxuu.com/"/>
-  <updated>2025-07-13T12:36:00.000Z</updated>
+  <updated>2025-10-13T12:36:00.000Z</updated>
   <id>https://xaoxuu.com/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在混乱中建立秩序</title>
+    <link href="https://xaoxuu.com/blog/20251013/"/>
+    <id>https://xaoxuu.com/blog/20251013/</id>
+    <published>2025-10-13T12:36:00.000Z</published>
+    <updated>2025-10-13T12:36:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;人人向往秩序井然，却总被现实的混乱裹挟前行。那么，如何在混乱中逐步建立秩序呢？本文将结合我的亲身经历，从产品设计和技术实现的方面，分享我的方法与思考。&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>关于本站备用站点的紧急通知</title>
@@ -195,25 +210,6 @@
     
     
     <category term="思考" scheme="https://xaoxuu.com/blog/categories/%E6%80%9D%E8%80%83/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>文章里放大才能看的插图是好插图吗？</title>
-    <link href="https://xaoxuu.com/blog/20240208/"/>
-    <id>https://xaoxuu.com/blog/20240208/</id>
-    <published>2024-02-07T16:00:00.000Z</published>
-    <updated>2024-02-07T16:00:00.000Z</updated>
-    
-    
-    <summary type="html">这是一个非常有争议的话题，自 Stellar 诞生之初，就有这个话题相关的讨论，本文将就这个话题展开详细阐述，解答一下 Stellar 为什么与众不同。</summary>
-    
-    
-    
-    <category term="产研" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/"/>
-    
-    <category term="产品" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/%E4%BA%A7%E5%93%81/"/>
     
     
   </entry>
