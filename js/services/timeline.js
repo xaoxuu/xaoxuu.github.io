@@ -1,1 +1,108 @@
-utils.jq(()=>{$(function(){const o={"+1":"👍","-1":"👎",laugh:"😀",hooray:"🎉",confused:"😕",heart:"❤️",rocket:"🚀",eyes:"👀"};for(var e=document.getElementsByClassName("ds-timeline"),a=0;a<e.length;a++){const i=e[a],s=i.dataset.api;null!=s&&utils.request(i,s,async e=>{e=await e.json();const n=new URL(s).search;var e=e.content||e,t=[],a=i.getAttribute("user"),r=(a&&0<a.length&&(t=a.split(",")),[]),a=i.getAttribute("hide");a&&0<a.length&&(r=a.split(",")),e.forEach((e,a)=>{if(!(e.user&&e.user.login&&0<t.length)||t.includes(e.user.login)){var s='<div class="timenode" index="'+a+'">',a=(s+='<div class="header">',t.length||!e.user||r.includes("user")||(s=(s=(s+='<a class="user-info" href="'+e.user.html_url+'" target="_blank" rel="external nofollow noopener noreferrer">')+'<img src="'+e.user.avatar_url+'">')+"<span>"+e.user.login+"</span></a>"),new Date(e.created_at)),s=(s+="<span>"+a.toLocaleString()+"</span>")+"</div>"+'<div class="body">';if(r.includes("title")||(s=(s=(s+='<p class="title">')+'<a href="'+e.html_url+'" target="_blank" rel="external nofollow noopener noreferrer">')+(e.title||e.name||e.tag_name)+"</a></p>"),s+=marked.parse(e.body||""),!r.includes("footer")){if(s=s+'<div class="footer">'+'<div class="flex left">',e.labels?e.labels.forEach((e,a)=>{n&&n.includes(encodeURI(e.name))||(s=(s+='<div class="item label '+e.name+'" style="background:#'+e.color+"18;border-color:#"+e.color+'36">')+"<span>"+e.name+"</span></div>")}):e.zipball_url&&(s=(s+='<a class="item download" href="'+e.zipball_url+'" target="_blank" rel="external nofollow noopener noreferrer">')+"<span>📦 "+e.tag_name+".zip</span></a>"),s=s+"</div>"+'<div class="flex right">',0<e.reactions?.total_count)for(var l of Object.keys(o))0<e.reactions[l]&&(s=(s+='<div class="item reaction '+l+'">')+"<span>"+o[l]+" "+e.reactions[l]+"</span></div>");s=(s=null!=e.comments?(s+='<a class="item comments last" href="'+e.html_url+'#issuecomment-new" target="_blank" rel="external nofollow noopener noreferrer">')+'<span><svg t="1666270368054" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2528" width="200" height="200"><path d="M952 64H72C32.3 64 0 96.3 0 136v508c0 39.7 32.3 72 72 72h261l128 128c14 14 32.5 21.1 50.9 21.1s36.9-7 50.9-21.1l128-128h261c39.7 0 72-32.3 72-72V136c0.2-39.7-32.1-72-71.8-72zM222 462c-39.8 0-72-32.2-72-72s32.2-72 72-72 72 32.2 72 72-32.2 72-72 72z m290-7.7c-39.8 0-72-32.2-72-72s32.2-72 72-72 72 32.2 72 72c0 39.7-32.2 72-72 72z m290 8c-39.8 0-72-32.2-72-72s32.2-72 72-72 72 32.2 72 72c0 39.7-32.2 72-72 72z" p-id="2529"></path></svg> '+(e.comments||0)+"</span></a>":s)+"</div>"+"</div>"}s=s+"</div>"+"</div>",$(i).append(s)}}),window.wrapLazyloadImages(i)})}})});
+utils.jq(() => {
+  $(function () {
+    const reactions = {
+      '+1': '👍',
+      '-1': '👎', 
+      'laugh': '😀', 
+      'hooray': '🎉', 
+      'confused': '😕', 
+      'heart': '❤️', 
+      'rocket': '🚀', 
+      'eyes': '👀'
+    }
+    const timelines = document.getElementsByClassName('ds-timeline');
+    for (var i = 0; i < timelines.length; i++) {
+      const el = timelines[i];
+      const api = el.dataset.api;
+      if (api == null) {
+        continue;
+      }
+      // layout
+      utils.request(el, api, async resp => {
+        const data = await resp.json();
+        const query = new URL(api).search;
+        const arr = data.content || data;
+        var users = [];
+        const filter = el.getAttribute('user');
+        if (filter && filter.length > 0) {
+          users = filter.split(",");
+        }
+        var hide = [];
+        const hideStr = el.getAttribute('hide');
+        if (hideStr && hideStr.length > 0) {
+          hide = hideStr.split(",");
+        }
+        arr.forEach((item, i) => {
+          if (item.user && item.user.login && users.length > 0) {
+            if (!users.includes(item.user.login)) {
+              return;
+            }
+          }
+          var cell = '<div class="timenode" index="' + i + '">';
+          cell += '<div class="header">';
+          if (!users.length && item.user && !hide.includes('user')) {
+            cell += '<a class="user-info" href="' + item.user.html_url + '" target="_blank" rel="external nofollow noopener noreferrer">';
+            cell += '<img src="' + item.user.avatar_url + '">';
+            cell += '<span>' + item.user.login + '</span>';
+            cell += '</a>';
+          }
+          let date = new Date(item.created_at);
+          cell += '<span>' + date.toLocaleString() + '</span>';
+          cell += '</div>';
+          cell += '<div class="body">';
+          if (!hide.includes('title')) {
+            cell += '<p class="title">';
+            cell += '<a href="' + item.html_url + '" target="_blank" rel="external nofollow noopener noreferrer">';
+            cell += item.title || item.name || item.tag_name;
+            cell += '</a>';
+            cell += '</p>';
+          }
+          
+          cell += marked.parse(item.body || '');
+          if (!hide.includes('footer')) {
+            cell += '<div class="footer">';
+            cell += '<div class="flex left">';
+            if (item.labels) {
+              item.labels.forEach((label, i) => {
+                if (!query || !query.includes(encodeURI(label.name))) {
+                  cell += '<div class="item label ' + label.name + '" style="background:#' + label.color + '18;border-color:#' + label.color + '36">';
+                  cell += '<span>' + label.name + '</span>';
+                  cell += '</div>';
+                }
+              });
+            } else if (item.zipball_url) {
+              cell += '<a class="item download" href="' + item.zipball_url + '" target="_blank" rel="external nofollow noopener noreferrer">';
+              cell += '<span>📦 ' + item.tag_name + '.zip</span>';
+              cell += '</a>';
+            }
+            cell += '</div>';
+            cell += '<div class="flex right">';
+            if (item.reactions?.total_count > 0) {
+              for (let key of Object.keys(reactions)) {
+                let num = item.reactions[key];
+                if (num > 0) {
+                  cell += '<div class="item reaction ' + key + '">';
+                  cell += '<span>' + reactions[key] + ' ' + item.reactions[key] + '</span>';
+                  cell += '</div>';
+                }
+              }
+            }
+            if (item.comments != null) {
+              cell += '<a class="item comments last" href="' + item.html_url + '#issuecomment-new" target="_blank" rel="external nofollow noopener noreferrer">';
+              cell += '<span><svg t="1666270368054" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2528" width="200" height="200"><path d="M952 64H72C32.3 64 0 96.3 0 136v508c0 39.7 32.3 72 72 72h261l128 128c14 14 32.5 21.1 50.9 21.1s36.9-7 50.9-21.1l128-128h261c39.7 0 72-32.3 72-72V136c0.2-39.7-32.1-72-71.8-72zM222 462c-39.8 0-72-32.2-72-72s32.2-72 72-72 72 32.2 72 72-32.2 72-72 72z m290-7.7c-39.8 0-72-32.2-72-72s32.2-72 72-72 72 32.2 72 72c0 39.7-32.2 72-72 72z m290 8c-39.8 0-72-32.2-72-72s32.2-72 72-72 72 32.2 72 72c0 39.7-32.2 72-72 72z" p-id="2529"></path></svg> ' + (item.comments || 0) + '</span>';
+              cell += '</a>';
+            }
+            
+            cell += '</div>';
+            cell += '</div>';
+          }
+          
+          cell += '</div>';
+          cell += '</div>';
+          $(el).append(cell);
+        });
+        window.wrapLazyloadImages(el);
+      });
+    }
+  });
+});

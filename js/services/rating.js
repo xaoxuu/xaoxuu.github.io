@@ -1,1 +1,142 @@
-function getRatingKey(e){return"rating-"+e}function hasRated(e){return!!localStorage.getItem(getRatingKey(e))}function getRatedValue(e){return parseInt(localStorage.getItem(getRatingKey(e))||"0")}function storeRating(e,t){localStorage.setItem(getRatingKey(e),t)}function clearHover(e){e.querySelectorAll(".star").forEach(e=>e.classList.remove("hover"))}function updatePreview(e,t){const a=Math.floor(t);e.querySelectorAll(".star").forEach(e=>{var t=parseInt(e.dataset.value);e.classList.toggle("preview",t<=a)})}function setupHoverEffect(t){const n=t.querySelectorAll(".star");n.length&&n.forEach(e=>{const a=parseInt(e.dataset.value);e.addEventListener("mouseenter",()=>{n.forEach(e=>{e.classList.remove("preview");var t=parseInt(e.dataset.value);e.classList.toggle("hover",t<=a)})}),e.addEventListener("mouseleave",()=>{clearHover(t);var e=parseFloat(t.querySelector(".avg")?.textContent.replace(/[()]/g,"")||"0");updatePreview(t,e)})})}function calculateAverage(e={}){var e=Object.entries(e).filter(([e])=>!isNaN(Number(e))),t=e.reduce((e,[t,a])=>e+Number(t)*a,0),e=e.reduce((e,[,t])=>e+t,0);return 0<e?(t/e).toFixed(1):"0.0"}async function loadRating(a){var n=a.dataset.id,r=a.dataset.api;if(n&&r)try{var o=(await(await fetch(r+"/info?id="+encodeURIComponent(n))).json()).rating||{},i=calculateAverage(o),c=Object.entries(o).filter(([e])=>!isNaN(Number(e))).reduce((e,[,t])=>e+t,0);let e=a.querySelector(".avg"),t=(e||((e=document.createElement("span")).className="avg",a.appendChild(e)),e.textContent=`(${i})`,a.querySelector(".count"));t||((t=document.createElement("span")).className="count",a.appendChild(t)),t.textContent=""+c,updatePreview(a,i)}catch(e){console.warn("[rating] 加载失败: id="+n,e)}}async function submitRating(e,t){var a=e.dataset.id,n=e.dataset.api;if(a&&n&&!hasRated(a)){storeRating(a,t),e.classList.add("rated");try{await fetch(`${n}/update?id=${encodeURIComponent(a)}&value=`+t,{method:"POST"}),loadRating(e)}catch(e){console.warn("[rating] 提交失败: id="+a,e)}}}function initRatings(){document.querySelectorAll(".ds-rating").forEach(a=>{const{id:n,api:e}=a.dataset;n&&e&&(loadRating(a),setupHoverEffect(a),hasRated(n)&&a.classList.add("rated"),a.querySelectorAll(".star").forEach(e=>{const t=e.dataset.value;e.addEventListener("click",()=>{hasRated(n)||submitRating(a,t)})}))})}"loading"===document.readyState?window.addEventListener("DOMContentLoaded",initRatings):initRatings();
+function getRatingKey(id) {
+  return `rating-${id}`;
+}
+
+function hasRated(id) {
+  return !!localStorage.getItem(getRatingKey(id));
+}
+
+function getRatedValue(id) {
+  return parseInt(localStorage.getItem(getRatingKey(id)) || '0');
+}
+
+function storeRating(id, value) {
+  localStorage.setItem(getRatingKey(id), value);
+}
+
+function clearHover(el) {
+  el.querySelectorAll('.star').forEach(s => s.classList.remove('hover'));
+}
+
+function updatePreview(el, avg) {
+  const rounded = Math.floor(avg);
+  el.querySelectorAll('.star').forEach(s => {
+    const v = parseInt(s.dataset.value);
+    s.classList.toggle('preview', v <= rounded);
+  });
+}
+
+function setupHoverEffect(el) {
+  const stars = el.querySelectorAll('.star');
+  if (!stars.length) return;
+
+  stars.forEach(star => {
+    const value = parseInt(star.dataset.value);
+
+    star.addEventListener('mouseenter', () => {
+      stars.forEach(s => {
+        s.classList.remove('preview');
+        const v = parseInt(s.dataset.value);
+        s.classList.toggle('hover', v <= value);
+      });
+    });
+
+    star.addEventListener('mouseleave', () => {
+      clearHover(el);
+      // 恢复平均分预览
+      const avg = parseFloat(el.querySelector('.avg')?.textContent.replace(/[()]/g, '') || '0');
+      updatePreview(el, avg);
+    });
+  });
+}
+
+function calculateAverage(rating = {}) {
+  const validScores = Object.entries(rating).filter(([k]) => !isNaN(Number(k)));
+  const total = validScores.reduce((sum, [k, c]) => sum + Number(k) * c, 0);
+  const votes = validScores.reduce((sum, [, c]) => sum + c, 0);
+  return votes > 0 ? (total / votes).toFixed(1) : '0.0';
+}
+
+async function loadRating(el) {
+  const id = el.dataset.id;
+  const api = el.dataset.api;
+  if (!id || !api) return;
+
+  try {
+    const res = await fetch(`${api}/info?id=${encodeURIComponent(id)}`);
+    const data = await res.json();
+    const rating = data.rating || {};
+    const avg = calculateAverage(rating);
+
+    // 计算评分人数
+    const validScores = Object.entries(rating).filter(([k]) => !isNaN(Number(k)));
+    const totalVotes = validScores.reduce((sum, [, c]) => sum + c, 0);
+
+    // 设置平均分
+    let avgEl = el.querySelector('.avg');
+    if (!avgEl) {
+      avgEl = document.createElement('span');
+      avgEl.className = 'avg';
+      el.appendChild(avgEl);
+    }
+    avgEl.textContent = `(${avg})`;
+
+    // 设置评分人数
+    let countEl = el.querySelector('.count');
+    if (!countEl) {
+      countEl = document.createElement('span');
+      countEl.className = 'count';
+      el.appendChild(countEl);
+    }
+    countEl.textContent = `${totalVotes}`;
+
+    updatePreview(el, avg);
+  } catch (e) {
+    console.warn(`[rating] 加载失败: id=${id}`, e);
+  }
+}
+
+async function submitRating(el, value) {
+  const id = el.dataset.id;
+  const api = el.dataset.api;
+  if (!id || !api || hasRated(id)) return;
+
+  storeRating(id, value);
+  el.classList.add('rated');
+
+  try {
+    await fetch(`${api}/update?id=${encodeURIComponent(id)}&value=${value}`, {
+      method: 'POST'
+    });
+    loadRating(el);
+  } catch (e) {
+    console.warn(`[rating] 提交失败: id=${id}`, e);
+  }
+}
+
+function initRatings() {
+  document.querySelectorAll('.ds-rating').forEach(el => {
+    const { id, api } = el.dataset;
+    if (!id || !api) return;
+
+    loadRating(el);
+    setupHoverEffect(el);
+
+    if (hasRated(id)) {
+      el.classList.add('rated');
+    }
+
+    el.querySelectorAll('.star').forEach(star => {
+      const value = star.dataset.value;
+      star.addEventListener('click', () => {
+        if (!hasRated(id)) submitRating(el, value);
+      });
+    });
+  });
+}
+
+if (document.readyState === 'loading') {
+  window.addEventListener('DOMContentLoaded', initRatings);
+} else {
+  initRatings();
+}

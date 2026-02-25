@@ -1,1 +1,34 @@
-utils.jq(()=>{$(function(){for(var t=document.getElementsByClassName("ds-ghinfo"),e=0;e<t.length;e++){const l=t[e];var n=l.dataset.api;null!=n&&utils.request(null,n,async t=>{t=await t.json();function e(t){for(var e of Object.keys(t))$(l).find("[type=text]#"+e).text(t[e]),$(l).find("[type=link]#"+e).attr("href",t[e]),$(l).find("[type=img]#"+e).attr("src",t[e])}var n,a,i=l.getAttribute("index");null!=i?(n=t.content||t)&&n.length>i&&((a=n[i])["latest-tag-name"]=a.name,e(n[i])):e(t)})}})});
+utils.jq(() => {
+  $(function () {
+    const els = document.getElementsByClassName('ds-ghinfo');
+    for (var i = 0; i < els.length; i++) {
+      const el = els[i];
+      const api = el.dataset.api;
+      if (api == null) {
+        continue;
+      }
+      // layout
+      utils.request(null, api, async resp => {
+        const data = await resp.json();
+        function fill(data) {
+          for (let key of Object.keys(data)) {
+            $(el).find("[type=text]#" + key).text(data[key]);
+            $(el).find("[type=link]#" + key).attr("href", data[key]);
+            $(el).find("[type=img]#" + key).attr("src", data[key]);
+          }
+        }
+        const idx = el.getAttribute('index');
+        if (idx != undefined) {
+          const arr = data.content || data;
+          if (arr && arr.length > idx) {
+            let obj = arr[idx];
+            obj['latest-tag-name'] = obj['name'];
+            fill(arr[idx]);
+          }
+        } else {
+          fill(data);
+        }
+      });
+    }
+  });
+});

@@ -1,1 +1,33 @@
-utils.jq(()=>{$(function(){for(var e=document.getElementsByClassName("ds-waline"),a=0;a<e.length;a++){const r=e[a];var t=parseInt(r.getAttribute("limit"))||10,n=r.dataset.api;if(null!=n){const s=def.avatar;utils.request(r,n+"/comment?type=recent&count="+t,async e=>{(await e.json()).forEach((e,a)=>{a=(a=(a=(a=(a=(a='<div class="timenode" index="'+a+'"><div class="header"><div class="user-info">')+'<img src="'+(e.avatar||s)+'" onerror="javascript:this.src=\''+s+"';\">")+"<span>"+e.nick+"</span></div>")+"<span>"+new Date(e.time).toLocaleString()+"</span>")+'</div><a class="body" href="'+e.url+"#"+e.objectId+'" target="_blank" rel="external nofollow noopener noreferrer">')+e.comment.replace(/<a\b[^>]*>(.*?)<\/a>/g,"$1")+"</a></div>";$(r).append(a)})})}}})});
+utils.jq(() => {
+    $(function () {
+      const els = document.getElementsByClassName('ds-waline');
+      for (var i = 0; i < els.length; i++) {
+        const el = els[i];
+        const limit = parseInt(el.getAttribute('limit')) || 10;
+        const apiBase = el.dataset.api;
+        if (apiBase == null) {
+          continue;
+        }
+        const api = apiBase + '/comment?type=recent&count=' + limit;
+        const default_avatar = def.avatar;
+        utils.request(el, api, async resp => {
+          const data = await resp.json();
+          data.forEach((item, i) => {
+            var cell = '<div class="timenode" index="' + i + '">';
+            cell += '<div class="header">';
+            cell += '<div class="user-info">';
+            cell += '<img src="' + (item.avatar || default_avatar) + '" onerror="javascript:this.src=\'' + default_avatar + '\';">';
+            cell += '<span>' + item.nick + '</span>';
+            cell += '</div>';
+            cell += '<span>' + new Date(item.time).toLocaleString() + '</span>';
+            cell += '</div>';
+            cell += '<a class="body" href="' + item.url + '#' + item.objectId + '" target="_blank" rel="external nofollow noopener noreferrer">';
+            cell += item.comment.replace(/<a\b[^>]*>(.*?)<\/a>/g, '$1');
+            cell += '</a>';
+            cell += '</div>';
+            $(el).append(cell);
+          });
+        });
+      }
+    });
+  });

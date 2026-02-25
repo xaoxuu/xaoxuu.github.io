@@ -1,16 +1,438 @@
-function fillRoundRect(e,t,a,i,n,r,l){if(i<2*r||n<2*r)return!1;e.save(),e.translate(t,a),drawRoundRectPath(e,i,n,r),e.fillStyle=l||"#000",e.fill(),e.restore()}function strokeRoundRect(e,t,a,i,n,r,l,s){if(i<2*r||n<2*r)return!1;e.save(),e.translate(t,a),drawRoundRectPath(e,i,n,r),e.lineWidth=l||2,e.strokeStyle=s||"#000",e.stroke(),e.restore()}function drawRoundRectPath(e,t,a,i){e.beginPath(0),e.arc(t-i,a-i,i,0,Math.PI/2),e.lineTo(i,a),e.arc(i,a-i,i,Math.PI/2,Math.PI),e.lineTo(0,i),e.arc(i,i,i,Math.PI,3*Math.PI/2),e.lineTo(t-i,0),e.arc(t-i,i,i,3*Math.PI/2,2*Math.PI),e.lineTo(t,a-i),e.closePath()}function fillRoundRectPro(e,t,a,i,n,r,l,s,o,c){if(i<r+l||i<o+s||n<r+o||n<l+s)return!1;e.save(),e.translate(t,a),drawRoundRectPathPro(e,i,n,r,l,s,o),e.fillStyle=c||"#000",e.fill(),e.restore()}function drawRoundRectPathPro(e,t,a,i,n,r,l){e.beginPath(0),e.arc(t-r,a-r,r,0,Math.PI/2),e.lineTo(l,a),e.arc(l,a-l,l,Math.PI/2,Math.PI),e.lineTo(0,i),e.arc(i,i,i,Math.PI,3*Math.PI/2),e.lineTo(t-n,0),e.arc(t-n,n,n,3*Math.PI/2,2*Math.PI),e.lineTo(t,a-r),e.closePath()}function drawWave(t,a,i,n,r){for(let e=0;e<i.length;++e)fillRoundRect(t,4*e,(a-i[e])/2,2,i[e],n,r)}function drawWaveWhenPlaying(t,a,i,n,r,l,s){for(let e=0;e<n.length;++e)4*e+2<=i?fillRoundRect(t,4*e,(a-n[e])/2,2,n[e],r,l):4*e>=i?fillRoundRect(t,4*e,(a-n[e])/2,2,n[e],r,s):1<=i-4*e?(fillRoundRect(t,4*e,(a-n[e])/2,2,n[e],r,s),fillRoundRectPro(t,4*e,(a-n[e])/2,i-4*e,n[e],r,0,0,r,l)):(fillRoundRect(t,4*e,(a-n[e])/2,2,n[e],r,l),fillRoundRectPro(t,4*e,(a-n[e])/2,2-i+4*e,n[e],0,r,r,0,s))}function drawPlayLine(e,t,a,i){fillRoundRect(e,a,0,1,t,.1,i)}function createVoiceDom(a){for(let t=0;t<a.length;++t){let e=a[t];e.loop=!1;e.currentTime;e.classList.contains("qq")?isNaN(e.duration)||e.duration===1/0?e.addEventListener("durationchange",()=>{createWaveDom(e)}):createWaveDom(e):e.classList.contains("wechat")&&(isNaN(e.duration)||e.duration===1/0?e.addEventListener("durationchange",()=>{createWechatVoiceDom(e)}):createWechatVoiceDom(e))}}function createWaveDom(s){var o=s.parentElement;let c=o.querySelector("canvas");if(c.getContext("2d")){var d=s.duration,d=Math.floor(d),h=25<d+2?25:d+2;let e=o.querySelector(".pause-btn"),t=o.querySelector(".play-btn"),a=(o.querySelector(".voice-seconds").innerHTML=`${60<d?"..":d}"`,window.devicePixelRatio),i=(c.width=2*(2*h-1)*a,c.height=23*a,c.style.width=2*(2*h-1)+"px",c.style.height="23px",[]);for(let e=0;e<h;++e){var u=(Math.floor(51*Math.random())+30)/100*c.height*.8;i.push(u)}var f=c.getContext("2d");f.scale(a,1);let n="#333",r="#999",l=(c.classList.contains("right")&&(n="#ffffff",r="#1373b3"),"dark"===utils.dark.mode&&(n="#ccc",r="#707070",c.classList.contains("right"))&&(n="#fff9",r="#6797b780"),!1);drawWave(f,c.height,i,1,n),s.addEventListener("timeupdate",()=>{0<s.currentTime&&("dark"===utils.dark.mode?(n="#ccc",r="#707070",c.classList.contains("right")&&(n="#fff9",r="#6797b780")):(n="#333",r="#999",c.classList.contains("right")&&(n="#ffffff",r="#1373b3")),utils.requestAnimationFrame(()=>{f.clearRect(0,0,c.width,c.height),drawWaveWhenPlaying(f,c.height,s.currentTime/s.duration*c.width/a,i,1,n,r),drawPlayLine(f,c.height,s.currentTime/s.duration/a*c.width,n)}))}),s.addEventListener("ended",()=>{s.pause(),e.style.display="none",t.style.display="flex",s.currentTime=0,utils.requestAnimationFrame(()=>{f.clearRect(0,0,c.width,c.height),drawWave(f,c.height,i,1,n)}),l=!1}),o.addEventListener("click",()=>{l="flex"===e.style.display?(s.pause(),e.style.display="none",!(t.style.display="flex")):(s.play(),e.style.display="flex",t.style.display="none",!0)}),utils.dark.push(function(){l||("dark"===utils.dark.mode?(n="#ccc",r="#707070",c.classList.contains("right")&&(n="#fff9",r="#6797b780")):(n="#333",r="#999",c.classList.contains("right")&&(n="#ffffff",r="#1373b3")),0<s.currentTime?utils.requestAnimationFrame(()=>{f.clearRect(0,0,c.width,c.height),drawWaveWhenPlaying(f,c.height,s.currentTime/s.duration*c.width/a,i,1,n,r),drawPlayLine(f,c.height,s.currentTime/s.duration/a*c.width,n)}):utils.requestAnimationFrame(()=>{f.clearRect(0,0,c.width,c.height),drawWave(f,c.height,i,1,n)}))})}else console.log("浏览器不支持canvas")}function createCssStyle(e,t){var a=e.duration,i=Math.floor(a),n=25<i+2?25:i+2,r=e.parentElement;let l=r.querySelector(".pause-btn"),s=r.querySelector(".play-btn");r.querySelector(".voice-seconds").innerHTML=`${60<i?"..":i}"`;var o=2*(2*n-1),c=(25<i+2&&(r.style.width="100%"),document.createElement("div"));let d=document.createElement("div");d.className="play-line",c.append(d),c.className="voice-wave voice-wave-"+(t+1);for(let e=0;e<n;e++){var h=document.createElement("span");h.className="voice-wave-item",c.append(h)}r.insertBefore(c,r.querySelector(".voice-metas")),e.addEventListener("ended",()=>{e.pause(),l.style.display="none",s.style.display="flex",e.currentTime=0,d.classList.remove("active"),d.classList.add("back")}),r.addEventListener("click",()=>{"flex"===l.style.display?(e.pause(),l.style.display="none",s.style.display="flex",e.currentTime=0,d.classList.remove("active"),d.classList.add("back")):(e.play(),l.style.display="flex",s.style.display="none",d.classList.add("active"),d.classList.remove("back"))});let u=`
-    .voice-wave.voice-wave-${t+1}>.play-line {
-        transition: transform ${a}s linear;
-        -moz-transition: transform ${a}s linear;
-        -webkit-transition: transform ${a}s linear;
-        -o-transition: transform ${a}s linear;
+/**该方法用来绘制一个有填充色的圆角矩形 
+    *@param cxt:canvas的上下文环境 
+    *@param x:左上角x轴坐标 
+    *@param y:左上角y轴坐标 
+    *@param width:矩形的宽度 
+    *@param height:矩形的高度 
+    *@param radius:圆的半径 
+    *@param fillColor:填充颜色 
+**/
+function fillRoundRect(cxt, x, y, width, height, radius, /*optional*/ fillColor) {
+    //圆的直径必然要小于矩形的宽高          
+    if (2 * radius > width || 2 * radius > height) { return false; }
+
+    cxt.save();
+    cxt.translate(x, y);
+    //绘制圆角矩形的各个边  
+    drawRoundRectPath(cxt, width, height, radius);
+    cxt.fillStyle = fillColor || "#000"; //若是给定了值就用给定的值否则给予默认值  
+    cxt.fill();
+    cxt.restore();
+}
+
+
+/**该方法用来绘制圆角矩形 
+    *@param cxt:canvas的上下文环境 
+    *@param x:左上角x轴坐标 
+    *@param y:左上角y轴坐标 
+    *@param width:矩形的宽度 
+    *@param height:矩形的高度 
+    *@param radius:圆的半径 
+    *@param lineWidth:线条粗细 
+    *@param strokeColor:线条颜色 
+**/
+function strokeRoundRect(cxt, x, y, width, height, radius, /*optional*/ lineWidth, /*optional*/ strokeColor) {
+    //圆的直径必然要小于矩形的宽高          
+    if (2 * radius > width || 2 * radius > height) { return false; }
+
+    cxt.save();
+    cxt.translate(x, y);
+    //绘制圆角矩形的各个边  
+    drawRoundRectPath(cxt, width, height, radius);
+    cxt.lineWidth = lineWidth || 2; //若是给定了值就用给定的值否则给予默认值2  
+    cxt.strokeStyle = strokeColor || "#000";
+    cxt.stroke();
+    cxt.restore();
+}
+
+function drawRoundRectPath(cxt, width, height, radius) {
+    cxt.beginPath(0);
+    //从右下角顺时针绘制，弧度从0到1/2PI  
+    cxt.arc(width - radius, height - radius, radius, 0, Math.PI / 2);
+
+    //矩形下边线  
+    cxt.lineTo(radius, height);
+
+    //左下角圆弧，弧度从1/2PI到PI  
+    cxt.arc(radius, height - radius, radius, Math.PI / 2, Math.PI);
+
+    //矩形左边线  
+    cxt.lineTo(0, radius);
+
+    //左上角圆弧，弧度从PI到3/2PI  
+    cxt.arc(radius, radius, radius, Math.PI, Math.PI * 3 / 2);
+
+    //上边线  
+    cxt.lineTo(width - radius, 0);
+
+    //右上角圆弧  
+    cxt.arc(width - radius, radius, radius, Math.PI * 3 / 2, Math.PI * 2);
+
+    //右边线  
+    cxt.lineTo(width, height - radius);
+    cxt.closePath();
+}
+
+function fillRoundRectPro(cxt, x, y, width, height, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius, /*optional*/ fillColor) {
+    //圆的直径必然要小于矩形的宽高          
+    if (topLeftRadius +  topRightRadius > width || 
+    bottomLeftRadius +  bottomRightRadius > width || 
+    topLeftRadius +  bottomLeftRadius > height || 
+    topRightRadius +  bottomRightRadius > height) { 
+        return false; 
     }
-    .voice-wave.voice-wave-${t+1}>.play-line.active {
-        transform: translateX(${o}px);
+
+    cxt.save();
+    cxt.translate(x, y);
+    //绘制圆角矩形的各个边  
+    drawRoundRectPathPro(cxt, width, height, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius);
+    cxt.fillStyle = fillColor || "#000"; //若是给定了值就用给定的值否则给予默认值  
+    cxt.fill();
+    cxt.restore();
+}
+
+function drawRoundRectPathPro(cxt, width, height, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius) {
+    cxt.beginPath(0);
+    //从右下角顺时针绘制，弧度从0到1/2PI  
+    cxt.arc(width - bottomRightRadius, height - bottomRightRadius, bottomRightRadius, 0, Math.PI / 2);
+
+    //矩形下边线  
+    cxt.lineTo(bottomLeftRadius, height);
+
+    //左下角圆弧，弧度从1/2PI到PI  
+    cxt.arc(bottomLeftRadius, height - bottomLeftRadius, bottomLeftRadius, Math.PI / 2, Math.PI);
+
+    //矩形左边线  
+    cxt.lineTo(0, topLeftRadius);
+
+    //左上角圆弧，弧度从PI到3/2PI  
+    cxt.arc(topLeftRadius, topLeftRadius, topLeftRadius, Math.PI, Math.PI * 3 / 2);
+
+    //上边线  
+    cxt.lineTo(width - topRightRadius, 0);
+
+    //右上角圆弧  
+    cxt.arc(width - topRightRadius, topRightRadius, topRightRadius, Math.PI * 3 / 2, Math.PI * 2);
+
+    //右边线  
+    cxt.lineTo(width, height - bottomRightRadius);
+    cxt.closePath();
+}
+
+function drawWave(context, audioHeight, waveHeightArr, radius, waveColor) {
+    //绘制wave
+    for (let i = 0; i < waveHeightArr.length; ++i) {
+        fillRoundRect(context, 4 * i, (audioHeight - waveHeightArr[i]) / 2, 2, waveHeightArr[i], radius, waveColor);
     }
-    `;for(let e=0;e<n;++e)u+=`
-        .voice-wave-${t+1} span.voice-wave-item:nth-child(${e+1}) {
-            height: ${10*(Math.floor(8*Math.random())+3)}%;
-            margin-left: ${0==e?0:2}px;
+}
+
+function drawWaveWhenPlaying(context, audioHeight, playLineX, waveHeightArr, radius, activeWaveColor, inactiveWaveColor) {
+    //绘制wave
+    for (let i = 0; i < waveHeightArr.length; ++i) {
+        if (4 * i + 2 <= playLineX) {
+            fillRoundRect(context, 4 * i, (audioHeight - waveHeightArr[i]) / 2, 2, waveHeightArr[i], radius, activeWaveColor);
+        } else if (4 * i >= playLineX) {
+            fillRoundRect(context, 4 * i, (audioHeight - waveHeightArr[i]) / 2, 2, waveHeightArr[i], radius, inactiveWaveColor);
+        } else {
+            if (playLineX - 4 * i >= 1) {
+                fillRoundRect(context, 4 * i, (audioHeight - waveHeightArr[i]) / 2, 2, waveHeightArr[i], radius, inactiveWaveColor);
+                fillRoundRectPro(context, 4 * i, (audioHeight - waveHeightArr[i]) / 2, playLineX - 4 * i, waveHeightArr[i], radius, 0, 0, radius, activeWaveColor);
+            } else {
+                fillRoundRect(context, 4 * i, (audioHeight - waveHeightArr[i]) / 2, 2, waveHeightArr[i], radius, activeWaveColor);
+                fillRoundRectPro(context, 4 * i, (audioHeight - waveHeightArr[i]) / 2, 2 - playLineX + 4 * i, waveHeightArr[i], 0, radius, radius, 0, inactiveWaveColor);
+            }
         }
-        `;i=document.createElement("style");i.setAttribute("type","text/css"),i.innerHTML=u,document.getElementsByTagName("head").item(0).appendChild(i)}function createWechatVoiceDom(e){var t=e.parentElement;let a=t.querySelector(".wechat-voice");var i=e.duration,i=Math.floor(i);t.querySelector(".voice-seconds").innerHTML=`${60<i?"..":i}"`,t.querySelector(".voice-placeholder").style.width=2*i+"px";let n=!1;e.addEventListener("ended",()=>{e.pause(),a.classList.remove("play"),e.currentTime=0,n=!1}),t.addEventListener("click",()=>{n=n?(e.pause(),a.classList.remove("play"),!1):(e.play(),a.classList.add("play"),!0)})}
+        
+    }
+}
+
+function drawPlayLine(context, playLineHeight, playLineX, playLineColor) {
+    // 绘制 playLine
+    fillRoundRect(context, playLineX, 0, 1, playLineHeight, 0.1, playLineColor);
+}
+
+function createVoiceDom(audios) {
+    for (let i = 0; i < audios.length; ++i) {
+        let audio = audios[i];
+        audio.loop = false;
+        let currentTime = audio.currentTime // 当前播放时间
+
+        if (audio.classList.contains('qq')) {
+            if (isNaN(audio.duration) || audio.duration === Infinity) {
+                audio.addEventListener('durationchange', ()=>{
+                    // createCssStyle(audio, i);
+                    createWaveDom(audio);
+                });
+            } else {
+                // createCssStyle(audio, i);
+                createWaveDom(audio);
+            }
+        } else if (audio.classList.contains('wechat')) {
+            if (isNaN(audio.duration) || audio.duration === Infinity) {
+                audio.addEventListener('durationchange', ()=>{
+                    createWechatVoiceDom(audio);
+                });
+            } else {
+                createWechatVoiceDom(audio);
+            }
+        }
+    }
+}
+
+// cancas 效果更好
+function createWaveDom(audio) {
+    let voiceDom = audio.parentElement;
+    let audioCanvas = voiceDom.querySelector('canvas');
+    if (audioCanvas.getContext("2d")) { //判断浏览器是否支持canvas标签  
+        let totalTime = audio.duration;
+        let totalTimeInt = Math.floor(totalTime);
+        let spanNum = totalTimeInt + 2 > 25 ? 25 : totalTimeInt + 2;  // 防止过多溢出容器而导致被hidden切割边缘
+    
+        let pauseBtn = voiceDom.querySelector('.pause-btn');
+        let playBtn = voiceDom.querySelector('.play-btn');
+        let voiceSecondsSpan = voiceDom.querySelector('.voice-seconds');
+
+        voiceSecondsSpan.innerHTML = `${totalTimeInt > 60 ? '..' : totalTimeInt}"`;
+
+        let dpr = window.devicePixelRatio;
+
+        //设置canvas的宽度和高度  
+        audioCanvas.width = (spanNum * 2 - 1) * 2 * dpr;
+        audioCanvas.height = 23 * dpr;
+
+        audioCanvas.style.width = (spanNum * 2 - 1) * 2 + 'px';
+        audioCanvas.style.height = 23 + 'px';
+
+        let waveHeightArr = [];
+        for (let i = 0; i < spanNum; ++i) {
+            // (Math.floor(Math.random()*(100-10+1))+10) [10, 100]之间的随机整数
+            let h = (Math.floor(Math.random()*(80-30+1))+30) / 100 * audioCanvas.height * 0.8;
+            waveHeightArr.push(h);
+        }
+
+        var context = audioCanvas.getContext("2d"); //获取画布context的上下文环境 
+        context.scale(dpr, 1);
+
+        let activeWaveColor = '#333';
+        let inactiveWaveColor = '#999';
+
+        if (audioCanvas.classList.contains('right')) {
+            activeWaveColor = '#ffffff';
+            inactiveWaveColor = '#1373b3';
+        }
+
+        if (utils.dark.mode === "dark") {
+            activeWaveColor = '#ccc';
+            inactiveWaveColor = '#707070';
+            if (audioCanvas.classList.contains('right')) {
+                activeWaveColor = '#fff9';
+                inactiveWaveColor = '#6797b780';
+            }
+        }
+
+        let playFlag = false;
+
+        //绘制wave
+        drawWave(context,audioCanvas.height,waveHeightArr,1,activeWaveColor);
+
+        audio.addEventListener('timeupdate', ()=>{
+            if (audio.currentTime > 0) {
+                if (utils.dark.mode === "dark") {
+                    activeWaveColor = '#ccc';
+                    inactiveWaveColor = '#707070';
+                    if (audioCanvas.classList.contains('right')) {
+                        activeWaveColor = '#fff9';
+                        inactiveWaveColor = '#6797b780';
+                    }
+                } else {
+                    activeWaveColor = '#333';
+                    inactiveWaveColor = '#999';
+                    if (audioCanvas.classList.contains('right')) {
+                        activeWaveColor = '#ffffff';
+                        inactiveWaveColor = '#1373b3';
+                    }
+                }
+                utils.requestAnimationFrame(()=>{
+                    context.clearRect(0, 0, audioCanvas.width, audioCanvas.height);
+                    drawWaveWhenPlaying(context,audioCanvas.height,(audio.currentTime / audio.duration) * audioCanvas.width / dpr,waveHeightArr,1,activeWaveColor,inactiveWaveColor);
+                    drawPlayLine(context,audioCanvas.height,(audio.currentTime / audio.duration / dpr) * audioCanvas.width,activeWaveColor);
+                });
+            }
+        });
+
+        audio.addEventListener('ended', ()=>{
+            audio.pause();
+            pauseBtn.style.display = "none";
+            playBtn.style.display = "flex";
+            audio.currentTime = 0;
+            utils.requestAnimationFrame(()=>{
+                context.clearRect(0, 0, audioCanvas.width, audioCanvas.height);
+                drawWave(context,audioCanvas.height,waveHeightArr,1,activeWaveColor);
+            });
+            playFlag = false;
+        });
+        voiceDom.addEventListener('click', ()=>{
+            if (pauseBtn.style.display === 'flex') {
+                audio.pause();
+                pauseBtn.style.display = "none";
+                playBtn.style.display = "flex";
+                playFlag = false;
+            } else {
+                audio.play();
+                pauseBtn.style.display = "flex";
+                playBtn.style.display = "none";
+                playFlag = true;
+            }
+        });
+
+        utils.dark.push(function () {
+            if (!playFlag) {
+                if (utils.dark.mode === "dark") {
+                    activeWaveColor = '#ccc';
+                    inactiveWaveColor = '#707070';
+                    if (audioCanvas.classList.contains('right')) {
+                        activeWaveColor = '#fff9';
+                        inactiveWaveColor = '#6797b780';
+                    }
+                } else {
+                    activeWaveColor = '#333';
+                    inactiveWaveColor = '#999';
+                    if (audioCanvas.classList.contains('right')) {
+                        activeWaveColor = '#ffffff';
+                        inactiveWaveColor = '#1373b3';
+                    }
+                }
+                if (audio.currentTime > 0) {
+                    utils.requestAnimationFrame(()=>{
+                        context.clearRect(0, 0, audioCanvas.width, audioCanvas.height);
+                        drawWaveWhenPlaying(context,audioCanvas.height,(audio.currentTime / audio.duration) * audioCanvas.width / dpr,waveHeightArr,1,activeWaveColor,inactiveWaveColor);
+                        drawPlayLine(context,audioCanvas.height,(audio.currentTime / audio.duration / dpr) * audioCanvas.width,activeWaveColor);
+                    });
+                } else {
+                    utils.requestAnimationFrame(()=>{
+                        context.clearRect(0, 0, audioCanvas.width, audioCanvas.height);
+                        drawWave(context,audioCanvas.height,waveHeightArr,1,activeWaveColor);
+                    });
+                }
+            }
+        });
+        
+    } else {
+        console.log("浏览器不支持canvas");
+    }
+}
+
+// transition 效果差一些
+function createCssStyle(audio, i) {
+    let totalTime = audio.duration;
+    let totalTimeInt = Math.floor(totalTime);
+    let spanNum = totalTimeInt + 2 > 25 ? 25 : totalTimeInt + 2;  // 防止过多溢出容器而导致被hidden切割边缘
+
+    let voiceDom = audio.parentElement;
+    let pauseBtn = voiceDom.querySelector('.pause-btn');
+    let playBtn = voiceDom.querySelector('.play-btn');
+    let voiceSecondsSpan = voiceDom.querySelector('.voice-seconds');
+
+    voiceSecondsSpan.innerHTML = `${totalTimeInt > 60 ? '..' : totalTimeInt}"`;
+
+    let width = (2 * spanNum - 1) * 2;
+
+    if (totalTimeInt + 2 > 25) {
+        voiceDom.style.width = '100%';
+    }
+
+    let waveDiv = document.createElement('div');
+    let playLineDiv = document.createElement('div');
+    playLineDiv.className = 'play-line';
+    waveDiv.append(playLineDiv);
+    waveDiv.className = `voice-wave voice-wave-${i + 1}`;
+    for (let j = 0; j < spanNum; j++) {
+        let itemSpan = document.createElement('span');
+        itemSpan.className = 'voice-wave-item';
+        waveDiv.append(itemSpan)
+    }
+    voiceDom.insertBefore(waveDiv, voiceDom.querySelector('.voice-metas'));
+
+    audio.addEventListener('ended', ()=>{
+        audio.pause();
+        pauseBtn.style.display = "none";
+        playBtn.style.display = "flex";
+        audio.currentTime = 0;
+        playLineDiv.classList.remove('active');
+        playLineDiv.classList.add('back');
+    });
+    voiceDom.addEventListener('click', ()=>{
+        if (pauseBtn.style.display === 'flex') {
+            audio.pause();
+            pauseBtn.style.display = "none";
+            playBtn.style.display = "flex";
+            audio.currentTime = 0;
+            playLineDiv.classList.remove('active');
+            playLineDiv.classList.add('back');
+        } else {
+            audio.play();
+            pauseBtn.style.display = "flex";
+            playBtn.style.display = "none";
+            playLineDiv.classList.add('active');
+            playLineDiv.classList.remove('back');
+        }
+    });
+
+    let audio_css_str = `
+    .voice-wave.voice-wave-${i + 1}>.play-line {
+        transition: transform ${totalTime}s linear;
+        -moz-transition: transform ${totalTime}s linear;
+        -webkit-transition: transform ${totalTime}s linear;
+        -o-transition: transform ${totalTime}s linear;
+    }
+    .voice-wave.voice-wave-${i + 1}>.play-line.active {
+        transform: translateX(${width}px);
+    }
+    `;
+    for (let j = 0; j < spanNum; ++j) {
+        audio_css_str += `
+        .voice-wave-${i + 1} span.voice-wave-item:nth-child(${j + 1}) {
+            height: ${(Math.floor(Math.random() * (10 - 3 + 1)) + 3) * 10}%;
+            margin-left: ${j == 0 ? 0 : 2}px;
+        }
+        `;
+    }
+    let style_voice_wave = document.createElement('style');
+    style_voice_wave.setAttribute('type', 'text/css');
+    style_voice_wave.innerHTML = audio_css_str;
+    document.getElementsByTagName('head').item(0).appendChild(style_voice_wave);
+}
+
+function createWechatVoiceDom(audio) {
+    let voiceDom = audio.parentElement;
+    let wechatVoice = voiceDom.querySelector('.wechat-voice');
+
+    let totalTime = audio.duration;
+    let totalTimeInt = Math.floor(totalTime);
+
+    let voiceSecondsSpan = voiceDom.querySelector('.voice-seconds');
+    voiceSecondsSpan.innerHTML = `${totalTimeInt > 60 ? '..' : totalTimeInt}"`;
+
+    let voicePlaceholderDiv = voiceDom.querySelector('.voice-placeholder');
+    voicePlaceholderDiv.style.width = totalTimeInt * 2 + 'px';
+
+    let playFlag = false;
+
+    audio.addEventListener('ended', ()=>{
+        audio.pause();
+        wechatVoice.classList.remove('play');
+        audio.currentTime = 0;
+        playFlag = false;
+    });
+    voiceDom.addEventListener('click', ()=>{
+        if (playFlag) {
+            audio.pause();
+            wechatVoice.classList.remove('play');
+            playFlag = false;
+        } else {
+            audio.play();
+            wechatVoice.classList.add('play');
+            playFlag = true;
+        }
+    });
+}

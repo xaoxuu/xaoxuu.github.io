@@ -1,1 +1,43 @@
-utils.jq(()=>{$(function(){for(var a=document.getElementsByClassName("ds-sites"),s=0;s<a.length;s++){const t=a[s];var e=t.dataset.api;if(null!=e){const l=def.avatar,o=def.cover;utils.request(t,e,async a=>{var s;for(s of(await a.json()).content){var e,r='<div class="grid-cell site-card">',r=(r=(r=(r=(r=(r+=`<a class="card-link" target="_blank" rel="external nofollow noopener noreferrer" href="${s.url}">`)+`<img src="${s.cover||s.snapshot||s.screenshot}" onerror="javascript:this.removeAttribute('data-src');this.src='${o}';"/>`+'<div class="info">')+`<img src="${s.icon||s.avatar||l}" onerror="javascript:this.removeAttribute('data-src');this.src='${l}';"/>`)+`<span class="title">${s.title}</span>`)+`<span class="desc">${s.description||s.url}</span>`)+"</div>"+'<div class="labels">';for(e of s.labels)75<e.lightness?r+=`<div class="label" style="background:#${e.color};color:hsla(${e.hue}, ${e.saturation}%, 20%, 1);">${e.name}</div>`:90<e.saturation&&40<e.lightness?r+=`<div class="label" style="background:#${e.color};color:hsla(${e.hue}, 50%, 20%, 1);">${e.name}</div>`:r+=`<div class="label" style="background:#${e.color};color:white">${e.name}</div>`;r=(r+="</div>")+"</a>"+"</div>",$(t).find(".grid-box").append(r)}window.wrapLazyloadImages(t)})}}})});
+utils.jq(() => {
+  $(function () {
+    const els = document.getElementsByClassName('ds-sites');
+    for (var i = 0; i < els.length; i++) {
+      const el = els[i];
+      const api = el.dataset.api;
+      if (api == null) {
+        continue;
+      }
+      const default_avatar = def.avatar;
+      const default_cover = def.cover;
+      // layout
+      utils.request(el, api, async resp => {
+        const data = await resp.json();
+        for (let item of data.content) {
+          var cell = `<div class="grid-cell site-card">`;
+          cell += `<a class="card-link" target="_blank" rel="external nofollow noopener noreferrer" href="${item.url}">`;
+          cell += `<img src="${item.cover || item.snapshot || item.screenshot}" onerror="javascript:this.removeAttribute(\'data-src\');this.src=\'${default_cover}\';"/>`;
+          cell += `<div class="info">`;
+          cell += `<img src="${item.icon || item.avatar || default_avatar}" onerror="javascript:this.removeAttribute(\'data-src\');this.src=\'${default_avatar}\';"/>`;
+          cell += `<span class="title">${item.title}</span>`;
+          cell += `<span class="desc">${item.description || item.url}</span>`;
+          cell += `</div>`;
+          cell += `<div class="labels">`;
+          for (let label of item.labels) {
+            if (label.lightness > 75) {
+              cell += `<div class="label" style="background:#${label.color};color:hsla(${label.hue}, ${label.saturation}%, 20%, 1);">${label.name}</div>`;
+            } else if (label.saturation > 90 && label.lightness > 40) {
+              cell += `<div class="label" style="background:#${label.color};color:hsla(${label.hue}, 50%, 20%, 1);">${label.name}</div>`;
+            } else {
+              cell += `<div class="label" style="background:#${label.color};color:white">${label.name}</div>`;
+            }
+          }
+          cell += `</div>`;
+          cell += `</a>`;
+          cell += `</div>`;
+          $(el).find('.grid-box').append(cell);
+        }
+        window.wrapLazyloadImages(el);
+      });
+    }
+  });
+});

@@ -1,6 +1,134 @@
-utils.jq(()=>{Array.from(document.getElementsByClassName("ds-memos")).forEach(i=>{const t=i.dataset.api;if(!t)return;const r=i.getAttribute("avatar")||def.avatar,n=i.getAttribute("limit"),l=t.match(/https:\/\/(.*?)\/(.*)/i)[1];utils.request(i,t,async e=>{e=await e.json();let s=u.identify(e);if("feature"!==s.version){const t=i.getAttribute("user")?.split(",")||[],a=i.getAttribute("hide")?.split(",")||[];await Promise.all(s.data.slice(0,n||s.data.length).map(e=>async function(e,s,t,a,i,r){var n=u[s.version]||u.feature;return`<div class="timenode">
-                      <div class="header">${t.length||a.includes("user")?"":await n.buildUser(e,s,i)}
-                      <span>${n.buildDate(e).toLocaleString()}</span></div>
-                      <div class="body">${marked.parse(e.content||"")}
-                      <p>${n.buildImages(e,r).join("")}</p>
-                      </div></div>`}(e,s,t,a,r,l).then(e=>$(i).append(e))))}});const u={"22-":{buildUser:async(e,s,t)=>`<div class="user-info">${t?`<img src="${t}">`:""}<span>${e.creatorName}</span></div>`,buildDate:e=>new Date(1e3*e.createdTs),buildImages:(e,s)=>(e.resourceList||[]).filter(e=>e.type?.includes("image/")).map(e=>`<p><img src="${e.externalLink||`https://${s}/o/r/`+e.id}"></p>`)},"22+":{buildUser:async(e,s,t)=>{const a=e?.creator.split("/")[1];let i=s.users.find(e=>e.id===parseInt(a));i||(s.requests[a]||(s.requests[a]=fetch(s.site+"/api/v1/users/"+a).then(e=>e.json()).then(e=>{e.username?(i=e,s.users.push(e)):i=null}).finally(()=>delete s.requests[a])),await s.requests[a],i=s.users.find(e=>e.id===parseInt(a)));e=i?i.nickname||i.username:"memos",t=i?.avatarUrl?""+s.site+i.avatarUrl:t||"";return`<div class="user-info">${t?`<img src="${t}">`:""}<span>${e}</span></div>`},buildDate:e=>new Date(e.createTime),buildImages:e=>(e.resources||[]).filter(e=>e.type?.includes("image/")).map(e=>`<p><img src="${e.externalLink||`https://${l}/o/r/`+e.id}"></p>`)},"25+":{buildUser:async(e,s,t)=>{const a=e?.creator.split("/")[1];let i=s.users.find(e=>e.name.split("/")[1]===a);i||(s.requests[a]||(s.requests[a]=fetch(s.site+"/api/v1/users/"+a).then(e=>e.json()).then(e=>{e.username?(i=e,s.users.push(e)):i=null}).finally(()=>delete s.requests[a])),await s.requests[a],i=s.users.find(e=>e.name.split("/")[1]===a)),console.log(JSON.stringify(i));e=i?i.displayName||i.username:"memos",t=i?.avatarUrl?""+s.site+i.avatarUrl:t||"";return`<div class="user-info">${t?`<img src="${t}">`:""}<span>${e}</span></div>`},buildDate:e=>new Date(e.createTime),buildImages:e=>(e.attachments||[]).filter(e=>e.type?.includes("image/")).map(e=>`<div class="image-bg"><img src="${e.externalLink||`https://${l}/file/${e.name}/`+e.filename}"></div>`)},feature:{buildUser:async()=>"memos",buildDate:()=>new Date,buildImages:()=>[]},identify:e=>{var s={version:"feature",users:[],site:t.split("/api/v1")[0],requests:{},data:[]};return Array.isArray(e)?(s.version="22-",s.data=e,console.log("当前Memos版本为22-")):e.memos&&!e.memos[0].attachments?(s.version="22+",s.data=e.memos,console.log("当前Memos版本为22+")):e.memos&&e.memos[0].attachments?(s.version="25+",s.data=e.memos,console.log("当前Memos版本为25+")):(s.version="feature",console.log("当前Memos版本过高，请到Stellar社区反馈")),s}}})});
+utils.jq(() => {
+  const els = Array.from(document.getElementsByClassName('ds-memos'));
+
+  els.forEach(el => {
+    const api = el.dataset.api;
+    if (!api) return;
+
+    const default_avatar = el.getAttribute('avatar') || def.avatar;
+    const limit = el.getAttribute('limit');
+    const host = api.match(/https:\/\/(.*?)\/(.*)/i)[1];
+
+    utils.request(el, api, async resp => {
+      const data = await resp.json();
+      let memos = versionHandlers.identify(data);
+      if (memos.version === "feature" )return;
+
+      const users = el.getAttribute('user')?.split(",") || [];
+      const hide = el.getAttribute('hide')?.split(",") || [];
+
+      await Promise.all(memos.data.slice(0, limit || memos.data.length).map(item =>
+          createMemoCell(item, memos, users, hide, default_avatar, host).then(cell => $(el).append(cell))
+      ));
+    });
+
+    async function createMemoCell(item, memos, users, hide, default_avatar, host) {
+      const versionHandler = versionHandlers[memos.version] || versionHandlers["feature"];
+      return `<div class="timenode">
+                      <div class="header">${!users.length && !hide.includes('user') ? await versionHandler.buildUser(item, memos, default_avatar) : ''}
+                      <span>${versionHandler.buildDate(item).toLocaleString()}</span></div>
+                      <div class="body">${marked.parse(item.content || '')}
+                      <p>${versionHandler.buildImages(item, host).join('')}</p>
+                      </div></div>`;
+    }
+
+    // Memos版本管理
+    const versionHandlers = {
+      "22-": {
+        buildUser: async (item, memos, default_avatar) =>
+            `<div class="user-info">${default_avatar ? `<img src="${default_avatar}">` : ''}<span>${item.creatorName}</span></div>`,
+        buildDate: item => new Date(item.createdTs * 1000),
+        buildImages: (item, host) => (item.resourceList || []).filter(res => res.type?.includes('image/')).map(res =>
+            `<p><img src="${res.externalLink || `https://${host}/o/r/${res.id}`}"></p>`
+        )
+      },
+      "22+": {
+        buildUser: async (item, memos, default_avatar) => {
+          const creatorId = item?.creator.split('/')[1];
+          let user = memos.users.find(user => user.id === parseInt(creatorId));
+          if (!user) {
+            if (!memos.requests[creatorId]) {
+              memos.requests[creatorId] = fetch(`${memos.site}/api/v1/users/${creatorId}`)
+                  .then(response => response.json())
+                  .then(data => {
+                    if (data.username) {
+                      user = data;
+                      memos.users.push(data);
+                    } else {
+                      user = null;
+                    }
+                  })
+                  .finally(() => delete memos.requests[creatorId]);
+            }
+            await memos.requests[creatorId];
+            user = memos.users.find(user => user.id === parseInt(creatorId));
+          }
+          const name = user ? user.nickname || user.username : 'memos';
+          const avatarUrl = user?.avatarUrl ? `${memos.site}${user.avatarUrl}` : default_avatar || '';
+          return `<div class="user-info">${avatarUrl ? `<img src="${avatarUrl}">` : ''}<span>${name}</span></div>`;
+        },
+        buildDate: item => new Date(item.createTime),
+        buildImages: (item) => (item.resources || []).filter(res => res.type?.includes('image/')).map(res =>
+            `<p><img src="${res.externalLink || `https://${host}/o/r/${res.id}`}"></p>`
+        )
+      },
+      "25+": {
+        buildUser: async (item, memos, default_avatar) => {
+          const creatorId = item?.creator.split('/')[1];
+          let user = memos.users.find(user => user.name.split('/')[1] === creatorId);
+          if (!user) {
+            if (!memos.requests[creatorId]) {
+              memos.requests[creatorId] = fetch(`${memos.site}/api/v1/users/${creatorId}`)
+                  .then(response => response.json())
+                  .then(data => {
+                    if (data.username) {
+                      user = data;
+                      memos.users.push(data);
+                    } else {
+                      user = null;
+                    }
+                  })
+                  .finally(() => delete memos.requests[creatorId]);
+            }
+            await memos.requests[creatorId];
+            user = memos.users.find(user => user.name.split('/')[1] === creatorId);
+          }
+          console.log(JSON.stringify(user));
+          const name = user ? user.displayName || user.username : 'memos';
+          const avatarUrl = user?.avatarUrl ? `${memos.site}${user.avatarUrl}` : default_avatar || '';
+          return `<div class="user-info">${avatarUrl ? `<img src="${avatarUrl}">` : ''}<span>${name}</span></div>`;
+        },
+        buildDate: item => new Date(item.createTime),
+        buildImages: (item) => (item.attachments || []).filter(res => res.type?.includes('image/')).map(res =>
+            `<div class="image-bg"><img src="${res.externalLink || `https://${host}/file/${res.name}/${res.filename}`}"></div>`
+        )
+      },
+      "feature": {
+        buildUser: async () => "memos",
+        buildDate: () => new Date(),
+        buildImages: () => []
+      },
+      identify: (data) => {
+        let memos = { version: "feature", users: [], site: api.split('/api/v1')[0], requests: {}, data: [] }
+        if (Array.isArray(data)) {
+          memos.version = "22-";
+          memos.data = data;
+          console.log("当前Memos版本为22-");
+        } else if (data.memos && !data.memos[0].attachments) {
+          memos.version = "22+";
+          memos.data = data.memos;
+          console.log("当前Memos版本为22+");
+        } else if (data.memos && data.memos[0].attachments) {
+          memos.version = "25+";
+          memos.data = data.memos;
+          console.log("当前Memos版本为25+");
+        } else {
+          memos.version = "feature";
+          console.log("当前Memos版本过高，请到Stellar社区反馈");
+        }
+        return memos
+      }
+    };
+  });
+});
+
