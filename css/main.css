@@ -9516,6 +9516,122 @@ a[data-fancybox] {
   margin-right: 1rem;
   border-radius: 8px;
 }
+.page-loading-bar {
+  position: fixed;
+  top: 0;
+  left: calc(50% - 16px);
+  width: 32px;
+  height: 32px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+.page-loading-bar img {
+  height: 100%;
+}
+body.pjax-loading .page-loading-bar {
+  display: flex;
+}
+.l_body .l_main,
+#l_cover {
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+body.pjax-loading .l_body .l_main,
+body.pjax-loading #l_cover {
+  opacity: 0.4;
+  transform: translateY(0px);
+  pointer-events: none;
+}
+body.pjax-loaded .l_body .l_main,
+body.pjax-loaded #l_cover {
+  animation: pjax-fade-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  .l_body .l_main,
+  #l_cover {
+    transition: opacity 0.4s ease;
+  }
+  body.pjax-loading .l_body .l_main,
+  body.pjax-loading #l_cover {
+    transform: none;
+  }
+  body.pjax-loaded .l_body .l_main,
+  body.pjax-loaded #l_cover {
+    animation: pjax-fade-simple 0.4s ease forwards;
+  }
+@-moz-keyframes pjax-fade-simple {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+@-webkit-keyframes pjax-fade-simple {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+@-o-keyframes pjax-fade-simple {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+@keyframes pjax-fade-simple {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+}
+@-moz-keyframes pjax-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes pjax-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-o-keyframes pjax-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes pjax-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .cmt-body.beaudar {
   margin: 0 -4px;
   width: calc(100% + 8px);

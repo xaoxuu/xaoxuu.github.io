@@ -1072,6 +1072,13 @@
   };
 </script>
 <script defer src="https://res.xaox.cc/npm/flying-pages@2/flying-pages.min.js"></script><script>
+    window.StellarPjaxConfig = {
+        selectors: ["title","#l_cover",".l_body"],
+        timeout: 10000,
+        cacheBust: false
+    };
+</script>
+<script src="/js/plugins/pjax.js" defer></script><script>
   ctx.fancybox = {
     selector: `.timenode p>img`,
     css: `https://res.xaox.cc/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css`,
