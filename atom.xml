@@ -6,7 +6,7 @@
   <link href="https://xaoxuu.com/atom.xml" rel="self"/>
   
   <link href="https://xaoxuu.com/"/>
-  <updated>2026-01-16T12:36:00.000Z</updated>
+  <updated>2026-02-26T12:00:00.000Z</updated>
   <id>https://xaoxuu.com/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>连续两个晚上做梦笑醒</title>
+    <link href="https://xaoxuu.com/blog/20260226/"/>
+    <id>https://xaoxuu.com/blog/20260226/</id>
+    <published>2026-02-26T12:00:00.000Z</published>
+    <updated>2026-02-26T12:00:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;连续两个晚上做梦笑醒，不是因为有什么好事，只是睡眠变浅了。&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>2025年度OKR复盘</title>
@@ -179,39 +194,6 @@
     
     <category term="思考" scheme="https://xaoxuu.com/blog/categories/%E6%80%9D%E8%80%83/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>感谢 AI，动态友链获重磅升级！</title>
-    <link href="https://xaoxuu.com/blog/20250602/"/>
-    <id>https://xaoxuu.com/blog/20250602/</id>
-    <published>2025-06-02T11:56:49.000Z</published>
-    <updated>2025-06-02T11:56:49.000Z</updated>
-    
-    
-    <summary type="html">最近用TRAE重构了动态友链项目，新版功能更加强大，使用更简单，快来试试吧。</summary>
-    
-    
-    
-    <category term="产研" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/"/>
-    
-    <category term="设计开发" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/%E8%AE%BE%E8%AE%A1%E5%BC%80%E5%8F%91/"/>
-    
-    
-    <category term="开源项目" scheme="https://xaoxuu.com/blog/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
-    
-    <category term="动态友链" scheme="https://xaoxuu.com/blog/tags/%E5%8A%A8%E6%80%81%E5%8F%8B%E9%93%BE/"/>
-    
-    <category term="GitHub Actions" scheme="https://xaoxuu.com/blog/tags/github-actions/"/>
-    
-    <category term="GitHub Workflow" scheme="https://xaoxuu.com/blog/tags/github-workflow/"/>
-    
-    <category term="友链" scheme="https://xaoxuu.com/blog/tags/%E5%8F%8B%E9%93%BE/"/>
-    
-    <category term="动态" scheme="https://xaoxuu.com/blog/tags/%E5%8A%A8%E6%80%81/"/>
-    
-    <category term="静态友链" scheme="https://xaoxuu.com/blog/tags/%E9%9D%99%E6%80%81%E5%8F%8B%E9%93%BE/"/>
     
   </entry>
   
