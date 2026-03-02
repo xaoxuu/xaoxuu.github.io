@@ -1526,6 +1526,7 @@ pre:not([class]):has(>code) {
   --theme: var(--text-p3);
   margin: var(--gap-p) 0;
   border-radius: 16px;
+  corner-shape: superellipse(1.2);
   overflow: hidden;
   background: var(--block);
   font-family: Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
@@ -1621,6 +1622,7 @@ pre:not([class]):has(>code) {
 .md-text .gist .gist-file {
   border: 1px solid var(--block-border);
   border-radius: 16px;
+  corner-shape: superellipse(1.2);
   overflow: hidden;
 }
 .md-text .gist .gist-data {
@@ -2016,6 +2018,9 @@ svg.loading {
 .loading-wrap.error:after {
   content: '加载失败，请稍后重试。';
 }
+.article-footer .loading-wrap {
+  background: none;
+}
 audio,
 video {
   max-width: 100%;
@@ -2352,6 +2357,7 @@ div.toast.show {
   padding: 1rem;
   background: var(--block);
   border-radius: 24px;
+  corner-shape: superellipse(1.2);
   border: 1px solid var(--block-border);
   font-size: 0.9375rem;
   line-height: 1.6;
@@ -4533,6 +4539,7 @@ details.folding {
   padding: 1rem;
   margin: 1rem 0;
   border-radius: 16px;
+  corner-shape: superellipse(1.2);
   background: var(--theme-block);
   border: 1px solid var(--theme-border);
 }
@@ -5009,6 +5016,9 @@ details.folding[child=iframe] >div.body {
 .tag-plugin.gallery.grid-box {
   display: grid;
 }
+.tag-plugin.gallery.grid-box .grid-cell {
+  corner-shape: superellipse(1.2);
+}
 .tag-plugin.gallery.grid-box[size='xs'] {
   grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
   grid-gap: 2px;
@@ -5130,6 +5140,7 @@ details.folding[child=iframe] >div.body {
 .tag-plugin.grid[bg]>.cell {
   padding: 1rem;
   border-radius: 16px;
+  corner-shape: superellipse(1.2);
 }
 .tag-plugin.grid[bg='box']>.cell {
   background: var(--block);
@@ -5217,6 +5228,7 @@ p>strong>span.tag-plugin.icon {
 .tag-plugin.image .image-bg {
   text-align: center;
   border-radius: 16px;
+  corner-shape: superellipse(1.2);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -5238,6 +5250,7 @@ p>strong>span.tag-plugin.icon {
   display: block;
   object-fit: cover;
   border-radius: 16px;
+  corner-shape: superellipse(1.2);
 }
 .tag-plugin.image .image-bg .image-download {
   z-index: 2;
@@ -5592,6 +5605,7 @@ p>strong>span.tag-plugin.icon {
   width: 300px;
   max-width: 100%;
   border-radius: 12px;
+  corner-shape: superellipse(1.2);
   transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -webkit-transition: all 0.2s ease-out;
@@ -5778,6 +5792,7 @@ p>strong>span.tag-plugin.icon {
   position: relative;
   padding: 0.25rem 1rem;
   border-radius: 16px;
+  corner-shape: superellipse(1.2);
   background: var(--theme-block);
   overflow: hidden;
   border: 1px solid var(--theme-border);
@@ -5855,6 +5870,7 @@ p>strong>span.tag-plugin.icon {
 .md-text .tag-plugin.okr {
   position: relative;
   border-radius: 16px;
+  corner-shape: superellipse(1.2);
   background: var(--theme-block);
   border: 1px solid var(--theme-border);
   overflow: hidden;
@@ -6232,6 +6248,7 @@ p>strong>span.tag-plugin.icon {
 }
 .sites-wrap .site-card .card-link .lazy-box {
   border-radius: 12px;
+  corner-shape: superellipse(1.2);
   box-shadow: 0 1px 2px 0px rgba(0,0,0,0.2);
   overflow: hidden;
 }
@@ -6251,6 +6268,7 @@ p>strong>span.tag-plugin.icon {
   margin-right: 8px;
   margin-top: 2px;
   border-radius: 100%;
+  corner-shape: superellipse(1);
 }
 .sites-wrap .site-card .card-link .info .lazy-box >img {
   width: 28px;
@@ -6449,6 +6467,7 @@ p>strong>span.tag-plugin.icon {
 }
 .tag-plugin.timeline p>img {
   border-radius: 8px;
+  corner-shape: superellipse(1.2);
 }
 .tag-plugin.timeline:before {
   content: '';
@@ -6473,6 +6492,7 @@ p>strong>span.tag-plugin.icon {
 }
 .l_body[type=story] .md-text.content .tag-plugin.timeline p>img {
   border-radius: 8px;
+  corner-shape: superellipse(1.2);
 }
 .tag-plugin.timeline .timenode {
   position: relative;
@@ -6554,6 +6574,7 @@ p>strong>span.tag-plugin.icon {
 .tag-plugin.timeline .body {
   background: var(--card);
   border-radius: 16px;
+  corner-shape: superellipse(1.2);
   border-top-left-radius: 2px;
   padding: 0.5rem 1rem;
   margin-top: 4px;
@@ -6625,6 +6646,7 @@ p>strong>span.tag-plugin.icon {
 .tag-plugin.timeline[data-api] .body .lazy-box {
   margin: 0.5rem 0;
   border-radius: 16px;
+  corner-shape: superellipse(1.2);
 }
 .tag-plugin.timeline[data-api] .body .lazy-box >img {
   margin: 0 auto;
@@ -6634,6 +6656,7 @@ p>strong>span.tag-plugin.icon {
 }
 aside .tag-plugin.timeline[data-api] .body .lazy-box {
   border-radius: 8px;
+  corner-shape: superellipse(1.2);
 }
 .tag-plugin.timeline[data-api] .body .footer {
   margin: 0 0 -0.5rem;
@@ -7032,6 +7055,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   width: 100%;
   min-height: 40px;
   border-radius: 8px;
+  corner-shape: superellipse(1.2);
   font-size: 0.9375rem;
   font-weight: 500;
   color: var(--text-p3);
@@ -7376,6 +7400,7 @@ details.toc[open] >div.body section .header+.doc_tree {
 }
 .linklist .link {
   border-radius: 8px;
+  corner-shape: superellipse(1.2);
   color: var(--text-p2);
   min-height: 32px;
   padding: 0 4px;
@@ -7623,6 +7648,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   padding: 6px 16px;
   display: block;
   border-radius: 8px;
+  corner-shape: superellipse(1.2);
   color: var(--text-p1);
   transition: background 0.2s ease-out;
   -moz-transition: background 0.2s ease-out;
@@ -8469,10 +8495,12 @@ details.toc[open] >div.body section .header+.doc_tree {
 .l_body[type=story] .md-text.content p>img,
 .l_body[type=story] .md-text.content .tag-plugin.image .image-bg {
   border-radius: 24px;
+  corner-shape: superellipse(1.2);
 }
 .l_body[type=story] .md-text.content p>img >img,
 .l_body[type=story] .md-text.content .tag-plugin.image .image-bg >img {
   border-radius: 24px;
+  corner-shape: superellipse(1.2);
 }
 .l_body[type=story] .md-text.content>blockquote,
 .md-text.content .tag-plugin.blockquote {
@@ -9320,6 +9348,7 @@ body>.sitebg .siteblur:hover {
 .md-text.content p>img,
 .md-text.content .tag-plugin.image .image-bg {
   border-radius: 16px;
+  corner-shape: superellipse(1.2);
 }
 li:not([class]) a:not([class]),
 p:not([class]) a:not([class]),
@@ -9644,6 +9673,7 @@ body.pjax-loaded #l_cover {
 .cmt-body.twikoo .tk-content .tk-owo-emotion {
   width: unset;
   border-radius: 8px;
+  corner-shape: superellipse(1.2);
   max-height: 24px;
   max-width: 100px;
   display: inline;
@@ -9653,6 +9683,7 @@ body.pjax-loaded #l_cover {
   max-width: 400px;
   max-height: 400px;
   border-radius: 8px;
+  corner-shape: superellipse(1.2);
 }
 .OwO .OwO-body {
   background-color: var(--block) !important;
@@ -10122,6 +10153,7 @@ body.pjax-loaded #l_cover {
 .md-text .cmt-body.artalk .artalk p >img {
   margin: var(--gap-p) auto;
   border-radius: 8px;
+  corner-shape: superellipse(1.2);
 }
 .md-text .cmt-body.artalk .artalk a>img {
   display: inline;
