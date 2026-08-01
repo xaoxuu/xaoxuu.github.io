@@ -19,12 +19,12 @@
   <meta name="theme-color" content="#f9fafb">
   <title>iOS 接入 Strava 分享模块（上篇：FitSDK） - XAOXUU</title>
 
-  <meta name="description" content="fit 是一种文件协议，体积小巧，多用于可穿戴设备记录、传输运动与健康数据。官方提供了 C、C++、Java 语言的 SDK 和非常详细的使用文档。因此在 iOS 端接入 fit 就需要在 C 或 C++ 的 SDK 基础上进行一点面向对象的封装。">
+  <meta name="description" content="本文内容已经过时，仅作参考。  fit 是一种文件协议，体积小巧，多用于可穿戴设备记录、传输运动与健康数据。官方提供了 C、C++、Java 语言的 SDK 和非常详细的使用文档。因此在 iOS 端接入 fit 就需要在 C 或 C++ 的 SDK 基础上进行一点面向对象的封装。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS 接入 Strava 分享模块（上篇：FitSDK）">
 <meta property="og:url" content="https://xaoxuu.com/blog/20170622/">
 <meta property="og:site_name" content="iOS 接入 Strava 分享模块（上篇：FitSDK）">
-<meta property="og:description" content="fit 是一种文件协议，体积小巧，多用于可穿戴设备记录、传输运动与健康数据。官方提供了 C、C++、Java 语言的 SDK 和非常详细的使用文档。因此在 iOS 端接入 fit 就需要在 C 或 C++ 的 SDK 基础上进行一点面向对象的封装。">
+<meta property="og:description" content="本文内容已经过时，仅作参考。  fit 是一种文件协议，体积小巧，多用于可穿戴设备记录、传输运动与健康数据。官方提供了 C、C++、Java 语言的 SDK 和非常详细的使用文档。因此在 iOS 端接入 fit 就需要在 C 或 C++ 的 SDK 基础上进行一点面向对象的封装。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp">
 <meta property="article:published_time" content="2017-06-21T16:00:00.000Z">
@@ -56,7 +56,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"xaoxuu","sameAs":[],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"},"dateCreated":"2017-06-22T00:00:00+08:00","dateModified":"2017-06-22T00:00:00+08:00","datePublished":"2017-06-22T00:00:00+08:00","description":"fit 是一种文件协议，体积小巧，多用于可穿戴设备记录、传输运动与健康数据。官方提供了 C、C++、Java 语言的 SDK 和非常详细的使用文档。因此在 iOS 端接入 fit 就需要在 C 或 C++ 的 SDK 基础上进行一点面向对象的封装。","headline":"iOS 接入 Strava 分享模块（上篇：FitSDK）","mainEntityOfPage":{"@type":"WebPage","@id":"https://xaoxuu.com/blog/20170622/"},"publisher":{"@type":"Organization","name":"xaoxuu","sameAs":[],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"}},"url":"https://xaoxuu.com/blog/20170622/","keywords":"iOS, FitSDK","image":[]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"xaoxuu","sameAs":[],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"},"dateCreated":"2017-06-22T00:00:00+08:00","dateModified":"2017-06-22T00:00:00+08:00","datePublished":"2017-06-22T00:00:00+08:00","description":"本文内容已经过时，仅作参考。\n\nfit 是一种文件协议，体积小巧，多用于可穿戴设备记录、传输运动与健康数据。官方提供了 C、C++、Java 语言的 SDK 和非常详细的使用文档。因此在 iOS 端接入 fit 就需要在 C 或 C++ 的 SDK 基础上进行一点面向对象的封装。","headline":"iOS 接入 Strava 分享模块（上篇：FitSDK）","mainEntityOfPage":{"@type":"WebPage","@id":"https://xaoxuu.com/blog/20170622/"},"publisher":{"@type":"Organization","name":"xaoxuu","sameAs":[],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"}},"url":"https://xaoxuu.com/blog/20170622/","keywords":"iOS, FitSDK","image":[]}</script>
   <link rel="apple-touch-icon" sizes="180x180" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="16x16" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="192x192" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/android-chrome-192x192.png"><link rel="manifest" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/site.webmanifest"><link rel="shortcut icon" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/favicon.ico"><meta name="theme-color" content="#f9fafb"><link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css" media="print" onload="this.media=&quot;all&quot;">
 </head>
 <body><div id="l_cover"></div><div class="l_body content" id="start" layout="post" type="tech"><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
@@ -97,7 +97,9 @@
     </div>
     
   </div>
-  </div><article class="md-text content"><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://developer.garmin.com/fit/?resources/fit/">fit</a> 是一种文件协议，体积小巧，多用于可穿戴设备记录、传输运动与健康数据。官方提供了 C、C++、Java 语言的 SDK 和非常详细的使用文档。因此在 iOS 端接入 fit 就需要在 C 或 C++ 的 SDK 基础上进行一点面向对象的封装。</p>
+  </div><article class="md-text content"><div class="tag-plugin colorful note" color="yellow"><div class="body"><p>本文内容已经过时，仅作参考。</p></div></div>
+
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://developer.garmin.com/fit/?resources/fit/">fit</a> 是一种文件协议，体积小巧，多用于可穿戴设备记录、传输运动与健康数据。官方提供了 C、C++、Java 语言的 SDK 和非常详细的使用文档。因此在 iOS 端接入 fit 就需要在 C 或 C++ 的 SDK 基础上进行一点面向对象的封装。</p>
 <span id="more"></span>
 
 <h2 id="认识-Fit"><a href="#认识-Fit" class="headerlink" title="认识 Fit"></a>认识 Fit</h2><p>我使用的 C 语言的 SDK，官方有示例 demo，在 <code>fit_mgr</code> 文件中提供了一些示例，这些代码未必全部都要用到。创建一个最简单的 <code>.fit</code> 文件的流程是：</p>
@@ -155,7 +157,9 @@
       <div class="header"><span>分享文章</span></div>
       <div class="body">
         <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://xaoxuu.com/blog/20170622/"></div>
-        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot;)"><img src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg"></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://xaoxuu.com/blog/20170622/&title=iOS 接入 Strava 分享模块（上篇：FitSDK） - XAOXUU&summary=fit 是一种文件协议，体积小巧，多用于可穿戴设备记录、传输运动与健康数据。官方提供了 C、C++、Java 语言的 SDK 和非常详细的使用文档。因此在 iOS 端接入 fit 就需要在 C 或 C++ 的 SDK 基础上进行一点面..."><img src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg"></a><a class="social share-item email" href="mailto:?subject=iOS 接入 Strava 分享模块（上篇：FitSDK） - XAOXUU&amp;body=https://xaoxuu.com/blog/20170622/"><img src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg"></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg"></a></div>
+        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot;)"><img src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg"></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://xaoxuu.com/blog/20170622/&title=iOS 接入 Strava 分享模块（上篇：FitSDK） - XAOXUU&summary=本文内容已经过时，仅作参考。
+
+fit 是一种文件协议，体积小巧，多用于可穿戴设备记录、传输运动与健康数据。官方提供了 C、C++、Java 语言的 SDK 和非常详细的使用文档。因此在 iOS 端接入 fit 就需要在 C 或 C+..."><img src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg"></a><a class="social share-item email" href="mailto:?subject=iOS 接入 Strava 分享模块（上篇：FitSDK） - XAOXUU&amp;body=https://xaoxuu.com/blog/20170622/"><img src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg"></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg"></a></div>
         
         <div class="qrcode" id="qrcode-wechat" style="opacity:0;height:0">
           <img src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://xaoxuu.com/blog/20170622/">
