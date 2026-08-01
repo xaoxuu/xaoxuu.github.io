@@ -6,7 +6,7 @@
   <link href="https://xaoxuu.com/atom.xml" rel="self"/>
   
   <link href="https://xaoxuu.com/"/>
-  <updated>2026-02-26T12:00:00.000Z</updated>
+  <updated>2026-07-31T16:00:00.000Z</updated>
   <id>https://xaoxuu.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>梦境：无法定格的偶遇</title>
+    <link href="https://xaoxuu.com/blog/20260801/"/>
+    <id>https://xaoxuu.com/blog/20260801/</id>
+    <published>2026-07-31T16:00:00.000Z</published>
+    <updated>2026-07-31T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;前面的梦已经记不太清了，大多是一些无聊的小事，只是我发现这个世界并不完美，偶尔冒出一些解释不清的异象。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="梦境" scheme="https://xaoxuu.com/blog/categories/%E6%A2%A6%E5%A2%83/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>连续两个晚上做梦笑醒</title>
@@ -176,23 +195,6 @@
     
     
     <category term="梦境" scheme="https://xaoxuu.com/blog/categories/%E6%A2%A6%E5%A2%83/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>预埋了两年半的数据，现在终于用上了</title>
-    <link href="https://xaoxuu.com/blog/20250604/"/>
-    <id>https://xaoxuu.com/blog/20250604/</id>
-    <published>2025-06-04T12:33:35.000Z</published>
-    <updated>2025-06-04T12:33:35.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;其实早在 Stellar 1.13.0 版本，我便引入了主题信息标签，初衷是待用户群体广泛升级后，通过解析此标签，在前端清晰展示用户当前所用的主题版本。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="思考" scheme="https://xaoxuu.com/blog/categories/%E6%80%9D%E8%80%83/"/>
     
     
   </entry>
