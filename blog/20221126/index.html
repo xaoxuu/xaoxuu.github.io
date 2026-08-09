@@ -314,7 +314,7 @@
 
 
 
-  <script>!function(){function t(){const t=document.getElementById("artalk_container");t&&util.viewportLazyload(t,function(){utils.css("https://res.xaox.cc/unpkg/artalk@2.9.1/dist/artalk.css"),utils.js("https://res.xaox.cc/unpkg/artalk@2.9.1/dist/artalk.js",{defer:!0}).then(function(){const e=t.getAttribute("comment_id")??decodeURI(window.location.pathname);Artalk.init({el:"#artalk_container",pageKey:e,pageTitle:"博客进阶：自动化部署",server:"https://res.xaox.cc/atk/",site:"XAOXUU",darkMode:"auto",imgUploader:function(t){let e=new Headers;e.set("Accept","application/json");let a=new FormData;return a.append("file",t),fetch("https://github-uploader.xaox.cc/api/v1/upload?user=cdn-x&repo=comments-assets",{method:"POST",body:a,headers:e}).then(t=>t.json()).then(t=>t.urls.gcore)}})})})}window.stellar=window.stellar||{},window.stellar.initComments=window.stellar.initComments||{},window.stellar.initComments.artalk=t,t()}()</script>
+  <script type="module">!function(){const t=document.getElementById("artalk_container");t&&util.viewportLazyload(t,function(){utils.css("https://res.xaox.cc/unpkg/artalk@2.9.1/dist/artalk.css"),utils.js("https://res.xaox.cc/unpkg/artalk@2.9.1/dist/artalk.js",{defer:!0}).then(function(){const e=t.getAttribute("comment_id")??decodeURI(window.location.pathname);Artalk.init({el:"#artalk_container",pageKey:e,pageTitle:"博客进阶：自动化部署",server:"https://res.xaox.cc/atk/",site:"XAOXUU",darkMode:"auto",imgUploader:function(t){let e=new Headers;e.set("Accept","application/json");let a=new FormData;return a.append("file",t),fetch("https://github-uploader.xaox.cc/api/v1/upload?user=cdn-x&repo=comments-assets",{method:"POST",body:a,headers:e}).then(t=>t.json()).then(t=>t.urls.gcore)}})})})}()</script>
 
 
 
