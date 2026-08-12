@@ -1,204 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>XAOXUU</title>
-  <icon>https://res.xaox.cc/gh/cdn-x/xaoxuu@main/avatar/classic.webp</icon>
-  <subtitle>For all time, always. | 风暴前夕</subtitle>
-  <link href="https://xaoxuu.com/atom.xml" rel="self"/>
-  
-  <link href="https://xaoxuu.com/"/>
-  <updated>2026-08-01T07:24:00.000Z</updated>
-  <id>https://xaoxuu.com/</id>
-  
   <author>
     <name>xaoxuu</name>
     <email>me@xaoxuu.com</email>
   </author>
-  
   <generator uri="https://hexo.io/">Hexo</generator>
-  
+  <icon>https://res.xaox.cc/gh/cdn-x/xaoxuu@main/avatar/classic.webp</icon>
+  <id>https://xaoxuu.com/</id>
+  <link href="https://xaoxuu.com/" rel="alternate"/>
+  <link href="https://xaoxuu.com/atom.xml" rel="self"/>
+  <rights>All rights reserved 2026, xaoxuu</rights>
+  <subtitle>For all time, always. | 风暴前夕</subtitle>
+  <title>XAOXUU</title>
+  <updated>2026-08-01T07:24:00.000Z</updated>
   <entry>
-    <title>梦境：无法定格的偶遇</title>
-    <link href="https://xaoxuu.com/blog/20260801/"/>
+    <author>
+      <name>xaoxuu</name>
+      <email>me@xaoxuu.com</email>
+    </author>
+    <category term="梦境" scheme="https://xaoxuu.com/blog/categories/%E6%A2%A6%E5%A2%83/"/>
     <id>https://xaoxuu.com/blog/20260801/</id>
+    <link href="https://xaoxuu.com/blog/20260801/"/>
     <published>2026-08-01T07:24:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>前面的梦已经记不太清了，大多是一些无聊的小事，只是我发现这个世界并不完美，偶尔冒出一些解释不清的异象。</p>
+</blockquote>]]>
+    </summary>
+    <title>梦境：无法定格的偶遇</title>
     <updated>2026-08-01T07:24:00.000Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;前面的梦已经记不太清了，大多是一些无聊的小事，只是我发现这个世界并不完美，偶尔冒出一些解释不清的异象。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="梦境" scheme="https://xaoxuu.com/blog/categories/%E6%A2%A6%E5%A2%83/"/>
-    
-    
   </entry>
-  
   <entry>
-    <title>连续两个晚上做梦笑醒</title>
-    <link href="https://xaoxuu.com/blog/20260226/"/>
+    <author>
+      <name>xaoxuu</name>
+      <email>me@xaoxuu.com</email>
+    </author>
     <id>https://xaoxuu.com/blog/20260226/</id>
+    <link href="https://xaoxuu.com/blog/20260226/"/>
     <published>2026-02-26T12:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>连续两个晚上做梦笑醒，不是因为有什么好事，只是睡眠变浅了。</p>]]>
+    </summary>
+    <title>连续两个晚上做梦笑醒</title>
     <updated>2026-02-26T12:00:00.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;连续两个晚上做梦笑醒，不是因为有什么好事，只是睡眠变浅了。&lt;/p&gt;</summary>
-    
-    
-    
-    
   </entry>
-  
   <entry>
-    <title>2025年度OKR复盘</title>
-    <link href="https://xaoxuu.com/blog/20260116/"/>
+    <author>
+      <name>xaoxuu</name>
+      <email>me@xaoxuu.com</email>
+    </author>
     <id>https://xaoxuu.com/blog/20260116/</id>
+    <link href="https://xaoxuu.com/blog/20260116/"/>
     <published>2026-01-16T12:36:00.000Z</published>
+    <summary>
+      <![CDATA[<div class="tag-plugin quot p"><p class="content"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Ic]]>
+    </summary>
+    <title>2025年度OKR复盘</title>
     <updated>2026-01-16T12:36:00.000Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;div class=&quot;tag-plugin quot p&quot;&gt;&lt;p class=&quot;content&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;32&quot; height=&quot;32&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;!-- Ic</summary>
-      
-    
-    
-    
-    
   </entry>
-  
   <entry>
-    <title>在混乱中建立秩序</title>
-    <link href="https://xaoxuu.com/blog/20251013/"/>
+    <author>
+      <name>xaoxuu</name>
+      <email>me@xaoxuu.com</email>
+    </author>
     <id>https://xaoxuu.com/blog/20251013/</id>
+    <link href="https://xaoxuu.com/blog/20251013/"/>
     <published>2025-10-13T12:36:00.000Z</published>
+    <summary>
+      <![CDATA[<p>人人向往秩序井然，却总被现实的混乱裹挟前行。那么，如何在混乱中逐步建立秩序呢？本文将结合我的亲身经历，从产品设计和技术实现的方面，分享我的方法与思考。</p>]]>
+    </summary>
+    <title>在混乱中建立秩序</title>
     <updated>2025-10-13T12:36:00.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;人人向往秩序井然，却总被现实的混乱裹挟前行。那么，如何在混乱中逐步建立秩序呢？本文将结合我的亲身经历，从产品设计和技术实现的方面，分享我的方法与思考。&lt;/p&gt;</summary>
-    
-    
-    
-    
   </entry>
-  
   <entry>
-    <title>关于本站备用站点的紧急通知</title>
-    <link href="https://xaoxuu.com/blog/20250713/"/>
+    <author>
+      <name>xaoxuu</name>
+      <email>me@xaoxuu.com</email>
+    </author>
     <id>https://xaoxuu.com/blog/20250713/</id>
+    <link href="https://xaoxuu.com/blog/20250713/"/>
     <published>2025-07-13T12:36:00.000Z</published>
+    <summary>
+      <![CDATA[<p>近期由于各种不可抗力因素，网站可访问性遭遇了前所未有的挑战。</p>]]>
+    </summary>
+    <title>关于本站备用站点的紧急通知</title>
     <updated>2025-07-13T12:36:00.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;近期由于各种不可抗力因素，网站可访问性遭遇了前所未有的挑战。&lt;/p&gt;</summary>
-    
-    
-    
-    
   </entry>
-  
   <entry>
-    <title>适合静态博客的 Nginx 安全性配置</title>
-    <link href="https://xaoxuu.com/blog/20250706/"/>
+    <author>
+      <name>xaoxuu</name>
+      <email>me@xaoxuu.com</email>
+    </author>
+    <category term="产研" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/"/>
+    <category term="技术" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/%E6%8A%80%E6%9C%AF/"/>
     <id>https://xaoxuu.com/blog/20250706/</id>
+    <link href="https://xaoxuu.com/blog/20250706/"/>
     <published>2025-07-06T13:36:00.000Z</published>
-    <updated>2025-07-06T13:36:00.000Z</updated>
-    
-    
-    <summary type="html">&lt;div class=&quot;tag-plugin colorful note&quot; color=&quot;yellow&quot;&gt;&lt;div class=&quot;body&quot;&gt;&lt;p&gt;本文内容可能已经过时，仅作参考。&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+    <summary>
+      <![CDATA[<div class="tag-plugin colorful note" color="yellow"><div class="body"><p>本文内容可能已经过时，仅作参考。</p></div></div>
 
-&lt;p&gt;书接上回，刚迁到服务器，东西还没完全配完，就从日志里看到不少蟑螂了！虽然是静态博客，但是看到这些蟑螂爬来爬去的还是很恶心，果断禁掉。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="产研" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/"/>
-    
-    <category term="技术" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/%E6%8A%80%E6%9C%AF/"/>
-    
-    
+<p>书接上回，刚迁到服务器，东西还没完全配完，就从日志里看到不少蟑螂了！虽然是静态博客，但是看到这些蟑螂爬来爬去的还是很恶心，果断禁掉。</p>]]>
+    </summary>
+    <title>适合静态博客的 Nginx 安全性配置</title>
+    <updated>2025-07-06T13:36:00.000Z</updated>
   </entry>
-  
   <entry>
-    <title>利用 Webhook 实现博客自动部署到服务器并通过飞书通知</title>
-    <link href="https://xaoxuu.com/blog/20250705/"/>
+    <author>
+      <name>xaoxuu</name>
+      <email>me@xaoxuu.com</email>
+    </author>
+    <category term="产研" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/"/>
+    <category term="技术" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/%E6%8A%80%E6%9C%AF/"/>
     <id>https://xaoxuu.com/blog/20250705/</id>
+    <link href="https://xaoxuu.com/blog/20250705/"/>
     <published>2025-07-05T13:59:00.000Z</published>
+    <summary>由于近期网站速度不稳定，只好再把博客解析改到服务器上。本文记录了如何利用 Webhook 实现博客自动部署到服务器并通过飞书通知。</summary>
+    <title>利用 Webhook 实现博客自动部署到服务器并通过飞书通知</title>
     <updated>2026-08-01T10:03:00.000Z</updated>
-    
-    
-    <summary type="html">由于近期网站速度不稳定，只好再把博客解析改到服务器上。本文记录了如何利用 Webhook 实现博客自动部署到服务器并通过飞书通知。</summary>
-    
-    
-    
-    <category term="产研" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/"/>
-    
-    <category term="技术" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/%E6%8A%80%E6%9C%AF/"/>
-    
-    
   </entry>
-  
   <entry>
-    <title>梦境：寄生之种与崩塌的时空</title>
-    <link href="https://xaoxuu.com/blog/20250616/"/>
+    <author>
+      <name>xaoxuu</name>
+      <email>me@xaoxuu.com</email>
+    </author>
+    <category term="梦境" scheme="https://xaoxuu.com/blog/categories/%E6%A2%A6%E5%A2%83/"/>
     <id>https://xaoxuu.com/blog/20250616/</id>
+    <link href="https://xaoxuu.com/blog/20250616/"/>
     <published>2025-06-16T04:56:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>这是一个新鲜热乎的梦，我今天早上快迟到了还没醒，意识投射入了梦境，醒来后请了一上午假，把这有趣的梦写了下来。</p>
+</blockquote>]]>
+    </summary>
+    <title>梦境：寄生之种与崩塌的时空</title>
     <updated>2025-06-16T04:56:00.000Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;这是一个新鲜热乎的梦，我今天早上快迟到了还没醒，意识投射入了梦境，醒来后请了一上午假，把这有趣的梦写了下来。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="梦境" scheme="https://xaoxuu.com/blog/categories/%E6%A2%A6%E5%A2%83/"/>
-    
-    
   </entry>
-  
   <entry>
-    <title>博客图片到底该存哪儿啊？</title>
-    <link href="https://xaoxuu.com/blog/20250611/"/>
-    <id>https://xaoxuu.com/blog/20250611/</id>
-    <published>2025-06-11T15:37:00.000Z</published>
-    <updated>2025-06-11T15:37:00.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;博客图片存哪儿，看起来是小事，折腾起来却让人头大。&lt;/p&gt;</summary>
-    
-    
-    
-    
+    <author>
+      <name>xaoxuu</name>
+      <email>me@xaoxuu.com</email>
+    </author>
     <category term="图床" scheme="https://xaoxuu.com/blog/tags/%E5%9B%BE%E5%BA%8A/"/>
-    
     <category term="博客" scheme="https://xaoxuu.com/blog/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
     <category term="图片" scheme="https://xaoxuu.com/blog/tags/%E5%9B%BE%E7%89%87/"/>
-    
+    <id>https://xaoxuu.com/blog/20250611/</id>
+    <link href="https://xaoxuu.com/blog/20250611/"/>
+    <published>2025-06-11T15:37:00.000Z</published>
+    <summary>
+      <![CDATA[<p>博客图片存哪儿，看起来是小事，折腾起来却让人头大。</p>]]>
+    </summary>
+    <title>博客图片到底该存哪儿啊？</title>
+    <updated>2025-06-11T15:37:00.000Z</updated>
   </entry>
-  
   <entry>
-    <title>梦境：末日之后</title>
-    <link href="https://xaoxuu.com/blog/20250605/"/>
-    <id>https://xaoxuu.com/blog/20250605/</id>
-    <published>2025-06-04T16:00:00.000Z</published>
-    <updated>2025-06-04T16:00:00.000Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;这是我真实的梦境，看记录大概在2024年初，一直没时间写出来分享给大家，现在借助 AI 帮我圆梦了。所以本文以及插图由 AI 根据我拙劣的描述生成。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;那是某个傍晚，我沿着一条蜿蜒曲折的小路慢慢往前走。路面是</summary>
-      
-    
-    
-    
+    <author>
+      <name>xaoxuu</name>
+      <email>me@xaoxuu.com</email>
+    </author>
     <category term="梦境" scheme="https://xaoxuu.com/blog/categories/%E6%A2%A6%E5%A2%83/"/>
-    
-    
+    <id>https://xaoxuu.com/blog/20250605/</id>
+    <link href="https://xaoxuu.com/blog/20250605/"/>
+    <published>2025-06-04T16:00:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>这是我真实的梦境，看记录大概在2024年初，一直没时间写出来分享给大家，现在借助 AI 帮我圆梦了。所以本文以及插图由 AI 根据我拙劣的描述生成。</p>
+</blockquote>
+<p>那是某个傍晚，我沿着一条蜿蜒曲折的小路慢慢往前走。路面是]]>
+    </summary>
+    <title>梦境：末日之后</title>
+    <updated>2025-06-04T16:00:00.000Z</updated>
   </entry>
-  
 </feed>
