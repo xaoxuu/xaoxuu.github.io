@@ -121,7 +121,7 @@
 <figure class="highlight objc"><table><tr><td class="code"><pre><span class="line"><span class="string">@&quot;文件名&quot;</span>.cachePath.save(要保存的内容);</span><br></pre></td></tr></table></figure>
 
 
-<h2 id="接入AXKit"><a href="#接入AXKit" class="headerlink" title="接入AXKit"></a>接入AXKit</h2><p>如果你的项目里还没有AXKit，可以在pod文件里添加一条 <code>pod &#39;AXKit&#39;</code> 进行接入，也可移步至<a href="https://xaoxuu.com/wiki/axkit">AXKit在线文档</a>查看详细的安装和使用方法。</p>
+<h2 id="接入AXKit"><a href="#接入AXKit" class="headerlink" title="接入AXKit"></a>接入AXKit</h2><p>如果你的项目里还没有AXKit，可以在 Podfile 里添加一条 <code>pod &#39;AXKit&#39;</code> 进行接入，也可移步至<a href="https://xaoxuu.com/wiki/axkit">AXKit在线文档</a>查看详细的安装和使用方法。</p>
 <h2 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h2><p>我封装了几个常用的沙盒路径，如下：</p>
 <figure class="highlight objc"><table><tr><td class="code"><pre><span class="line">- (<span class="keyword">nullable</span> <span class="built_in">NSString</span> *)mainBundlePath; <span class="comment">// mainBundlePath就是主工程项目里的文件路径</span></span><br><span class="line">- (<span class="built_in">NSString</span> *)docPath; <span class="comment">// 文档，iTunes会备份，适合保存重要的数据</span></span><br><span class="line">- (<span class="built_in">NSString</span> *)cachePath; <span class="comment">// 缓存，iTunes不会备份，适合保存不太重要的较大的数据</span></span><br><span class="line">- (<span class="built_in">NSString</span> *)tempPath; <span class="comment">// 临时文件，iTunes不会备份，系统空闲时会自动删除，设备重启时也会删除</span></span><br></pre></td></tr></table></figure>
 

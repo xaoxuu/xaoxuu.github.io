@@ -19,12 +19,12 @@
   <meta name="theme-color" content="#f9fafb">
   <title>如何封装自己的 iOS Framework 静态库 - XAOXUU</title>
 
-  <meta name="description" content="像工作中使用的第三方SDK基本上都是闭源的，因为公司不能把自己的机密泄露出去。所以当需要给别人提供SDK但不让他们知道代码的实现时就需要封装成静态库。">
+  <meta name="description" content="市面上许多第三方 SDK 都是闭源的，因为厂商不希望泄露自己的实现。所以当需要给别人提供SDK但不让他们知道代码的实现时就需要封装成静态库。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何封装自己的 iOS Framework 静态库">
 <meta property="og:url" content="https://xaoxuu.com/blog/20161106/">
 <meta property="og:site_name" content="如何封装自己的 iOS Framework 静态库">
-<meta property="og:description" content="像工作中使用的第三方SDK基本上都是闭源的，因为公司不能把自己的机密泄露出去。所以当需要给别人提供SDK但不让他们知道代码的实现时就需要封装成静态库。">
+<meta property="og:description" content="市面上许多第三方 SDK 都是闭源的，因为厂商不希望泄露自己的实现。所以当需要给别人提供SDK但不让他们知道代码的实现时就需要封装成静态库。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp">
 <meta property="article:published_time" content="2016-11-05T16:00:00.000Z">
@@ -57,7 +57,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"xaoxuu","sameAs":[],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"},"dateCreated":"2016-11-06T00:00:00+08:00","dateModified":"2016-11-06T00:00:00+08:00","datePublished":"2016-11-06T00:00:00+08:00","description":"像工作中使用的第三方SDK基本上都是闭源的，因为公司不能把自己的机密泄露出去。所以当需要给别人提供SDK但不让他们知道代码的实现时就需要封装成静态库。","headline":"如何封装自己的 iOS Framework 静态库","mainEntityOfPage":{"@type":"WebPage","@id":"https://xaoxuu.com/blog/20161106/"},"publisher":{"@type":"Organization","name":"xaoxuu","sameAs":[],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"}},"url":"https://xaoxuu.com/blog/20161106/","keywords":"iOS, Framework","image":[]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"xaoxuu","sameAs":[],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"},"dateCreated":"2016-11-06T00:00:00+08:00","dateModified":"2016-11-06T00:00:00+08:00","datePublished":"2016-11-06T00:00:00+08:00","description":"市面上许多第三方 SDK 都是闭源的，因为厂商不希望泄露自己的实现。所以当需要给别人提供SDK但不让他们知道代码的实现时就需要封装成静态库。","headline":"如何封装自己的 iOS Framework 静态库","mainEntityOfPage":{"@type":"WebPage","@id":"https://xaoxuu.com/blog/20161106/"},"publisher":{"@type":"Organization","name":"xaoxuu","sameAs":[],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"}},"url":"https://xaoxuu.com/blog/20161106/","keywords":"iOS, Framework","image":[]}</script>
   <link rel="apple-touch-icon" sizes="180x180" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="16x16" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="192x192" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/android-chrome-192x192.png"><link rel="manifest" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/site.webmanifest"><link rel="shortcut icon" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/favicon.ico"><meta name="theme-color" content="#f9fafb"><link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css" media="print" onload="this.media=&quot;all&quot;">
 </head>
 <body><div id="l_cover"></div><div class="l_body content" id="start" layout="post" type="tech"><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
@@ -113,14 +113,14 @@
     
   </div>
   </div></div>
-<article class="md-text content slide-up"><p>像工作中使用的第三方SDK基本上都是闭源的，因为公司不能把自己的机密泄露出去。所以当需要给别人提供SDK但不让他们知道代码的实现时就需要封装成静态库。</p>
+<article class="md-text content slide-up"><p>市面上许多第三方 SDK 都是闭源的，因为厂商不希望泄露自己的实现。所以当需要给别人提供SDK但不让他们知道代码的实现时就需要封装成静态库。</p>
 <span id="more"></span>
 
 <h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ol>
 <li>创建工程，最好是起名为 <code>xxxDemo</code> 例如 <code>AXKitDemo</code>，然后新建一个 target 名为 <code>AXKit</code>，并把原来的工程改名为 <code>AXKit</code>。（为了方便在 demo 中调试静态库）</li>
 <li>新建一个 target ，选择类型为 <code>framework</code>。</li>
 <li>在 <code>framework</code> 中创建需要封装的类，写好代码。</li>
-<li>在 <code>Build Setting</code> 里更改参数，<code>Math-O Type</code> 为 <code>Static Library</code>。</li>
+<li>在 <code>Build Settings</code> 里更改参数，<code>Mach-O Type</code> 为 <code>Static Library</code>。</li>
 <li>在 <code>Build Phases -&gt; Headers</code> 里将需要暴露出来的头文件从 <code>Project</code> 移动到 <code>Public</code>。</li>
 <li>添加一个 <code>Aggregate</code> 的 target，并添加运行脚本。目的是把编译出来的真机版和模拟器版的 <code>framework</code> 合并。</li>
 <li>模拟器编译一下，真机编译一下，然后 <code>Aggregate</code> 编译一下，然后在项目的 <code>Products</code> 文件夹里就有了最终生成的静态库。</li>
@@ -141,7 +141,7 @@
       <div class="header"><span>分享文章</span></div>
       <div class="body">
         <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://xaoxuu.com/blog/20161106/"></div>
-        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg"></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://xaoxuu.com/blog/20161106/&title=如何封装自己的 iOS Framework 静态库 - XAOXUU&summary=像工作中使用的第三方SDK基本上都是闭源的，因为公司不能把自己的机密泄露出去。所以当需要给别人提供SDK但不让他们知道代码的实现时就需要封装成静态库。"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg"></a><a class="social share-item email" href="mailto:?subject=如何封装自己的 iOS Framework 静态库 - XAOXUU&amp;body=https://xaoxuu.com/blog/20161106/"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg"></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg"></a></div>
+        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg"></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://xaoxuu.com/blog/20161106/&title=如何封装自己的 iOS Framework 静态库 - XAOXUU&summary=市面上许多第三方 SDK 都是闭源的，因为厂商不希望泄露自己的实现。所以当需要给别人提供SDK但不让他们知道代码的实现时就需要封装成静态库。"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg"></a><a class="social share-item email" href="mailto:?subject=如何封装自己的 iOS Framework 静态库 - XAOXUU&amp;body=https://xaoxuu.com/blog/20161106/"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg"></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg"></a></div>
         
         <div class="qrcode" id="qrcode-wechat" style="opacity:0;height:0">
           <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://xaoxuu.com/blog/20161106/">

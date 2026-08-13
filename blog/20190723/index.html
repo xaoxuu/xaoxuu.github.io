@@ -126,13 +126,13 @@
     </div>
 
 <h2 id="立项"><a href="#立项" class="headerlink" title="立项"></a>立项</h2><h3 id="确定需求"><a href="#确定需求" class="headerlink" title="确定需求"></a>确定需求</h3><p>立项的初衷是满足随时测心率的需求（没有智能手环手表的人群），App 核心功能就是测量心率，围绕这个功能展开的是测量时更多细节的记录、对已有数据的筛选。再往深度挖掘的是数据分析、健康预测。</p>
-<h3 id="市场考察"><a href="#市场考察" class="headerlink" title="市场考察"></a>市场考察</h3><p>虽然 AppStore 已有，但是无一例外都特别丑，要么收费要么有广告，所以不如自己做一个。</p>
+<h3 id="市场考察"><a href="#市场考察" class="headerlink" title="市场考察"></a>市场考察</h3><p>虽然 AppStore 已有不少心率 App，但我用过的要么界面粗糙，要么收费或带广告，所以不如自己做一个。</p>
 <h3 id="测量原理"><a href="#测量原理" class="headerlink" title="测量原理"></a>测量原理</h3><p><strong>光电容积脉搏波描记法（PPG）</strong></p>
 <p>是追踪可见光（通常为绿光）在人体组织中的反射。它具备一个可见光光源来照射皮肤，再使用光电传感器采集被皮肤反射回来的光线。PPG 有两种模式，透射式和反射式，像一般的手环手表这样，光源和传感器在同一侧的，就是反射式；而医院中常见的夹在指尖上的通常是透射式的，即光源和传感器在不同侧。 皮肤本身对光线的反射能力是相对稳定的，但是心脏泵血使得血管容积周期性地变化，导致反射光也呈现出周期性的波动值，特别是在指尖这种毛细血管非常丰富的部位，这种周期性的波动很容易被观察到。</p>
 <p>Wikipedia: <a target="_blank" rel="external nofollow noopener noreferrer" href="https://en.wikipedia.org/wiki/Photoplethysmogram">#Photoplethysmogram</a></p>
 <p>对应到 App 上就是通过分析摄像头每一帧画面的色值，计算出颜色波动的频率，即为近似心率。</p>
 <h3 id="定价策略"><a href="#定价策略" class="headerlink" title="定价策略"></a>定价策略</h3><ul>
-<li>付费版：价格波动，通过降价和限免吸引爬虫收录。</li>
+<li>付费版：价格波动，通过降价和限免吸引价格追踪网站&#x2F;比价平台收录。</li>
 <li>免费版：限制了部分个性化功能，核心功能不受影响，没有任何广告。</li>
 </ul>
 <h3 id="技术方案"><a href="#技术方案" class="headerlink" title="技术方案"></a>技术方案</h3><p>语言：Swift5<br>设计模式：MVC<br>路由方案：JLRoutes<br>主题和UI管理：Inspire<br>缓存方案：SQLite<br>数据同步方案：暂定AppleHealth</p>
@@ -144,7 +144,7 @@
 <h3 id="快捷指令"><a href="#快捷指令" class="headerlink" title="快捷指令"></a>快捷指令</h3><p>使用 JLRoutes 路由方案，目前支持 URLSchemes 启动并开始测量，可接受两个参数：</p>
 <figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 直接启动</span></span><br><span class="line">heartmatepro:<span class="comment">//record</span></span><br><span class="line"><span class="comment">// 自定义补光灯亮度（亮度值 l 为浮点数，取值范围是0~1）</span></span><br><span class="line">heartmatepro:<span class="comment">//record?l=0.3</span></span><br><span class="line"><span class="comment">// 自定义补光灯亮度和测量样本容器大小（样本容器大小 c 为正整数，取值范围是1~20）</span></span><br><span class="line">heartmatepro:<span class="comment">//record?l=0.1&amp;c=10</span></span><br></pre></td></tr></table></figure>
 
-<p>免费版限制了自定义亮度，但是你依然可以通过这种方式来自定义。</p>
+<p>免费版在界面里限制了自定义亮度，但依然可以通过 URL 参数 l 来设置。</p>
 <h3 id="ProHUD"><a href="#ProHUD" class="headerlink" title="ProHUD"></a>ProHUD</h3><p>使用 <a href="https://xaoxuu.com/wiki/prohud/">ProHUD</a> 来负责弹窗和操作表，包括隐私政策页面。</p>
 <div class="tag-plugin swiper fancybox" id="swiper-api" width="min"><div class="swiper-wrapper"><div class="swiper-slide"><img no-lazy src="https://res.xaox.cc/gh/cdn-x/wiki@main/heartmate/screenshot21.png" onerror='this.classList.add("error"),this.src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/image/2659360.svg"'></div><div class="swiper-slide"><img no-lazy src="https://res.xaox.cc/gh/cdn-x/wiki@main/heartmate/screenshot22.png" onerror='this.classList.add("error"),this.src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/image/2659360.svg"'></div><div class="swiper-slide"><img no-lazy src="https://res.xaox.cc/gh/cdn-x/wiki@main/heartmate/screenshot23.png" onerror='this.classList.add("error"),this.src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/image/2659360.svg"'></div><div class="swiper-slide"><img no-lazy src="https://res.xaox.cc/gh/cdn-x/wiki@main/heartmate/screenshot24.png" onerror='this.classList.add("error"),this.src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/image/2659360.svg"'></div><div class="swiper-slide"><img no-lazy src="https://res.xaox.cc/gh/cdn-x/wiki@main/heartmate/screenshot25.png" onerror='this.classList.add("error"),this.src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/image/2659360.svg"'></div></div><div class="swiper-pagination"></div><div class="swiper-button-prev blur"></div><div class="swiper-button-next blur"></div></div>
 

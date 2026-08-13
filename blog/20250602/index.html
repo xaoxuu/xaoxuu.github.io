@@ -41,7 +41,7 @@
 <meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"><meta name="twitter:title" content="感谢 AI，动态友链获重磅升级！">
   
   
-  <meta name="keywords" content="开源项目,友链,动态,动态友链,静态友链,GitHub Actions,GitHub Workflow">
+  <meta name="keywords" content="开源项目,动态友链,GitHub Actions,GitHub Workflow,友链,动态,静态友链">
 
   
   
@@ -62,7 +62,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"xaoxuu","sameAs":[],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"},"dateCreated":"2025-06-02T19:56:49+08:00","dateModified":"2025-06-02T19:56:49+08:00","datePublished":"2025-06-02T19:56:49+08:00","description":"","headline":"感谢 AI，动态友链获重磅升级！","mainEntityOfPage":{"@type":"WebPage","@id":"https://xaoxuu.com/blog/20250602/"},"publisher":{"@type":"Organization","name":"xaoxuu","sameAs":[],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"}},"url":"https://xaoxuu.com/blog/20250602/","keywords":"开源项目, 友链, 动态, 动态友链, 静态友链, GitHub Actions, GitHub Workflow","thumbnailUrl":"https://res.xaox.cc/gh/cdn-x/xaoxuu@main/posts/20250706160002094.webp","image":1}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"xaoxuu","sameAs":[],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"},"dateCreated":"2025-06-02T19:56:49+08:00","dateModified":"2025-06-02T19:56:49+08:00","datePublished":"2025-06-02T19:56:49+08:00","description":"","headline":"感谢 AI，动态友链获重磅升级！","mainEntityOfPage":{"@type":"WebPage","@id":"https://xaoxuu.com/blog/20250602/"},"publisher":{"@type":"Organization","name":"xaoxuu","sameAs":[],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"}},"url":"https://xaoxuu.com/blog/20250602/","keywords":"开源项目, 动态友链, GitHub Actions, GitHub Workflow, 友链, 动态, 静态友链","thumbnailUrl":"https://res.xaox.cc/gh/cdn-x/xaoxuu@main/posts/20250706160002094.webp","image":1}</script>
   <link rel="apple-touch-icon" sizes="180x180" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="16x16" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="192x192" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/android-chrome-192x192.png"><link rel="manifest" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/site.webmanifest"><link rel="shortcut icon" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/favicon.ico"><meta name="theme-color" content="#f9fafb"><link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css" media="print" onload="this.media=&quot;all&quot;">
 </head>
 <body><div id="l_cover"></div><div class="l_body content" id="start" layout="post" type="tech"><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
@@ -127,7 +127,7 @@
 </ul>
 <h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><p>幸运的是，我们身处 AI 时代，许多曾经遥不可及的想法，如今有了实现的可能。前不久，在访问<a target="_blank" rel="external nofollow noopener noreferrer" href="https://weekdaycare.cn/posts/twikoo-new/">星日语</a>的博客时，他为 Stellar 主题开发的<a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/weekdaycare/issue-discussion-generator">获取最新评论</a>功能给了我灵感。我茅塞顿开：何不借助 AI 的力量，将我的动态友链项目彻底重构，并打造成一个可复用的 GitHub Workflow 呢？这样一来，至少能解决那个配置和更新繁琐的最大痛点。</p>
 <p>在技术选型上，我果断选择了 Node.js。相较于 Python，我对 Node.js 更为熟悉，遇到问题时也更有方向感，知道如何高效地查找资料和解决问题。</p>
-<p>经过一番努力，重构后的动态友链核心项目 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/xaoxuu/issues2json">issues2json</a> 诞生了！它可以自动抓取每个 GitHub Issue 中的第一段 JSON 数据并保存为文件，支持多种排序和过滤规则。我还贴心地加入了一个小特性：当用户未设置图标时，会自动使用其 GitHub 头像作为默认图标。<mark class="tag-plugin colorful mark" color="yellow">但是</mark>，我更推荐大家关注基于它构建的、功能更为强大的项目：<a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/xaoxuu/links-checker">links-checker</a>。它能自动检查友链的存活状态，并为不同状态的链接打上相应的标签，让友链管理更加智能高效。</p>
+<p>经过一番努力，重构后的动态友链核心项目 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/xaoxuu/issues2json">issues2json</a> 诞生了！它可以自动抓取每个 GitHub Issue 中的第一段 JSON 数据并保存为文件，支持多种排序和过滤规则。我还加入了一个小特性：当用户未设置图标时，会自动使用其 GitHub 头像作为默认图标。<mark class="tag-plugin colorful mark" color="yellow">但是</mark>，我更推荐大家关注基于它构建的、功能更为强大的项目：<a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/xaoxuu/links-checker">links-checker</a>。它能自动检查友链的存活状态，并为不同状态的链接打上相应的标签，让友链管理更加智能高效。</p>
 <p>此外，我还从<a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.thyuu.com/friends/#life">风记星辰</a>的友链设计中汲取灵感，同样运用 Node.js 技术栈，开发了一个实用的友链文章订阅功能。其原理是解析每个 Issue 中 <code>feed</code> 字段提供的 RSS 地址，抓取最新的 N 篇文章，并将这些信息写回 Issue 中。如此一来，再结合 issues2json 的 Workflow，就能轻松将最新的朋友动态整合到友链数据中了。</p>
 <h2 id="如何用上新版动态友链？"><a href="#如何用上新版动态友链？" class="headerlink" title="如何用上新版动态友链？"></a>如何用上新版动态友链？</h2><p>最便捷的方式莫过于直接 fork 我的友链仓库，根据您的需求稍作配置，启用相关的 GitHub Workflow，即可轻松体验新版动态友链的魅力。如果您已经拥有自己的动态友链仓库，但并非 fork 自我的仓库，也无需担心，只需按照以下步骤操作即可：</p>
 <h3 id="1-清理旧版配置"><a href="#1-清理旧版配置" class="headerlink" title="1. 清理旧版配置"></a>1. 清理旧版配置</h3><p>为避免旧的 Workflow 意外覆盖新生成的数据，请您先将友链仓库中与旧版动态友链相关的代码和配置文件彻底删除。</p>
@@ -162,10 +162,7 @@
 <hr>
 
 <blockquote>
-<p><strong>后记</strong>：现在 Claude 和 Gemini 模型都排队排的没法用了。</p>
-</blockquote>
-<blockquote>
-<p><strong>后记2</strong>：现在连代码补全都要收费了，再见！（体验还远远达不到为之付费的水平）</p>
+<p><strong>后记</strong>（2025 年 6 月）：当时部分模型服务排队严重、体验受限，一些代码补全功能也开始收费。</p>
 </blockquote>
 </article>
 <div class="article-footer slide-up">

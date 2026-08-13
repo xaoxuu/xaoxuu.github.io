@@ -143,9 +143,9 @@
 <li>如果测量时间中等：成功率低，准确性高。</li>
 <li>如果测量时间长：成功率很低，准确性很高，但是数据意义不大。</li>
 </ul>
-<p>我想出了一种新的方案，就是每探测到一个有效脉冲，就记录下这个脉冲与上一个有效脉冲之间的间隔，两个连续的有效脉冲计算出来的频率就是100%正确的瞬时脉率。所以改进后的方案是：开始测量后，始终记录脉冲，随时可以计算瞬时脉率、最后若干秒的平均脉率。</p>
+<p>我想出了一种新的方案，就是每探测到一个有效脉冲，就记录下这个脉冲与上一个有效脉冲之间的间隔，在脉冲计数完全准确的前提下，两个连续的有效脉冲计算出来的频率就是正确的瞬时脉率。所以改进后的方案是：开始测量后，始终记录脉冲，随时可以计算瞬时脉率、最后若干秒的平均脉率。</p>
 <ul>
-<li>成功率：100%（不存在测量中断而失败的情况）</li>
+<li>成功率：理论上不受测量中断影响（不存在因测量中断而失败的情况）</li>
 <li>准确性的情况如下：<ul>
 <li>如果脉冲计数都是由脉搏跳动引起的，测量结果就是完全准确的</li>
 <li>如果脉搏跳动了而脉冲计数没有增加，不会影响结果，因为计算时只会把有效脉冲的周期进行累加</li>
@@ -153,7 +153,7 @@
 </ul>
 </li>
 </ul>
-<p>如果不故意快速抖动手指，数据失真的情况就不会发生，因为手指不离开摄像头并在两次脉搏跳动中间产生一次色相饱和度明度都以假乱真的脉冲信号是很难的。</p>
+<p>如果不故意快速抖动手指，数据失真的情况就不会发生，因为要在两次脉搏跳动之间，靠手指抖动产生一个色相、饱和度、明度都能以假乱真的脉冲信号，几乎是不可能的。</p>
 <h3 id="脉冲探测器"><a href="#脉冲探测器" class="headerlink" title="脉冲探测器"></a>脉冲探测器</h3><p>经过滤波后的数值是围绕0上下波动的，分别记录大于0的值和小于0的值，各自保存到数组中，然后求出它们的平均值：</p>
 <figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> filted <span class="operator">&gt;</span> <span class="number">0</span> &#123;</span><br><span class="line">    upVals.append(filted)</span><br><span class="line">    <span class="keyword">if</span> upVals.count <span class="operator">&gt;</span> <span class="number">20</span> &#123;</span><br><span class="line">        upVals.removeFirst(upVals.count <span class="operator">-</span> <span class="number">20</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> filted <span class="operator">&lt;</span> <span class="number">0</span> &#123;</span><br><span class="line">    downVals.append(filted)</span><br><span class="line">    <span class="keyword">if</span> downVals.count <span class="operator">&gt;</span> <span class="number">20</span> &#123;</span><br><span class="line">        downVals.removeFirst(downVals.count <span class="operator">-</span> <span class="number">20</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> avgUp <span class="operator">=</span> upVals.reduce(<span class="number">0</span>, <span class="operator">+</span>) <span class="operator">/</span> <span class="type">CGFloat</span>(upVals.count)</span><br><span class="line"><span class="keyword">let</span> avgDown <span class="operator">=</span> downVals.reduce(<span class="number">0</span>, <span class="operator">+</span>) <span class="operator">/</span> <span class="type">CGFloat</span>(downVals.count)</span><br></pre></td></tr></table></figure>
 
@@ -175,6 +175,9 @@
 <h2 id="脉率和心率"><a href="#脉率和心率" class="headerlink" title="脉率和心率"></a>脉率和心率</h2><p>脉率是每分钟脉搏的次数，心率是每分钟心跳次数，健康情况下脉率与心率一致，但是如果出现心律失常，心脏有一些跳动不能有效将血液泵至全身，因此会出现脉搏缺失，导致脉率显著低于心率。如果用来判断心脏功能状态，误差很大。对于心动过速、低血压症和休克病人，即使是心率规则，由于脉压差很小，脉搏也会很弱，此时往往不能够准确测量脉率。</p>
 <p>另外，脉搏随肢体移动会形成伪迹波动，也会影响脉率的测量。而心率不受心律失常、心动过速、休克、肢体活动的影响，所以在临床上，医生判断心跳活动不是看脉率，而是看心率，摸脉搏只是一个辅助操作。</p>
 <p>因此，通过手环、手表、app 测量的“心率”并不是一个完全可靠的数据。</p>
+<blockquote>
+<p>以上内容为个人经验分享，不构成医疗建议。</p>
+</blockquote>
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>非常感谢 @JustinYang 大佬在滤波算法方面给予的援助。也十分感谢 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://punmy.cn/">@Punmy</a>、<a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/WuXiaoTu">@WuXiaoTu</a> 等作者的文章，使得后人能够少走很多弯路。</p>
 <div class="tag-plugin link dis-select"><a class="link-card plain" title href="https://xaoxuu.com/blog/20190723/" target="_blank" rel="external nofollow noopener noreferrer" cardlink data-api="https://api.xaox.cc/site_info/v1?url=https://xaoxuu.com/blog/20190723/" autofill="title,icon,desc"><div class="left"><span class="title">https://xaoxuu.com/blog/20190723/</span><span class="cap link footnote">https://xaoxuu.com/blog/20190723/</span></div><div class="right"><div class="lazy img" data-bg="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/link/8f277b4ee0ecd.svg"></div></div></a></div>
 </article>

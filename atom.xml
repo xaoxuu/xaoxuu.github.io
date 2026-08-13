@@ -81,7 +81,7 @@
     <link href="https://xaoxuu.com/blog/20250713/"/>
     <published>2025-07-13T12:36:00.000Z</published>
     <summary>
-      <![CDATA[<p>近期由于各种不可抗力因素，网站可访问性遭遇了前所未有的挑战。</p>]]>
+      <![CDATA[<p>近期由于各种不可抗力，网站可访问性遭遇了前所未有的挑战。</p>]]>
     </summary>
     <title>关于本站备用站点的紧急通知</title>
     <updated>2025-07-13T12:36:00.000Z</updated>
@@ -99,7 +99,7 @@
     <summary>
       <![CDATA[<div class="tag-plugin colorful note" color="yellow"><div class="body"><p>本文内容可能已经过时，仅作参考。</p></div></div>
 
-<p>书接上回，刚迁到服务器，东西还没完全配完，就从日志里看到不少蟑螂了！虽然是静态博客，但是看到这些蟑螂爬来爬去的还是很恶心，果断禁掉。</p>]]>
+<p>书接上回，刚迁到服务器，东西还没完全配完，就从日志里看到不少不速之客了！虽然是静态博客，但看到这些扫描器反复试探还是很烦，果断禁掉。</p>]]>
     </summary>
     <title>适合静态博客的 Nginx 安全性配置</title>
     <updated>2025-07-06T13:36:00.000Z</updated>

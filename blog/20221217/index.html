@@ -175,7 +175,7 @@
 
 <p>不出意外的话，接下来访问：<code>https://username.github.io</code> 就可以看到自己的博客啦～</p>
 <blockquote>
-<p>遗憾的是，<code>github.io</code> 域名在大陆地区被电信运营商 DNS 污染，无法直接访问。</p>
+<p>遗憾的是，<code>github.io</code> 域名在大陆地区曾被电信运营商 DNS 污染，访问不稳定（2022 年时的情况）。</p>
 </blockquote>
 <h2 id="博客日常更新流程"><a href="#博客日常更新流程" class="headerlink" title="博客日常更新流程"></a>博客日常更新流程</h2><p><strong>创建&#x2F;修改文章 -&gt; 提交代码</strong></p>
 <p>在完成首次发布之后，后续新增或者修改文章之后就只需要执行这组命令即可同步发布：</p>
@@ -199,9 +199,9 @@
 <h2 id="体验优化建议"><a href="#体验优化建议" class="headerlink" title="体验优化建议"></a>体验优化建议</h2><h3 id="使用-Vercel-部署"><a href="#使用-Vercel-部署" class="headerlink" title="使用 Vercel 部署"></a>使用 Vercel 部署</h3><p>前面我们使用 GitHub Pages 服务进行部署，但是访问速度比较慢，建议使用  Vercel 来获得更快的访问速度。</p>
 <p>打开 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://vercel.com/">vercel.com</a> 选择使用 GitHub 账号登录，然后 <mark class="tag-plugin colorful mark" color="yellow">Add New...</mark> -&gt; <mark class="tag-plugin colorful mark" color="yellow">Project</mark> 选择我们在 GitHub 那边的静态文件仓库（<code>username.github.io</code>），稍等片刻就完成部署，完成后会告诉你访问地址，例如：<code>username.vercel.app</code>。</p>
 <blockquote>
-<p>遗憾的是，<code>vercel.app</code> 域名在大陆地区被电信运营商 DNS 污染，无法直接访问。</p>
+<p>遗憾的是，<code>vercel.app</code> 域名在大陆地区也曾被电信运营商 DNS 污染，访问不稳定（2022 年时的情况）。</p>
 </blockquote>
-<h3 id="使用自己的域名"><a href="#使用自己的域名" class="headerlink" title="使用自己的域名"></a>使用自己的域名</h3><p>一个域名一年也就几十块钱，建议自己从阿里云或者腾讯云购买一个域名，也顺带直接解决了免费域名被 DNS 污染无法访问的问题。</p>
+<h3 id="使用自己的域名"><a href="#使用自己的域名" class="headerlink" title="使用自己的域名"></a>使用自己的域名</h3><p>截至 2022 年底，一个域名一年也就几十块钱，建议自己从阿里云或者腾讯云购买一个域名，也顺带直接解决了免费域名被 DNS 污染无法访问的问题。</p>
 <h4 id="设置-DNS-解析"><a href="#设置-DNS-解析" class="headerlink" title="设置 DNS 解析"></a>设置 DNS 解析</h4><p>然后在云服务商的域名DNS解析中增加 <code>CNAME</code> 解析：</p>
 <table>
 <thead>
