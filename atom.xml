@@ -12,7 +12,25 @@
   <rights>All rights reserved 2026, xaoxuu</rights>
   <subtitle>For all time, always. | 风暴前夕</subtitle>
   <title>XAOXUU</title>
-  <updated>2026-08-01T07:24:00.000Z</updated>
+  <updated>2026-08-14T18:14:00.000Z</updated>
+  <entry>
+    <author>
+      <name>xaoxuu</name>
+      <email>me@xaoxuu.com</email>
+    </author>
+    <category term="Stellar" scheme="https://xaoxuu.com/blog/tags/stellar/"/>
+    <category term="Hexo" scheme="https://xaoxuu.com/blog/tags/hexo/"/>
+    <category term="数据分析" scheme="https://xaoxuu.com/blog/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    <category term="主题复盘" scheme="https://xaoxuu.com/blog/tags/%E4%B8%BB%E9%A2%98%E5%A4%8D%E7%9B%98/"/>
+    <id>https://xaoxuu.com/blog/20260815/</id>
+    <link href="https://xaoxuu.com/blog/20260815/"/>
+    <published>2026-08-14T18:14:00.000Z</published>
+    <summary>
+      <![CDATA[<p>这篇复盘想回答一个问题：Stellar 为什么没能进入 Hexo 主题头部？数据面（2026-08-14 快照）的答案是——star 第 9、与第二梯队差约 4 倍、2024 年明显增长后增速回落、近一年发版几乎停摆；但同一组数据也显示 npm 月下载排第 3、近 12 个月 star 增速高于同梯队竞品。产品面补上另一半：在「轻博客为主流」的 Hexo 生态里，四系统这类「重功能、强差异」的定位没有形成品类心智，增长机制也没能把它转化为规模。落后是「定位错位」与「增长机制不足」叠加的结果。</p>]]>
+    </summary>
+    <title>Stellar 为什么没能进入 Hexo 主题头部</title>
+    <updated>2026-08-14T18:14:00.000Z</updated>
+  </entry>
   <entry>
     <author>
       <name>xaoxuu</name>
@@ -28,7 +46,7 @@
 </blockquote>]]>
     </summary>
     <title>梦境：无法定格的偶遇</title>
-    <updated>2026-08-01T07:24:00.000Z</updated>
+    <updated>2026-08-14T16:17:00.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -133,7 +151,7 @@
 </blockquote>]]>
     </summary>
     <title>梦境：寄生之种与崩塌的时空</title>
-    <updated>2025-06-16T04:56:00.000Z</updated>
+    <updated>2026-08-14T16:17:00.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -151,23 +169,5 @@
     </summary>
     <title>博客图片到底该存哪儿啊？</title>
     <updated>2025-06-11T15:37:00.000Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>xaoxuu</name>
-      <email>me@xaoxuu.com</email>
-    </author>
-    <category term="梦境" scheme="https://xaoxuu.com/blog/categories/%E6%A2%A6%E5%A2%83/"/>
-    <id>https://xaoxuu.com/blog/20250605/</id>
-    <link href="https://xaoxuu.com/blog/20250605/"/>
-    <published>2025-06-05T10:24:00.000Z</published>
-    <summary>
-      <![CDATA[<blockquote>
-<p>这是我真实的梦境，看记录大概在2024年初，一直没时间写出来分享给大家，现在借助 AI 帮我圆梦了。所以本文以及插图由 AI 根据我拙劣的描述生成。</p>
-</blockquote>
-<p>那是某个傍晚，我沿着一条蜿蜒曲折的小路慢慢往前走。路面是]]>
-    </summary>
-    <title>梦境：末日之后</title>
-    <updated>2025-06-05T10:24:00.000Z</updated>
   </entry>
 </feed>
