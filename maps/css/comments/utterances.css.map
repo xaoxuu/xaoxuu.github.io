@@ -1,1 +1,1 @@
-{"version":3,"sources":["../../../maps/css/comments/css/comments/utterances.css"],"names":[],"mappings":"AAAA,qBACE,OAAQ,EAAE,KACV,MAAO,iBAET,6CACE,IAAK","file":"../../../css/comments/utterances.css","sourcesContent":[]}
+{"version":3,"sources":["css/comments/utterances.css"],"names":[],"mappings":"AAAA,qBACE,OAAQ,EAAE,KACV,MAAO,iBAET,6CACE,IAAK","file":"../../../css/comments/utterances.css","sourcesContent":[".cmt-body.utterances {\n  margin: 0 -4px;\n  width: calc(100% + 8px);\n}\n.related-wrap#comments .cmt-body svg.loading {\n  top: 62px;\n}\n"]}

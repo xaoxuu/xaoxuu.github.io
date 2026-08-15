@@ -1,1 +1,1 @@
-{"version":3,"sources":["../../../maps/css/plugins/css/plugins/fancybox.css"],"names":[],"mappings":"AACA,iBADA,mBAEE,OAAQ","file":"../../../css/plugins/fancybox.css","sourcesContent":[]}
+{"version":3,"sources":["css/plugins/fancybox.css"],"names":[],"mappings":"AACA,iBADA,mBAEE,OAAQ","file":"../../../css/plugins/fancybox.css","sourcesContent":["img[data-fancybox],\na[data-fancybox] {\n  cursor: zoom-in;\n}\n"]}

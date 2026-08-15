@@ -1,1 +1,1 @@
-{"version":3,"sources":["../../../maps/css/comments/css/comments/beaudar.css"],"names":[],"mappings":"AAAA,kBACE,OAAQ,EAAE,KACV,MAAO","file":"../../../css/comments/beaudar.css","sourcesContent":[]}
+{"version":3,"sources":["css/comments/beaudar.css"],"names":[],"mappings":"AAAA,kBACE,OAAQ,EAAE,KACV,MAAO","file":"../../../css/comments/beaudar.css","sourcesContent":[".cmt-body.beaudar {\n  margin: 0 -4px;\n  width: calc(100% + 8px);\n}\n"]}
