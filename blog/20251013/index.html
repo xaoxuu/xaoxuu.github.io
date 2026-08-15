@@ -17,24 +17,27 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
-  <title>在混乱中建立秩序 - XAOXUU</title>
+  <title>在混乱中建立秩序：Stellar 产品设计与工程重构复盘 - XAOXUU</title>
 
-  <meta name="description" content="人人向往秩序井然，却总被现实的混乱裹挟前行。那么，如何在混乱中逐步建立秩序呢？本文将结合我的亲身经历，从产品设计和技术实现的方面，分享我的方法与思考。">
+  <meta name="description" content="如何在混乱中建立秩序？作者结合 Stellar 的产品设计原则与工程重构实践（知识库系统、动态时间线、动态友链重构、主题版本检测），分享从混乱走向秩序的方法与思考。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在混乱中建立秩序">
+<meta property="og:title" content="在混乱中建立秩序：Stellar 产品设计与工程重构复盘">
 <meta property="og:url" content="https://xaoxuu.com/blog/20251013/">
-<meta property="og:site_name" content="在混乱中建立秩序">
-<meta property="og:description" content="人人向往秩序井然，却总被现实的混乱裹挟前行。那么，如何在混乱中逐步建立秩序呢？本文将结合我的亲身经历，从产品设计和技术实现的方面，分享我的方法与思考。">
+<meta property="og:site_name" content="XAOXUU">
+<meta property="og:description" content="如何在混乱中建立秩序？作者结合 Stellar 的产品设计原则与工程重构实践（知识库系统、动态时间线、动态友链重构、主题版本检测），分享从混乱走向秩序的方法与思考。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp">
 <meta property="article:published_time" content="2025-10-13T12:36:00.000Z">
-<meta property="article:modified_time" content="2025-10-13T12:36:00.000Z">
+<meta property="article:modified_time" content="2026-08-15T07:19:00.000Z">
 <meta property="article:author" content="xaoxuu">
+<meta property="article:tag" content="Stellar">
+<meta property="article:tag" content="产品设计">
+<meta property="article:tag" content="思考">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"><meta name="twitter:title" content="在混乱中建立秩序">
+<meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"><meta name="twitter:title" content="在混乱中建立秩序：Stellar 产品设计与工程重构复盘">
   
   
-  
+  <meta name="keywords" content="思考,产品设计,Stellar">
 
   
   
@@ -55,7 +58,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"xaoxuu","sameAs":[],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"},"dateCreated":"2025-10-13T20:36:00+08:00","dateModified":"2025-10-13T20:36:00+08:00","datePublished":"2025-10-13T20:36:00+08:00","description":"人人向往秩序井然，却总被现实的混乱裹挟前行。那么，如何在混乱中逐步建立秩序呢？本文将结合我的亲身经历，从产品设计和技术实现的方面，分享我的方法与思考。","headline":"在混乱中建立秩序","mainEntityOfPage":{"@type":"WebPage","@id":"https://xaoxuu.com/blog/20251013/"},"publisher":{"@type":"Organization","name":"xaoxuu","sameAs":[],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"}},"url":"https://xaoxuu.com/blog/20251013/","image":[]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"xaoxuu","sameAs":["https://github.com/xaoxuu"],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"},"dateCreated":"2025-10-13T20:36:00+08:00","dateModified":"2026-08-15T15:19:00+08:00","datePublished":"2025-10-13T20:36:00+08:00","description":"人人向往秩序井然，却总被现实的混乱裹挟前行。那么，如何在混乱中逐步建立秩序呢？本文将结合我的亲身经历，从产品设计和技术实现的方面，分享我的方法与思考。","headline":"在混乱中建立秩序：Stellar 产品设计与工程重构复盘","mainEntityOfPage":{"@type":"WebPage","@id":"https://xaoxuu.com/blog/20251013/"},"publisher":{"@type":"Organization","name":"xaoxuu","sameAs":["https://github.com/xaoxuu"],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"}},"url":"https://xaoxuu.com/blog/20251013/","keywords":"思考, 产品设计, Stellar","thumbnailUrl":"https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg","image":["https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg"]}</script>
   <link rel="apple-touch-icon" sizes="180x180" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="16x16" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="192x192" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/android-chrome-192x192.png"><link rel="manifest" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/site.webmanifest"><link rel="shortcut icon" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/favicon.ico"><meta name="theme-color" content="#f9fafb"><link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css" media="print" onload="this.media=&quot;all&quot;">
 </head>
 <body><div id="l_cover"></div><div class="l_body content" id="start" layout="post" type="story" text-indent><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
@@ -83,9 +86,9 @@
 <svg class="grad-def" width="0" height="0" aria-hidden="true" focusable="false"><defs><lineargradient id="menu-grad-about" x1="70%" y1="10%" x2="10%" y2="130%"><stop offset="20%" style="stop-color:var(--item-theme-light)"/><stop offset="60%" style="stop-color:var(--item-theme)"/></lineargradient></defs></svg>
 </a></nav>
 </div>
+<widget class="widget-wrapper related post-list"><div class="widget-header dis-select"><span class="name">专栏：为什么</span></div><div class="widget-body"><a class="item" href="/blog/20260815/"><span class="title">Stellar 为什么没能进入 Hexo 主题头部</span></a><a class="item active" href="/blog/20251013/"><span class="title">在混乱中建立秩序：Stellar 产品设计与工程重构复盘</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a><a class="item" href="/blog/20240208/"><span class="title">文章插图需要点击放大吗？Stellar 图片展示的设计取舍</span></a><a class="item" href="/blog/20240203/"><span class="title">Stellar 专栏功能：我为什么专门开发它？</span></a></div></widget>
 
-
-<widget class="widget-wrapper slide-up recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19q0-.825.588-1.412T5 17q.825 0 1.413.588T7 19q0 .825-.587 1.413T5 21m13.5 0q-.65 0-1.088-.475T16.9 19.4q-.275-2.425-1.312-4.537T12.9 11.1q-1.65-1.65-3.762-2.687T4.6 7.1q-.65-.075-1.125-.512T3 5.5q0-.65.45-1.062t1.075-.363q3.075.275 5.763 1.563t4.737 3.337q2.05 2.05 3.338 4.738t1.562 5.762q.05.625-.363 1.075T18.5 21m-6 0q-.625 0-1.075-.437T10.85 19.5q-.225-1.225-.787-2.262T8.65 15.35q-.85-.85-1.888-1.412T4.5 13.15q-.625-.125-1.062-.575T3 11.5q0-.65.45-1.075t1.075-.325q1.825.25 3.413 1.063t2.837 2.062q1.25 1.25 2.063 2.838t1.062 3.412q.1.625-.325 1.075T12.5 21"/></svg></a></div><div class="widget-body fs14"><a class="item title" href="/blog/20260815/"><span class="title">Stellar 为什么没能进入 Hexo 主题头部</span></a><a class="item title" href="/blog/20250605/"><span class="title">梦境：末日之后</span></a><a class="item title" href="/blog/20250616/"><span class="title">梦境：寄生之种与崩塌的时空</span></a><a class="item title" href="/blog/20260801/"><span class="title">梦境：无法定格的偶遇</span></a><a class="item title" href="/blog/20250705/"><span class="title">利用 Webhook 实现博客自动部署到服务器并通过飞书通知</span></a><a class="item title" href="/blog/20260226/"><span class="title">连续两个晚上做梦笑醒</span></a><a class="item title" href="/blog/20260116/"><span class="title">2025年度OKR复盘</span></a><a class="item title" href="/blog/20251013/"><span class="title">在混乱中建立秩序</span></a><a class="item title" href="/blog/20250713/"><span class="title">关于本站备用站点的紧急通知</span></a><a class="item title" href="/blog/20250706/"><span class="title">适合静态博客的 Nginx 安全性配置</span></a></div></widget>
+<widget class="widget-wrapper slide-up recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19q0-.825.588-1.412T5 17q.825 0 1.413.588T7 19q0 .825-.587 1.413T5 21m13.5 0q-.65 0-1.088-.475T16.9 19.4q-.275-2.425-1.312-4.537T12.9 11.1q-1.65-1.65-3.762-2.687T4.6 7.1q-.65-.075-1.125-.512T3 5.5q0-.65.45-1.062t1.075-.363q3.075.275 5.763 1.563t4.737 3.337q2.05 2.05 3.338 4.738t1.562 5.762q.05.625-.363 1.075T18.5 21m-6 0q-.625 0-1.075-.437T10.85 19.5q-.225-1.225-.787-2.262T8.65 15.35q-.85-.85-1.888-1.412T4.5 13.15q-.625-.125-1.062-.575T3 11.5q0-.65.45-1.075t1.075-.325q1.825.25 3.413 1.063t2.837 2.062q1.25 1.25 2.063 2.838t1.062 3.412q.1.625-.325 1.075T12.5 21"/></svg></a></div><div class="widget-body fs14"><a class="item title" href="/blog/20251013/"><span class="title">在混乱中建立秩序：Stellar 产品设计与工程重构复盘</span></a><a class="item title" href="/blog/20240110/"><span class="title">ObjC/Swift 混编的通知崩溃排查</span></a><a class="item title" href="/blog/20240129/"><span class="title">又穷又忙的一年——2023 年度回顾</span></a><a class="item title" href="/blog/20240208/"><span class="title">文章插图需要点击放大吗？Stellar 图片展示的设计取舍</span></a><a class="item title" href="/blog/20240203/"><span class="title">Stellar 专栏功能：我为什么专门开发它？</span></a><a class="item title" href="/blog/20250602/"><span class="title">动态友链重构：借助 AI 获重磅升级</span></a><a class="item title" href="/blog/20250705/"><span class="title">利用 Webhook 自动部署博客到服务器并飞书通知</span></a><a class="item title" href="/blog/20260116/"><span class="title">2025 年度 OKR 复盘</span></a><a class="item title" href="/blog/20260815/"><span class="title">Stellar 为什么没能进入 Hexo 主题头部</span></a><a class="item title" href="/blog/20210102/"><span class="title">用 GitHub 搭建一个简单的云脚本体系</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -95,17 +98,17 @@
 
 
 
-<div class="article-banner-wrap slide-up"><div class="article banner top">
+<div class="article-banner-wrap slide-up"><div class="article banner top" style="--bg-url:url('https://res.xaox.cc/gh/cdn-x/xaoxuu@main/posts/20250706160449903.webp')"><img class="lazy bg" data-src="https://res.xaox.cc/gh/cdn-x/xaoxuu@main/posts/20250706160449903.webp">
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
-<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><a class="author" href="/author/xaoxuu/">Mr. X</a><span class="sep"></span><span class="text created"><time datetime="2025-10-13T12:36:00.000Z">2025年10月13日</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-10-13T12:36:00.000Z">2025年10月13日</time></span></div>
+<span class="sep"></span><a class="cap breadcrumb" id="menu" href="/topic/">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/blog/20260815/">为什么</a><span class="cap right ai-label"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24"><path fill="currentColor" d="M3 10.417c0-3.198 0-4.797.378-5.335c.377-.537 1.88-1.052 4.887-2.081l.573-.196C10.405 2.268 11.188 2 12 2s1.595.268 3.162.805l.573.196c3.007 1.029 4.51 1.544 4.887 2.081C21 5.62 21 7.22 21 10.417v1.574c0 5.638-4.239 8.375-6.899 9.536C13.38 21.842 13.02 22 12 22s-1.38-.158-2.101-.473C7.239 20.365 3 17.63 3 11.991z" opacity=".5"/><path fill="currentColor" fill-rule="evenodd" d="M10.95 8.4a1.75 1.75 0 0 1 2.1 0l3.4 2.55a.75.75 0 1 1-.9 1.2l-3.4-2.55a.25.25 0 0 0-.3 0l-3.4 2.55a.75.75 0 1 1-.9-1.2zm.6 3.55a.75.75 0 0 1 .9 0l2 1.5a.75.75 0 1 1-.9 1.2L12 13.488l-1.55 1.162a.75.75 0 1 1-.9-1.2z" clip-rule="evenodd"/></svg>已 AI 润色</span></div>
+<div class="flex-row" id="post-meta"><a class="author" href="/author/xaoxuu/">Mr. X</a><span class="sep"></span><span class="text created"><time datetime="2025-10-13T12:36:00.000Z">2025年10月13日</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-08-15T07:19:00.000Z">2026年8月15日</time></span></div>
 </div></div>
     
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>在混乱中建立秩序</span></h1>
+        <h1 class="text title"><span>在混乱中建立秩序：Stellar 产品设计与工程重构复盘</span></h1>
         
       </div>
     </div>
@@ -140,38 +143,26 @@
 </ul>
 <p>这种<strong>数据与 UI 分离</strong>的设计思路，不仅兼顾了便捷的发布流程与一致的用户体验，还为后续的演进开辟了新天地——比如动态友链、GitHub 项目更新日志，甚至社区用户自发开发的各种创意玩法。</p>
 <blockquote>
-<p>Stellar 是我的业余开源作品，代表了在没有外部约束的情况下，我在混乱的用户体验现状中找到秩序化的解决方案。接下来的篇幅，我将重点讨论在工作中，如何面对混乱的条件限制中，找到一条稳定可靠的出路。</p>
+<p>Stellar 是我的业余开源作品，代表了在没有外部约束的情况下，我在混乱的用户体验现状中找到秩序化的解决方案。接下来的篇幅，我将从工程重构的角度，讲述这些设计如何在现实条件的约束下，一步步落地为可复用的能力。</p>
 </blockquote>
-<h2 id="技术栈与直播架构演进"><a href="#技术栈与直播架构演进" class="headerlink" title="技术栈与直播架构演进"></a>技术栈与直播架构演进</h2><p>正如文章开头所说，我们一直在被现实的混乱裹挟前行——技术债务高筑，但互联网公司不可能停下迭代来专门重构。所以我制定了一个“五年计划”，在日常迭代中同步推进渐进式重构，就像忒修斯之船一样，每次替换一块板，每次更新一根桅杆，最终重建整艘船。</p>
-<h3 id="分层架构设计与渐进式重构"><a href="#分层架构设计与渐进式重构" class="headerlink" title="分层架构设计与渐进式重构"></a>分层架构设计与渐进式重构</h3><p>项目原本是标准 MVC 架构，但是没有约束力和缺少 Code Review 导致最终劣化成了“没有架构”，堪称“低内聚、高耦合”的典范：一个 ViewController 会出现业务逻辑代码、网络层代码、服务层代码，网络接口的类文件里面甚至也会见到写死的业务层逻辑。结果现状就是：即便解决一个很小的问题都会牵一发而动全身，影响范围大，维护成本高。</p>
-<p>为了理顺依赖、降低耦合，我将原本盘根错节的网状依赖，改造成单向的树状依赖。结合项目实际需求，我将架构划分为三大层，从底层到顶层分别是：</p>
+<h2 id="Stellar-的工程重构"><a href="#Stellar-的工程重构" class="headerlink" title="Stellar 的工程重构"></a>Stellar 的工程重构</h2><p>Stellar 自 2021 年诞生以来，一直处于渐进式的重构之中。它就像忒修斯之船：每次替换一块板，每次更新一根桅杆，在持续航行的同时完成整艘船的重建。作为业余开源项目，Stellar 没有外部时间表，却有另一重约束——投入的精力有限，因此每一次重构都必须把力气用在刀刃上：想清楚问题本质，用最低成本验证，再把成果沉淀为可复用的能力。</p>
+<h3 id="动态友链重构：从-Issues-API-到可复用工作流"><a href="#动态友链重构：从-Issues-API-到可复用工作流" class="headerlink" title="动态友链重构：从 Issues API 到可复用工作流"></a>动态友链重构：从 Issues API 到可复用工作流</h3><p>动态友链是「数据与 UI 分离」思路的早期实践。2020 年，我实现了通过 GitHub Issue 提交友链信息、前端拉取数据并渲染的方案，发布友链不再需要重新部署站点；这个能力后来被集成进 Stellar，成为动态数据组件的起点。</p>
+<p>但受限于我当时的技能积累，这个项目一直处于“勉强能用”的状态：配置和更新流程繁琐，无法自动检测友链的在线状态，朋友有没有更新博客只能逐个手动访问，排序方式也只有创建和更新时间两种，体验不佳。这些痛点积压了五年，直到 2025 年，我借助 AI 对它进行了彻底重构。</p>
+<p>重构的成果，是三个可以独立复用、也可以组合成完整工作流的开源项目：</p>
 <ul>
-<li>基础工具层：提供跨项目通用功能，如环境切换、类扩展、日志等</li>
-<li>抽象服务层：面向协议设计，封装公共服务接口，例如网络服务、消息服务</li>
-<li>业务模块层：面向具体业务需求的封装，每个模块内部改进为 MVVM 架构</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/xaoxuu/issues2json">issues2json</a>：抓取 GitHub Issue 中的第一段 JSON 并保存为数据文件，支持多种排序和过滤规则</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/xaoxuu/links-checker">links-checker</a>：自动检测友链的存活状态，并为不同状态的链接打上标签</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/xaoxuu/feed-posts-parser">feed-posts-parser</a>：解析友链的 RSS 地址，抓取最新文章并写回 Issue，再结合 issues2json 生成数据</li>
 </ul>
-<p>分层之后难点在于如何逐步接入以及防止后续劣化。我们采取了三步推进策略：</p>
-<ol>
-<li>完成接入+试水：新功能用新架构实现。</li>
-<li>小范围AB实验：一部分接口替换成新架构的实现，并通过AB开关实现新旧切换，有问题可以立即回退。</li>
-<li>收尾工作：第二阶段验证可行后，逐步完成剩余替换工作。</li>
-</ol>
-<p>实现方面，这个改造面临资源严重不足、历史代码兼容成本高等问题，但好在团队认同该方案，为了最终效果，短期内增加工作量是值得的。截止目前，工程总体完成度约 80%，虽然进度受限于资源支持，但重构带来的收益显著——代码质量和维护效率相比之前已经有了质的飞跃。</p>
-<h3 id="礼物播放率问题治理"><a href="#礼物播放率问题治理" class="headerlink" title="礼物播放率问题治理"></a>礼物播放率问题治理</h3><p>接手项目时，礼物未显示一直是高频客诉问题。我对从赠送、接收消息到播放特效的全链路进行了排查，发现每个环节都存在问题。于是制定了一个系统性重构方案，并根据问题严重程度分阶段推进：</p>
-<ul>
-<li>赠送阶段：原本通过 IM 消息发送，高 QPS 下容易被限流丢失，改为直接 API 调用，保障核心功能。</li>
-<li>接收阶段：IM 消息接收与分发存在串房或误拦截问题，需在分层架构改造中优化消息服务。</li>
-<li>播放阶段：播放队列健壮性差，偶尔中断导致后续礼物无法展示；同时播放器库兼容性差、存在崩溃。解决方案：更换稳定播放器 + 队列自唤醒机制，工作量约占总改造的 1/5，但解决了约 4/5 的客诉。</li>
-</ul>
-<p>经过三个阶段的系统治理后，礼物未显示的客诉大幅下降，已基本绝迹，客户体验和业务稳定性显著提升。</p>
-<h3 id="在下架风波中，稳步前进"><a href="#在下架风波中，稳步前进" class="headerlink" title="在下架风波中，稳步前进"></a>在下架风波中，稳步前进</h3><p>我所在的行业监管较严，工作期间经历过多次产品下架的风波。第一次下架发生后，很快连内测分发平台也纷纷下架了我们的包，导致 iOS <strong>正常的产研流程受阻</strong>。</p>
-<p>面对这一突发情况，作为技术团队，我们自然不能坐以待毙，在整改期间也需要继续迭代的。遭遇政策因素被全平台下架时，<strong>无论选择哪个平台，或早或晚都会被下架</strong>，因此我很快意识到，换一家内测分发平台不能解决问题，唯一的出路是自部署。</p>
-<p>好在自部署并不复杂。事实上，在我入职的第一家公司，我就出于兴趣为公司实现过一个简单的内测分发方案。因此这次，我们迅速完成了方案替换，并开始自主管理，使内部产研流程恢复正常运转。</p>
-<p>新方案的优势不仅仅是不受外部政策影响，在持续迭代后，它在用户体验上也发生了巨大的飞跃。比如，打包完成后，系统会自动通过飞书@打包操作人，并在飞书消息卡片中提供一键安装按钮；同时，消息通知里还集成了这次打包的变更内容，极大地提高了开发和测试过程中信息的透明度。</p>
-<p>这套方案后来也被广泛应用于公司的其他项目，不仅提升了工作效率，还为多个产品线提供了稳定的应急保障。</p>
-<p>这是一件小事，分享它的重点不在于会不会做，而在于正确的决策。在 AI 时代，只要解决方案的思路是对的，大部分实现工作都可以交给 AI 辅助完成，但仍需自己验证结果。（如有读者感兴趣，可以参考<a href="https://xaoxuu.com/blog/20250602/">《感谢 AI，动态友链获重磅升级！》</a>这篇文章，后续我也会有其它案例分享。）</p>
+<p>三个工具组合起来，过去的痛点被逐一击破：配置大幅简化，友链状态自动检测，朋友的最新文章自动同步并按更新时间排序。更重要的是，这次重构不再是为了某一个页面服务，而是把「数据与 UI 分离」沉淀成了一条通用的数据管线——GitHub 项目更新日志、需求反馈等玩法，都可以在这条管线上快速搭建。在 AI 时代，只要解决方案的思路是对的，大部分实现工作都可以交给 AI 辅助完成，但仍需自己验证结果。详细过程和配置说明，可以参考<a href="https://xaoxuu.com/blog/20250602/">《动态友链重构：借助 AI 获重磅升级》</a>。</p>
+<h3 id="主题版本检测：预埋两年半的数据终于用上了"><a href="#主题版本检测：预埋两年半的数据终于用上了" class="headerlink" title="主题版本检测：预埋两年半的数据终于用上了"></a>主题版本检测：预埋两年半的数据终于用上了</h3><p>另一个工程决策，是 Stellar 1.13.0 引入的主题信息标签。当时我的初衷是：等用户群体广泛升级后，通过解析这个标签，在前端清晰展示用户当前使用的主题版本，方便用户查阅文档时对照最新版本的部署效果。</p>
+<p>但当时面临一个现实问题：缺乏现成的数据支撑。摆在我面前有两条路：一是投入技术力量分析数据来实现；二是先以最低成本预埋数据点，待时机成熟再推进后续工作。我毫不犹豫地选择了后者。原因在于，每个人在同一时期往往要应对纷繁复杂的事务，依据轻重缓急制定计划，把非紧急事项以最低成本并行处理，虽然微观上降低了单一任务的即时效率，宏观上却提升了整体的产出与效能。</p>
+<p>两年半后，示例博客中的最低版本号也到了 1.18.5，预埋的数据终于派上用场，这个功能在 2025 年端午节得以实现。回头看，这或许就是「在混乱中建立秩序」的一种具体形态：不急于一次解决所有问题，而是把正确的数据点提前埋好，让它们在合适的时机自己发挥作用。完整的决策过程，可以参考<a href="https://xaoxuu.com/blog/20250604/">《Stellar 主题版本检测：预埋两年半的数据终于用上了》</a>。</p>
 <h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>山重水复疑无路，柳暗花明又一村。混乱不是深渊，而是阶梯，它鞭策我们去探寻问题的本质，找到通往秩序之路。</p>
 </article>
+
+<div class="article-tags slide-up"><a class="tag" href="/blog/tags/%E6%80%9D%E8%80%83/">思考</a><a class="tag" href="/blog/tags/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/">产品设计</a><a class="tag" href="/blog/tags/stellar/">Stellar</a></div>
+
 <div class="article-footer slide-up">
     <section id="license">
       <div class="header"><span>许可协议</span></div>
@@ -185,7 +176,7 @@
       <div class="header"><span>分享文章</span></div>
       <div class="body">
         <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https:&#x2F;&#x2F;xaoxuu.com&#x2F;blog&#x2F;20251013&#x2F;"></div>
-        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg"></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fxaoxuu.com%2Fblog%2F20251013%2F&title=%E5%9C%A8%E6%B7%B7%E4%B9%B1%E4%B8%AD%E5%BB%BA%E7%AB%8B%E7%A7%A9%E5%BA%8F%20-%20XAOXUU&summary=%E4%BA%BA%E4%BA%BA%E5%90%91%E5%BE%80%E7%A7%A9%E5%BA%8F%E4%BA%95%E7%84%B6%EF%BC%8C%E5%8D%B4%E6%80%BB%E8%A2%AB%E7%8E%B0%E5%AE%9E%E7%9A%84%E6%B7%B7%E4%B9%B1%E8%A3%B9%E6%8C%9F%E5%89%8D%E8%A1%8C%E3%80%82%E9%82%A3%E4%B9%88%EF%BC%8C%E5%A6%82%E4%BD%95%E5%9C%A8%E6%B7%B7%E4%B9%B1%E4%B8%AD%E9%80%90%E6%AD%A5%E5%BB%BA%E7%AB%8B%E7%A7%A9%E5%BA%8F%E5%91%A2%EF%BC%9F%E6%9C%AC%E6%96%87%E5%B0%86%E7%BB%93%E5%90%88%E6%88%91%E7%9A%84%E4%BA%B2%E8%BA%AB%E7%BB%8F%E5%8E%86%EF%BC%8C%E4%BB%8E%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%E5%92%8C%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0%E7%9A%84%E6%96%B9%E9%9D%A2%EF%BC%8C%E5%88%86%E4%BA%AB%E6%88%91%E7%9A%84%E6%96%B9%E6%B3%95%E4%B8%8E%E6%80%9D%E8%80%83%E3%80%82"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg"></a><a class="social share-item email" href="mailto:?subject=%E5%9C%A8%E6%B7%B7%E4%B9%B1%E4%B8%AD%E5%BB%BA%E7%AB%8B%E7%A7%A9%E5%BA%8F%20-%20XAOXUU&amp;body=https%3A%2F%2Fxaoxuu.com%2Fblog%2F20251013%2F"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg"></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg"></a></div>
+        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg"></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fxaoxuu.com%2Fblog%2F20251013%2F&title=%E5%9C%A8%E6%B7%B7%E4%B9%B1%E4%B8%AD%E5%BB%BA%E7%AB%8B%E7%A7%A9%E5%BA%8F%EF%BC%9AStellar%20%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%B7%A5%E7%A8%8B%E9%87%8D%E6%9E%84%E5%A4%8D%E7%9B%98%20-%20XAOXUU&summary=%E5%A6%82%E4%BD%95%E5%9C%A8%E6%B7%B7%E4%B9%B1%E4%B8%AD%E5%BB%BA%E7%AB%8B%E7%A7%A9%E5%BA%8F%EF%BC%9F%E4%BD%9C%E8%80%85%E7%BB%93%E5%90%88%20Stellar%20%E7%9A%84%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99%E4%B8%8E%E5%B7%A5%E7%A8%8B%E9%87%8D%E6%9E%84%E5%AE%9E%E8%B7%B5%EF%BC%88%E7%9F%A5%E8%AF%86%E5%BA%93%E7%B3%BB%E7%BB%9F%E3%80%81%E5%8A%A8%E6%80%81%E6%97%B6%E9%97%B4%E7%BA%BF%E3%80%81%E5%8A%A8%E6%80%81%E5%8F%8B%E9%93%BE%E9%87%8D%E6%9E%84%E3%80%81%E4%B8%BB%E9%A2%98%E7%89%88%E6%9C%AC%E6%A3%80%E6%B5%8B%EF%BC%89%EF%BC%8C%E5%88%86%E4%BA%AB%E4%BB%8E%E6%B7%B7%E4%B9%B1%E8%B5%B0%E5%90%91%E7%A7%A9%E5%BA%8F%E7%9A%84%E6%96%B9%E6%B3%95%E4%B8%8E%E6%80%9D%E8%80%83%E3%80%82"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg"></a><a class="social share-item email" href="mailto:?subject=%E5%9C%A8%E6%B7%B7%E4%B9%B1%E4%B8%AD%E5%BB%BA%E7%AB%8B%E7%A7%A9%E5%BA%8F%EF%BC%9AStellar%20%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%B7%A5%E7%A8%8B%E9%87%8D%E6%9E%84%E5%A4%8D%E7%9B%98%20-%20XAOXUU&amp;body=https%3A%2F%2Fxaoxuu.com%2Fblog%2F20251013%2F"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg"></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg"></a></div>
         
         <div class="qrcode" id="qrcode-wechat" style="opacity:0;height:0">
           <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https%3A%2F%2Fxaoxuu.com%2Fblog%2F20251013%2F">
@@ -195,15 +186,14 @@
     </section>
     </div>
 
-<div class="related-wrap slide-up" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/blog/20260116/">2025年度OKR复盘</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/blog/20250713/">关于本站备用站点的紧急通知</a></div></section></div>
+<div class="related-wrap slide-up" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/blog/20260116/">2025 年度 OKR 复盘</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/blog/20250713/">关于本站备用站点的紧急通知</a></div></section></div>
 
 
 
 
   <div class="related-wrap md-text slide-up" id="comments">
     <section class="header cmt-title cap theme">
-      <p>快来参与讨论吧~</p>
-
+      
     </section>
     <section class="body cmt-body artalk">
       
@@ -221,7 +211,7 @@
 
 
 
-<widget class="widget-wrapper slide-up toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Stellar-%E7%9A%84%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99"><span class="toc-text">Stellar 的产品设计原则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E9%9B%86%E6%88%90%E7%9F%A5%E8%AF%86%E5%BA%93%E7%B3%BB%E7%BB%9F%EF%BC%9F"><span class="toc-text">为什么要集成知识库系统？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E6%97%B6%E9%97%B4%E7%BA%BF%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E8%B7%B5"><span class="toc-text">动态时间线的设计与实践</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E6%A0%88%E4%B8%8E%E7%9B%B4%E6%92%AD%E6%9E%B6%E6%9E%84%E6%BC%94%E8%BF%9B"><span class="toc-text">技术栈与直播架构演进</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%B1%82%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E6%B8%90%E8%BF%9B%E5%BC%8F%E9%87%8D%E6%9E%84"><span class="toc-text">分层架构设计与渐进式重构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BC%E7%89%A9%E6%92%AD%E6%94%BE%E7%8E%87%E9%97%AE%E9%A2%98%E6%B2%BB%E7%90%86"><span class="toc-text">礼物播放率问题治理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E4%B8%8B%E6%9E%B6%E9%A3%8E%E6%B3%A2%E4%B8%AD%EF%BC%8C%E7%A8%B3%E6%AD%A5%E5%89%8D%E8%BF%9B"><span class="toc-text">在下架风波中，稳步前进</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-text">结语</span></a></li></ol></div><div class="widget-footer"><a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/><path d="M7 3.338A9.95 9.95 0 0 1 12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12c0-1.821.487-3.53 1.338-5"/></g></svg><span>回到顶部</span></a><a class="buttom" onclick="util.scrollComment()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M8 10.5h8M8 14h5.5M17 3.338A9.95 9.95 0 0 0 12 2C6.477 2 2 6.477 2 12c0 1.6.376 3.112 1.043 4.453c.178.356.237.763.134 1.148l-.595 2.226a1.3 1.3 0 0 0 1.591 1.592l2.226-.596a1.63 1.63 0 0 1 1.149.133A9.96 9.96 0 0 0 12 22c5.523 0 10-4.477 10-10c0-1.821-.487-3.53-1.338-5"/></svg><span>参与讨论</span></a></div></widget>
+<widget class="widget-wrapper slide-up toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Stellar-%E7%9A%84%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99"><span class="toc-text">Stellar 的产品设计原则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E9%9B%86%E6%88%90%E7%9F%A5%E8%AF%86%E5%BA%93%E7%B3%BB%E7%BB%9F%EF%BC%9F"><span class="toc-text">为什么要集成知识库系统？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E6%97%B6%E9%97%B4%E7%BA%BF%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E8%B7%B5"><span class="toc-text">动态时间线的设计与实践</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Stellar-%E7%9A%84%E5%B7%A5%E7%A8%8B%E9%87%8D%E6%9E%84"><span class="toc-text">Stellar 的工程重构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E5%8F%8B%E9%93%BE%E9%87%8D%E6%9E%84%EF%BC%9A%E4%BB%8E-Issues-API-%E5%88%B0%E5%8F%AF%E5%A4%8D%E7%94%A8%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="toc-text">动态友链重构：从 Issues API 到可复用工作流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E7%89%88%E6%9C%AC%E6%A3%80%E6%B5%8B%EF%BC%9A%E9%A2%84%E5%9F%8B%E4%B8%A4%E5%B9%B4%E5%8D%8A%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%88%E4%BA%8E%E7%94%A8%E4%B8%8A%E4%BA%86"><span class="toc-text">主题版本检测：预埋两年半的数据终于用上了</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-text">结语</span></a></li></ol></div><div class="widget-footer"><a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/><path d="M7 3.338A9.95 9.95 0 0 1 12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12c0-1.821.487-3.53 1.338-5"/></g></svg><span>回到顶部</span></a><a class="buttom" onclick="util.scrollComment()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M8 10.5h8M8 14h5.5M17 3.338A9.95 9.95 0 0 0 12 2C6.477 2 2 6.477 2 12c0 1.6.376 3.112 1.043 4.453c.178.356.237.763.134 1.148l-.595 2.226a1.3 1.3 0 0 0 1.591 1.592l2.226-.596a1.63 1.63 0 0 1 1.149.133A9.96 9.96 0 0 0 12 22c5.523 0 10-4.477 10-10c0-1.821-.487-3.53-1.338-5"/></svg><span>参与讨论</span></a></div></widget>
 </div></aside><div class="float-panel">
   <button type="button" style="display:none" class="laptop-only rightbar-toggle mobile" onclick="sidebar.rightbar()">
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
@@ -252,7 +242,7 @@
 
 
 
-  <script type="module">!function(){const t=document.getElementById("artalk_container");t&&util.viewportLazyload(t,function(){utils.css("https://res.xaox.cc/unpkg/artalk@2.9.1/dist/artalk.css"),utils.js("https://res.xaox.cc/unpkg/artalk@2.9.1/dist/artalk.js",{defer:!0}).then(function(){const e=t.getAttribute("comment_id")??decodeURI(window.location.pathname);Artalk.init({el:"#artalk_container",pageKey:e,pageTitle:"在混乱中建立秩序",server:"https://res.xaox.cc/atk/",site:"XAOXUU",darkMode:"auto",imgUploader:function(t){let e=new Headers;e.set("Accept","application/json");let a=new FormData;return a.append("file",t),fetch("https://github-uploader.xaox.cc/api/v1/upload?user=cdn-x&repo=comments-assets",{method:"POST",body:a,headers:e}).then(t=>t.json()).then(t=>t.urls.gcore)}}),-1!==window.location.search.indexOf("atk_")&&window.setTimeout(function(){window.history.replaceState(null,"",window.location.pathname+window.location.hash)},300)})})}()</script>
+  <script type="module">!function(){const t=document.getElementById("artalk_container");if(!t)return;const e=/[?&]atk_comment=\d+/.test(window.location.search)||/#atk-comment-\d+/.test(window.location.hash);util.viewportLazyload(t,function(){utils.css("https://res.xaox.cc/unpkg/artalk@2.9.1/dist/artalk.css"),utils.js("https://res.xaox.cc/unpkg/artalk@2.9.1/dist/artalk.js",{defer:!0}).then(function(){const o=window.location.search.match(/[?&]atk_comment=(\d+)/);if(o&&!/#atk-comment-\d+/.test(window.location.hash)){const t=new URLSearchParams(window.location.search).get("atk_notify_key"),e=t?"?atk_notify_key="+encodeURIComponent(t):"";window.history.replaceState(null,"",window.location.pathname+e+"#atk-comment-"+o[1])}const n=t.getAttribute("comment_id")??decodeURI(window.location.pathname),a=Artalk.init({el:"#artalk_container",pageKey:n,pageTitle:"在混乱中建立秩序：Stellar 产品设计与工程重构复盘",server:"https://res.xaox.cc/atk/",site:"XAOXUU",darkMode:"auto",imgUploader:function(t){let e=new Headers;e.set("Accept","application/json");let o=new FormData;return o.append("file",t),fetch("https://github-uploader.xaox.cc/api/v1/upload?user=cdn-x&repo=comments-assets",{method:"POST",body:o,headers:e}).then(t=>t.json()).then(t=>t.urls.gcore)}});e&&-1!==window.location.search.indexOf("atk_")&&a.on("list-loaded",function(){window.setTimeout(function(){window.history.replaceState(null,"",window.location.pathname+window.location.hash)},0)})})},!e)}()</script>
 
 
 

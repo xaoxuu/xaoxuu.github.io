@@ -12,24 +12,22 @@
   <rights>All rights reserved 2026, xaoxuu</rights>
   <subtitle>For all time, always. | 风暴前夕</subtitle>
   <title>XAOXUU</title>
-  <updated>2026-08-14T18:14:00.000Z</updated>
+  <updated>2026-08-15T06:19:00.000Z</updated>
   <entry>
     <author>
       <name>xaoxuu</name>
       <email>me@xaoxuu.com</email>
     </author>
+    <category term="思考" scheme="https://xaoxuu.com/blog/categories/%E6%80%9D%E8%80%83/"/>
+    <category term="思考" scheme="https://xaoxuu.com/blog/tags/%E6%80%9D%E8%80%83/"/>
     <category term="Stellar" scheme="https://xaoxuu.com/blog/tags/stellar/"/>
     <category term="Hexo" scheme="https://xaoxuu.com/blog/tags/hexo/"/>
-    <category term="数据分析" scheme="https://xaoxuu.com/blog/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
-    <category term="主题复盘" scheme="https://xaoxuu.com/blog/tags/%E4%B8%BB%E9%A2%98%E5%A4%8D%E7%9B%98/"/>
     <id>https://xaoxuu.com/blog/20260815/</id>
     <link href="https://xaoxuu.com/blog/20260815/"/>
     <published>2026-08-14T18:14:00.000Z</published>
-    <summary>
-      <![CDATA[<p>这篇复盘想回答一个问题：Stellar 为什么没能进入 Hexo 主题头部？数据面（2026-08-14 快照）的答案是——star 第 9、与第二梯队差约 4 倍、2024 年明显增长后增速回落、近一年发版几乎停摆；但同一组数据也显示 npm 月下载排第 3、近 12 个月 star 增速高于同梯队竞品。产品面补上另一半：在「轻博客为主流」的 Hexo 生态里，四系统这类「重功能、强差异」的定位没有形成品类心智，增长机制也没能把它转化为规模。落后是「定位错位」与「增长机制不足」叠加的结果。</p>]]>
-    </summary>
+    <summary>Stellar 为什么没能进入 Hexo 主题头部？基于 2026-08 数据快照从数据面与产品面双线复盘：star 第 9 与 npm 下载第 3 的矛盾、定位错位与增长机制不足，并给出行动路线图。</summary>
     <title>Stellar 为什么没能进入 Hexo 主题头部</title>
-    <updated>2026-08-14T18:14:00.000Z</updated>
+    <updated>2026-08-15T06:19:00.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -37,14 +35,12 @@
       <email>me@xaoxuu.com</email>
     </author>
     <category term="梦境" scheme="https://xaoxuu.com/blog/categories/%E6%A2%A6%E5%A2%83/"/>
+    <category term="梦境" scheme="https://xaoxuu.com/blog/tags/%E6%A2%A6%E5%A2%83/"/>
+    <category term="故事" scheme="https://xaoxuu.com/blog/tags/%E6%95%85%E4%BA%8B/"/>
     <id>https://xaoxuu.com/blog/20260801/</id>
     <link href="https://xaoxuu.com/blog/20260801/"/>
     <published>2026-08-01T07:24:00.000Z</published>
-    <summary>
-      <![CDATA[<blockquote>
-<p>前面的梦已经记不太清了，大多是一些无聊的小事，只是我发现这个世界并不完美，偶尔冒出一些解释不清的异象。</p>
-</blockquote>]]>
-    </summary>
+    <summary>一场关于「无法定格的偶遇」的梦：教室里出现多个不同时期的自己，想拍合照却始终无法成功，借梦境探讨时间错位、自我认知与那些注定无法留住的人。</summary>
     <title>梦境：无法定格的偶遇</title>
     <updated>2026-08-14T16:17:00.000Z</updated>
   </entry>
@@ -53,12 +49,13 @@
       <name>xaoxuu</name>
       <email>me@xaoxuu.com</email>
     </author>
+    <category term="思考" scheme="https://xaoxuu.com/blog/categories/%E6%80%9D%E8%80%83/"/>
+    <category term="思考" scheme="https://xaoxuu.com/blog/tags/%E6%80%9D%E8%80%83/"/>
+    <category term="随笔" scheme="https://xaoxuu.com/blog/tags/%E9%9A%8F%E7%AC%94/"/>
     <id>https://xaoxuu.com/blog/20260226/</id>
     <link href="https://xaoxuu.com/blog/20260226/"/>
     <published>2026-02-26T12:00:00.000Z</published>
-    <summary>
-      <![CDATA[<p>连续两个晚上做梦笑醒，不是因为有什么好事，只是睡眠变浅了。</p>]]>
-    </summary>
+    <summary>连续两个晚上做梦笑醒的日常随笔：团圆后的送别、落日与飞机尾迹、听不懂的 Dattle，用三张照片记录平凡日子里转瞬即逝的瞬间。</summary>
     <title>连续两个晚上做梦笑醒</title>
     <updated>2026-02-26T12:00:00.000Z</updated>
   </entry>
@@ -67,40 +64,46 @@
       <name>xaoxuu</name>
       <email>me@xaoxuu.com</email>
     </author>
+    <category term="思考" scheme="https://xaoxuu.com/blog/categories/%E6%80%9D%E8%80%83/"/>
+    <category term="思考" scheme="https://xaoxuu.com/blog/tags/%E6%80%9D%E8%80%83/"/>
+    <category term="自我迭代" scheme="https://xaoxuu.com/blog/tags/%E8%87%AA%E6%88%91%E8%BF%AD%E4%BB%A3/"/>
+    <category term="年度复盘" scheme="https://xaoxuu.com/blog/tags/%E5%B9%B4%E5%BA%A6%E5%A4%8D%E7%9B%98/"/>
     <id>https://xaoxuu.com/blog/20260116/</id>
     <link href="https://xaoxuu.com/blog/20260116/"/>
     <published>2026-01-16T12:36:00.000Z</published>
-    <summary>
-      <![CDATA[<div class="tag-plugin quot p"><p class="content"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Ic]]>
-    </summary>
-    <title>2025年度OKR复盘</title>
-    <updated>2026-01-16T12:36:00.000Z</updated>
+    <summary>2025 年度 OKR 复盘：回顾知识沉淀、文章发布与产品设计重构等目标的完成情况，也记录与 AI 对话整理世界观、认识自我的意外收获与 2026 计划。</summary>
+    <title>2025 年度 OKR 复盘</title>
+    <updated>2026-08-15T06:38:00.000Z</updated>
   </entry>
   <entry>
     <author>
       <name>xaoxuu</name>
       <email>me@xaoxuu.com</email>
     </author>
+    <category term="思考" scheme="https://xaoxuu.com/blog/categories/%E6%80%9D%E8%80%83/"/>
+    <category term="思考" scheme="https://xaoxuu.com/blog/tags/%E6%80%9D%E8%80%83/"/>
+    <category term="产品设计" scheme="https://xaoxuu.com/blog/tags/%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/"/>
+    <category term="Stellar" scheme="https://xaoxuu.com/blog/tags/stellar/"/>
     <id>https://xaoxuu.com/blog/20251013/</id>
     <link href="https://xaoxuu.com/blog/20251013/"/>
     <published>2025-10-13T12:36:00.000Z</published>
-    <summary>
-      <![CDATA[<p>人人向往秩序井然，却总被现实的混乱裹挟前行。那么，如何在混乱中逐步建立秩序呢？本文将结合我的亲身经历，从产品设计和技术实现的方面，分享我的方法与思考。</p>]]>
-    </summary>
-    <title>在混乱中建立秩序</title>
-    <updated>2025-10-13T12:36:00.000Z</updated>
+    <summary>如何在混乱中建立秩序？作者结合 Stellar 的产品设计原则与工程重构实践（知识库系统、动态时间线、动态友链重构、主题版本检测），分享从混乱走向秩序的方法与思考。</summary>
+    <title>在混乱中建立秩序：Stellar 产品设计与工程重构复盘</title>
+    <updated>2026-08-15T07:19:00.000Z</updated>
   </entry>
   <entry>
     <author>
       <name>xaoxuu</name>
       <email>me@xaoxuu.com</email>
     </author>
+    <category term="产研" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/"/>
+    <category term="经验" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/%E7%BB%8F%E9%AA%8C/"/>
+    <category term="静态博客" scheme="https://xaoxuu.com/blog/tags/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/"/>
+    <category term="博客部署" scheme="https://xaoxuu.com/blog/tags/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/"/>
     <id>https://xaoxuu.com/blog/20250713/</id>
     <link href="https://xaoxuu.com/blog/20250713/"/>
     <published>2025-07-13T12:36:00.000Z</published>
-    <summary>
-      <![CDATA[<p>近期由于各种不可抗力，网站可访问性遭遇了前所未有的挑战。</p>]]>
-    </summary>
+    <summary>关于本站备用站点的紧急通知：近期访问可能不稳定，已部署 Vercel、Netlify、Cloudflare Pages 与 GitHub Pages 多个备用站，主备站点 canonical 已收敛，不分散主站权重。</summary>
     <title>关于本站备用站点的紧急通知</title>
     <updated>2025-07-13T12:36:00.000Z</updated>
   </entry>
@@ -111,14 +114,13 @@
     </author>
     <category term="产研" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/"/>
     <category term="技术" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/%E6%8A%80%E6%9C%AF/"/>
+    <category term="静态博客" scheme="https://xaoxuu.com/blog/tags/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/"/>
+    <category term="Nginx" scheme="https://xaoxuu.com/blog/tags/nginx/"/>
+    <category term="安全配置" scheme="https://xaoxuu.com/blog/tags/%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE/"/>
     <id>https://xaoxuu.com/blog/20250706/</id>
     <link href="https://xaoxuu.com/blog/20250706/"/>
     <published>2025-07-06T13:36:00.000Z</published>
-    <summary>
-      <![CDATA[<div class="tag-plugin colorful note" color="yellow"><div class="body"><p>本文内容可能已经过时，仅作参考。</p></div></div>
-
-<p>书接上回，刚迁到服务器，东西还没完全配完，就从日志里看到不少不速之客了！虽然是静态博客，但看到这些扫描器反复试探还是很烦，果断禁掉。</p>]]>
-    </summary>
+    <summary>分享适合静态博客的 Nginx 安全配置：拦截 PHP 等动态脚本与压缩包下载、拒绝 .git/.env 等敏感文件、隐藏文件防遍历，并配置 HSTS 与自定义 404。</summary>
     <title>适合静态博客的 Nginx 安全性配置</title>
     <updated>2025-07-06T13:36:00.000Z</updated>
   </entry>
@@ -129,12 +131,15 @@
     </author>
     <category term="产研" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/"/>
     <category term="技术" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/%E6%8A%80%E6%9C%AF/"/>
+    <category term="GitHub Actions" scheme="https://xaoxuu.com/blog/tags/github-actions/"/>
+    <category term="Shell" scheme="https://xaoxuu.com/blog/tags/shell/"/>
+    <category term="博客部署" scheme="https://xaoxuu.com/blog/tags/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/"/>
     <id>https://xaoxuu.com/blog/20250705/</id>
     <link href="https://xaoxuu.com/blog/20250705/"/>
     <published>2025-07-05T13:59:00.000Z</published>
     <summary>由于近期网站速度不稳定，只好再把博客解析改到服务器上。本文记录了如何利用 Webhook 实现博客自动部署到服务器并通过飞书通知。</summary>
-    <title>利用 Webhook 实现博客自动部署到服务器并通过飞书通知</title>
-    <updated>2026-08-01T10:03:00.000Z</updated>
+    <title>利用 Webhook 自动部署博客到服务器并飞书通知</title>
+    <updated>2026-08-15T06:38:00.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -142,14 +147,12 @@
       <email>me@xaoxuu.com</email>
     </author>
     <category term="梦境" scheme="https://xaoxuu.com/blog/categories/%E6%A2%A6%E5%A2%83/"/>
+    <category term="梦境" scheme="https://xaoxuu.com/blog/tags/%E6%A2%A6%E5%A2%83/"/>
+    <category term="故事" scheme="https://xaoxuu.com/blog/tags/%E6%95%85%E4%BA%8B/"/>
     <id>https://xaoxuu.com/blog/20250616/</id>
     <link href="https://xaoxuu.com/blog/20250616/"/>
     <published>2025-06-16T04:56:00.000Z</published>
-    <summary>
-      <![CDATA[<blockquote>
-<p>这是一个新鲜热乎的梦，我今天早上快迟到了还没醒，意识投射入了梦境，醒来后请了一上午假，把这有趣的梦写了下来。</p>
-</blockquote>]]>
-    </summary>
+    <summary>一场关于寄生之种与崩塌时空的清醒梦：从被寄生植物入侵到打车系统错乱，再到客服背后的时钟墙。作者记录梦境并借 AI 解读潜意识中的焦虑与自我唤醒。</summary>
     <title>梦境：寄生之种与崩塌的时空</title>
     <updated>2026-08-14T16:17:00.000Z</updated>
   </entry>
@@ -158,16 +161,16 @@
       <name>xaoxuu</name>
       <email>me@xaoxuu.com</email>
     </author>
-    <category term="图床" scheme="https://xaoxuu.com/blog/tags/%E5%9B%BE%E5%BA%8A/"/>
-    <category term="博客" scheme="https://xaoxuu.com/blog/tags/%E5%8D%9A%E5%AE%A2/"/>
+    <category term="产研" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/"/>
+    <category term="技术" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/%E6%8A%80%E6%9C%AF/"/>
     <category term="图片" scheme="https://xaoxuu.com/blog/tags/%E5%9B%BE%E7%89%87/"/>
+    <category term="静态博客" scheme="https://xaoxuu.com/blog/tags/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/"/>
+    <category term="图床" scheme="https://xaoxuu.com/blog/tags/%E5%9B%BE%E5%BA%8A/"/>
     <id>https://xaoxuu.com/blog/20250611/</id>
     <link href="https://xaoxuu.com/blog/20250611/"/>
     <published>2025-06-11T15:37:00.000Z</published>
-    <summary>
-      <![CDATA[<p>博客图片存哪儿，看起来是小事，折腾起来却让人头大。</p>]]>
-    </summary>
-    <title>博客图片到底该存哪儿啊？</title>
+    <summary>博客图片到底该存哪儿？作者对比本地仓库、图床与阿里云 OSS 的优缺点，梳理格式支持、修改成本、冗余与访问速度等需求，并分享 OSS 反代解决 SSL 续期的思路。</summary>
+    <title>博客图片存哪儿？图床 / OSS / 本地仓库对比</title>
     <updated>2025-06-11T15:37:00.000Z</updated>
   </entry>
 </feed>

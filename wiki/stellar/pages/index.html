@@ -26,12 +26,12 @@
 <meta property="og:site_name" content="XAOXUU">
 <meta property="og:description" content="Stellar 是一个内置文档系统的简约商务风 Hexo 主题，支持丰富的标签和动态数据组件。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp">
+<meta property="og:image" content="https://pic.imgdb.cn/item/63bc16f2be43e0d30eb899d1.jpg">
 <meta property="article:published_time" content="2023-12-06T13:55:00.000Z">
 <meta property="article:modified_time" content="2025-07-06T09:11:00.000Z">
 <meta property="article:author" content="xaoxuu">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"><meta name="twitter:title" content="编写文章以及独立页面">
+<meta name="twitter:image" content="https://pic.imgdb.cn/item/63bc16f2be43e0d30eb899d1.jpg"><meta name="twitter:title" content="编写文章以及独立页面">
   
   
   
@@ -55,7 +55,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Website","@id":"https://xaoxuu.com/wiki/stellar/pages/","author":{"@type":"Person","name":"xaoxuu","sameAs":[],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"},"name":"编写文章以及独立页面","description":"Stellar 是一个内置文档系统的简约商务风 Hexo 主题，支持丰富的标签和动态数据组件。","url":"https://xaoxuu.com/wiki/stellar/pages/"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Website","@id":"https://xaoxuu.com/wiki/stellar/pages/","author":{"@type":"Person","name":"xaoxuu","sameAs":["https://github.com/xaoxuu"],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"},"name":"编写文章以及独立页面","description":"Stellar 是一个内置文档系统的简约商务风 Hexo 主题，支持丰富的标签和动态数据组件。","url":"https://xaoxuu.com/wiki/stellar/pages/"}</script>
   <link rel="apple-touch-icon" sizes="180x180" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="16x16" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="192x192" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/android-chrome-192x192.png"><link rel="manifest" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/site.webmanifest"><link rel="shortcut icon" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/favicon.ico"><meta name="theme-color" content="#f9fafb"><link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css" media="print" onload="this.media=&quot;all&quot;">
 </head>
 <body><div id="l_cover"></div><div class="l_body content" id="start" layout="page" type="tech"><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
@@ -152,11 +152,11 @@
 <figure class="highlight yaml"><figcaption><span>blog/source/_posts/xxx.md</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">categories:</span> [<span class="string">设计开发</span>, <span class="string">iOS开发</span>]</span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>这样写就只会显示「设计开发」一级分类，而在文章页面顶部则会显示完整的面包屑导航。</p>
-<h3 id="文章标签"><a href="#文章标签" class="headerlink" title="文章标签"></a>文章标签</h3><p>文章标签目前不可见，用于关键词、搜索、按标签检索、相关文章推荐等功能，例如：</p>
+<h3 id="文章标签"><a href="#文章标签" class="headerlink" title="文章标签"></a>文章标签</h3><p>文章标签用于关键词、搜索、按标签检索、相关文章推荐等功能；默认情况下文章页正文结束后（页脚之前）会显示一行本文标签，点击进入对应标签页，可通过主题配置 <code>article.tags: false</code> 关闭。例如：</p>
 <figure class="highlight yaml"><figcaption><span>blog/source/_posts/xxx.md</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">tags:</span> [<span class="string">iOS</span>, <span class="string">心率</span>]</span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="相关文章推荐"><a href="#相关文章推荐" class="headerlink" title="相关文章推荐"></a>相关文章推荐</h3><p>要实现相关文章推荐功能，您需要安装插件：</p>
-<div class="tag-plugin copy"><input class="copy-area" id="copy_37" value="npm i hexo-related-popular-posts"><button class="copy-btn" onclick="util.copy(&quot;copy_37&quot;,&quot;复制成功&quot;)"><svg class="icon copy-btn" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"/></svg></button></div>
+<div class="tag-plugin copy"><input class="copy-area" id="copy_46" value="npm i hexo-related-popular-posts"><button class="copy-btn" onclick="util.copy(&quot;copy_46&quot;,&quot;复制成功&quot;)"><svg class="icon copy-btn" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"/></svg></button></div>
 
 <p>然后在主题配置文件中开启：</p>
 <figure class="highlight yaml"><figcaption><span>blog/_config.stellar.yml</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">article:</span></span><br><span class="line">  <span class="comment"># npm i hexo-related-popular-posts</span></span><br><span class="line">  <span class="attr">related_posts:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">title:</span> <span class="string">您可能感兴趣的文章</span></span><br></pre></td></tr></tbody></table></figure>
@@ -217,8 +217,7 @@
 
   <div class="related-wrap md-text slide-up" id="comments">
     <section class="header cmt-title cap theme">
-      <p>快来参与讨论吧~</p>
-
+      
     </section>
     <section class="body cmt-body giscus">
       

@@ -23,19 +23,20 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="用 GitHub 搭建一个简单的云脚本体系">
 <meta property="og:url" content="https://xaoxuu.com/blog/20210102/">
-<meta property="og:site_name" content="用 GitHub 搭建一个简单的云脚本体系">
+<meta property="og:site_name" content="XAOXUU">
 <meta property="og:description" content="细心的朋友可能会发现，我提供的一些脚本都可以在不需要任何包管理工具的情况下通过一行命令安装，本文讲述如何搭建一个轻量级的脚本库，方便随时执行自己存放于仓库的脚本。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp">
 <meta property="article:published_time" content="2021-01-02T09:04:00.000Z">
-<meta property="article:modified_time" content="2022-04-12T15:34:00.000Z">
+<meta property="article:modified_time" content="2026-08-15T05:55:00.000Z">
 <meta property="article:author" content="xaoxuu">
-<meta property="article:tag" content="shell">
+<meta property="article:tag" content="GitHub">
+<meta property="article:tag" content="Shell">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"><meta name="twitter:title" content="用 GitHub 搭建一个简单的云脚本体系">
   
   
-  <meta name="keywords" content="shell">
+  <meta name="keywords" content="GitHub,Shell">
 
   
   
@@ -56,7 +57,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"xaoxuu","sameAs":[],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"},"dateCreated":"2021-01-02T17:04:00+08:00","dateModified":"2022-04-12T23:34:00+08:00","datePublished":"2021-01-02T17:04:00+08:00","description":"","headline":"用 GitHub 搭建一个简单的云脚本体系","mainEntityOfPage":{"@type":"WebPage","@id":"https://xaoxuu.com/blog/20210102/"},"publisher":{"@type":"Organization","name":"xaoxuu","sameAs":[],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"}},"url":"https://xaoxuu.com/blog/20210102/","keywords":"shell","image":[]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"xaoxuu","sameAs":["https://github.com/xaoxuu"],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"},"dateCreated":"2021-01-02T17:04:00+08:00","dateModified":"2026-08-15T13:55:00+08:00","datePublished":"2021-01-02T17:04:00+08:00","description":"接口变动近期已升级至 v3 版本，文章内容已更新。\n\n细心的朋友可能会发现，我提供的一些脚本都可以在不依赖任何包管理工具的情况下通过一行命令安装，并且它们的安装命令极为相似：\ncurl -s https://sh.xaox.cc/install | sh -s hexocurl -s https://sh.xaox.cc/install | sh -s tagcurl -s https://sh.xaox.cc/install | sh -s vimcncurl -s https://sh.xaox.cc/install | sh -s podspec\n\n虽然它们安装方式极为相似，但是安装逻辑却并非完全相同，例如前三者是安装到 /usr/local/bin/ 目录下，在任意位置打开终端都可以使用，而  podspec.sh 则是下载到当前目录下。","headline":"用 GitHub 搭建一个简单的云脚本体系","mainEntityOfPage":{"@type":"WebPage","@id":"https://xaoxuu.com/blog/20210102/"},"publisher":{"@type":"Organization","name":"xaoxuu","sameAs":["https://github.com/xaoxuu"],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"}},"url":"https://xaoxuu.com/blog/20210102/","keywords":"GitHub, Shell","thumbnailUrl":"https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg","image":["https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg"]}</script>
   <link rel="apple-touch-icon" sizes="180x180" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="16x16" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="192x192" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/android-chrome-192x192.png"><link rel="manifest" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/site.webmanifest"><link rel="shortcut icon" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/favicon.ico"><meta name="theme-color" content="#f9fafb"><link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css" media="print" onload="this.media=&quot;all&quot;">
 </head>
 <body><div id="l_cover"></div><div class="l_body content" id="start" layout="post" type="tech"><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
@@ -86,7 +87,7 @@
 </div>
 
 
-<widget class="widget-wrapper slide-up recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19q0-.825.588-1.412T5 17q.825 0 1.413.588T7 19q0 .825-.587 1.413T5 21m13.5 0q-.65 0-1.088-.475T16.9 19.4q-.275-2.425-1.312-4.537T12.9 11.1q-1.65-1.65-3.762-2.687T4.6 7.1q-.65-.075-1.125-.512T3 5.5q0-.65.45-1.062t1.075-.363q3.075.275 5.763 1.563t4.737 3.337q2.05 2.05 3.338 4.738t1.562 5.762q.05.625-.363 1.075T18.5 21m-6 0q-.625 0-1.075-.437T10.85 19.5q-.225-1.225-.787-2.262T8.65 15.35q-.85-.85-1.888-1.412T4.5 13.15q-.625-.125-1.062-.575T3 11.5q0-.65.45-1.075t1.075-.325q1.825.25 3.413 1.063t2.837 2.062q1.25 1.25 2.063 2.838t1.062 3.412q.1.625-.325 1.075T12.5 21"/></svg></a></div><div class="widget-body fs14"><a class="item title" href="/blog/20260815/"><span class="title">Stellar 为什么没能进入 Hexo 主题头部</span></a><a class="item title" href="/blog/20250605/"><span class="title">梦境：末日之后</span></a><a class="item title" href="/blog/20250616/"><span class="title">梦境：寄生之种与崩塌的时空</span></a><a class="item title" href="/blog/20260801/"><span class="title">梦境：无法定格的偶遇</span></a><a class="item title" href="/blog/20250705/"><span class="title">利用 Webhook 实现博客自动部署到服务器并通过飞书通知</span></a><a class="item title" href="/blog/20260226/"><span class="title">连续两个晚上做梦笑醒</span></a><a class="item title" href="/blog/20260116/"><span class="title">2025年度OKR复盘</span></a><a class="item title" href="/blog/20251013/"><span class="title">在混乱中建立秩序</span></a><a class="item title" href="/blog/20250713/"><span class="title">关于本站备用站点的紧急通知</span></a><a class="item title" href="/blog/20250706/"><span class="title">适合静态博客的 Nginx 安全性配置</span></a></div></widget>
+<widget class="widget-wrapper slide-up recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19q0-.825.588-1.412T5 17q.825 0 1.413.588T7 19q0 .825-.587 1.413T5 21m13.5 0q-.65 0-1.088-.475T16.9 19.4q-.275-2.425-1.312-4.537T12.9 11.1q-1.65-1.65-3.762-2.687T4.6 7.1q-.65-.075-1.125-.512T3 5.5q0-.65.45-1.062t1.075-.363q3.075.275 5.763 1.563t4.737 3.337q2.05 2.05 3.338 4.738t1.562 5.762q.05.625-.363 1.075T18.5 21m-6 0q-.625 0-1.075-.437T10.85 19.5q-.225-1.225-.787-2.262T8.65 15.35q-.85-.85-1.888-1.412T4.5 13.15q-.625-.125-1.062-.575T3 11.5q0-.65.45-1.075t1.075-.325q1.825.25 3.413 1.063t2.837 2.062q1.25 1.25 2.063 2.838t1.062 3.412q.1.625-.325 1.075T12.5 21"/></svg></a></div><div class="widget-body fs14"><a class="item title" href="/blog/20251013/"><span class="title">在混乱中建立秩序：Stellar 产品设计与工程重构复盘</span></a><a class="item title" href="/blog/20240110/"><span class="title">ObjC/Swift 混编的通知崩溃排查</span></a><a class="item title" href="/blog/20240129/"><span class="title">又穷又忙的一年——2023 年度回顾</span></a><a class="item title" href="/blog/20240208/"><span class="title">文章插图需要点击放大吗？Stellar 图片展示的设计取舍</span></a><a class="item title" href="/blog/20240203/"><span class="title">Stellar 专栏功能：我为什么专门开发它？</span></a><a class="item title" href="/blog/20250602/"><span class="title">动态友链重构：借助 AI 获重磅升级</span></a><a class="item title" href="/blog/20250705/"><span class="title">利用 Webhook 自动部署博客到服务器并飞书通知</span></a><a class="item title" href="/blog/20260116/"><span class="title">2025 年度 OKR 复盘</span></a><a class="item title" href="/blog/20260815/"><span class="title">Stellar 为什么没能进入 Hexo 主题头部</span></a><a class="item title" href="/blog/20210102/"><span class="title">用 GitHub 搭建一个简单的云脚本体系</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -100,7 +101,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/blog/categories/%E4%BA%A7%E7%A0%94/">产研</a> <span class="sep"></span> <a class="cap breadcrumb-link" href="/blog/categories/%E4%BA%A7%E7%A0%94/%E8%AE%BE%E8%AE%A1%E5%BC%80%E5%8F%91/">设计开发</a></div>
-<div class="flex-row" id="post-meta"><a class="author" href="/author/xaoxuu/">Mr. X</a><span class="sep"></span><span class="text created"><time datetime="2021-01-02T09:04:00.000Z">2021年1月2日</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2022-04-12T15:34:00.000Z">2022年4月12日</time></span></div>
+<div class="flex-row" id="post-meta"><a class="author" href="/author/xaoxuu/">Mr. X</a><span class="sep"></span><span class="text created"><time datetime="2021-01-02T09:04:00.000Z">2021年1月2日</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-08-15T05:55:00.000Z">2026年8月15日</time></span></div>
 </div></div>
     
     <div class="bottom only-title">
@@ -119,6 +120,8 @@
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">curl -s https://sh.xaox.cc/install | sh -s hexo</span><br><span class="line">curl -s https://sh.xaox.cc/install | sh -s tag</span><br><span class="line">curl -s https://sh.xaox.cc/install | sh -s vimcn</span><br><span class="line">curl -s https://sh.xaox.cc/install | sh -s podspec</span><br></pre></td></tr></tbody></table></figure>
 
 <p>虽然它们安装方式极为相似，但是安装逻辑却并非完全相同，例如前三者是安装到 <code>/usr/local/bin/</code> 目录下，在任意位置打开终端都可以使用，而  <code>podspec.sh</code> 则是下载到当前目录下。</p>
+<span id="more"></span>
+
 <p>如果打开 <code>https://sh.xaox.cc/install</code> 文件，你会发现它并没有做任何实质性的操作，只是负责任务派发，根据不同的参数把「安装」指令指派给不同的项目，不同的项目对「安装」的具体实现可以相同也可以不同。</p>
 <p>对于相同的部分，以 <code>vimcn</code> 为例，它的 <code>index.sh</code> 实现如下：</p>
 <figure class="highlight sh"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"><span class="comment"># 这个脚本负责下载和安装的逻辑</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># function lib</span></span><br><span class="line">lib=<span class="string">'https://sh.xaox.cc/lib/v3'</span></span><br><span class="line"><span class="comment"># repository name</span></span><br><span class="line">REPO=<span class="string">'vimcn'</span></span><br><span class="line"><span class="comment"># client file name</span></span><br><span class="line">TARGET=<span class="string">'cli.sh'</span></span><br><span class="line"><span class="comment"># client file name</span></span><br><span class="line">RENAME=<span class="string">'upload'</span></span><br><span class="line"><span class="comment"># download version</span></span><br><span class="line">VERSION=<span class="variable">$1</span></span><br><span class="line"><span class="keyword">if</span> [ <span class="string">"<span class="variable">$VERSION</span>"</span> = <span class="string">""</span> ];<span class="keyword">then</span></span><br><span class="line">    VERSION=<span class="string">'main'</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">on_success</span></span>() {</span><br><span class="line">    doc_url=xxx</span><br><span class="line">    <span class="built_in">printf</span> <span class="string">"\n&gt; \033[32m恭喜您，安装成功！\033[0m 请收藏这个页面，在您遇到问题的时候可以查看文档：\n<span class="variable">${doc_url}</span>\n\n"</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">curl -s <span class="variable">${lib}</span>/download.sh | sh -s <span class="variable">${REPO}</span> <span class="variable">${VERSION}</span> <span class="variable">${TARGET}</span> &amp;&amp;</span><br><span class="line">curl -s <span class="variable">${lib}</span>/install.sh | sh -s <span class="variable">$HOME</span>/Downloads/<span class="variable">${TARGET}</span> <span class="variable">${RENAME}</span> &amp;&amp; on_success</span><br></pre></td></tr></tbody></table></figure>
@@ -139,6 +142,9 @@
 <li>在目标脚本仓库中创建一个命名固定的脚本用于接收传入的指令，然后可以根据需要执行操作或者调用公共库的下载、安装等通用流程。</li>
 </ol>
 </article>
+
+<div class="article-tags slide-up"><a class="tag" href="/blog/tags/github/">GitHub</a><a class="tag" href="/blog/tags/shell/">Shell</a></div>
+
 <div class="article-footer slide-up">
     <section id="license">
       <div class="header"><span>许可协议</span></div>
@@ -162,15 +168,14 @@
     </section>
     </div>
 
-<div class="related-wrap slide-up" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/blog/20221029/">探索 Stellar 时间线标签的 N 种用法</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/blog/20201119/">苹果设计开发加速器线上活动</a></div></section></div>
+<div class="related-wrap slide-up" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/blog/20221029/">探索 Stellar 时间线标签的 N 种用法</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/blog/20201119/">苹果设计开发加速器：iPhone 和 iPad 界面灵活适配</a></div></section></div>
 
 
 
 
   <div class="related-wrap md-text slide-up" id="comments">
     <section class="header cmt-title cap theme">
-      <p>快来参与讨论吧~</p>
-
+      
     </section>
     <section class="body cmt-body artalk">
       
@@ -219,7 +224,7 @@
 
 
 
-  <script type="module">!function(){const t=document.getElementById("artalk_container");t&&util.viewportLazyload(t,function(){utils.css("https://res.xaox.cc/unpkg/artalk@2.9.1/dist/artalk.css"),utils.js("https://res.xaox.cc/unpkg/artalk@2.9.1/dist/artalk.js",{defer:!0}).then(function(){const e=t.getAttribute("comment_id")??decodeURI(window.location.pathname);Artalk.init({el:"#artalk_container",pageKey:e,pageTitle:"用 GitHub 搭建一个简单的云脚本体系",server:"https://res.xaox.cc/atk/",site:"XAOXUU",darkMode:"auto",imgUploader:function(t){let e=new Headers;e.set("Accept","application/json");let a=new FormData;return a.append("file",t),fetch("https://github-uploader.xaox.cc/api/v1/upload?user=cdn-x&repo=comments-assets",{method:"POST",body:a,headers:e}).then(t=>t.json()).then(t=>t.urls.gcore)}}),-1!==window.location.search.indexOf("atk_")&&window.setTimeout(function(){window.history.replaceState(null,"",window.location.pathname+window.location.hash)},300)})})}()</script>
+  <script type="module">!function(){const t=document.getElementById("artalk_container");if(!t)return;const e=/[?&]atk_comment=\d+/.test(window.location.search)||/#atk-comment-\d+/.test(window.location.hash);util.viewportLazyload(t,function(){utils.css("https://res.xaox.cc/unpkg/artalk@2.9.1/dist/artalk.css"),utils.js("https://res.xaox.cc/unpkg/artalk@2.9.1/dist/artalk.js",{defer:!0}).then(function(){const o=window.location.search.match(/[?&]atk_comment=(\d+)/);if(o&&!/#atk-comment-\d+/.test(window.location.hash)){const t=new URLSearchParams(window.location.search).get("atk_notify_key"),e=t?"?atk_notify_key="+encodeURIComponent(t):"";window.history.replaceState(null,"",window.location.pathname+e+"#atk-comment-"+o[1])}const n=t.getAttribute("comment_id")??decodeURI(window.location.pathname),a=Artalk.init({el:"#artalk_container",pageKey:n,pageTitle:"用 GitHub 搭建一个简单的云脚本体系",server:"https://res.xaox.cc/atk/",site:"XAOXUU",darkMode:"auto",imgUploader:function(t){let e=new Headers;e.set("Accept","application/json");let o=new FormData;return o.append("file",t),fetch("https://github-uploader.xaox.cc/api/v1/upload?user=cdn-x&repo=comments-assets",{method:"POST",body:o,headers:e}).then(t=>t.json()).then(t=>t.urls.gcore)}});e&&-1!==window.location.search.indexOf("atk_")&&a.on("list-loaded",function(){window.setTimeout(function(){window.history.replaceState(null,"",window.location.pathname+window.location.hash)},0)})})},!e)}()</script>
 
 
 

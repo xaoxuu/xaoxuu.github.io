@@ -23,21 +23,22 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="博客入门：每个人的独立博客">
 <meta property="og:url" content="https://xaoxuu.com/blog/20221217/">
-<meta property="og:site_name" content="博客入门：每个人的独立博客">
+<meta property="og:site_name" content="XAOXUU">
 <meta property="og:description" content="本文讲了如何零基础创建一个属于自己的博客网站。面向从未用过独立博客，也不了解 markdown 和 git 的用户，旨在普及独立博客技术，顺序经过调整以降低首次上手难度。有相关经验的读者可以自行跳过某些步骤。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://res.xaox.cc/gh/cdn-x/xaoxuu@main/posts/20250706160449903.webp">
 <meta property="article:published_time" content="2022-12-17T04:22:00.000Z">
-<meta property="article:modified_time" content="2022-12-17T04:22:00.000Z">
+<meta property="article:modified_time" content="2026-08-15T05:55:00.000Z">
 <meta property="article:author" content="xaoxuu">
-<meta property="article:tag" content="blog">
-<meta property="article:tag" content="hexo">
-<meta property="article:tag" content="stellar">
+<meta property="article:tag" content="GitHub">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Stellar">
+<meta property="article:tag" content="独立博客">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://res.xaox.cc/gh/cdn-x/xaoxuu@main/posts/20250706160449903.webp"><meta name="twitter:title" content="博客入门：每个人的独立博客">
   
   
-  <meta name="keywords" content="hexo,blog,stellar">
+  <meta name="keywords" content="GitHub,Stellar,Hexo,独立博客">
 
   
   
@@ -58,7 +59,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"xaoxuu","sameAs":[],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"},"dateCreated":"2022-12-17T12:22:00+08:00","dateModified":"2022-12-17T12:22:00+08:00","datePublished":"2022-12-17T12:22:00+08:00","description":"","headline":"博客入门：每个人的独立博客","mainEntityOfPage":{"@type":"WebPage","@id":"https://xaoxuu.com/blog/20221217/"},"publisher":{"@type":"Organization","name":"xaoxuu","sameAs":[],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"}},"url":"https://xaoxuu.com/blog/20221217/","keywords":"hexo, blog, stellar","thumbnailUrl":"https://res.xaox.cc/gh/cdn-x/xaoxuu@main/posts/20250706160449903.webp","image":1}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"xaoxuu","sameAs":["https://github.com/xaoxuu"],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"},"dateCreated":"2022-12-17T12:22:00+08:00","dateModified":"2026-08-15T13:55:00+08:00","datePublished":"2022-12-17T12:22:00+08:00","description":"本文面向从未用过独立博客，也不了解 markdown 和 git 的用户，旨在普及独立博客技术，顺序经过调整以降低首次上手难度。有相关经验的读者可以自行跳过某些步骤。","headline":"博客入门：每个人的独立博客","mainEntityOfPage":{"@type":"WebPage","@id":"https://xaoxuu.com/blog/20221217/"},"publisher":{"@type":"Organization","name":"xaoxuu","sameAs":["https://github.com/xaoxuu"],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"}},"url":"https://xaoxuu.com/blog/20221217/","keywords":"GitHub, Stellar, Hexo, 独立博客","thumbnailUrl":"https://res.xaox.cc/gh/cdn-x/xaoxuu@main/posts/20250706160449903.webp","image":["https://res.xaox.cc/gh/cdn-x/xaoxuu@main/posts/20250706160449903.webp"]}</script>
   <link rel="apple-touch-icon" sizes="180x180" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="16x16" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="192x192" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/android-chrome-192x192.png"><link rel="manifest" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/site.webmanifest"><link rel="shortcut icon" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/favicon.ico"><meta name="theme-color" content="#f9fafb"><link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css" media="print" onload="this.media=&quot;all&quot;">
 </head>
 <body><div id="l_cover"></div><div class="l_body content" id="start" layout="post" type="tech"><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
@@ -86,9 +87,9 @@
 <svg class="grad-def" width="0" height="0" aria-hidden="true" focusable="false"><defs><lineargradient id="menu-grad-about" x1="70%" y1="10%" x2="10%" y2="130%"><stop offset="20%" style="stop-color:var(--item-theme-light)"/><stop offset="60%" style="stop-color:var(--item-theme)"/></lineargradient></defs></svg>
 </a></nav>
 </div>
-<widget class="widget-wrapper related post-list"><div class="widget-header dis-select"><span class="name">专栏：博客专题</span></div><div class="widget-body"><a class="item" href="/blog/20250706/"><span class="title">适合静态博客的 Nginx 安全性配置</span></a><a class="item" href="/blog/20250705/"><span class="title">利用 Webhook 实现博客自动部署到服务器并通过飞书通知</span></a><a class="item" href="/blog/20231223/"><span class="title">Gallery 标签组件的使用方法和 Unsplash 高清壁纸分享</span></a><a class="item active" href="/blog/20221217/"><span class="title">博客入门：每个人的独立博客</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a><a class="item" href="/blog/20221126/"><span class="title">博客进阶：自动化部署</span></a><a class="item" href="/blog/20221029/"><span class="title">探索 Stellar 时间线标签的 N 种用法</span></a><a class="item" href="/blog/20200823/"><span class="title">静态博客使用 Issues API 来实现动态发布友链、书签</span></a></div></widget>
+<widget class="widget-wrapper related post-list"><div class="widget-header dis-select"><span class="name">专栏：博客专题</span></div><div class="widget-body"><a class="item" href="/blog/20250713/"><span class="title">关于本站备用站点的紧急通知</span></a><a class="item" href="/blog/20250706/"><span class="title">适合静态博客的 Nginx 安全性配置</span></a><a class="item" href="/blog/20250705/"><span class="title">利用 Webhook 自动部署博客到服务器并飞书通知</span></a><a class="item" href="/blog/20250611/"><span class="title">博客图片存哪儿？图床 / OSS / 本地仓库对比</span></a><a class="item" href="/blog/20250604/"><span class="title">Stellar 主题版本检测：预埋两年半的数据终于用上了</span></a><a class="item" href="/blog/20250602/"><span class="title">动态友链重构：借助 AI 获重磅升级</span></a><a class="item" href="/blog/20231223/"><span class="title">Gallery 标签组件的使用方法和 Unsplash 高清壁纸分享</span></a><a class="item active" href="/blog/20221217/"><span class="title">博客入门：每个人的独立博客</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a><a class="item" href="/blog/20221126/"><span class="title">博客进阶：自动化部署</span></a><a class="item" href="/blog/20221029/"><span class="title">探索 Stellar 时间线标签的 N 种用法</span></a><a class="item" href="/blog/20200823/"><span class="title">静态博客使用 Issues API 来实现动态发布友链、书签</span></a></div></widget>
 
-<widget class="widget-wrapper slide-up recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19q0-.825.588-1.412T5 17q.825 0 1.413.588T7 19q0 .825-.587 1.413T5 21m13.5 0q-.65 0-1.088-.475T16.9 19.4q-.275-2.425-1.312-4.537T12.9 11.1q-1.65-1.65-3.762-2.687T4.6 7.1q-.65-.075-1.125-.512T3 5.5q0-.65.45-1.062t1.075-.363q3.075.275 5.763 1.563t4.737 3.337q2.05 2.05 3.338 4.738t1.562 5.762q.05.625-.363 1.075T18.5 21m-6 0q-.625 0-1.075-.437T10.85 19.5q-.225-1.225-.787-2.262T8.65 15.35q-.85-.85-1.888-1.412T4.5 13.15q-.625-.125-1.062-.575T3 11.5q0-.65.45-1.075t1.075-.325q1.825.25 3.413 1.063t2.837 2.062q1.25 1.25 2.063 2.838t1.062 3.412q.1.625-.325 1.075T12.5 21"/></svg></a></div><div class="widget-body fs14"><a class="item title" href="/blog/20260815/"><span class="title">Stellar 为什么没能进入 Hexo 主题头部</span></a><a class="item title" href="/blog/20250605/"><span class="title">梦境：末日之后</span></a><a class="item title" href="/blog/20250616/"><span class="title">梦境：寄生之种与崩塌的时空</span></a><a class="item title" href="/blog/20260801/"><span class="title">梦境：无法定格的偶遇</span></a><a class="item title" href="/blog/20250705/"><span class="title">利用 Webhook 实现博客自动部署到服务器并通过飞书通知</span></a><a class="item title" href="/blog/20260226/"><span class="title">连续两个晚上做梦笑醒</span></a><a class="item title" href="/blog/20260116/"><span class="title">2025年度OKR复盘</span></a><a class="item title" href="/blog/20251013/"><span class="title">在混乱中建立秩序</span></a><a class="item title" href="/blog/20250713/"><span class="title">关于本站备用站点的紧急通知</span></a><a class="item title" href="/blog/20250706/"><span class="title">适合静态博客的 Nginx 安全性配置</span></a></div></widget>
+<widget class="widget-wrapper slide-up recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19q0-.825.588-1.412T5 17q.825 0 1.413.588T7 19q0 .825-.587 1.413T5 21m13.5 0q-.65 0-1.088-.475T16.9 19.4q-.275-2.425-1.312-4.537T12.9 11.1q-1.65-1.65-3.762-2.687T4.6 7.1q-.65-.075-1.125-.512T3 5.5q0-.65.45-1.062t1.075-.363q3.075.275 5.763 1.563t4.737 3.337q2.05 2.05 3.338 4.738t1.562 5.762q.05.625-.363 1.075T18.5 21m-6 0q-.625 0-1.075-.437T10.85 19.5q-.225-1.225-.787-2.262T8.65 15.35q-.85-.85-1.888-1.412T4.5 13.15q-.625-.125-1.062-.575T3 11.5q0-.65.45-1.075t1.075-.325q1.825.25 3.413 1.063t2.837 2.062q1.25 1.25 2.063 2.838t1.062 3.412q.1.625-.325 1.075T12.5 21"/></svg></a></div><div class="widget-body fs14"><a class="item title" href="/blog/20251013/"><span class="title">在混乱中建立秩序：Stellar 产品设计与工程重构复盘</span></a><a class="item title" href="/blog/20240110/"><span class="title">ObjC/Swift 混编的通知崩溃排查</span></a><a class="item title" href="/blog/20240129/"><span class="title">又穷又忙的一年——2023 年度回顾</span></a><a class="item title" href="/blog/20240208/"><span class="title">文章插图需要点击放大吗？Stellar 图片展示的设计取舍</span></a><a class="item title" href="/blog/20240203/"><span class="title">Stellar 专栏功能：我为什么专门开发它？</span></a><a class="item title" href="/blog/20250602/"><span class="title">动态友链重构：借助 AI 获重磅升级</span></a><a class="item title" href="/blog/20250705/"><span class="title">利用 Webhook 自动部署博客到服务器并飞书通知</span></a><a class="item title" href="/blog/20260116/"><span class="title">2025 年度 OKR 复盘</span></a><a class="item title" href="/blog/20260815/"><span class="title">Stellar 为什么没能进入 Hexo 主题头部</span></a><a class="item title" href="/blog/20210102/"><span class="title">用 GitHub 搭建一个简单的云脚本体系</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -101,8 +102,8 @@
 <div class="article-banner-wrap slide-up"><div class="article banner top" style="--bg-url:url('https://res.xaox.cc/gh/cdn-x/xaoxuu@main/posts/20250706160449903.webp')"><img class="lazy bg" data-src="https://res.xaox.cc/gh/cdn-x/xaoxuu@main/posts/20250706160449903.webp">
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
-<span class="sep"></span><a class="cap breadcrumb" id="menu" href="/topic/">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/blog/20250706/">博客专题</a></div>
-<div class="flex-row" id="post-meta"><a class="author" href="/author/xaoxuu/">Mr. X</a><span class="sep"></span><span class="text created"><time datetime="2022-12-17T04:22:00.000Z">2022年12月17日</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2022-12-17T04:22:00.000Z">2022年12月17日</time></span></div>
+<span class="sep"></span><a class="cap breadcrumb" id="menu" href="/topic/">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/blog/20250713/">博客专题</a></div>
+<div class="flex-row" id="post-meta"><a class="author" href="/author/xaoxuu/">Mr. X</a><span class="sep"></span><span class="text created"><time datetime="2022-12-17T04:22:00.000Z">2022年12月17日</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-08-15T05:55:00.000Z">2026年8月15日</time></span></div>
 </div></div>
     
     <div class="bottom only-title">
@@ -116,6 +117,8 @@
   </div>
   </div></div>
 <article class="md-text content slide-up"><div class="tag-plugin colorful note"><div class="body"><p>本文面向从未用过独立博客，也不了解 markdown 和 git 的用户，旨在普及独立博客技术，顺序经过调整以降低首次上手难度。有相关经验的读者可以自行跳过某些步骤。</p></div></div>
+
+<span id="more"></span>
 
 <h2 id="什么是独立博客？"><a href="#什么是独立博客？" class="headerlink" title="什么是独立博客？"></a>什么是独立博客？</h2><p>独立博客就是区别于平台博客（如简书、知乎、豆瓣）的一种方案，特点即：</p>
 <ul>
@@ -131,7 +134,7 @@
 </ul>
 <p>独立博客可以有无数种技术方案，本文采用 GitHub + Hexo + Stellar 方案进行讲解。</p>
 <h2 id="体验-hello-world"><a href="#体验-hello-world" class="headerlink" title="体验 hello world"></a>体验 hello world</h2><p>使用 <mark class="tag-plugin colorful mark" color="yellow">macOS</mark> 系统的朋友可以在 <mark class="tag-plugin colorful mark" color="yellow">终端</mark> 中执行下面这行命令，体验如何快速搭建一个独立博客：</p>
-<div class="tag-plugin copy"><input class="copy-area" id="copy_5" value="curl -s https://sh.xaox.cc/install | sh -s blog &amp;&amp; blog init"><button class="copy-btn" onclick="util.copy(&quot;copy_5&quot;,&quot;复制成功&quot;)"><svg class="icon copy-btn" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"/></svg></button></div>
+<div class="tag-plugin copy"><input class="copy-area" id="copy_12" value="curl -s https://sh.xaox.cc/install | sh -s blog &amp;&amp; blog init"><button class="copy-btn" onclick="util.copy(&quot;copy_12&quot;,&quot;复制成功&quot;)"><svg class="icon copy-btn" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"/></svg></button></div>
 
 <blockquote>
 <p>一般在1分钟内即可完成，如果下载速度缓慢建议更换网络环境。</p>
@@ -277,6 +280,9 @@
 </ul>
 <p>掌握了这些，你也可以自己写一个基于 hexo 博客框架的主题给别人使用了。</p>
 </article>
+
+<div class="article-tags slide-up"><a class="tag" href="/blog/tags/github/">GitHub</a><a class="tag" href="/blog/tags/stellar/">Stellar</a><a class="tag" href="/blog/tags/hexo/">Hexo</a><a class="tag" href="/blog/tags/%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2/">独立博客</a></div>
+
 <div class="article-footer slide-up">
     <section id="license">
       <div class="header"><span>许可协议</span></div>
@@ -307,8 +313,7 @@
 
   <div class="related-wrap md-text slide-up" id="comments">
     <section class="header cmt-title cap theme">
-      <p>快来参与讨论吧~</p>
-
+      
     </section>
     <section class="body cmt-body artalk">
       
@@ -357,7 +362,7 @@
 
 
 
-  <script type="module">!function(){const t=document.getElementById("artalk_container");t&&util.viewportLazyload(t,function(){utils.css("https://res.xaox.cc/unpkg/artalk@2.9.1/dist/artalk.css"),utils.js("https://res.xaox.cc/unpkg/artalk@2.9.1/dist/artalk.js",{defer:!0}).then(function(){const e=t.getAttribute("comment_id")??decodeURI(window.location.pathname);Artalk.init({el:"#artalk_container",pageKey:e,pageTitle:"博客入门：每个人的独立博客",server:"https://res.xaox.cc/atk/",site:"XAOXUU",darkMode:"auto",imgUploader:function(t){let e=new Headers;e.set("Accept","application/json");let a=new FormData;return a.append("file",t),fetch("https://github-uploader.xaox.cc/api/v1/upload?user=cdn-x&repo=comments-assets",{method:"POST",body:a,headers:e}).then(t=>t.json()).then(t=>t.urls.gcore)}}),-1!==window.location.search.indexOf("atk_")&&window.setTimeout(function(){window.history.replaceState(null,"",window.location.pathname+window.location.hash)},300)})})}()</script>
+  <script type="module">!function(){const t=document.getElementById("artalk_container");if(!t)return;const e=/[?&]atk_comment=\d+/.test(window.location.search)||/#atk-comment-\d+/.test(window.location.hash);util.viewportLazyload(t,function(){utils.css("https://res.xaox.cc/unpkg/artalk@2.9.1/dist/artalk.css"),utils.js("https://res.xaox.cc/unpkg/artalk@2.9.1/dist/artalk.js",{defer:!0}).then(function(){const o=window.location.search.match(/[?&]atk_comment=(\d+)/);if(o&&!/#atk-comment-\d+/.test(window.location.hash)){const t=new URLSearchParams(window.location.search).get("atk_notify_key"),e=t?"?atk_notify_key="+encodeURIComponent(t):"";window.history.replaceState(null,"",window.location.pathname+e+"#atk-comment-"+o[1])}const n=t.getAttribute("comment_id")??decodeURI(window.location.pathname),a=Artalk.init({el:"#artalk_container",pageKey:n,pageTitle:"博客入门：每个人的独立博客",server:"https://res.xaox.cc/atk/",site:"XAOXUU",darkMode:"auto",imgUploader:function(t){let e=new Headers;e.set("Accept","application/json");let o=new FormData;return o.append("file",t),fetch("https://github-uploader.xaox.cc/api/v1/upload?user=cdn-x&repo=comments-assets",{method:"POST",body:o,headers:e}).then(t=>t.json()).then(t=>t.urls.gcore)}});e&&-1!==window.location.search.indexOf("atk_")&&a.on("list-loaded",function(){window.setTimeout(function(){window.history.replaceState(null,"",window.location.pathname+window.location.hash)},0)})})},!e)}()</script>
 
 
 

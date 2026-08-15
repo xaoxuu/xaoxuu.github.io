@@ -17,25 +17,27 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
-  <title>关于 ObjC 通知的一个奇怪的崩溃 - XAOXUU</title>
+  <title>ObjC/Swift 混编的通知崩溃排查 - XAOXUU</title>
 
   <meta name="description" content="近日发现一个用 NSNotificationCenter 发通知时触发的 EXC_BAD_ACCESS 崩溃，表现形式比较奇怪，特此记录一下。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于 ObjC 通知的一个奇怪的崩溃">
+<meta property="og:title" content="ObjC/Swift 混编的通知崩溃排查">
 <meta property="og:url" content="https://xaoxuu.com/blog/20240110/">
-<meta property="og:site_name" content="关于 ObjC 通知的一个奇怪的崩溃">
+<meta property="og:site_name" content="XAOXUU">
 <meta property="og:description" content="近日发现一个用 NSNotificationCenter 发通知时触发的 EXC_BAD_ACCESS 崩溃，表现形式比较奇怪，特此记录一下。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp">
 <meta property="article:published_time" content="2024-01-10T07:08:00.000Z">
-<meta property="article:modified_time" content="2024-01-10T07:08:00.000Z">
+<meta property="article:modified_time" content="2026-08-15T06:38:00.000Z">
 <meta property="article:author" content="xaoxuu">
+<meta property="article:tag" content="ObjC">
+<meta property="article:tag" content="Swift">
 <meta property="article:tag" content="iOS">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"><meta name="twitter:title" content="关于 ObjC 通知的一个奇怪的崩溃">
+<meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"><meta name="twitter:title" content="ObjC/Swift 混编的通知崩溃排查">
   
   
-  <meta name="keywords" content="iOS">
+  <meta name="keywords" content="iOS,ObjC,Swift">
 
   
   
@@ -56,7 +58,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"xaoxuu","sameAs":[],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"},"dateCreated":"2024-01-10T15:08:00+08:00","dateModified":"2024-01-10T15:08:00+08:00","datePublished":"2024-01-10T15:08:00+08:00","description":"","headline":"关于 ObjC 通知的一个奇怪的崩溃","mainEntityOfPage":{"@type":"WebPage","@id":"https://xaoxuu.com/blog/20240110/"},"publisher":{"@type":"Organization","name":"xaoxuu","sameAs":[],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"}},"url":"https://xaoxuu.com/blog/20240110/","keywords":"iOS","image":[]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"xaoxuu","sameAs":["https://github.com/xaoxuu"],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"},"dateCreated":"2024-01-10T15:08:00+08:00","dateModified":"2026-08-15T14:38:00+08:00","datePublished":"2024-01-10T15:08:00+08:00","description":"事情经过近日发现一个发通知时触发的 EXC_BAD_ACCESS 崩溃，在 DEBUG 时，崩溃指向这一行代码：","headline":"ObjC/Swift 混编的通知崩溃排查","mainEntityOfPage":{"@type":"WebPage","@id":"https://xaoxuu.com/blog/20240110/"},"publisher":{"@type":"Organization","name":"xaoxuu","sameAs":["https://github.com/xaoxuu"],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp","logo":{"@type":"ImageObject","url":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"}},"url":"https://xaoxuu.com/blog/20240110/","keywords":"iOS, ObjC, Swift","thumbnailUrl":"https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg","image":["https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg"]}</script>
   <link rel="apple-touch-icon" sizes="180x180" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="16x16" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="192x192" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/android-chrome-192x192.png"><link rel="manifest" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/site.webmanifest"><link rel="shortcut icon" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/favicon.ico"><meta name="theme-color" content="#f9fafb"><link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css" media="print" onload="this.media=&quot;all&quot;">
 </head>
 <body><div id="l_cover"></div><div class="l_body content" id="start" layout="post" type="tech"><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
@@ -84,9 +86,9 @@
 <svg class="grad-def" width="0" height="0" aria-hidden="true" focusable="false"><defs><lineargradient id="menu-grad-about" x1="70%" y1="10%" x2="10%" y2="130%"><stop offset="20%" style="stop-color:var(--item-theme-light)"/><stop offset="60%" style="stop-color:var(--item-theme)"/></lineargradient></defs></svg>
 </a></nav>
 </div>
+<widget class="widget-wrapper related post-list"><div class="widget-header dis-select"><span class="name">专栏：iOS 开发</span></div><div class="widget-body"><a class="item" href="/blog/20240111/"><span class="title">不要忽视项目警告对构建速度的巨大影响</span></a><a class="item active" href="/blog/20240110/"><span class="title">ObjC/Swift 混编的通知崩溃排查</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a><a class="item" href="/blog/20201119/"><span class="title">苹果设计开发加速器：iPhone 和 iPad 界面灵活适配</span></a><a class="item" href="/blog/20200927/"><span class="title">PPG 光电容积脉搏波描记法：如何用手机摄像头测量心率</span></a><a class="item" href="/blog/20191006/"><span class="title">苹果设计开发加速器：《创建卓越的 Apple Watch 体验》</span></a><a class="item" href="/blog/20190829/"><span class="title">使用链式语法打造一个 ObjC 安全的对象类型转换库</span></a><a class="item" href="/blog/20190827/"><span class="title">如何设计一个样式和逻辑分离的 HUD 库（ProHUD）</span></a><a class="item" href="/blog/20190723/"><span class="title">心率管家的设计与开发（上篇：整体流程）</span></a><a class="item" href="/blog/20171225/"><span class="title">整理 iOS 老项目中混乱不堪的多语言翻译</span></a><a class="item" href="/blog/20171109/"><span class="title">iOS 开发：如何实现只推迟而不会重复执行的函数</span></a><a class="item" href="/blog/20170628/"><span class="title">iOS 接入 Strava 分享模块（下篇：StravaSDK）</span></a><a class="item" href="/blog/20170622/"><span class="title">iOS 接入 Strava 分享模块（上篇：FitSDK）</span></a><a class="item" href="/blog/20161106/"><span class="title">如何封装自己的 iOS Framework 静态库</span></a><a class="item" href="/blog/20160914/"><span class="title">如何从 UIImageView 指定的坐标点取色？</span></a><a class="item" href="/blog/20160912/"><span class="title">ObjC 使用链式语法更优雅地管理沙盒文件</span></a></div></widget>
 
-
-<widget class="widget-wrapper slide-up recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19q0-.825.588-1.412T5 17q.825 0 1.413.588T7 19q0 .825-.587 1.413T5 21m13.5 0q-.65 0-1.088-.475T16.9 19.4q-.275-2.425-1.312-4.537T12.9 11.1q-1.65-1.65-3.762-2.687T4.6 7.1q-.65-.075-1.125-.512T3 5.5q0-.65.45-1.062t1.075-.363q3.075.275 5.763 1.563t4.737 3.337q2.05 2.05 3.338 4.738t1.562 5.762q.05.625-.363 1.075T18.5 21m-6 0q-.625 0-1.075-.437T10.85 19.5q-.225-1.225-.787-2.262T8.65 15.35q-.85-.85-1.888-1.412T4.5 13.15q-.625-.125-1.062-.575T3 11.5q0-.65.45-1.075t1.075-.325q1.825.25 3.413 1.063t2.837 2.062q1.25 1.25 2.063 2.838t1.062 3.412q.1.625-.325 1.075T12.5 21"/></svg></a></div><div class="widget-body fs14"><a class="item title" href="/blog/20260815/"><span class="title">Stellar 为什么没能进入 Hexo 主题头部</span></a><a class="item title" href="/blog/20250605/"><span class="title">梦境：末日之后</span></a><a class="item title" href="/blog/20250616/"><span class="title">梦境：寄生之种与崩塌的时空</span></a><a class="item title" href="/blog/20260801/"><span class="title">梦境：无法定格的偶遇</span></a><a class="item title" href="/blog/20250705/"><span class="title">利用 Webhook 实现博客自动部署到服务器并通过飞书通知</span></a><a class="item title" href="/blog/20260226/"><span class="title">连续两个晚上做梦笑醒</span></a><a class="item title" href="/blog/20260116/"><span class="title">2025年度OKR复盘</span></a><a class="item title" href="/blog/20251013/"><span class="title">在混乱中建立秩序</span></a><a class="item title" href="/blog/20250713/"><span class="title">关于本站备用站点的紧急通知</span></a><a class="item title" href="/blog/20250706/"><span class="title">适合静态博客的 Nginx 安全性配置</span></a></div></widget>
+<widget class="widget-wrapper slide-up recent post-list"><div class="widget-header dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19q0-.825.588-1.412T5 17q.825 0 1.413.588T7 19q0 .825-.587 1.413T5 21m13.5 0q-.65 0-1.088-.475T16.9 19.4q-.275-2.425-1.312-4.537T12.9 11.1q-1.65-1.65-3.762-2.687T4.6 7.1q-.65-.075-1.125-.512T3 5.5q0-.65.45-1.062t1.075-.363q3.075.275 5.763 1.563t4.737 3.337q2.05 2.05 3.338 4.738t1.562 5.762q.05.625-.363 1.075T18.5 21m-6 0q-.625 0-1.075-.437T10.85 19.5q-.225-1.225-.787-2.262T8.65 15.35q-.85-.85-1.888-1.412T4.5 13.15q-.625-.125-1.062-.575T3 11.5q0-.65.45-1.075t1.075-.325q1.825.25 3.413 1.063t2.837 2.062q1.25 1.25 2.063 2.838t1.062 3.412q.1.625-.325 1.075T12.5 21"/></svg></a></div><div class="widget-body fs14"><a class="item title" href="/blog/20251013/"><span class="title">在混乱中建立秩序：Stellar 产品设计与工程重构复盘</span></a><a class="item title" href="/blog/20240110/"><span class="title">ObjC/Swift 混编的通知崩溃排查</span></a><a class="item title" href="/blog/20240129/"><span class="title">又穷又忙的一年——2023 年度回顾</span></a><a class="item title" href="/blog/20240208/"><span class="title">文章插图需要点击放大吗？Stellar 图片展示的设计取舍</span></a><a class="item title" href="/blog/20240203/"><span class="title">Stellar 专栏功能：我为什么专门开发它？</span></a><a class="item title" href="/blog/20250602/"><span class="title">动态友链重构：借助 AI 获重磅升级</span></a><a class="item title" href="/blog/20250705/"><span class="title">利用 Webhook 自动部署博客到服务器并飞书通知</span></a><a class="item title" href="/blog/20260116/"><span class="title">2025 年度 OKR 复盘</span></a><a class="item title" href="/blog/20260815/"><span class="title">Stellar 为什么没能进入 Hexo 主题头部</span></a><a class="item title" href="/blog/20210102/"><span class="title">用 GitHub 搭建一个简单的云脚本体系</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -96,17 +98,17 @@
 
 
 
-<div class="article-banner-wrap slide-up"><div class="article banner top">
+<div class="article-banner-wrap slide-up"><div class="article banner top" style="--bg-url:url('https://res.xaox.cc/posts/20250706161629702.webp-hd')"><img class="lazy bg" data-src="https://res.xaox.cc/posts/20250706161629702.webp-hd">
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
-<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/blog/categories/%E4%BA%A7%E7%A0%94/">产研</a> <span class="sep"></span> <a class="cap breadcrumb-link" href="/blog/categories/%E4%BA%A7%E7%A0%94/%E6%8A%80%E6%9C%AF/">技术</a></div>
-<div class="flex-row" id="post-meta"><a class="author" href="/author/xaoxuu/">Mr. X</a><span class="sep"></span><span class="text created"><time datetime="2024-01-10T07:08:00.000Z">2024年1月10日</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-01-10T07:08:00.000Z">2024年1月10日</time></span></div>
+<span class="sep"></span><a class="cap breadcrumb" id="menu" href="/topic/">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/blog/20240111/">iOS 开发</a></div>
+<div class="flex-row" id="post-meta"><a class="author" href="/author/xaoxuu/">Mr. X</a><span class="sep"></span><span class="text created"><time datetime="2024-01-10T07:08:00.000Z">2024年1月10日</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2026-08-15T06:38:00.000Z">2026年8月15日</time></span></div>
 </div></div>
     
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>关于 ObjC 通知的一个奇怪的崩溃</span></h1>
+        <h1 class="text title"><span>ObjC/Swift 混编的通知崩溃排查</span></h1>
         
       </div>
     </div>
@@ -114,6 +116,8 @@
   </div>
   </div></div>
 <article class="md-text content slide-up"><h2 id="事情经过"><a href="#事情经过" class="headerlink" title="事情经过"></a>事情经过</h2><p>近日发现一个发通知时触发的 EXC_BAD_ACCESS 崩溃，在 DEBUG 时，崩溃指向这一行代码：</p>
+<span id="more"></span>
+
 <figure class="highlight objc"><figcaption><span>崩溃行</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">[<span class="built_in">NSNotificationCenter</span>.defaultCenter postNotificationName:<span class="string">@"test"</span> object:<span class="literal">nil</span>];</span><br></pre></td></tr></tbody></table></figure>
 
 <p>崩溃信息为：</p>
@@ -161,6 +165,9 @@
 <p>暂时还没有头绪</p>
 </blockquote>
 </article>
+
+<div class="article-tags slide-up"><a class="tag" href="/blog/tags/ios/">iOS</a><a class="tag" href="/blog/tags/objc/">ObjC</a><a class="tag" href="/blog/tags/swift/">Swift</a></div>
+
 <div class="article-footer slide-up">
     <section id="license">
       <div class="header"><span>许可协议</span></div>
@@ -174,7 +181,7 @@
       <div class="header"><span>分享文章</span></div>
       <div class="body">
         <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https:&#x2F;&#x2F;xaoxuu.com&#x2F;blog&#x2F;20240110&#x2F;"></div>
-        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg"></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fxaoxuu.com%2Fblog%2F20240110%2F&title=%E5%85%B3%E4%BA%8E%20ObjC%20%E9%80%9A%E7%9F%A5%E7%9A%84%E4%B8%80%E4%B8%AA%E5%A5%87%E6%80%AA%E7%9A%84%E5%B4%A9%E6%BA%83%20-%20XAOXUU&summary=%E8%BF%91%E6%97%A5%E5%8F%91%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%94%A8%20NSNotificationCenter%20%E5%8F%91%E9%80%9A%E7%9F%A5%E6%97%B6%E8%A7%A6%E5%8F%91%E7%9A%84%20EXC_BAD_ACCESS%20%E5%B4%A9%E6%BA%83%EF%BC%8C%E8%A1%A8%E7%8E%B0%E5%BD%A2%E5%BC%8F%E6%AF%94%E8%BE%83%E5%A5%87%E6%80%AA%EF%BC%8C%E7%89%B9%E6%AD%A4%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B%E3%80%82"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg"></a><a class="social share-item email" href="mailto:?subject=%E5%85%B3%E4%BA%8E%20ObjC%20%E9%80%9A%E7%9F%A5%E7%9A%84%E4%B8%80%E4%B8%AA%E5%A5%87%E6%80%AA%E7%9A%84%E5%B4%A9%E6%BA%83%20-%20XAOXUU&amp;body=https%3A%2F%2Fxaoxuu.com%2Fblog%2F20240110%2F"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg"></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg"></a></div>
+        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg"></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fxaoxuu.com%2Fblog%2F20240110%2F&title=ObjC%2FSwift%20%E6%B7%B7%E7%BC%96%E7%9A%84%E9%80%9A%E7%9F%A5%E5%B4%A9%E6%BA%83%E6%8E%92%E6%9F%A5%20-%20XAOXUU&summary=%E8%BF%91%E6%97%A5%E5%8F%91%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%94%A8%20NSNotificationCenter%20%E5%8F%91%E9%80%9A%E7%9F%A5%E6%97%B6%E8%A7%A6%E5%8F%91%E7%9A%84%20EXC_BAD_ACCESS%20%E5%B4%A9%E6%BA%83%EF%BC%8C%E8%A1%A8%E7%8E%B0%E5%BD%A2%E5%BC%8F%E6%AF%94%E8%BE%83%E5%A5%87%E6%80%AA%EF%BC%8C%E7%89%B9%E6%AD%A4%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B%E3%80%82"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg"></a><a class="social share-item email" href="mailto:?subject=ObjC%2FSwift%20%E6%B7%B7%E7%BC%96%E7%9A%84%E9%80%9A%E7%9F%A5%E5%B4%A9%E6%BA%83%E6%8E%92%E6%9F%A5%20-%20XAOXUU&amp;body=https%3A%2F%2Fxaoxuu.com%2Fblog%2F20240110%2F"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg"></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg"></a></div>
         
         <div class="qrcode" id="qrcode-wechat" style="opacity:0;height:0">
           <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https%3A%2F%2Fxaoxuu.com%2Fblog%2F20240110%2F">
@@ -191,8 +198,7 @@
 
   <div class="related-wrap md-text slide-up" id="comments">
     <section class="header cmt-title cap theme">
-      <p>快来参与讨论吧~</p>
-
+      
     </section>
     <section class="body cmt-body artalk">
       
@@ -241,7 +247,7 @@
 
 
 
-  <script type="module">!function(){const t=document.getElementById("artalk_container");t&&util.viewportLazyload(t,function(){utils.css("https://res.xaox.cc/unpkg/artalk@2.9.1/dist/artalk.css"),utils.js("https://res.xaox.cc/unpkg/artalk@2.9.1/dist/artalk.js",{defer:!0}).then(function(){const e=t.getAttribute("comment_id")??decodeURI(window.location.pathname);Artalk.init({el:"#artalk_container",pageKey:e,pageTitle:"关于 ObjC 通知的一个奇怪的崩溃",server:"https://res.xaox.cc/atk/",site:"XAOXUU",darkMode:"auto",imgUploader:function(t){let e=new Headers;e.set("Accept","application/json");let a=new FormData;return a.append("file",t),fetch("https://github-uploader.xaox.cc/api/v1/upload?user=cdn-x&repo=comments-assets",{method:"POST",body:a,headers:e}).then(t=>t.json()).then(t=>t.urls.gcore)}}),-1!==window.location.search.indexOf("atk_")&&window.setTimeout(function(){window.history.replaceState(null,"",window.location.pathname+window.location.hash)},300)})})}()</script>
+  <script type="module">!function(){const t=document.getElementById("artalk_container");if(!t)return;const e=/[?&]atk_comment=\d+/.test(window.location.search)||/#atk-comment-\d+/.test(window.location.hash);util.viewportLazyload(t,function(){utils.css("https://res.xaox.cc/unpkg/artalk@2.9.1/dist/artalk.css"),utils.js("https://res.xaox.cc/unpkg/artalk@2.9.1/dist/artalk.js",{defer:!0}).then(function(){const o=window.location.search.match(/[?&]atk_comment=(\d+)/);if(o&&!/#atk-comment-\d+/.test(window.location.hash)){const t=new URLSearchParams(window.location.search).get("atk_notify_key"),e=t?"?atk_notify_key="+encodeURIComponent(t):"";window.history.replaceState(null,"",window.location.pathname+e+"#atk-comment-"+o[1])}const n=t.getAttribute("comment_id")??decodeURI(window.location.pathname),a=Artalk.init({el:"#artalk_container",pageKey:n,pageTitle:"ObjC/Swift 混编的通知崩溃排查",server:"https://res.xaox.cc/atk/",site:"XAOXUU",darkMode:"auto",imgUploader:function(t){let e=new Headers;e.set("Accept","application/json");let o=new FormData;return o.append("file",t),fetch("https://github-uploader.xaox.cc/api/v1/upload?user=cdn-x&repo=comments-assets",{method:"POST",body:o,headers:e}).then(t=>t.json()).then(t=>t.urls.gcore)}});e&&-1!==window.location.search.indexOf("atk_")&&a.on("list-loaded",function(){window.setTimeout(function(){window.history.replaceState(null,"",window.location.pathname+window.location.hash)},0)})})},!e)}()</script>
 
 
 

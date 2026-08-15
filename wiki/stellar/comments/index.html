@@ -28,7 +28,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp">
 <meta property="article:published_time" content="2023-12-06T13:55:00.000Z">
-<meta property="article:modified_time" content="2026-08-10T13:10:00.000Z">
+<meta property="article:modified_time" content="2026-08-15T07:20:00.000Z">
 <meta property="article:author" content="xaoxuu">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"><meta name="twitter:title" content="评论插件配置（6个）">
@@ -55,7 +55,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Website","@id":"https://xaoxuu.com/wiki/stellar/comments/","author":{"@type":"Person","name":"xaoxuu","sameAs":[],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"},"name":"评论插件配置（6个）","description":"Stellar 是一个内置文档系统的简约商务风 Hexo 主题，支持丰富的标签和动态数据组件。","url":"https://xaoxuu.com/wiki/stellar/comments/"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Website","@id":"https://xaoxuu.com/wiki/stellar/comments/","author":{"@type":"Person","name":"xaoxuu","sameAs":["https://github.com/xaoxuu"],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"},"name":"评论插件配置（6个）","description":"Stellar 是一个内置文档系统的简约商务风 Hexo 主题，支持丰富的标签和动态数据组件。","url":"https://xaoxuu.com/wiki/stellar/comments/"}</script>
   <link rel="apple-touch-icon" sizes="180x180" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="16x16" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="192x192" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/android-chrome-192x192.png"><link rel="manifest" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/site.webmanifest"><link rel="shortcut icon" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/favicon.ico"><meta name="theme-color" content="#f9fafb"><link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css" media="print" onload="this.media=&quot;all&quot;">
 </head>
 <body><div id="l_cover"></div><div class="l_body content" id="start" layout="page" type="tech"><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
@@ -87,7 +87,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">文档</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/stellar/">Stellar</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">更新于：<time datetime="2026-08-10T13:10:00.000Z">2026年8月10日</time></span></div>
+<div class="flex-row" id="post-meta"><span class="text created">更新于：<time datetime="2026-08-15T07:20:00.000Z">2026年8月15日</time></span></div>
 </div></div>
     
     <div class="bottom only-title">
@@ -124,6 +124,7 @@
 
 <div class="tag-plugin link dis-select"><a class="link-card plain" title href="https://artalk.js.org" target="_blank" rel="external nofollow noopener noreferrer" cardlink data-api="https://api.xaox.cc/site_info/v1?url=https://artalk.js.org" autofill="title,icon,desc"><div class="left"><span class="title">https://artalk.js.org</span><span class="cap link footnote">https://artalk.js.org</span></div><div class="right"><div class="lazy img" data-bg="https://res.xaox.cc/gh/cdn-x/placeholder@1.0.12/link/8f277b4ee0ecd.svg"></div></div></a></div>
 
+<p>Artalk 邮件通知中的评论链接（形如 <code>?atk_comment=&lt;id&gt;</code>）以及侧栏「最近评论」的 <code>#atk-comment-&lt;id&gt;</code> 链接，打开页面会自动定位并高亮对应评论：此时评论区跳过视口懒加载立即初始化，定位完成后 URL 中的 <code>atk_*</code> 查询参数会被自动清理。</p>
 <h2 id="评论的灵活用法"><a href="#评论的灵活用法" class="headerlink" title="评论的灵活用法"></a>评论的灵活用法</h2><h3 id="评论区懒加载"><a href="#评论区懒加载" class="headerlink" title="评论区懒加载"></a>评论区懒加载</h3><p>该功能于 <mark class="tag-plugin colorful mark" color="yellow">1.29.0</mark> 支持。</p>
 <figure class="highlight yaml"><figcaption><span>blog/_config.stellar.yml</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">comments:</span></span><br><span class="line">  <span class="attr">service:</span> <span class="comment"># beaudar, utterances, giscus, twikoo, waline, artalk</span></span><br><span class="line">  <span class="attr">lazyload:</span> <span class="comment"># true</span></span><br></pre></td></tr></tbody></table></figure>
 
@@ -172,8 +173,7 @@
 
   <div class="related-wrap md-text slide-up" id="comments">
     <section class="header cmt-title cap theme">
-      <p>快来参与讨论吧~</p>
-
+      
     </section>
     <section class="body cmt-body giscus">
       

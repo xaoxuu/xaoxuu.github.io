@@ -55,7 +55,7 @@
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Website","@id":"https://xaoxuu.com/notes/ios/","author":{"@type":"Person","name":"xaoxuu","sameAs":[],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"},"name":"iOS 相关问题","description":"xaoxuu 目前主要从事于互联网行业，活跃于开源社区，热衷于探索未知、设计和打磨美妙的东西。代表作有：Stellar、ProHUD、心率管家等。","url":"https://xaoxuu.com/notes/ios/"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Website","@id":"https://xaoxuu.com/notes/ios/","author":{"@type":"Person","name":"xaoxuu","sameAs":["https://github.com/xaoxuu"],"image":"https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/avatar/classic.webp"},"name":"iOS 相关问题","description":"xaoxuu 目前主要从事于互联网行业，活跃于开源社区，热衷于探索未知、设计和打磨美妙的东西。代表作有：Stellar、ProHUD、心率管家等。","url":"https://xaoxuu.com/notes/ios/"}</script>
   <link rel="apple-touch-icon" sizes="180x180" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="16x16" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="192x192" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/android-chrome-192x192.png"><link rel="manifest" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/site.webmanifest"><link rel="shortcut icon" href="https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/favicon.ico"><meta name="theme-color" content="#f9fafb"><link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css" media="print" onload="this.media=&quot;all&quot;">
 </head>
 <body><div id="l_cover"></div><div class="l_body content" id="start" layout="page" type="tech"><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
@@ -133,8 +133,7 @@
 
   <div class="related-wrap md-text slide-up" id="comments">
     <section class="header cmt-title cap theme">
-      <p>快来参与讨论吧~</p>
-
+      
     </section>
     <section class="body cmt-body artalk">
       
@@ -183,7 +182,7 @@
 
 
 
-  <script type="module">!function(){const t=document.getElementById("artalk_container");t&&util.viewportLazyload(t,function(){utils.css("https://res.xaox.cc/unpkg/artalk@2.9.1/dist/artalk.css"),utils.js("https://res.xaox.cc/unpkg/artalk@2.9.1/dist/artalk.js",{defer:!0}).then(function(){const e=t.getAttribute("comment_id")??decodeURI(window.location.pathname);Artalk.init({el:"#artalk_container",pageKey:e,pageTitle:"iOS 相关问题",server:"https://res.xaox.cc/atk/",site:"XAOXUU",darkMode:"auto",imgUploader:function(t){let e=new Headers;e.set("Accept","application/json");let a=new FormData;return a.append("file",t),fetch("https://github-uploader.xaox.cc/api/v1/upload?user=cdn-x&repo=comments-assets",{method:"POST",body:a,headers:e}).then(t=>t.json()).then(t=>t.urls.gcore)}}),-1!==window.location.search.indexOf("atk_")&&window.setTimeout(function(){window.history.replaceState(null,"",window.location.pathname+window.location.hash)},300)})})}()</script>
+  <script type="module">!function(){const t=document.getElementById("artalk_container");if(!t)return;const e=/[?&]atk_comment=\d+/.test(window.location.search)||/#atk-comment-\d+/.test(window.location.hash);util.viewportLazyload(t,function(){utils.css("https://res.xaox.cc/unpkg/artalk@2.9.1/dist/artalk.css"),utils.js("https://res.xaox.cc/unpkg/artalk@2.9.1/dist/artalk.js",{defer:!0}).then(function(){const o=window.location.search.match(/[?&]atk_comment=(\d+)/);if(o&&!/#atk-comment-\d+/.test(window.location.hash)){const t=new URLSearchParams(window.location.search).get("atk_notify_key"),e=t?"?atk_notify_key="+encodeURIComponent(t):"";window.history.replaceState(null,"",window.location.pathname+e+"#atk-comment-"+o[1])}const n=t.getAttribute("comment_id")??decodeURI(window.location.pathname),a=Artalk.init({el:"#artalk_container",pageKey:n,pageTitle:"iOS 相关问题",server:"https://res.xaox.cc/atk/",site:"XAOXUU",darkMode:"auto",imgUploader:function(t){let e=new Headers;e.set("Accept","application/json");let o=new FormData;return o.append("file",t),fetch("https://github-uploader.xaox.cc/api/v1/upload?user=cdn-x&repo=comments-assets",{method:"POST",body:o,headers:e}).then(t=>t.json()).then(t=>t.urls.gcore)}});e&&-1!==window.location.search.indexOf("atk_")&&a.on("list-loaded",function(){window.setTimeout(function(){window.history.replaceState(null,"",window.location.pathname+window.location.hash)},0)})})},!e)}()</script>
 
 
 
