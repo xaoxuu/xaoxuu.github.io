@@ -10,6 +10,15 @@
     
     
     <url>
+        <loc>https://xaoxuu.com/wiki/stellar/advanced-settings/</loc>
+        <lastmod>2026-08-17T13:06:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    
+    
+    
+    <url>
         <loc>https://xaoxuu.com/wiki/stellar/tag-plugins/express/</loc>
         <lastmod>2026-08-16T15:27:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -30,15 +39,6 @@
     <url>
         <loc>https://xaoxuu.com/wiki/stellar/pages/</loc>
         <lastmod>2026-08-16T10:47:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.4</priority>
-    </url>
-    
-    
-    
-    <url>
-        <loc>https://xaoxuu.com/wiki/stellar/advanced-settings/</loc>
-        <lastmod>2026-08-16T10:32:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
     </url>
@@ -235,15 +235,6 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/git/</loc>
-        <lastmod>2025-07-19T03:54:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.4</priority>
-    </url>
-    
-    
-    
-    <url>
         <loc>https://xaoxuu.com/wiki/git/git-server/</loc>
         <lastmod>2025-07-19T03:54:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -253,7 +244,16 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/heartmate/</loc>
+        <loc>https://xaoxuu.com/wiki/git/</loc>
+        <lastmod>2025-07-19T03:54:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>https://xaoxuu.com/wiki/git/install-and-config/</loc>
         <lastmod>2025-07-19T03:54:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
@@ -280,7 +280,7 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/smartlamp/</loc>
+        <loc>https://xaoxuu.com/wiki/heartmate/</loc>
         <lastmod>2025-07-19T03:54:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
@@ -289,7 +289,7 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/git/install-and-config/</loc>
+        <loc>https://xaoxuu.com/wiki/smartlamp/</loc>
         <lastmod>2025-07-19T03:54:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
@@ -325,7 +325,7 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/stellar/theme-settings/</loc>
+        <loc>https://xaoxuu.com/wiki/stellar/tag-plugins/</loc>
         <lastmod>2025-07-06T05:34:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
@@ -334,7 +334,7 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/stellar/tag-plugins/</loc>
+        <loc>https://xaoxuu.com/wiki/stellar/theme-settings/</loc>
         <lastmod>2025-07-06T05:34:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
@@ -352,7 +352,7 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/stellar/articles/</loc>
+        <loc>https://xaoxuu.com/wiki/stellar/examples/</loc>
         <lastmod>2025-07-01T13:17:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
@@ -361,7 +361,7 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/stellar/examples/</loc>
+        <loc>https://xaoxuu.com/wiki/stellar/articles/</loc>
         <lastmod>2025-07-01T13:17:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
@@ -514,15 +514,6 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/cloud-shell/tag/</loc>
-        <lastmod>2024-01-21T15:15:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.4</priority>
-    </url>
-    
-    
-    
-    <url>
         <loc>https://xaoxuu.com/wiki/cloud-shell/blog/</loc>
         <lastmod>2024-01-21T15:15:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -532,7 +523,7 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/cloud-shell/vimcn/</loc>
+        <loc>https://xaoxuu.com/wiki/cloud-shell/podspec/</loc>
         <lastmod>2024-01-21T15:15:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
@@ -541,7 +532,16 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/cloud-shell/podspec/</loc>
+        <loc>https://xaoxuu.com/wiki/cloud-shell/tag/</loc>
+        <lastmod>2024-01-21T15:15:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>https://xaoxuu.com/wiki/cloud-shell/vimcn/</loc>
         <lastmod>2024-01-21T15:15:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
