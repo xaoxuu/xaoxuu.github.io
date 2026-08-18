@@ -34,37 +34,6 @@
       <name>xaoxuu</name>
       <email>me@xaoxuu.com</email>
     </author>
-    <category term="Ideas" scheme="https://xaoxuu.com/blog/categories/ideas/"/>
-    <category term="Stellar" scheme="https://xaoxuu.com/blog/tags/stellar/"/>
-    <category term="Hexo" scheme="https://xaoxuu.com/blog/tags/hexo/"/>
-    <category term="Ideas" scheme="https://xaoxuu.com/blog/tags/ideas/"/>
-    <id>https://xaoxuu.com/en/blog/20260815/</id>
-    <link href="https://xaoxuu.com/en/blog/20260815/"/>
-    <published>2026-08-14T18:14:00.000Z</published>
-    <summary>A review of why Stellar has not reached the top tier of Hexo themes, using the August 2026 data snapshot to examine positioning, growth, trust, and the road ahead.</summary>
-    <title>Why Stellar Has Not Reached the Top Tier of Hexo Themes</title>
-    <updated>2026-08-18T07:20:00.000Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>xaoxuu</name>
-      <email>me@xaoxuu.com</email>
-    </author>
-    <category term="Dreams" scheme="https://xaoxuu.com/blog/categories/dreams/"/>
-    <category term="Dreams" scheme="https://xaoxuu.com/blog/tags/dreams/"/>
-    <category term="Stories" scheme="https://xaoxuu.com/blog/tags/stories/"/>
-    <id>https://xaoxuu.com/en/blog/20260801/</id>
-    <link href="https://xaoxuu.com/en/blog/20260801/"/>
-    <published>2026-08-01T07:24:00.000Z</published>
-    <summary>A dream about an encounter that could not be captured: several versions of myself appear in a classroom, but a group photo never succeeds, leading to thoughts about time, identity, and people we are destined to lose.</summary>
-    <title>A Dream of an Encounter That Could Not Be Captured</title>
-    <updated>2026-08-18T07:20:00.000Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>xaoxuu</name>
-      <email>me@xaoxuu.com</email>
-    </author>
     <category term="梦境" scheme="https://xaoxuu.com/blog/categories/%E6%A2%A6%E5%A2%83/"/>
     <category term="梦境" scheme="https://xaoxuu.com/blog/tags/%E6%A2%A6%E5%A2%83/"/>
     <category term="故事" scheme="https://xaoxuu.com/blog/tags/%E6%95%85%E4%BA%8B/"/>
@@ -171,5 +140,37 @@
     <summary>由于近期网站速度不稳定，只好再把博客解析改到服务器上。本文记录了如何利用 Webhook 实现博客自动部署到服务器并通过飞书通知。</summary>
     <title>利用 Webhook 自动部署博客到服务器并飞书通知</title>
     <updated>2026-08-15T06:38:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>xaoxuu</name>
+      <email>me@xaoxuu.com</email>
+    </author>
+    <category term="梦境" scheme="https://xaoxuu.com/blog/categories/%E6%A2%A6%E5%A2%83/"/>
+    <category term="梦境" scheme="https://xaoxuu.com/blog/tags/%E6%A2%A6%E5%A2%83/"/>
+    <category term="故事" scheme="https://xaoxuu.com/blog/tags/%E6%95%85%E4%BA%8B/"/>
+    <id>https://xaoxuu.com/blog/20250616/</id>
+    <link href="https://xaoxuu.com/blog/20250616/"/>
+    <published>2025-06-16T04:56:00.000Z</published>
+    <summary>一场关于寄生之种与崩塌时空的清醒梦：从被寄生植物入侵到打车系统错乱，再到客服背后的时钟墙。作者记录梦境并借 AI 解读潜意识中的焦虑与自我唤醒。</summary>
+    <title>梦境：寄生之种与崩塌的时空</title>
+    <updated>2026-08-14T16:17:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>xaoxuu</name>
+      <email>me@xaoxuu.com</email>
+    </author>
+    <category term="产研" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/"/>
+    <category term="技术" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/%E6%8A%80%E6%9C%AF/"/>
+    <category term="图片" scheme="https://xaoxuu.com/blog/tags/%E5%9B%BE%E7%89%87/"/>
+    <category term="静态博客" scheme="https://xaoxuu.com/blog/tags/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/"/>
+    <category term="图床" scheme="https://xaoxuu.com/blog/tags/%E5%9B%BE%E5%BA%8A/"/>
+    <id>https://xaoxuu.com/blog/20250611/</id>
+    <link href="https://xaoxuu.com/blog/20250611/"/>
+    <published>2025-06-11T15:37:00.000Z</published>
+    <summary>博客图片到底该存哪儿？作者对比本地仓库、图床与阿里云 OSS 的优缺点，梳理格式支持、修改成本、冗余与访问速度等需求，并分享 OSS 反代解决 SSL 续期的思路。</summary>
+    <title>博客图片存哪儿？图床 / OSS / 本地仓库对比</title>
+    <updated>2025-06-11T15:37:00.000Z</updated>
   </entry>
 </feed>
