@@ -12,23 +12,7 @@
   <rights>All rights reserved 2026, xaoxuu</rights>
   <subtitle>For all time, always. | 风暴前夕</subtitle>
   <title>XAOXUU</title>
-  <updated>2026-08-18T07:20:00.000Z</updated>
-  <entry>
-    <author>
-      <name>xaoxuu</name>
-      <email>me@xaoxuu.com</email>
-    </author>
-    <category term="Ideas" scheme="https://xaoxuu.com/blog/categories/ideas/"/>
-    <category term="Hexo" scheme="https://xaoxuu.com/blog/tags/hexo/"/>
-    <category term="Stellar" scheme="https://xaoxuu.com/blog/tags/stellar/"/>
-    <category term="Ideas" scheme="https://xaoxuu.com/blog/tags/ideas/"/>
-    <id>https://xaoxuu.com/en/blog/20260815/</id>
-    <link href="https://xaoxuu.com/en/blog/20260815/"/>
-    <published>2026-08-14T18:14:00.000Z</published>
-    <summary>A review of why Stellar has not reached the top tier of Hexo themes, using the August 2026 data snapshot to examine positioning, growth, trust, and the road ahead.</summary>
-    <title>Why Stellar Has Not Reached the Top Tier of Hexo Themes</title>
-    <updated>2026-08-18T07:20:00.000Z</updated>
-  </entry>
+  <updated>2026-08-15T06:19:00.000Z</updated>
   <entry>
     <author>
       <name>xaoxuu</name>
@@ -36,14 +20,30 @@
     </author>
     <category term="思考" scheme="https://xaoxuu.com/blog/categories/%E6%80%9D%E8%80%83/"/>
     <category term="思考" scheme="https://xaoxuu.com/blog/tags/%E6%80%9D%E8%80%83/"/>
-    <category term="Hexo" scheme="https://xaoxuu.com/blog/tags/hexo/"/>
     <category term="Stellar" scheme="https://xaoxuu.com/blog/tags/stellar/"/>
+    <category term="Hexo" scheme="https://xaoxuu.com/blog/tags/hexo/"/>
     <id>https://xaoxuu.com/blog/20260815/</id>
     <link href="https://xaoxuu.com/blog/20260815/"/>
     <published>2026-08-14T18:14:00.000Z</published>
     <summary>Stellar 为什么没能进入 Hexo 主题头部？基于 2026-08 数据快照从数据面与产品面双线复盘：star 第 9 与 npm 下载第 3 的矛盾、定位错位与增长机制不足，并给出行动路线图。</summary>
     <title>Stellar 为什么没能进入 Hexo 主题头部</title>
     <updated>2026-08-15T06:19:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>xaoxuu</name>
+      <email>me@xaoxuu.com</email>
+    </author>
+    <category term="Ideas" scheme="https://xaoxuu.com/blog/categories/ideas/"/>
+    <category term="Stellar" scheme="https://xaoxuu.com/blog/tags/stellar/"/>
+    <category term="Hexo" scheme="https://xaoxuu.com/blog/tags/hexo/"/>
+    <category term="Ideas" scheme="https://xaoxuu.com/blog/tags/ideas/"/>
+    <id>https://xaoxuu.com/en/blog/20260815/</id>
+    <link href="https://xaoxuu.com/en/blog/20260815/"/>
+    <published>2026-08-14T18:14:00.000Z</published>
+    <summary>A review of why Stellar has not reached the top tier of Hexo themes, using the August 2026 data snapshot to examine positioning, growth, trust, and the road ahead.</summary>
+    <title>Why Stellar Has Not Reached the Top Tier of Hexo Themes</title>
+    <updated>2026-08-18T07:20:00.000Z</updated>
   </entry>
   <entry>
     <author>
