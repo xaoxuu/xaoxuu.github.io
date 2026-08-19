@@ -20,8 +20,8 @@
     </author>
     <category term="思考" scheme="https://xaoxuu.com/blog/categories/%E6%80%9D%E8%80%83/"/>
     <category term="思考" scheme="https://xaoxuu.com/blog/tags/%E6%80%9D%E8%80%83/"/>
-    <category term="Stellar" scheme="https://xaoxuu.com/blog/tags/stellar/"/>
     <category term="Hexo" scheme="https://xaoxuu.com/blog/tags/hexo/"/>
+    <category term="Stellar" scheme="https://xaoxuu.com/blog/tags/stellar/"/>
     <id>https://xaoxuu.com/blog/20260815/</id>
     <link href="https://xaoxuu.com/blog/20260815/"/>
     <published>2026-08-14T18:14:00.000Z</published>
@@ -98,8 +98,8 @@
     </author>
     <category term="产研" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/"/>
     <category term="经验" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/%E7%BB%8F%E9%AA%8C/"/>
-    <category term="静态博客" scheme="https://xaoxuu.com/blog/tags/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/"/>
     <category term="博客部署" scheme="https://xaoxuu.com/blog/tags/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/"/>
+    <category term="静态博客" scheme="https://xaoxuu.com/blog/tags/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/"/>
     <id>https://xaoxuu.com/blog/20250713/</id>
     <link href="https://xaoxuu.com/blog/20250713/"/>
     <published>2025-07-13T12:36:00.000Z</published>
@@ -131,9 +131,9 @@
     </author>
     <category term="产研" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/"/>
     <category term="技术" scheme="https://xaoxuu.com/blog/categories/%E4%BA%A7%E7%A0%94/%E6%8A%80%E6%9C%AF/"/>
-    <category term="GitHub Actions" scheme="https://xaoxuu.com/blog/tags/github-actions/"/>
     <category term="Shell" scheme="https://xaoxuu.com/blog/tags/shell/"/>
     <category term="博客部署" scheme="https://xaoxuu.com/blog/tags/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/"/>
+    <category term="GitHub Actions" scheme="https://xaoxuu.com/blog/tags/github-actions/"/>
     <id>https://xaoxuu.com/blog/20250705/</id>
     <link href="https://xaoxuu.com/blog/20250705/"/>
     <published>2025-07-05T13:59:00.000Z</published>
