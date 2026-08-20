@@ -10,6 +10,33 @@
     
     
     <url>
+        <loc>https://xaoxuu.com/wiki/stellar/topic/</loc>
+        <lastmod>2026-08-20T04:32:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>https://xaoxuu.com/wiki/stellar/sidebar/</loc>
+        <lastmod>2026-08-20T04:10:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>https://xaoxuu.com/wiki/stellar/widgets/</loc>
+        <lastmod>2026-08-20T04:02:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    
+    
+    
+    <url>
         <loc>https://xaoxuu.com/wiki/stellar/tag-plugins/container/</loc>
         <lastmod>2026-08-20T03:20:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -19,26 +46,8 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/stellar/sidebar/</loc>
-        <lastmod>2026-08-20T03:09:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.4</priority>
-    </url>
-    
-    
-    
-    <url>
         <loc>https://xaoxuu.com/wiki/stellar/advanced-settings/</loc>
         <lastmod>2026-08-19T17:12:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.4</priority>
-    </url>
-    
-    
-    
-    <url>
-        <loc>https://xaoxuu.com/wiki/stellar/widgets/</loc>
-        <lastmod>2026-08-19T16:11:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
     </url>
@@ -118,15 +127,6 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/stellar/topic/</loc>
-        <lastmod>2026-08-16T08:51:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.4</priority>
-    </url>
-    
-    
-    
-    <url>
         <loc>https://xaoxuu.com/wiki/stellar/comments/</loc>
         <lastmod>2026-08-15T07:20:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -163,7 +163,7 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/issues2json/</loc>
+        <loc>https://xaoxuu.com/wiki/links-checker/</loc>
         <lastmod>2026-08-13T16:41:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
@@ -172,7 +172,7 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/links-checker/</loc>
+        <loc>https://xaoxuu.com/wiki/issues2json/</loc>
         <lastmod>2026-08-13T16:41:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
@@ -253,15 +253,6 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/git/git-server/</loc>
-        <lastmod>2025-07-19T03:54:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.4</priority>
-    </url>
-    
-    
-    
-    <url>
         <loc>https://xaoxuu.com/wiki/git/</loc>
         <lastmod>2025-07-19T03:54:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -272,6 +263,15 @@
     
     <url>
         <loc>https://xaoxuu.com/wiki/git/install-and-config/</loc>
+        <lastmod>2025-07-19T03:54:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>https://xaoxuu.com/wiki/git/git-server/</loc>
         <lastmod>2025-07-19T03:54:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
@@ -343,7 +343,7 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/stellar/tag-plugins/</loc>
+        <loc>https://xaoxuu.com/wiki/stellar/theme-settings/</loc>
         <lastmod>2025-07-06T05:34:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
@@ -352,7 +352,7 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/stellar/theme-settings/</loc>
+        <loc>https://xaoxuu.com/wiki/stellar/tag-plugins/</loc>
         <lastmod>2025-07-06T05:34:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
@@ -406,7 +406,7 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/stellar/third-party/mathjax/</loc>
+        <loc>https://xaoxuu.com/wiki/stellar/third-party/katex/</loc>
         <lastmod>2025-07-01T13:17:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
@@ -415,7 +415,7 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/stellar/third-party/katex/</loc>
+        <loc>https://xaoxuu.com/wiki/stellar/third-party/mathjax/</loc>
         <lastmod>2025-07-01T13:17:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
@@ -433,7 +433,7 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/axkit/</loc>
+        <loc>https://xaoxuu.com/wiki/cloud-shell/</loc>
         <lastmod>2024-01-21T15:15:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
@@ -442,7 +442,7 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/cloud-shell/</loc>
+        <loc>https://xaoxuu.com/wiki/axkit/</loc>
         <lastmod>2024-01-21T15:15:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
@@ -469,7 +469,7 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/project-management/</loc>
+        <loc>https://xaoxuu.com/wiki/project-management/project-dependency/</loc>
         <lastmod>2024-01-21T15:15:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
@@ -478,7 +478,7 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/project-management/project-dependency/</loc>
+        <loc>https://xaoxuu.com/wiki/project-management/</loc>
         <lastmod>2024-01-21T15:15:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
@@ -496,7 +496,7 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/project-management/use-jenkins/</loc>
+        <loc>https://xaoxuu.com/wiki/resume/</loc>
         <lastmod>2024-01-21T15:15:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
@@ -505,7 +505,7 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/resume/</loc>
+        <loc>https://xaoxuu.com/wiki/project-management/use-jenkins/</loc>
         <lastmod>2024-01-21T15:15:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
@@ -541,7 +541,7 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/cloud-shell/tag/</loc>
+        <loc>https://xaoxuu.com/wiki/cloud-shell/vimcn/</loc>
         <lastmod>2024-01-21T15:15:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
@@ -550,7 +550,7 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/cloud-shell/vimcn/</loc>
+        <loc>https://xaoxuu.com/wiki/cloud-shell/tag/</loc>
         <lastmod>2024-01-21T15:15:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
