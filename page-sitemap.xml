@@ -127,7 +127,7 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/stellar/comments/</loc>
+        <loc>https://xaoxuu.com/wiki/stellar/multilingual/</loc>
         <lastmod>2026-08-21T15:17:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
@@ -136,7 +136,7 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/stellar/multilingual/</loc>
+        <loc>https://xaoxuu.com/wiki/stellar/comments/</loc>
         <lastmod>2026-08-21T15:17:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
@@ -280,6 +280,15 @@
     
     
     <url>
+        <loc>https://xaoxuu.com/wiki/git/</loc>
+        <lastmod>2025-07-19T03:54:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    
+    
+    
+    <url>
         <loc>https://xaoxuu.com/wiki/git/install-and-config/</loc>
         <lastmod>2025-07-19T03:54:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -298,15 +307,6 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/nexus/</loc>
-        <lastmod>2025-07-19T03:54:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.4</priority>
-    </url>
-    
-    
-    
-    <url>
         <loc>https://xaoxuu.com/wiki/prohud/</loc>
         <lastmod>2025-07-19T03:54:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -316,7 +316,7 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/smartlamp/</loc>
+        <loc>https://xaoxuu.com/wiki/nexus/</loc>
         <lastmod>2025-07-19T03:54:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
@@ -325,7 +325,7 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/git/</loc>
+        <loc>https://xaoxuu.com/wiki/smartlamp/</loc>
         <lastmod>2025-07-19T03:54:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
@@ -379,6 +379,15 @@
     
     
     <url>
+        <loc>https://xaoxuu.com/wiki/stellar/examples/</loc>
+        <lastmod>2025-07-01T13:17:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    
+    
+    
+    <url>
         <loc>https://xaoxuu.com/wiki/stellar/articles/</loc>
         <lastmod>2025-07-01T13:17:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -398,15 +407,6 @@
     
     <url>
         <loc>https://xaoxuu.com/wiki/stellar/todo/</loc>
-        <lastmod>2025-07-01T13:17:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.4</priority>
-    </url>
-    
-    
-    
-    <url>
-        <loc>https://xaoxuu.com/wiki/stellar/examples/</loc>
         <lastmod>2025-07-01T13:17:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
@@ -469,25 +469,16 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/project-management/</loc>
-        <lastmod>2024-01-21T15:15:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.4</priority>
-    </url>
-    
-    
-    
-    <url>
-        <loc>https://xaoxuu.com/wiki/project-management/project-dependency/</loc>
-        <lastmod>2024-01-21T15:15:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.4</priority>
-    </url>
-    
-    
-    
-    <url>
         <loc>https://xaoxuu.com/wiki/project-management/protocol/</loc>
+        <lastmod>2024-01-21T15:15:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>https://xaoxuu.com/wiki/project-management/</loc>
         <lastmod>2024-01-21T15:15:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
@@ -506,6 +497,15 @@
     
     <url>
         <loc>https://xaoxuu.com/wiki/project-management/use-jenkins/</loc>
+        <lastmod>2024-01-21T15:15:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>https://xaoxuu.com/wiki/project-management/project-dependency/</loc>
         <lastmod>2024-01-21T15:15:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
@@ -541,7 +541,7 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/cloud-shell/blog/</loc>
+        <loc>https://xaoxuu.com/wiki/cloud-shell/tag/</loc>
         <lastmod>2024-01-21T15:15:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
@@ -550,7 +550,7 @@
     
     
     <url>
-        <loc>https://xaoxuu.com/wiki/cloud-shell/tag/</loc>
+        <loc>https://xaoxuu.com/wiki/cloud-shell/blog/</loc>
         <lastmod>2024-01-21T15:15:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
