@@ -63,7 +63,10 @@ async function start() {
     })
   });
   await registry.mount(document, context);
-  window.addEventListener('pagehide', () => registry.unmount(document), { once: true });
+  window.addEventListener('pagehide', () => registry.unmount(document));
+  window.addEventListener('pageshow', event => {
+    if (event.persisted) registry.mount(document, context);
+  });
 }
 
 start().catch(error => {
