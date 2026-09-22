@@ -12,7 +12,7 @@
   <rights>All rights reserved 2026, xaoxuu</rights>
   <subtitle>For all time, always. | 风暴前夕</subtitle>
   <title>XAOXUU</title>
-  <updated>2026-09-11T12:51:00.000Z</updated>
+  <updated>2026-09-22T12:25:00.000Z</updated>
   <entry>
     <author>
       <name>xaoxuu</name>
@@ -27,7 +27,7 @@
     <published>2026-08-14T18:14:00.000Z</published>
     <summary>Stellar 为什么没能火起来？结合公开数据，对比 NexT、Butterfly、Solitude 与 Redefine 的产品能力，从内容组织、官网视觉展示、持续曝光和维护连续性分析 Stellar 的增长困境。</summary>
     <title>Stellar 为什么没能火起来</title>
-    <updated>2026-09-11T12:51:00.000Z</updated>
+    <updated>2026-09-22T12:25:00.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -40,7 +40,7 @@
     <id>https://xaoxuu.com/blog/20260801/</id>
     <link href="https://xaoxuu.com/blog/20260801/"/>
     <published>2026-08-01T07:24:00.000Z</published>
-    <summary>一场关于「无法定格的偶遇」的梦：教室里出现多个不同时期的自己，想拍合照却始终无法成功，借梦境探讨时间错位、自我认知与那些注定无法留住的人。</summary>
+    <summary>梦里教室里出现了好几个不同时期的自己，想拍张合照却始终没拍成。</summary>
     <title>梦境：无法定格的偶遇</title>
     <updated>2026-08-14T16:17:00.000Z</updated>
   </entry>
@@ -55,7 +55,7 @@
     <id>https://xaoxuu.com/blog/20260226/</id>
     <link href="https://xaoxuu.com/blog/20260226/"/>
     <published>2026-02-26T12:00:00.000Z</published>
-    <summary>连续两个晚上做梦笑醒的日常随笔：团圆后的送别、落日与飞机尾迹、听不懂的 Dattle，用三张照片记录平凡日子里转瞬即逝的瞬间。</summary>
+    <summary>连续两个晚上做梦笑醒，不是因为有什么好事。三张照片：送别、落日和听不懂的 Dattle。</summary>
     <title>连续两个晚上做梦笑醒</title>
     <updated>2026-09-09T08:22:00.000Z</updated>
   </entry>
@@ -71,7 +71,7 @@
     <id>https://xaoxuu.com/blog/20260116/</id>
     <link href="https://xaoxuu.com/blog/20260116/"/>
     <published>2026-01-16T12:36:00.000Z</published>
-    <summary>2025 年度 OKR 复盘：回顾知识沉淀、文章发布与产品设计重构等目标的完成情况，也记录与 AI 对话整理世界观、认识自我的意外收获与 2026 计划。</summary>
+    <summary>2025 年 OKR 的完成情况：知识沉淀和产品设计重构这两条线怎么样，以及和 AI 聊了半年之后整理出的世界观大纲。</summary>
     <title>2025 年度 OKR 复盘</title>
     <updated>2026-08-15T06:38:00.000Z</updated>
   </entry>
@@ -87,9 +87,9 @@
     <id>https://xaoxuu.com/blog/20251013/</id>
     <link href="https://xaoxuu.com/blog/20251013/"/>
     <published>2025-10-13T12:36:00.000Z</published>
-    <summary>如何在混乱中建立秩序？作者结合 Stellar 的产品设计原则与工程重构实践（知识库系统、动态时间线、动态友链重构、主题版本检测），分享从混乱走向秩序的方法与思考。</summary>
+    <summary>Stellar 的功能大多是从混乱里长出来的。这篇记录知识库、动态时间线、动态友链和主题版本检测这几个部分的设计过程。</summary>
     <title>在混乱中建立秩序：Stellar 产品设计与工程重构复盘</title>
-    <updated>2026-08-15T07:19:00.000Z</updated>
+    <updated>2026-09-22T12:25:00.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -103,7 +103,7 @@
     <id>https://xaoxuu.com/blog/20250713/</id>
     <link href="https://xaoxuu.com/blog/20250713/"/>
     <published>2025-07-13T12:36:00.000Z</published>
-    <summary>关于本站备用站点的紧急通知：近期访问可能不稳定，已部署 Vercel、Netlify、Cloudflare Pages 与 GitHub Pages 多个备用站，主备站点 canonical 已收敛，不分散主站权重。</summary>
+    <summary>近期访问不稳定，另外部署了 Vercel、Netlify、Cloudflare Pages 和 GitHub Pages 几个备用站。</summary>
     <title>关于本站备用站点的紧急通知</title>
     <updated>2026-09-09T08:22:00.000Z</updated>
   </entry>
@@ -120,7 +120,7 @@
     <id>https://xaoxuu.com/blog/20250706/</id>
     <link href="https://xaoxuu.com/blog/20250706/"/>
     <published>2025-07-06T13:36:00.000Z</published>
-    <summary>分享适合静态博客的 Nginx 安全配置：拦截 PHP 等动态脚本与压缩包下载、拒绝 .git/.env 等敏感文件、隐藏文件防遍历，并配置 HSTS 与自定义 404。</summary>
+    <summary>拦截 PHP 遍历、压缩包下载和隐藏文件的访问，再配好 HSTS 和自定义 404 页。</summary>
     <title>适合静态博客的 Nginx 安全性配置</title>
     <updated>2025-07-06T13:36:00.000Z</updated>
   </entry>
@@ -152,9 +152,9 @@
     <id>https://xaoxuu.com/blog/20250616/</id>
     <link href="https://xaoxuu.com/blog/20250616/"/>
     <published>2025-06-16T04:56:00.000Z</published>
-    <summary>一场关于寄生之种与崩塌时空的清醒梦：从被寄生植物入侵到打车系统错乱，再到客服背后的时钟墙。作者记录梦境并借 AI 解读潜意识中的焦虑与自我唤醒。</summary>
+    <summary>一场关于寄生之种和崩塌时空的梦：被寄生植物入侵、打车系统错乱，直到客服身后那面走时各异的时钟墙。</summary>
     <title>梦境：寄生之种与崩塌的时空</title>
-    <updated>2026-09-09T08:22:00.000Z</updated>
+    <updated>2026-09-22T12:25:00.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -169,7 +169,7 @@
     <id>https://xaoxuu.com/blog/20250611/</id>
     <link href="https://xaoxuu.com/blog/20250611/"/>
     <published>2025-06-11T15:37:00.000Z</published>
-    <summary>博客图片到底该存哪儿？作者对比本地仓库、图床与阿里云 OSS 的优缺点，梳理格式支持、修改成本、冗余与访问速度等需求，并分享 OSS 反代解决 SSL 续期的思路。</summary>
+    <summary>图片存本地仓库、图床还是 OSS？这篇对比了三种方案，最后用 OSS 加服务器反代解决了 SSL 续期的问题。</summary>
     <title>博客图片存哪儿？图床 / OSS / 本地仓库对比</title>
     <updated>2025-06-11T15:37:00.000Z</updated>
   </entry>
