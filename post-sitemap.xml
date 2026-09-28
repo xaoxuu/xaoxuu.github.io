@@ -9,14 +9,6 @@
 
 
     <url>
-        <loc>https://xaoxuu.com/blog/20221217/</loc>
-        <lastmod>2026-09-22T12:25:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://xaoxuu.com/blog/20240203/</loc>
         <lastmod>2026-09-22T12:25:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -33,7 +25,7 @@
     </url>
 
     <url>
-        <loc>https://xaoxuu.com/blog/20250604/</loc>
+        <loc>https://xaoxuu.com/blog/20250128/</loc>
         <lastmod>2026-09-22T12:25:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -41,7 +33,7 @@
     </url>
 
     <url>
-        <loc>https://xaoxuu.com/blog/20250128/</loc>
+        <loc>https://xaoxuu.com/blog/20250604/</loc>
         <lastmod>2026-09-22T12:25:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -57,6 +49,14 @@
     </url>
 
     <url>
+        <loc>https://xaoxuu.com/blog/20260815/</loc>
+        <lastmod>2026-09-22T12:25:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://xaoxuu.com/blog/20251013/</loc>
         <lastmod>2026-09-22T12:25:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -65,7 +65,7 @@
     </url>
 
     <url>
-        <loc>https://xaoxuu.com/blog/20260815/</loc>
+        <loc>https://xaoxuu.com/blog/20221217/</loc>
         <lastmod>2026-09-22T12:25:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
